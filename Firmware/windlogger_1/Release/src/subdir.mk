@@ -16,19 +16,6 @@ C_SRCS += \
 ../src/twi.c \
 ../src/usart.c 
 
-OBJS += \
-./src/adc.o \
-./src/config.o \
-./src/debug.o \
-./src/eeprom_manage.o \
-./src/fsm.o \
-./src/main.o \
-./src/pcf8563.o \
-./src/sensors.o \
-./src/time.o \
-./src/twi.o \
-./src/usart.o 
-
 C_DEPS += \
 ./src/adc.d \
 ./src/config.d \
@@ -41,6 +28,19 @@ C_DEPS += \
 ./src/time.d \
 ./src/twi.d \
 ./src/usart.d 
+
+OBJS += \
+./src/adc.o \
+./src/config.o \
+./src/debug.o \
+./src/eeprom_manage.o \
+./src/fsm.o \
+./src/main.o \
+./src/pcf8563.o \
+./src/sensors.o \
+./src/time.o \
+./src/twi.o \
+./src/usart.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes

@@ -1,0 +1,45 @@
+10:05:31 **** Incremental Build of configuration Release for project windlogger_dev_output_0310 ****
+make all 
+In file included from ../src/fct_SDCard.c:13:0:
+Building file: ../src/fct_SDCard.c
+../src/fct_SDCard.c: In function ‘SD_init’:
+../src/../lib/fct_SDCard.h:21:26: error: ‘PORTG’ undeclared (first use in this function)
+ #define SD_CS_ASSERT     PORTG &= ~0x02    /**mettre le 2em bit a 0 (cs)*/
+                          ^
+../src/fct_SDCard.c:33:3: note: in expansion of macro ‘SD_CS_ASSERT’
+   SD_CS_ASSERT;              /**set chip select*/
+   ^
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/fct_SDCard.d" -MT"src/fct_SDCard.o" -c -o "src/fct_SDCard.o" "../src/fct_SDCard.c"
+src/subdir.mk:51: recipe for target 'src/fct_SDCard.o' failed
+../src/../lib/fct_SDCard.h:21:26: note: each undeclared identifier is reported only once for each function it appears in
+ #define SD_CS_ASSERT     PORTG &= ~0x02    /**mettre le 2em bit a 0 (cs)*/
+                          ^
+../src/fct_SDCard.c:33:3: note: in expansion of macro ‘SD_CS_ASSERT’
+   SD_CS_ASSERT;              /**set chip select*/
+   ^
+../src/fct_SDCard.c: In function ‘SD_sendCommand’:
+../src/../lib/fct_SDCard.h:21:26: error: ‘PORTG’ undeclared (first use in this function)
+ #define SD_CS_ASSERT     PORTG &= ~0x02    /**mettre le 2em bit a 0 (cs)*/
+                          ^
+../src/fct_SDCard.c:157:3: note: in expansion of macro ‘SD_CS_ASSERT’
+   SD_CS_ASSERT;
+   ^
+../src/fct_SDCard.c: In function ‘SD_readSingleBlock’:
+../src/../lib/fct_SDCard.h:21:26: error: ‘PORTG’ undeclared (first use in this function)
+ #define SD_CS_ASSERT     PORTG &= ~0x02    /**mettre le 2em bit a 0 (cs)*/
+                          ^
+../src/fct_SDCard.c:233:3: note: in expansion of macro ‘SD_CS_ASSERT’
+   SD_CS_ASSERT;
+   ^
+../src/fct_SDCard.c: In function ‘SD_writeSingleBlock’:
+../src/../lib/fct_SDCard.h:21:26: error: ‘PORTG’ undeclared (first use in this function)
+ #define SD_CS_ASSERT     PORTG &= ~0x02    /**mettre le 2em bit a 0 (cs)*/
+                          ^
+../src/fct_SDCard.c:267:3: note: in expansion of macro ‘SD_CS_ASSERT’
+   SD_CS_ASSERT;
+   ^
+make: *** [src/fct_SDCard.o] Error 1
+
+10:05:32 Build Finished (took 314ms)
+
