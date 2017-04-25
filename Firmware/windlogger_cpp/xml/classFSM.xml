@@ -1,0 +1,267 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classFSM" kind="class" language="C++" prot="public">
+    <compoundname>FSM</compoundname>
+    <includes refid="FSM_8hpp" local="no">FSM.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classFSM_1aa17b47814eb43e7b46e3068b6d8ede95" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool FSM::flag_UART0_rx_char</definition>
+        <argsstring></argsstring>
+        <name>flag_UART0_rx_char</name>
+        <briefdescription>
+<para>flag set when a new char is receive by the microcontroller </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="23" column="1" bodyfile="lib/FSM.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFSM_1acc98c610679f700973b1566da8697030" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool FSM::flag_freq_data_ready</definition>
+        <argsstring></argsstring>
+        <name>flag_freq_data_ready</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>set when the timerX overflow (stop frequencies measurement) todo select timer </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="26" column="1" bodyfile="lib/FSM.hpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFSM_1aa3ee0bdf4d0af7e5c7b58e842241429f" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool FSM::flag_new_measure</definition>
+        <argsstring></argsstring>
+        <name>flag_new_measure</name>
+        <briefdescription>
+<para>set when time come for a new measure </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="28" column="1" bodyfile="lib/FSM.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFSM_1a790f41194078199e51a5203f1468d72f" prot="public" static="yes" mutable="no">
+        <type>bool</type>
+        <definition>bool FSM::flag_data_averages_ready</definition>
+        <argsstring></argsstring>
+        <name>flag_data_averages_ready</name>
+        <briefdescription>
+<para>set when each averages are calculated and ready for the OUTPUT state </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="30" column="1" bodyfile="lib/FSM.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFSM_1ae1d4ec156557896a3465b04e9cfe0f0e" prot="public" static="yes" mutable="no">
+        <type>unsigned long int</type>
+        <definition>unsigned long int FSM::timestamp</definition>
+        <argsstring></argsstring>
+        <name>timestamp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="33" column="1" bodyfile="lib/FSM.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classFSM_1a0182ee82eb45295d108b4a85663656a5" prot="private" static="no" mutable="no">
+        <type><ref refid="classIdle" kindref="compound">Idle</ref></type>
+        <definition>Idle FSM::idle</definition>
+        <argsstring></argsstring>
+        <name>idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="36" column="1" bodyfile="lib/FSM.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFSM_1a780fad8513827a8b3605ddd6701a4b1f" prot="private" static="no" mutable="no">
+        <type><ref refid="classConfig" kindref="compound">Config</ref></type>
+        <definition>Config FSM::config</definition>
+        <argsstring></argsstring>
+        <name>config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="37" column="1" bodyfile="lib/FSM.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFSM_1aa346f812ebdaa751e25a2dce6d821587" prot="private" static="no" mutable="no">
+        <type><ref refid="classMeasure" kindref="compound">Measure</ref></type>
+        <definition>Measure FSM::measure</definition>
+        <argsstring></argsstring>
+        <name>measure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="38" column="1" bodyfile="lib/FSM.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFSM_1ad275d4a25068af980261f6659349f574" prot="private" static="no" mutable="no">
+        <type><ref refid="classOutput" kindref="compound">Output</ref></type>
+        <definition>Output FSM::output</definition>
+        <argsstring></argsstring>
+        <name>output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="39" column="1" bodyfile="lib/FSM.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFSM_1af60b2de7424483c8a3656ee70dc33f1e" prot="private" static="no" mutable="no">
+        <type><ref refid="classSleep" kindref="compound">Sleep</ref></type>
+        <definition>Sleep FSM::sleep</definition>
+        <argsstring></argsstring>
+        <name>sleep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="40" column="1" bodyfile="lib/FSM.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classFSM_1aa8a98fb33283f3c8910027fc3ea19cf0" prot="private" static="no" mutable="no">
+        <type><ref refid="classState" kindref="compound">State</ref> &amp;</type>
+        <definition>State&amp; FSM::nextState</definition>
+        <argsstring></argsstring>
+        <name>nextState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="41" column="1" bodyfile="lib/FSM.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classFSM_1a2fccf1c016c43e4fa4ee512311bf9d7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FSM::FSM</definition>
+        <argsstring>()</argsstring>
+        <name>FSM</name>
+        <briefdescription>
+<para>Class constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classFSM_1a8a6e956375ea383f83fdd076badbe5a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FSM::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/FSM.hpp" line="18" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>DateTime</label>
+        <link refid="classDateTime"/>
+      </node>
+      <node id="8">
+        <label>FSM</label>
+        <link refid="classFSM"/>
+        <childnode refid="9" relation="usage">
+          <edgelabel>config</edgelabel>
+        </childnode>
+        <childnode refid="12" relation="usage">
+          <edgelabel>sleep</edgelabel>
+        </childnode>
+        <childnode refid="13" relation="usage">
+          <edgelabel>idle</edgelabel>
+        </childnode>
+        <childnode refid="14" relation="usage">
+          <edgelabel>measure</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>nextState</edgelabel>
+        </childnode>
+        <childnode refid="15" relation="usage">
+          <edgelabel>output</edgelabel>
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Output</label>
+        <link refid="classOutput"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="13">
+        <label>Idle</label>
+        <link refid="classIdle"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Measure</label>
+        <link refid="classMeasure"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Sleep</label>
+        <link refid="classSleep"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>Config</label>
+        <link refid="classConfig"/>
+        <childnode refid="10" relation="public-inheritance">
+        </childnode>
+        <childnode refid="11" relation="usage">
+          <edgelabel>currentTime</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/FSM.hpp" line="10" column="1" bodyfile="lib/FSM.hpp" bodystart="10" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classFSM_1a780fad8513827a8b3605ddd6701a4b1f" prot="private" virt="non-virtual"><scope>FSM</scope><name>config</name></member>
+      <member refid="classFSM_1a8a6e956375ea383f83fdd076badbe5a7" prot="public" virt="non-virtual"><scope>FSM</scope><name>execute</name></member>
+      <member refid="classFSM_1a790f41194078199e51a5203f1468d72f" prot="public" virt="non-virtual"><scope>FSM</scope><name>flag_data_averages_ready</name></member>
+      <member refid="classFSM_1acc98c610679f700973b1566da8697030" prot="public" virt="non-virtual"><scope>FSM</scope><name>flag_freq_data_ready</name></member>
+      <member refid="classFSM_1aa3ee0bdf4d0af7e5c7b58e842241429f" prot="public" virt="non-virtual"><scope>FSM</scope><name>flag_new_measure</name></member>
+      <member refid="classFSM_1aa17b47814eb43e7b46e3068b6d8ede95" prot="public" virt="non-virtual"><scope>FSM</scope><name>flag_UART0_rx_char</name></member>
+      <member refid="classFSM_1a2fccf1c016c43e4fa4ee512311bf9d7d" prot="public" virt="non-virtual"><scope>FSM</scope><name>FSM</name></member>
+      <member refid="classFSM_1a0182ee82eb45295d108b4a85663656a5" prot="private" virt="non-virtual"><scope>FSM</scope><name>idle</name></member>
+      <member refid="classFSM_1aa346f812ebdaa751e25a2dce6d821587" prot="private" virt="non-virtual"><scope>FSM</scope><name>measure</name></member>
+      <member refid="classFSM_1aa8a98fb33283f3c8910027fc3ea19cf0" prot="private" virt="non-virtual"><scope>FSM</scope><name>nextState</name></member>
+      <member refid="classFSM_1ad275d4a25068af980261f6659349f574" prot="private" virt="non-virtual"><scope>FSM</scope><name>output</name></member>
+      <member refid="classFSM_1af60b2de7424483c8a3656ee70dc33f1e" prot="private" virt="non-virtual"><scope>FSM</scope><name>sleep</name></member>
+      <member refid="classFSM_1ae1d4ec156557896a3465b04e9cfe0f0e" prot="public" virt="non-virtual"><scope>FSM</scope><name>timestamp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir">
+    <compoundname>lib</compoundname>
+    <innerfile refid="Config_8hpp">Config.hpp</innerfile>
+    <innerfile refid="DateTime_8hpp">DateTime.hpp</innerfile>
+    <innerfile refid="FSM_8hpp">FSM.hpp</innerfile>
+    <innerfile refid="Measure_8hpp">Measure.hpp</innerfile>
+    <innerfile refid="Output_8hpp">Output.hpp</innerfile>
+    <innerfile refid="Sleep_8hpp">Sleep.hpp</innerfile>
+    <innerfile refid="State_8hpp">State.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/"/>
+  </compounddef>
+</doxygen>

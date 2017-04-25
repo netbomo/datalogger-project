@@ -1,3 +1,4 @@
 build.all.configs.enabled=false
+doctool/workspace.default=org.eclipse.cdt.ui.doxygen
 eclipse.preferences.version=1
 macros/workspace=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<macros/>\n

@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classDateTime" kind="class" language="C++" prot="public">
+    <compoundname>DateTime</compoundname>
+    <includes refid="DateTime_8hpp" local="no">DateTime.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classDateTime_1af7e478d95feae77286bef901244702b3" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DateTime::m_second</definition>
+        <argsstring></argsstring>
+        <name>m_second</name>
+        <briefdescription>
+<para>second register </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="37" column="1" bodyfile="lib/DateTime.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDateTime_1a90b1c982c3cc64d1dabf0cb298514532" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DateTime::m_minute</definition>
+        <argsstring></argsstring>
+        <name>m_minute</name>
+        <briefdescription>
+<para>minute register </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="39" column="1" bodyfile="lib/DateTime.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDateTime_1ad329b38032a98f88c4c799fb61178ddc" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DateTime::m_hour</definition>
+        <argsstring></argsstring>
+        <name>m_hour</name>
+        <briefdescription>
+<para>hour register </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="41" column="1" bodyfile="lib/DateTime.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDateTime_1a2f50164877b2efea0c3e0410b3cbbddd" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DateTime::m_date</definition>
+        <argsstring></argsstring>
+        <name>m_date</name>
+        <briefdescription>
+<para>date number register </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="43" column="1" bodyfile="lib/DateTime.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDateTime_1af1c44e0e2f35484f5511e5fc794217a3" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char DateTime::m_month</definition>
+        <argsstring></argsstring>
+        <name>m_month</name>
+        <briefdescription>
+<para>month register </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="45" column="1" bodyfile="lib/DateTime.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classDateTime_1ad6821477db92536a88a021065e167bc7" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int DateTime::m_year</definition>
+        <argsstring></argsstring>
+        <name>m_year</name>
+        <briefdescription>
+<para>year register </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="47" column="1" bodyfile="lib/DateTime.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classDateTime_1ac2c1181de2aed99df5295dde0e4e61b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>DateTime::DateTime</definition>
+        <argsstring>(unsigned char s=0, unsigned char mi=0, unsigned char h=0, unsigned char d=0, unsigned char mo=0, unsigned int y=0)</argsstring>
+        <name>DateTime</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>s</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>mi</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>h</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>d</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned char</type>
+          <declname>mo</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>y</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Class constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="15" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDateTime_1ab81236b0fd2e5233fc7e519b57ae6580" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DateTime::toDateTime</definition>
+        <argsstring>(unsigned long int timestamp)</argsstring>
+        <name>toDateTime</name>
+        <param>
+          <type>unsigned long int</type>
+          <declname>timestamp</declname>
+        </param>
+        <briefdescription>
+<para>convert from timstamp (unsigned long int) to date time format </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timestamp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(???) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="22" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classDateTime_1ad861358638ba935132cdcfda0dd8c6c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned long int</type>
+        <definition>unsigned long int DateTime::getDateTime</definition>
+        <argsstring>()</argsstring>
+        <name>getDateTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="24" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classDateTime_1ab5970a4fdb13bb1bfa04f4611e8512a1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool DateTime::isLeap</definition>
+        <argsstring>(unsigned int year)</argsstring>
+        <name>isLeap</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>year</declname>
+        </param>
+        <briefdescription>
+<para>test if the year is leap or not </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>year</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(???) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>bool </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/DateTime.hpp" line="32" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The <ref refid="classDateTime" kindref="compound">DateTime</ref> class permit to have human comprehensive format for the timestamp. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="lib/DateTime.hpp" line="8" column="1" bodyfile="lib/DateTime.hpp" bodystart="8" bodyend="49"/>
+    <listofallmembers>
+      <member refid="classDateTime_1ac2c1181de2aed99df5295dde0e4e61b4" prot="public" virt="non-virtual"><scope>DateTime</scope><name>DateTime</name></member>
+      <member refid="classDateTime_1ad861358638ba935132cdcfda0dd8c6c2" prot="public" virt="non-virtual"><scope>DateTime</scope><name>getDateTime</name></member>
+      <member refid="classDateTime_1ab5970a4fdb13bb1bfa04f4611e8512a1" prot="private" virt="non-virtual"><scope>DateTime</scope><name>isLeap</name></member>
+      <member refid="classDateTime_1a2f50164877b2efea0c3e0410b3cbbddd" prot="private" virt="non-virtual"><scope>DateTime</scope><name>m_date</name></member>
+      <member refid="classDateTime_1ad329b38032a98f88c4c799fb61178ddc" prot="private" virt="non-virtual"><scope>DateTime</scope><name>m_hour</name></member>
+      <member refid="classDateTime_1a90b1c982c3cc64d1dabf0cb298514532" prot="private" virt="non-virtual"><scope>DateTime</scope><name>m_minute</name></member>
+      <member refid="classDateTime_1af1c44e0e2f35484f5511e5fc794217a3" prot="private" virt="non-virtual"><scope>DateTime</scope><name>m_month</name></member>
+      <member refid="classDateTime_1af7e478d95feae77286bef901244702b3" prot="private" virt="non-virtual"><scope>DateTime</scope><name>m_second</name></member>
+      <member refid="classDateTime_1ad6821477db92536a88a021065e167bc7" prot="private" virt="non-virtual"><scope>DateTime</scope><name>m_year</name></member>
+      <member refid="classDateTime_1ab81236b0fd2e5233fc7e519b57ae6580" prot="public" virt="non-virtual"><scope>DateTime</scope><name>toDateTime</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="CommitDialog.authorValues">
+		<item value="gilou &lt;gilou@tripalium.org&gt;"/>
+		<item value="gilou &lt;gilou@laptop.home&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="gilou &lt;gilou@tripalium.org&gt;"/>
+		<item value="gilou &lt;gilou@laptop.home&gt;"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
+		<item value="652" key="DIALOG_WIDTH"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="449" key="DIALOG_HEIGHT"/>
+		<item value="601" key="DIALOG_X_ORIGIN"/>
+		<item value="101" key="DIALOG_Y_ORIGIN"/>
+		<list key="sashWeights">
+			<item value="600"/>
+			<item value="400"/>
+		</list>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="/home/gilou/git_repos/datalogger-project/.git">
+			<item value="false"/>
+			<item value="gilou &lt;gilou@tripalium.org&gt;"/>
+			<item value="&#x0A;&#x0A;Signed-off-by: gilou &lt;gilou@tripalium.org&gt;&#x0A;"/>
+			<item value="gilou &lt;gilou@tripalium.org&gt;"/>
+			<item value="878ea32b8cdea0fda25fd1592274115ec7d9dc6a"/>
+		</list>
+	</section>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item value="679,320" key="STAGING_SASH_FORM_WEIGHT"/>
+		<item value="false" key="sortItemState"/>
+		<item value="500,500" key="HORIZONTAL_SASH_FORM_WEIGHT"/>
+	</section>
+</section>

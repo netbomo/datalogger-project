@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classState" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>State</compoundname>
+    <derivedcompoundref refid="classConfig" prot="public" virt="non-virtual">Config</derivedcompoundref>
+    <derivedcompoundref refid="classIdle" prot="public" virt="non-virtual">Idle</derivedcompoundref>
+    <derivedcompoundref refid="classMeasure" prot="public" virt="non-virtual">Measure</derivedcompoundref>
+    <derivedcompoundref refid="classOutput" prot="public" virt="non-virtual">Output</derivedcompoundref>
+    <derivedcompoundref refid="classSleep" prot="public" virt="non-virtual">Sleep</derivedcompoundref>
+    <includes refid="State_8hpp" local="no">State.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classState_1ab91bb1dd5aa6260ab2a456581daf9ec2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>State::State</definition>
+        <argsstring>()</argsstring>
+        <name>State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/State.hpp" line="7" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classState_1a9ddc1df6f998184d6477b48fab90281c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual State::~State</definition>
+        <argsstring>()</argsstring>
+        <name>~State</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/State.hpp" line="9" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classState_1aa272f704a5f33920524fb57c80339b2f" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void State::execute</definition>
+        <argsstring>()=0</argsstring>
+        <name>execute</name>
+        <reimplementedby refid="classSleep_1ac8c6b89846402091287b47aa8d036572">execute</reimplementedby>
+        <reimplementedby refid="classMeasure_1a3c4ca24a8e5eb4a844facbd025232b1c">execute</reimplementedby>
+        <reimplementedby refid="classOutput_1a784d66e2e5dc64c38842cb656fba724a">execute</reimplementedby>
+        <reimplementedby refid="classIdle_1a50b2057230259c6d8a898c0546a4db88">execute</reimplementedby>
+        <reimplementedby refid="classConfig_1acb6ae78ee9bafad396737c77f047bd04">execute</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/State.hpp" line="11" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="36">
+        <label>Output</label>
+        <link refid="classOutput"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="34">
+        <label>Idle</label>
+        <link refid="classIdle"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>Measure</label>
+        <link refid="classMeasure"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>Sleep</label>
+        <link refid="classSleep"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>Config</label>
+        <link refid="classConfig"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="lib/State.hpp" line="4" column="1" bodyfile="lib/State.hpp" bodystart="4" bodyend="12"/>
+    <listofallmembers>
+      <member refid="classState_1aa272f704a5f33920524fb57c80339b2f" prot="public" virt="pure-virtual"><scope>State</scope><name>execute</name></member>
+      <member refid="classState_1ab91bb1dd5aa6260ab2a456581daf9ec2" prot="public" virt="non-virtual"><scope>State</scope><name>State</name></member>
+      <member refid="classState_1a9ddc1df6f998184d6477b48fab90281c" prot="public" virt="virtual"><scope>State</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

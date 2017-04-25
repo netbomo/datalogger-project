@@ -1,0 +1,14 @@
+#ifndef STATE__HPP
+#define STATE__HPP
+
+class State {
+    // Operations
+    public :
+        State ();
+
+        ~State();
+
+        virtual void execute () = 0;
+};
+
+#endif

@@ -1,0 +1,5 @@
+/windlogger_cpp/windlogger_cpp.doxyfile
+/windlogger_cpp/windlogger_cpp.doxyfile
+/windlogger_cpp/windlogger_cpp.doxyfile
+/windlogger_cpp/windlogger_cpp.doxyfile
+/windlogger_cpp/windlogger_cpp.doxyfile

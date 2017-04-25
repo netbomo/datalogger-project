@@ -1,0 +1,9 @@
+<map id="FSM" name="FSM">
+<area shape="rect" id="node2" href="$classConfig.html" title="Config" alt="" coords="63,95,123,121"/>
+<area shape="rect" id="node3" href="$classState.html" title="State" alt="" coords="283,5,337,32"/>
+<area shape="rect" id="node5" href="$classSleep.html" title="Sleep" alt="" coords="257,95,312,121"/>
+<area shape="rect" id="node6" href="$classIdle.html" title="Idle" alt="" coords="337,95,379,121"/>
+<area shape="rect" id="node7" href="$classMeasure.html" title="Measure" alt="" coords="403,95,475,121"/>
+<area shape="rect" id="node8" href="$classOutput.html" title="Output" alt="" coords="499,95,561,121"/>
+<area shape="rect" id="node4" href="$classDateTime.html" title="The DateTime class permit to have human comprehensive format for the timestamp. " alt="" coords="5,5,84,32"/>
+</map>

@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classOutput" kind="class" language="C++" prot="public">
+    <compoundname>Output</compoundname>
+    <basecompoundref refid="classState" prot="public" virt="non-virtual">State</basecompoundref>
+    <includes refid="Output_8hpp" local="no">Output.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classOutput_1a6bcee5740b98818b54a7cb3f3212084b" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Output::output_enable</definition>
+        <argsstring></argsstring>
+        <name>output_enable</name>
+        <briefdescription>
+<para>this register permit to enable or disable output </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="10" column="1" bodyfile="lib/Output.hpp" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classOutput_1a180cf4bc4e10bd5c13aa7b781e40c279" prot="public" static="yes" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char Output::USART0</definition>
+        <argsstring></argsstring>
+        <name>USART0</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="25" column="1" bodyfile="lib/Output.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOutput_1aac634079f5edcaf4e26830336b0020e1" prot="public" static="yes" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char Output::USART1</definition>
+        <argsstring></argsstring>
+        <name>USART1</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>enable constant for USART0 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="27" column="1" bodyfile="lib/Output.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOutput_1a988af4cf1bb1697548670893871f424c" prot="public" static="yes" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char Output::SD_CARD</definition>
+        <argsstring></argsstring>
+        <name>SD_CARD</name>
+        <initializer>= 4</initializer>
+        <briefdescription>
+<para>enable constant for USART1 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="29" column="1" bodyfile="lib/Output.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOutput_1ae545bb67ea843eb6e0568e0d0fd46688" prot="public" static="yes" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char Output::WIFI</definition>
+        <argsstring></argsstring>
+        <name>WIFI</name>
+        <initializer>= 8</initializer>
+        <briefdescription>
+<para>enable constant for SD_CARD </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="31" column="1" bodyfile="lib/Output.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classOutput_1a7ccc32f33dc6d4a9ac68c3b2c09f9bf8" prot="public" static="yes" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char Output::GPRS</definition>
+        <argsstring></argsstring>
+        <name>GPRS</name>
+        <initializer>= 16</initializer>
+        <briefdescription>
+<para>enable constant for WIFI </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="33" column="1" bodyfile="lib/Output.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classOutput_1a428c663520336477a12f1a33504eb067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Output::Output</definition>
+        <argsstring>()</argsstring>
+        <name>Output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="12" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classOutput_1a0162ebdc8e5b13917788692fa9a753a0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Output::~Output</definition>
+        <argsstring>()</argsstring>
+        <name>~Output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="14" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classOutput_1a784d66e2e5dc64c38842cb656fba724a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Output::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <reimplements refid="classState_1aa272f704a5f33920524fb57c80339b2f">execute</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="16" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classOutput_1af4bc42d2d3bb3b2a98782f0df0eba133" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Output::usart0_print</definition>
+        <argsstring>()</argsstring>
+        <name>usart0_print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classOutput_1a943b106620d1c711e838298a4c4233af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Output::usart1_print</definition>
+        <argsstring>()</argsstring>
+        <name>usart1_print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="20" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classOutput_1a2d62a7d56d1731d8f100ad850642d04c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Output::SDCard_print</definition>
+        <argsstring>()</argsstring>
+        <name>SDCard_print</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Output.hpp" line="22" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="24">
+        <label>Output</label>
+        <link refid="classOutput"/>
+        <childnode refid="25" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="26">
+        <label>Output</label>
+        <link refid="classOutput"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+    </collaborationgraph>
+    <location file="lib/Output.hpp" line="6" column="1" bodyfile="lib/Output.hpp" bodystart="6" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classOutput_1a784d66e2e5dc64c38842cb656fba724a" prot="public" virt="virtual"><scope>Output</scope><name>execute</name></member>
+      <member refid="classOutput_1a7ccc32f33dc6d4a9ac68c3b2c09f9bf8" prot="public" virt="non-virtual"><scope>Output</scope><name>GPRS</name></member>
+      <member refid="classOutput_1a428c663520336477a12f1a33504eb067" prot="public" virt="non-virtual"><scope>Output</scope><name>Output</name></member>
+      <member refid="classOutput_1a6bcee5740b98818b54a7cb3f3212084b" prot="public" virt="non-virtual"><scope>Output</scope><name>output_enable</name></member>
+      <member refid="classOutput_1a988af4cf1bb1697548670893871f424c" prot="public" virt="non-virtual"><scope>Output</scope><name>SD_CARD</name></member>
+      <member refid="classOutput_1a2d62a7d56d1731d8f100ad850642d04c" prot="public" virt="non-virtual"><scope>Output</scope><name>SDCard_print</name></member>
+      <member refid="classState_1ab91bb1dd5aa6260ab2a456581daf9ec2" prot="public" virt="non-virtual"><scope>Output</scope><name>State</name></member>
+      <member refid="classOutput_1a180cf4bc4e10bd5c13aa7b781e40c279" prot="public" virt="non-virtual"><scope>Output</scope><name>USART0</name></member>
+      <member refid="classOutput_1af4bc42d2d3bb3b2a98782f0df0eba133" prot="public" virt="non-virtual"><scope>Output</scope><name>usart0_print</name></member>
+      <member refid="classOutput_1aac634079f5edcaf4e26830336b0020e1" prot="public" virt="non-virtual"><scope>Output</scope><name>USART1</name></member>
+      <member refid="classOutput_1a943b106620d1c711e838298a4c4233af" prot="public" virt="non-virtual"><scope>Output</scope><name>usart1_print</name></member>
+      <member refid="classOutput_1ae545bb67ea843eb6e0568e0d0fd46688" prot="public" virt="non-virtual"><scope>Output</scope><name>WIFI</name></member>
+      <member refid="classOutput_1a0162ebdc8e5b13917788692fa9a753a0" prot="public" virt="virtual"><scope>Output</scope><name>~Output</name></member>
+      <member refid="classState_1a9ddc1df6f998184d6477b48fab90281c" prot="public" virt="virtual"><scope>Output</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

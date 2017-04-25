@@ -1,0 +1,59 @@
+#ifndef DATETIME__HPP
+#define DATETIME__HPP
+
+/**
+ * \brief The DateTime structure permit to have human comprehensive format for the timestamp.
+ *        
+ */
+class DateTime {
+    // Attributes
+    private :
+        /// second register
+        unsigned char m_second;
+        /// minute register
+        unsigned char m_minute;
+        /// hour register
+        unsigned char m_hour;
+        /// date number register
+        unsigned char m_date;
+        /// month register
+        unsigned char m_month;
+        /// year register
+        unsigned int m_year;
+        /// Epoch year constante
+        /// The epoch time is the timestamp strating time. The value is the 01/01/1970 at 00:00:00
+        const unsigned int EPOCH_YEAR = 1970;
+        /// Epoch month constante
+        const unsigned char EPOCH_MONTH = 1;
+        /// Epoch date constante
+        const unsigned char EPOCH_DATE = 1;
+    // Operations
+    public :
+        /**
+         * \brief Class constructor
+         */
+        DateTime(unsigned char second,
+        		unsigned char minute,
+				unsigned char hour,
+				unsigned char date,
+				unsigned char month,
+				unsigned int year);
+
+        /**
+         * \brief convert from timstamp (unsigned long int) to date time format
+         * \param timestamp (???)
+         * \return void
+         */
+        void toDateTime (unsigned long int timestamp);
+    private :
+        /**
+         * \brief test if the year is leap or not
+         * \param year (???)
+         * \return bool
+         */
+        bool isLeap (unsigned int year);
+    public :
+        unsigned long int getDateTime ();
+};
+
+#endif

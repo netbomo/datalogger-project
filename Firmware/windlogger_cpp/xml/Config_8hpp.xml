@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="Config_8hpp" kind="file" language="C++">
+    <compoundname>Config.hpp</compoundname>
+    <includes refid="DateTime_8hpp" local="yes">DateTime.hpp</includes>
+    <includes refid="State_8hpp" local="yes">State.hpp</includes>
+    <includedby refid="FSM_8hpp" local="yes">lib/FSM.hpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>State.hpp</label>
+        <link refid="State_8hpp"/>
+      </node>
+      <node id="1">
+        <label>DateTime.hpp</label>
+        <link refid="DateTime_8hpp"/>
+      </node>
+      <node id="0">
+        <label>lib/Config.hpp</label>
+        <link refid="Config_8hpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4">
+        <label>lib/FSM.hpp</label>
+        <link refid="FSM_8hpp"/>
+      </node>
+      <node id="3">
+        <label>lib/Config.hpp</label>
+        <link refid="Config_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classConfig" prot="public">Config</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CONFIG__HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CONFIG__HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DateTime_8hpp" kindref="compound">DateTime.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="State_8hpp" kindref="compound">State.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classConfig" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classConfig" kindref="compound">Config</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classState" kindref="compound">State</ref><sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Associations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Attributes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>private<sp/>:</highlight></codeline>
+<codeline lineno="11" refid="classConfig_1ad2bae4db3d13f09b64b561836d25c651" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classDateTime" kindref="compound">DateTime</ref><sp/><ref refid="classConfig_1ad2bae4db3d13f09b64b561836d25c651" kindref="member">currentTime</ref>;</highlight></codeline>
+<codeline lineno="13" refid="classConfig_1a8acfceff457a2f01cac48ae21ff8ef01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classConfig_1a8acfceff457a2f01cac48ae21ff8ef01" kindref="member">request</ref>[20];</highlight></codeline>
+<codeline lineno="15" refid="classConfig_1ae526787b09821a19cc042edc63ba9386" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="classConfig_1ae526787b09821a19cc042edc63ba9386" kindref="member">request_i</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Operations</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>public<sp/>:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classConfig_1abd0c571c116924871e30444b192b792a" kindref="member">Config</ref><sp/>();</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classConfig_1ae0b90d4e69f2d1cb411f8a6466db7bba" kindref="member">~Config</ref>();</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classConfig_1acb6ae78ee9bafad396737c77f047bd04" kindref="member">execute</ref><sp/>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classConfig_1a227be549de0f89f787a20499c8db994c" kindref="member">print_config</ref><sp/>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classConfig_1ae18aa5af927253afbe2dafacc848b343" kindref="member">update</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>request[]);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classConfig_1a3f8d043789557191686ae632ebe6a571" kindref="member">addToRequest</ref><sp/>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="lib/Config.hpp"/>
+  </compounddef>
+</doxygen>

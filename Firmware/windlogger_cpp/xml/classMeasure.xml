@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classMeasure" kind="class" language="C++" prot="public">
+    <compoundname>Measure</compoundname>
+    <basecompoundref refid="classState" prot="public" virt="non-virtual">State</basecompoundref>
+    <includes refid="Measure_8hpp" local="no">Measure.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classMeasure_1aaca1bbcda6715d450f3724657e7fa6f2" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Measure::sensors_enable</definition>
+        <argsstring></argsstring>
+        <name>sensors_enable</name>
+        <briefdescription>
+<para>this register permit to enable or disable sensor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="17" column="1" bodyfile="lib/Measure.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMeasure_1a6c657c7e7e70e7086bdb49c0f3ba0062" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Measure::measureCounter</definition>
+        <argsstring></argsstring>
+        <name>measureCounter</name>
+        <briefdescription>
+<para>this counter is use to select what is need to do. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="58" column="1" bodyfile="lib/Measure.hpp" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMeasure_1a6a939399c4defc0ac990a9fa795e3918" prot="private" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char Measure::measureMax</definition>
+        <argsstring></argsstring>
+        <name>measureMax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="59" column="1" bodyfile="lib/Measure.hpp" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMeasure_1ab55c93d6121f43c91a337fb7bcd26825" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Measure::Measure</definition>
+        <argsstring>()</argsstring>
+        <name>Measure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="10" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeasure_1a6af10081ceb2f0850e74aec7202669a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Measure::~Measure</definition>
+        <argsstring>()</argsstring>
+        <name>~Measure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeasure_1a3c4ca24a8e5eb4a844facbd025232b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Measure::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <reimplements refid="classState_1aa272f704a5f33920524fb57c80339b2f">execute</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="13" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMeasure_1a333a5ff14469e98bed368fd3e268751f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Measure::clear_data_array</definition>
+        <argsstring>()</argsstring>
+        <name>clear_data_array</name>
+        <briefdescription>
+<para>this method clear data value to save news </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="24" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeasure_1adb3ffd40b37bda243c00893ffb208907" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Measure::freq_init_measurement</definition>
+        <argsstring>()</argsstring>
+        <name>freq_init_measurement</name>
+        <briefdescription>
+<para>this method initialize frequence measurement for anemometer and RPM </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="29" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeasure_1add6924662bc09f06abc3ec7b6dc2c94e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Measure::windvane_value</definition>
+        <argsstring>()</argsstring>
+        <name>windvane_value</name>
+        <briefdescription>
+<para>read the windvane value en map it between 0 to 359 degres </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="34" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeasure_1a313b5845f14f7c62f37db11272145320" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Measure::power_read_value</definition>
+        <argsstring>()</argsstring>
+        <name>power_read_value</name>
+        <briefdescription>
+<para>read power value - not define realy (see emonLib) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="39" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeasure_1ae3c562d3b11c5e202366597b951e969b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Measure::temperature_read_value</definition>
+        <argsstring>()</argsstring>
+        <name>temperature_read_value</name>
+        <briefdescription>
+<para>read the temperature value from one DS18b20 sensor </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="44" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeasure_1a4390d770b19dbc51e5486fefe9f4b9d1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Measure::freq_read_value</definition>
+        <argsstring>()</argsstring>
+        <name>freq_read_value</name>
+        <briefdescription>
+<para>read value from anemometer and RPM </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classMeasure_1a1518672dff4f81603a35bff08c20e9f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Measure::calc_average</definition>
+        <argsstring>()</argsstring>
+        <name>calc_average</name>
+        <briefdescription>
+<para>calcul average from the data array </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Measure.hpp" line="54" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="21">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="20">
+        <label>Measure</label>
+        <link refid="classMeasure"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="23">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="22">
+        <label>Measure</label>
+        <link refid="classMeasure"/>
+        <childnode refid="23" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/Measure.hpp" line="6" column="1" bodyfile="lib/Measure.hpp" bodystart="6" bodyend="60"/>
+    <listofallmembers>
+      <member refid="classMeasure_1a1518672dff4f81603a35bff08c20e9f5" prot="private" virt="non-virtual"><scope>Measure</scope><name>calc_average</name></member>
+      <member refid="classMeasure_1a333a5ff14469e98bed368fd3e268751f" prot="private" virt="non-virtual"><scope>Measure</scope><name>clear_data_array</name></member>
+      <member refid="classMeasure_1a3c4ca24a8e5eb4a844facbd025232b1c" prot="public" virt="virtual"><scope>Measure</scope><name>execute</name></member>
+      <member refid="classMeasure_1adb3ffd40b37bda243c00893ffb208907" prot="private" virt="non-virtual"><scope>Measure</scope><name>freq_init_measurement</name></member>
+      <member refid="classMeasure_1a4390d770b19dbc51e5486fefe9f4b9d1" prot="private" virt="non-virtual"><scope>Measure</scope><name>freq_read_value</name></member>
+      <member refid="classMeasure_1ab55c93d6121f43c91a337fb7bcd26825" prot="public" virt="non-virtual"><scope>Measure</scope><name>Measure</name></member>
+      <member refid="classMeasure_1a6c657c7e7e70e7086bdb49c0f3ba0062" prot="private" virt="non-virtual"><scope>Measure</scope><name>measureCounter</name></member>
+      <member refid="classMeasure_1a6a939399c4defc0ac990a9fa795e3918" prot="private" virt="non-virtual"><scope>Measure</scope><name>measureMax</name></member>
+      <member refid="classMeasure_1a313b5845f14f7c62f37db11272145320" prot="private" virt="non-virtual"><scope>Measure</scope><name>power_read_value</name></member>
+      <member refid="classMeasure_1aaca1bbcda6715d450f3724657e7fa6f2" prot="public" virt="non-virtual"><scope>Measure</scope><name>sensors_enable</name></member>
+      <member refid="classState_1ab91bb1dd5aa6260ab2a456581daf9ec2" prot="public" virt="non-virtual"><scope>Measure</scope><name>State</name></member>
+      <member refid="classMeasure_1ae3c562d3b11c5e202366597b951e969b" prot="private" virt="non-virtual"><scope>Measure</scope><name>temperature_read_value</name></member>
+      <member refid="classMeasure_1add6924662bc09f06abc3ec7b6dc2c94e" prot="private" virt="non-virtual"><scope>Measure</scope><name>windvane_value</name></member>
+      <member refid="classMeasure_1a6af10081ceb2f0850e74aec7202669a2" prot="public" virt="virtual"><scope>Measure</scope><name>~Measure</name></member>
+      <member refid="classState_1a9ddc1df6f998184d6477b48fab90281c" prot="public" virt="virtual"><scope>Measure</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

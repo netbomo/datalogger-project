@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classIdle" kind="class" language="C++" prot="public">
+    <compoundname>Idle</compoundname>
+    <basecompoundref refid="classState" prot="public" virt="non-virtual">State</basecompoundref>
+    <includes refid="State_8hpp" local="no">State.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classIdle_1a766bf3621da665c0f6a508084d1833e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Idle::Idle</definition>
+        <argsstring>()</argsstring>
+        <name>Idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/State.hpp" line="17" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classIdle_1a1abdb057ea22cc06e5ff1e9b265f964b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Idle::~Idle</definition>
+        <argsstring>()</argsstring>
+        <name>~Idle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/State.hpp" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classIdle_1a50b2057230259c6d8a898c0546a4db88" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Idle::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <reimplements refid="classState_1aa272f704a5f33920524fb57c80339b2f">execute</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/State.hpp" line="21" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="16">
+        <label>Idle</label>
+        <link refid="classIdle"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="19">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="18">
+        <label>Idle</label>
+        <link refid="classIdle"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/State.hpp" line="14" column="1" bodyfile="lib/State.hpp" bodystart="14" bodyend="22"/>
+    <listofallmembers>
+      <member refid="classIdle_1a50b2057230259c6d8a898c0546a4db88" prot="public" virt="virtual"><scope>Idle</scope><name>execute</name></member>
+      <member refid="classIdle_1a766bf3621da665c0f6a508084d1833e2" prot="public" virt="non-virtual"><scope>Idle</scope><name>Idle</name></member>
+      <member refid="classState_1ab91bb1dd5aa6260ab2a456581daf9ec2" prot="public" virt="non-virtual"><scope>Idle</scope><name>State</name></member>
+      <member refid="classIdle_1a1abdb057ea22cc06e5ff1e9b265f964b" prot="public" virt="virtual"><scope>Idle</scope><name>~Idle</name></member>
+      <member refid="classState_1a9ddc1df6f998184d6477b48fab90281c" prot="public" virt="virtual"><scope>Idle</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

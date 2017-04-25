@@ -1,0 +1,66 @@
+/**
+ *******************************************************************************
+ *******************************************************************************
+ *
+ *	Licence :
+ *    This program is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    This program is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * 
+ *******************************************************************************
+ *******************************************************************************
+ *
+ *
+ *    @file   Config.cpp
+ *    @Author gilou
+ *    @date   20 avr. 2017
+ *    @brief  Brief description of file.
+ *
+ *    Detailed description of file.
+ */
+
+
+
+#include "DateTime.hpp"
+#include "State.hpp"
+
+class Config : public State {
+    // Associations
+    // Attributes
+    private :
+        DateTime currentTime;
+        /// is the char array use to save character from USART0
+        char request[20];
+        /// this is the request strin's index
+        char request_i = 0;
+    // Operations
+    public :
+        Config ();
+        virtual void execute ();
+        /**
+         * \brief display all config on USART0
+         * \return void
+         */
+        void print_config ();
+        /**
+         * \brief update confif register
+         * \param request (???)
+         * \return void
+         */
+        void update(char &request);
+        /**
+         * \brief add char to request
+         * \param c (???)
+         * \return void
+         */
+        void addToRequest (char c);

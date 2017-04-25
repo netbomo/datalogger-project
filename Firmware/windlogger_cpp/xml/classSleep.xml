@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classSleep" kind="class" language="C++" prot="public">
+    <compoundname>Sleep</compoundname>
+    <basecompoundref refid="classState" prot="public" virt="non-virtual">State</basecompoundref>
+    <includes refid="Sleep_8hpp" local="no">Sleep.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSleep_1a54662668a2eb0463bd9b96cffc580f15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Sleep::Sleep</definition>
+        <argsstring>()</argsstring>
+        <name>Sleep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Sleep.hpp" line="9" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classSleep_1af01755616828bbaeccf3ff2ee99d3fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Sleep::~Sleep</definition>
+        <argsstring>()</argsstring>
+        <name>~Sleep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Sleep.hpp" line="11" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classSleep_1ac8c6b89846402091287b47aa8d036572" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Sleep::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <reimplements refid="classState_1aa272f704a5f33920524fb57c80339b2f">execute</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Sleep.hpp" line="13" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="29">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="28">
+        <label>Sleep</label>
+        <link refid="classSleep"/>
+        <childnode refid="29" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="31">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="30">
+        <label>Sleep</label>
+        <link refid="classSleep"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/Sleep.hpp" line="6" column="1" bodyfile="lib/Sleep.hpp" bodystart="6" bodyend="14"/>
+    <listofallmembers>
+      <member refid="classSleep_1ac8c6b89846402091287b47aa8d036572" prot="public" virt="virtual"><scope>Sleep</scope><name>execute</name></member>
+      <member refid="classSleep_1a54662668a2eb0463bd9b96cffc580f15" prot="public" virt="non-virtual"><scope>Sleep</scope><name>Sleep</name></member>
+      <member refid="classState_1ab91bb1dd5aa6260ab2a456581daf9ec2" prot="public" virt="non-virtual"><scope>Sleep</scope><name>State</name></member>
+      <member refid="classSleep_1af01755616828bbaeccf3ff2ee99d3fb8" prot="public" virt="virtual"><scope>Sleep</scope><name>~Sleep</name></member>
+      <member refid="classState_1a9ddc1df6f998184d6477b48fab90281c" prot="public" virt="virtual"><scope>Sleep</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

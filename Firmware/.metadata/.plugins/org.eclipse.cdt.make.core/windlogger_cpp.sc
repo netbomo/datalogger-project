@@ -326,8 +326,11 @@
 <definedSymbol symbol="__AVR=1"/>
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
-<definedSymbol symbol="__AVR_ARCH__=5"/>
-<definedSymbol symbol="__AVR_ATmega16__=1"/>
+<definedSymbol symbol="__AVR_ARCH__=51"/>
+<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
+<definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
+<definedSymbol symbol="__AVR_HAVE_ELPM__=1"/>
+<definedSymbol symbol="__AVR_HAVE_ELPMX__=1"/>
 <definedSymbol symbol="__AVR_HAVE_MOVW__=1"/>
 <definedSymbol symbol="__AVR_HAVE_LPMX__=1"/>
 <definedSymbol symbol="__AVR_ENHANCED__=1"/>
@@ -340,6 +343,7 @@
 <definedSymbol symbol="__AVR_SFR_OFFSET__=0x20"/>
 <definedSymbol symbol="__WITH_AVRLIBC__=1"/>
 <definedSymbol symbol="__FLASH=1"/>
+<definedSymbol symbol="__FLASH1=1"/>
 <definedSymbol symbol="__MEMX=1"/>
 <definedSymbol symbol="__BUILTIN_AVR_NOP=1"/>
 <definedSymbol symbol="__BUILTIN_AVR_SEI=1"/>
@@ -432,7 +436,7 @@
 <definedSymbol symbol="__INT24_MIN__=(-__INT24_MAX__-1)"/>
 <definedSymbol symbol="__UINT24_MAX__=16777215UL"/>
 <definedSymbol symbol="__ELF__=1"/>
-<definedSymbol symbol="F_CPU=1000000UL"/>
+<definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.app.debug.1214670962;de.innot.avreclipse.configuration.app.debug.1214670962.;de.innot.avreclipse.tool.cppcompiler.app.debug.2008442998;de.innot.avreclipse.cppcompiler.input.943763473">
@@ -765,8 +769,11 @@
 <definedSymbol symbol="__AVR=1"/>
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
-<definedSymbol symbol="__AVR_ARCH__=5"/>
-<definedSymbol symbol="__AVR_ATmega16__=1"/>
+<definedSymbol symbol="__AVR_ARCH__=51"/>
+<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
+<definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
+<definedSymbol symbol="__AVR_HAVE_ELPM__=1"/>
+<definedSymbol symbol="__AVR_HAVE_ELPMX__=1"/>
 <definedSymbol symbol="__AVR_HAVE_MOVW__=1"/>
 <definedSymbol symbol="__AVR_HAVE_LPMX__=1"/>
 <definedSymbol symbol="__AVR_ENHANCED__=1"/>
@@ -869,7 +876,7 @@
 <definedSymbol symbol="__INT24_MIN__=(-__INT24_MAX__-1)"/>
 <definedSymbol symbol="__UINT24_MAX__=16777215UL"/>
 <definedSymbol symbol="__ELF__=1"/>
-<definedSymbol symbol="F_CPU=1000000UL"/>
+<definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.app.release.552119404;de.innot.avreclipse.configuration.app.release.552119404.;de.innot.avreclipse.tool.compiler.winavr.app.release.900369444;de.innot.avreclipse.compiler.winavr.input.1668459620">
@@ -1198,8 +1205,11 @@
 <definedSymbol symbol="__AVR=1"/>
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
-<definedSymbol symbol="__AVR_ARCH__=5"/>
-<definedSymbol symbol="__AVR_ATmega16__=1"/>
+<definedSymbol symbol="__AVR_ARCH__=51"/>
+<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
+<definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
+<definedSymbol symbol="__AVR_HAVE_ELPM__=1"/>
+<definedSymbol symbol="__AVR_HAVE_ELPMX__=1"/>
 <definedSymbol symbol="__AVR_HAVE_MOVW__=1"/>
 <definedSymbol symbol="__AVR_HAVE_LPMX__=1"/>
 <definedSymbol symbol="__AVR_ENHANCED__=1"/>
@@ -1212,6 +1222,7 @@
 <definedSymbol symbol="__AVR_SFR_OFFSET__=0x20"/>
 <definedSymbol symbol="__WITH_AVRLIBC__=1"/>
 <definedSymbol symbol="__FLASH=1"/>
+<definedSymbol symbol="__FLASH1=1"/>
 <definedSymbol symbol="__MEMX=1"/>
 <definedSymbol symbol="__BUILTIN_AVR_NOP=1"/>
 <definedSymbol symbol="__BUILTIN_AVR_SEI=1"/>
@@ -1304,7 +1315,7 @@
 <definedSymbol symbol="__INT24_MIN__=(-__INT24_MAX__-1)"/>
 <definedSymbol symbol="__UINT24_MAX__=16777215UL"/>
 <definedSymbol symbol="__ELF__=1"/>
-<definedSymbol symbol="F_CPU=1000000UL"/>
+<definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.app.release.552119404;de.innot.avreclipse.configuration.app.release.552119404.;de.innot.avreclipse.tool.cppcompiler.app.release.989920968;de.innot.avreclipse.cppcompiler.input.2135302534">
@@ -1637,8 +1648,11 @@
 <definedSymbol symbol="__AVR=1"/>
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
-<definedSymbol symbol="__AVR_ARCH__=5"/>
-<definedSymbol symbol="__AVR_ATmega16__=1"/>
+<definedSymbol symbol="__AVR_ARCH__=51"/>
+<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
+<definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
+<definedSymbol symbol="__AVR_HAVE_ELPM__=1"/>
+<definedSymbol symbol="__AVR_HAVE_ELPMX__=1"/>
 <definedSymbol symbol="__AVR_HAVE_MOVW__=1"/>
 <definedSymbol symbol="__AVR_HAVE_LPMX__=1"/>
 <definedSymbol symbol="__AVR_ENHANCED__=1"/>
@@ -1741,7 +1755,7 @@
 <definedSymbol symbol="__INT24_MIN__=(-__INT24_MAX__-1)"/>
 <definedSymbol symbol="__UINT24_MAX__=16777215UL"/>
 <definedSymbol symbol="__ELF__=1"/>
-<definedSymbol symbol="F_CPU=1000000UL"/>
+<definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>
 </scannerInfo>

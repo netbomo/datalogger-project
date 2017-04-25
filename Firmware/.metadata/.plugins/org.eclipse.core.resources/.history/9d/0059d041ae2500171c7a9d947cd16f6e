@@ -1,0 +1,20 @@
+/*
+ * State.cpp
+ *
+ *  Created on: 20 avr. 2017
+ *      Author: gilou
+ */
+
+#include "../lib/State.hpp"
+
+State::State(){
+
+}
+
+State::~State(){
+
+}
+
+void State::execute(){
+
+}

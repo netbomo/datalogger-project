@@ -1,0 +1,30 @@
+#ifndef OUTPUT__HPP
+#define OUTPUT__HPP
+
+#include "State.hpp"
+
+class Output : public State {
+    // Attributes
+    public :
+        /// this register permit to enable or disable output
+        char output_enable;
+    // Operations
+        Output ();
+
+        virtual ~Output();
+
+        virtual void execute ();
+
+        void usart0_print ();
+
+        void usart1_print ();
+
+        void SDCard_print ();
+
+    private:
+        const unsigned char USART0 = 1;	/// enable constante for USART0
+
+        const unsigned char USART1 = 2;	/// enable constante for USART1
+};
+
+#endif

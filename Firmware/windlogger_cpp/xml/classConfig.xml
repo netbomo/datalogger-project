@@ -1,0 +1,207 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classConfig" kind="class" language="C++" prot="public">
+    <compoundname>Config</compoundname>
+    <basecompoundref refid="classState" prot="public" virt="non-virtual">State</basecompoundref>
+    <includes refid="Config_8hpp" local="no">Config.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classConfig_1ad2bae4db3d13f09b64b561836d25c651" prot="private" static="no" mutable="no">
+        <type><ref refid="classDateTime" kindref="compound">DateTime</ref></type>
+        <definition>DateTime Config::currentTime</definition>
+        <argsstring></argsstring>
+        <name>currentTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config.hpp" line="11" column="1" bodyfile="lib/Config.hpp" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1a8acfceff457a2f01cac48ae21ff8ef01" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Config::request[20]</definition>
+        <argsstring>[20]</argsstring>
+        <name>request</name>
+        <briefdescription>
+<para>is the char array use to save character from USART0 </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config.hpp" line="13" column="1" bodyfile="lib/Config.hpp" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classConfig_1ae526787b09821a19cc042edc63ba9386" prot="private" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Config::request_i</definition>
+        <argsstring></argsstring>
+        <name>request_i</name>
+        <briefdescription>
+<para>this is the request string&apos;s index </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config.hpp" line="15" column="1" bodyfile="lib/Config.hpp" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classConfig_1abd0c571c116924871e30444b192b792a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Config::Config</definition>
+        <argsstring>()</argsstring>
+        <name>Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config.hpp" line="18" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1ae0b90d4e69f2d1cb411f8a6466db7bba" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Config::~Config</definition>
+        <argsstring>()</argsstring>
+        <name>~Config</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config.hpp" line="19" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1acb6ae78ee9bafad396737c77f047bd04" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Config::execute</definition>
+        <argsstring>()</argsstring>
+        <name>execute</name>
+        <reimplements refid="classState_1aa272f704a5f33920524fb57c80339b2f">execute</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config.hpp" line="21" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a227be549de0f89f787a20499c8db994c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::print_config</definition>
+        <argsstring>()</argsstring>
+        <name>print_config</name>
+        <briefdescription>
+<para>display all config on USART0 </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config.hpp" line="26" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1ae18aa5af927253afbe2dafacc848b343" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::update</definition>
+        <argsstring>(char request[])</argsstring>
+        <name>update</name>
+        <param>
+          <type>char</type>
+          <declname>request</declname>
+          <array>[]</array>
+        </param>
+        <briefdescription>
+<para>update confif register </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(???) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config.hpp" line="32" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classConfig_1a3f8d043789557191686ae632ebe6a571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Config::addToRequest</definition>
+        <argsstring>(char c)</argsstring>
+        <name>addToRequest</name>
+        <param>
+          <type>char</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>add char to request </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>(???) </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>void </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lib/Config.hpp" line="38" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="0">
+        <label>Config</label>
+        <link refid="classConfig"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>DateTime</label>
+        <link refid="classDateTime"/>
+      </node>
+      <node id="3">
+        <label>State</label>
+        <link refid="classState"/>
+      </node>
+      <node id="2">
+        <label>Config</label>
+        <link refid="classConfig"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>currentTime</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="lib/Config.hpp" line="7" column="1" bodyfile="lib/Config.hpp" bodystart="7" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classConfig_1a3f8d043789557191686ae632ebe6a571" prot="public" virt="non-virtual"><scope>Config</scope><name>addToRequest</name></member>
+      <member refid="classConfig_1abd0c571c116924871e30444b192b792a" prot="public" virt="non-virtual"><scope>Config</scope><name>Config</name></member>
+      <member refid="classConfig_1ad2bae4db3d13f09b64b561836d25c651" prot="private" virt="non-virtual"><scope>Config</scope><name>currentTime</name></member>
+      <member refid="classConfig_1acb6ae78ee9bafad396737c77f047bd04" prot="public" virt="virtual"><scope>Config</scope><name>execute</name></member>
+      <member refid="classConfig_1a227be549de0f89f787a20499c8db994c" prot="public" virt="non-virtual"><scope>Config</scope><name>print_config</name></member>
+      <member refid="classConfig_1a8acfceff457a2f01cac48ae21ff8ef01" prot="private" virt="non-virtual"><scope>Config</scope><name>request</name></member>
+      <member refid="classConfig_1ae526787b09821a19cc042edc63ba9386" prot="private" virt="non-virtual"><scope>Config</scope><name>request_i</name></member>
+      <member refid="classState_1ab91bb1dd5aa6260ab2a456581daf9ec2" prot="public" virt="non-virtual"><scope>Config</scope><name>State</name></member>
+      <member refid="classConfig_1ae18aa5af927253afbe2dafacc848b343" prot="public" virt="non-virtual"><scope>Config</scope><name>update</name></member>
+      <member refid="classConfig_1ae0b90d4e69f2d1cb411f8a6466db7bba" prot="public" virt="virtual"><scope>Config</scope><name>~Config</name></member>
+      <member refid="classState_1a9ddc1df6f998184d6477b48fab90281c" prot="public" virt="virtual"><scope>Config</scope><name>~State</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

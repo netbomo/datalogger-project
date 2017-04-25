@@ -1,0 +1,56 @@
+/**
+ *******************************************************************************
+ *******************************************************************************
+ *
+ *	Licence :
+ *    This program is free software: you can redistribute it and/or modify
+ *    it under the terms of the GNU General Public License as published by
+ *    the Free Software Foundation, either version 3 of the License, or
+ *    (at your option) any later version.
+ *
+ *    This program is distributed in the hope that it will be useful,
+ *    but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *    GNU General Public License for more details.
+ *
+ *    You should have received a copy of the GNU General Public License
+ *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * 
+ *******************************************************************************
+ *******************************************************************************
+ *
+ *
+ *    @file   Idle.cpp
+ *    @Author gilou
+ *    @date   20 avr. 2017
+ *    @brief  Brief description of file.
+ *
+ *    Detailed description of file.
+ */
+
+
+    // Operations
+        Idle::Idle();
+        /**
+         * \brief execute the state
+         * \return void
+         */
+        void execute ();
+
+        /**
+         * \brief when a new char come on the USART0, it's need to echo it and do stuff
+         * \return void
+         */
+        void character_processing ();
+
+        /**
+         * \brief this method if a new measure is needed
+         * \return void
+         */
+        void measurement_timing_control ();
+
+        /**
+         * \brief This method define the next state by deduction
+         */
+        void newState_definition ();
