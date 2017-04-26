@@ -21,49 +21,47 @@
  *******************************************************************************
  *
  *
- *    @file   FSM.cpp
+ *    @file   Usart.h
  *    @Author gilou
- *    @date   20 avr. 2017
+ *    @date   26 avr. 2017
  *    @brief  Brief description of file.
  *
  *    Detailed description of file.
  */
-
-#include <avr/io.h>
-#include <avr/interrupt.h>
-#include "../lib/FSM.hpp"
-
-	/// flag set when a new char is receive by the micro-controller
-	bool FSM::flag_UART0_rx_char = 0;
-	/// set when the timerX overflow (stop frequencies measurement)
-	/// todo select timer
-	bool FSM::flag_freq_data_ready = 0;
-	/// set when time come for a new measure
-	bool FSM::flag_new_measure = 0;
-	/// set when each averages are calculated and ready for the OUTPUT state
-	bool FSM::flag_data_averages_ready = 0;
-
-	unsigned long int FSM::timestamp = 0;
+#ifndef USART_H_
+#define USART_H_
 
 
-FSM::FSM():nextState(idle){
+class Usart {
+public:
+	/**
+	 *	\brief USART constructor on asynchronous mode
+	 *	\param usart 0 for usart0 or 1 for usart1
+	 *	\param bauderate	Use BR_XXXX constant to define baude rate speed
+	 */
+	Usart(unsigned char usart, unsigned int baudrate);
+	virtual ~Usart();
 
-	TIMSK2 |= _BV(TOIE2);				// enable overflow interrupt
-	TCNT2 = 0;
-	TCCR2B = _BV(CS22) | _BV(CS20); // prescaler for overload interrupt each 1 second : CS2[2:0]=101;
-	ASSR |=  _BV(AS2);					// Set the bit AS2 in the ASSR register to clock the timer 2 from the external crystal
+	/**
+	 *	\brief USART char sender function
+	 *	\param character The character to send on the USART0
+	 */
+	void set(char character);
 
-	sei();						// enable interrupt
-}
+	/**
+	 *	\brief USART string sender function
+	 * 	\param string The string to send on the USART0
+	 */
+	void print(char *string);
 
 
-void FSM::execute(){
-	nextState.execute();
-}
+	// Constants
+static const unsigned int BR_9600 = 207;	/**< UBBRn registers value to work at 9600 baud**/
+static const unsigned int BR_57600 = 34;	/**< UBBRn registers value to work at 57600 baud**/
+static const unsigned int BR_115200 = 16;	/**< UBBRn registers value to work at 115200 baud**/
 
-/**
- * \brief This is an Interrupt Sub Routine, it's execute when timer2 overflows
- */
-ISR(TIMER2_OVF_vect){
-	FSM::timestamp++;
-}
+private:
+	unsigned char m_usart;
+};
+
+#endif /* USART_H_ */

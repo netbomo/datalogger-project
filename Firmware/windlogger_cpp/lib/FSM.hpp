@@ -15,6 +15,9 @@ public :
 	 */
 	FSM();
 
+	/**
+	 * \brief This method execute the next state
+	 */
 	void execute();
 
 

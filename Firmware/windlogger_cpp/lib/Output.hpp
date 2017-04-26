@@ -32,6 +32,7 @@ class Output : public State {
 
         static const unsigned char GPRS = 16;		/// enable constant for GPRS
 
+
 };
 
 #endif
