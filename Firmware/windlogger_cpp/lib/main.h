@@ -2,7 +2,7 @@
  *******************************************************************************
  *******************************************************************************
  *
- *	Licence :
+ *	License :
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
@@ -21,37 +21,19 @@
  *******************************************************************************
  *
  *
- *    @file   State.cpp
+ *    @file   main.hpp
  *    @Author gilou
  *    @date   30 avr. 2017
  *    @brief  Brief description of file.
  *
  *    Detailed description of file.
  */
+#ifndef LIB_MAIN_HPP_
+#define LIB_MAIN_HPP_
 
-#include "../lib/Usart.h"
-#include "../lib/main.h"
-#include "../lib/State.h"
+/// Pins declaration
+static const unsigned char LED_PIN = 7;		/*!< LED_PIN is on the PB7 pin>*/
 
-State::State(){
+static const unsigned int DATA_STRUCTURE_VERSION = 051017;		// use date of the data structure's revision
 
-}
-
-State::~State(){
-
-}
-
-Idle::Idle(){
-
-}
-
-Idle::~Idle(){
-
-}
-
-void Idle::execute(){
-}
-
-void Idle::print(Usart &usart){
-	usart.print("idle state");
-}
+#endif /* LIB_MAIN_HPP_ */

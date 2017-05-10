@@ -2,7 +2,7 @@
  *******************************************************************************
  *******************************************************************************
  *
- *	Licence :
+ *	License :
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
@@ -21,37 +21,38 @@
  *******************************************************************************
  *
  *
- *    @file   State.cpp
+ *    @file   State.h
  *    @Author gilou
  *    @date   30 avr. 2017
  *    @brief  Brief description of file.
  *
  *    Detailed description of file.
  */
+#ifndef STATE_H_
+#define STATE_H_
 
-#include "../lib/Usart.h"
-#include "../lib/main.h"
-#include "../lib/State.h"
+class State {
+    // Operations
+    public :
+        State ();
 
-State::State(){
+        virtual ~State();
 
-}
+        virtual void execute () = 0;
 
-State::~State(){
+        virtual void print(Usart &usart) = 0;
+};
 
-}
+class Idle : public State{
+    // Operations
+    public :
+        Idle();
 
-Idle::Idle(){
+        virtual ~Idle();
 
-}
+        virtual void execute ();
 
-Idle::~Idle(){
+        virtual void print(Usart &usart);
+};
 
-}
-
-void Idle::execute(){
-}
-
-void Idle::print(Usart &usart){
-	usart.print("idle state");
-}
+#endif /* STATE_H_ */

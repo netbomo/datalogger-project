@@ -30,8 +30,15 @@
  */
 
 #include <avr/io.h>
+#include <avr/interrupt.h>
 
+#include "../lib/FSM.h"
+#include "../lib/main.h"
 #include "../lib/Usart.h"
+
+/// static members definition need to be out of constructor or function. Top of cpp file is right
+	char Usart::data_udr0 = 0;			/*!< This register permit at the usart0 rx interrupt to store the UDR register>*/
+	bool Usart::flag_rx0 = 0;			/*!< Is set by the uart0 rx interrupt>*/
 
 Usart::Usart(unsigned char usart, unsigned int baudrate) {
 	// TODO Auto-generated constructor stub
@@ -58,6 +65,12 @@ Usart::Usart(unsigned char usart, unsigned int baudrate) {
 
 Usart::~Usart() {
 	// TODO Auto-generated destructor stub
+}
+
+ISR(USART0_RX_vect)							//sous routine d'interruption lors d'une reception
+{
+	Usart::data_udr0 = UDR0;						//récupération du registre de donnée UDR0 dans la variable globale data_udr0
+	Usart::flag_rx0 = 1;					//mise à 1 du drapeau de reception pour interruption
 }
 
 void Usart::set(char character){

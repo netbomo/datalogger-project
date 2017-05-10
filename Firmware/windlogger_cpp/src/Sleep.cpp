@@ -30,8 +30,11 @@
  */
 
 #include <avr/io.h>
+#include <util/delay.h>
 
-#include "../lib/Sleep.hpp"
+#include "../lib/main.h"
+#include "../lib/Usart.h"
+#include "../lib/Sleep.h"
 
     // Operations
 
@@ -44,6 +47,12 @@
         }
 
         void Sleep::execute(){
+        	_delay_ms(80);
+
 //        	SMCR |= _BV(SE);			// enanble sleep mode
 //        	SMCR |= _BV(SM2) | _BV(SM1) | _BV(SM0);		// Sleep mode = extended standby
+        }
+
+        void Sleep::print(Usart &usart){
+        	usart.print("sleep state");
         }

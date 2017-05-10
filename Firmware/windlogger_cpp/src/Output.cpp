@@ -29,10 +29,13 @@
  *    Detailed description of file.
  */
 
-#include "../lib/Output.hpp"
+#include "../lib/main.h"
+#include "../lib/FSM.h"
+#include "../lib/Usart.h"
+#include "../lib/Output.h"
 
 // Operations
-Output::Output ():output_enable(0){
+Output::Output (){
 
 }
 
@@ -41,21 +44,26 @@ Output::~Output(){
 }
 
 void Output::execute (){
-	if(output_enable||USART0){
+	//print();
+	if(FSM::eeprom.output_enable||USART0){
 		usart0_print();
 	}
-	if(output_enable||USART1){
+	if(FSM::eeprom.output_enable||USART1){
 		usart1_print();
 	}
-	if(output_enable||SD_CARD){
+	if(FSM::eeprom.output_enable||SD_CARD){
 		SDCard_print();
 	}
-	if(output_enable||WIFI){
+	if(FSM::eeprom.output_enable||WIFI){
 		usart1_print();
 	}
-	if(output_enable||GPRS){
+	if(FSM::eeprom.output_enable||GPRS){
 		usart1_print();
 	}
+}
+
+void Output::print(Usart &usart){
+	usart.print("output state");
 }
 
 void Output::usart0_print (){

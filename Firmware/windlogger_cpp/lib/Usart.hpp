@@ -2,7 +2,7 @@
  *******************************************************************************
  *******************************************************************************
  *
- *	Licence :
+ *	License :
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
@@ -21,37 +21,47 @@
  *******************************************************************************
  *
  *
- *    @file   State.cpp
+ *    @file   Usart.h
  *    @Author gilou
- *    @date   30 avr. 2017
+ *    @date   26 avr. 2017
  *    @brief  Brief description of file.
  *
  *    Detailed description of file.
  */
+#ifndef USART_H_
+#define USART_H_
 
-#include "../lib/Usart.h"
-#include "../lib/main.h"
-#include "../lib/State.h"
 
-State::State(){
+class Usart {
+public:
+	/**
+	 *	\brief USART constructor on asynchronous mode
+	 *	\param usart 0 for usart0 or 1 for usart1
+	 *	\param bauderate	Use BR_XXXX constant to define baude rate speed
+	 */
+	Usart(unsigned char usart, unsigned int baudrate);
+	virtual ~Usart();
 
-}
+	/**
+	 *	\brief USART char sender function
+	 *	\param character The character to send on the USART0
+	 */
+	void set(char character);
 
-State::~State(){
+	/**
+	 *	\brief USART string sender function
+	 * 	\param string The string to send on the USART0
+	 */
+	void print(char *string);
 
-}
 
-Idle::Idle(){
+	// Constants
+static const unsigned int BR_9600 = 207;	/**< UBBRn registers value to work at 9600 baud**/
+static const unsigned int BR_57600 = 34;	/**< UBBRn registers value to work at 57600 baud**/
+static const unsigned int BR_115200 = 16;	/**< UBBRn registers value to work at 115200 baud**/
 
-}
+private:
+	unsigned char m_usart;
+};
 
-Idle::~Idle(){
-
-}
-
-void Idle::execute(){
-}
-
-void Idle::print(Usart &usart){
-	usart.print("idle state");
-}
+#endif /* USART_H_ */

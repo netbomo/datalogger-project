@@ -29,11 +29,16 @@
  *    Detailed description of file.
  */
 
-#include "../lib/FSM.hpp"
-#include "../lib/Measure.hpp"
+#include <avr/io.h>
+
+#include "../lib/main.h"
+#include "../lib/FSM.h"
+#include "../lib/Measure.h"
+
+bool Measure::flag_data_frequencies_ready = 0;
 
 // Operations
-Measure::Measure():sensors_enable(0),measureCounter(0),measureMax(0){
+Measure::Measure(){
 
 }
 
@@ -42,23 +47,35 @@ Measure::~Measure(){
 }
 
 void Measure::execute (){
+	PORTB |= _BV(LED_PIN);
+
 	if(FSM::flag_new_measure){
-		if(measureCounter==0){		// if it's a new data flow
+		if(FSM::eeprom.measure_counter==0){		// if it's a new data flow
 			clear_data_array();		// clear the data array
 		}
 		freq_init_measurement();	// init frequencies measurement
 		windvane_value();			// read the value from the windvane, convert it in 0-359° value
 		power_read_value();			// do power measurement todo à préciser!
 		temperature_read_value();	// read temperature from the DS18B20
-		measureCounter++;			// increase the measureCounter
+		FSM::eeprom.measure_counter++;			// increase the measureCounter
+
+		FSM::flag_new_measure = 0;	/// reset the flag
 	}
-	if(FSM::flag_data_averages_ready){
+	if(Measure::flag_data_frequencies_ready){
 		freq_read_value();
+		Measure::flag_data_frequencies_ready = 0;		/// reset the flag
 	}
-	if(measureCounter==measureMax){
+	if(FSM::eeprom.measure_counter==FSM::eeprom.measure_max){
 		calc_average();
 	}
+
+	PORTB &= ~_BV(LED_PIN);
 }
+
+void Measure::print(Usart &usart){
+	usart.print("measure state");
+}
+
 
 /**
  * \brief this method clear data value to save news
@@ -112,6 +129,6 @@ void Measure::freq_read_value (){
  * \return void
  */
 void Measure::calc_average (){
-	measureCounter=0;	// initialize the next measure
+	FSM::eeprom.measure_counter=0;	// initialize the next measure
 
 }

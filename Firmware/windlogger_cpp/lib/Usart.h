@@ -31,7 +31,6 @@
 #ifndef USART_H_
 #define USART_H_
 
-
 class Usart {
 public:
 	/**
@@ -54,6 +53,8 @@ public:
 	 */
 	void print(char *string);
 
+	static char data_udr0;			/*!< This register permit at the usart0 rx interrupt to store the UDR register>*/
+	static bool flag_rx0;			/*!< Is set by the uart0 rx interrupt>*/
 
 	// Constants
 static const unsigned int BR_9600 = 207;	/**< UBBRn registers value to work at 9600 baud**/
