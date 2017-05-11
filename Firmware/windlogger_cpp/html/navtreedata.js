@@ -1,6 +1,7 @@
 var NAVTREE =
 [
-  [ "WindLogger_firmware", "index.html", [
+  [ "Windlogger", "index.html", [
+    [ "Todo List", "todo.html", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -12,14 +13,19 @@ var NAVTREE =
       ] ]
     ] ],
     [ "Files", null, [
-      [ "File List", "files.html", "files" ]
+      [ "File List", "files.html", "files" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"Config_8hpp.html"
+"_config_8cpp.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

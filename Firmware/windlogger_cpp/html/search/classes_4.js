@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['measure',['Measure',['../classMeasure.html',1,'']]]
+  ['idle',['Idle',['../class_idle.html',1,'']]]
 ];

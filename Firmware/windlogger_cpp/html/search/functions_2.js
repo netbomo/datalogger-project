@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['datetime',['DateTime',['../classDateTime.html#ac2c1181de2aed99df5295dde0e4e61b4',1,'DateTime']]]
+  ['backspace',['backspace',['../class_config.html#aad107d2aa88bbf57a728ec0c650a6f84',1,'Config']]]
 ];

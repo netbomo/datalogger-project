@@ -2,7 +2,7 @@
 #define DATETIME__HPP
 
 /**
- * \brief The DateTime class permit to have human comprehensive format for the timestamp.
+ * \brief The DateTime class permit to have human readable format for the timestamp.
  *        
  */
 class DateTime{

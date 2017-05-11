@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['update',['update',['../classConfig.html#ae18aa5af927253afbe2dafacc848b343',1,'Config']]],
-  ['usart0_5fprint',['usart0_print',['../classOutput.html#af4bc42d2d3bb3b2a98782f0df0eba133',1,'Output']]],
-  ['usart1_5fprint',['usart1_print',['../classOutput.html#a943b106620d1c711e838298a4c4233af',1,'Output']]]
+  ['operator_20delete',['operator delete',['../operator_8cpp.html#af2aac1d6bd3e4925376944602ca5195c',1,'operator.cpp']]],
+  ['operator_20delete_5b_5d',['operator delete[]',['../operator_8cpp.html#a789ca7ea87f8626ef19bc3ba6c548529',1,'operator.cpp']]],
+  ['operator_20new',['operator new',['../operator_8cpp.html#a01a3c7aa4768da9c4960045065476009',1,'operator.cpp']]],
+  ['operator_20new_5b_5d',['operator new[]',['../operator_8cpp.html#ae0b0cbbcf2427ac8ce6597ca896d2f16',1,'operator.cpp']]],
+  ['output',['Output',['../class_output.html#a428c663520336477a12f1a33504eb067',1,'Output']]]
 ];

@@ -1,12 +1,14 @@
 var hierarchy =
 [
-    [ "DateTime", "classDateTime.html", null ],
-    [ "FSM", "classFSM.html", null ],
-    [ "State", "classState.html", [
-      [ "Config", "classConfig.html", null ],
-      [ "Idle", "classIdle.html", null ],
-      [ "Measure", "classMeasure.html", null ],
-      [ "Output", "classOutput.html", null ],
-      [ "Sleep", "classSleep.html", null ]
-    ] ]
+    [ "DateTime", "class_date_time.html", null ],
+    [ "Eeprom", "struct_eeprom.html", null ],
+    [ "FSM", "class_f_s_m.html", null ],
+    [ "State", "class_state.html", [
+      [ "Config", "class_config.html", null ],
+      [ "Idle", "class_idle.html", null ],
+      [ "Measure", "class_measure.html", null ],
+      [ "Output", "class_output.html", null ],
+      [ "Sleep", "class_sleep.html", null ]
+    ] ],
+    [ "Usart", "class_usart.html", null ]
 ];

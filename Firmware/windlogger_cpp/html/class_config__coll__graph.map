@@ -1,0 +1,4 @@
+<map id="Config" name="Config">
+<area shape="rect" id="node2" href="$class_state.html" title="{State\n||+ State()\l+ ~State()\l+ execute()\l+ print()\l}" alt="" coords="5,42,93,163"/>
+<area shape="rect" id="node3" href="$class_date_time.html" title="The DateTime class permit to have human readable format for the timestamp. " alt="" coords="117,5,235,200"/>
+</map>
