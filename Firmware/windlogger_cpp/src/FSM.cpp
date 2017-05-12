@@ -76,7 +76,7 @@ FSM::FSM():nextState(&idle),second_counter(0){
  * State machine mechanic methods
  */
 // This method define the next state from hardware and software flags
-void FSM::newState_definition(){
+void FSM::new_State_definition(){
 	if(flag_config_request) {
 		flag_config_request = 0;							// Reset flag
 		nextState = &config;								// priority 1 : config request process

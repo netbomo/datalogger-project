@@ -3,7 +3,7 @@
 <area shape="rect" id="node6" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="719,427,805,453"/>
 <area shape="rect" id="node13" href="$class_f_s_m.html#a8a6e956375ea383f83fdd076badbe5a7" title="This method execute the next state. " alt="" coords="143,528,247,555"/>
 <area shape="rect" id="node16" href="$class_f_s_m.html#a96c6ea489297a70669bef5d29b3d889c" title="This method control if a new measure is needed. " alt="" coords="106,579,285,621"/>
-<area shape="rect" id="node17" href="$class_f_s_m.html#afca5ddfd799b975405998f984afd34f8" title="This method define the next state from hardware and software flags. " alt="" coords="109,645,281,672"/>
+<area shape="rect" id="node17" href="$class_f_s_m.html#a22fc8c194ad489ef718067ab60bcebd6" title="This method define the next state from hardware and software flags. " alt="" coords="106,645,285,672"/>
 <area shape="rect" id="node3" href="$class_config.html#a3f8d043789557191686ae632ebe6a571" title="add c to the end of request " alt="" coords="515,427,669,453"/>
 <area shape="rect" id="node4" href="$class_usart.html#a86c9264f48dabbc3d97fa32d2d02d22d" title="USART char sender function. " alt="" coords="360,5,440,32"/>
 <area shape="rect" id="node5" href="$class_config.html#aad107d2aa88bbf57a728ec0c650a6f84" title="Config::backspace" alt="" coords="335,56,465,83"/>

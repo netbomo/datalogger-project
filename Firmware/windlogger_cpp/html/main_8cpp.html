@@ -86,6 +86,9 @@ $(document).ready(function(){initNavTree('main_8cpp.html','');});
 <div class="title">main.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>This is the main file, is the firmware's body.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;avr/io.h&gt;</code><br />
 <code>#include &lt;util/delay.h&gt;</code><br />
 <code>#include &lt;stddef.h&gt;</code><br />
@@ -107,7 +110,19 @@ Functions</h2></td></tr>
 <tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
 <tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>This is the main file, is the firmware's body. </p>
+<p>License : This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.</p>
+<p>This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</p>
+<p>You should have received a copy of the GNU General Public License along with this program. If not, see <a href="http://www.gnu.org/licenses/">http://www.gnu.org/licenses/</a>.</p>
+<dl class="section author"><dt>Author</dt><dd>gilou </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>20 avr. 2017 The firmware works as : <div class="image">
+<object type="image/svg+xml" data="diag_firmware.svg">diag_firmware.svg</object>
+</div>
+ </dd></dl>
+
+<p class="definition">Definition in file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+</div><h2 class="groupheader">Function Documentation</h2>
 <a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
 
@@ -122,21 +137,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>&lt;!FSM instance&gt;</p>
-<p>If a new char come from the USART0 process this char</p>
-<p>process the char</p>
-<p>reset the flag</p>
-<p>check if time come to do a new measure or not</p>
-<p>Permit to choose the next state</p>
-<p>execute the next state </p>
+<dl class="todo"><dt><b><a class="el" href="todo.html#_todo000002">Todo:</a></b></dt><dd>use a verbose flag to write info others than data on uart0 </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00019">19</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00044">44</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_f_s_m_8cpp_source.html#l00117">FSM::character_processing()</a>, <a class="el" href="_f_s_m_8cpp_source.html#l00108">FSM::execute()</a>, <a class="el" href="_usart_8h_source.html#l00057">Usart::flag_rx0</a>, <a class="el" href="_f_s_m_8cpp_source.html#l00097">FSM::measurement_timing_control()</a>, <a class="el" href="_f_s_m_8cpp_source.html#l00079">FSM::newState_definition()</a>, <a class="el" href="_usart_8cpp_source.html#l00093">Usart::print()</a>, <a class="el" href="_f_s_m_8h_source.html#l00107">FSM::timestamp</a>, and <a class="el" href="_f_s_m_8h_source.html#l00112">FSM::uart0</a>.</p>
+<p class="reference">References <a class="el" href="_f_s_m_8cpp_source.html#l00117">FSM::character_processing()</a>, <a class="el" href="_f_s_m_8cpp_source.html#l00108">FSM::execute()</a>, <a class="el" href="_usart_8h_source.html#l00057">Usart::flag_rx0</a>, <a class="el" href="_f_s_m_8cpp_source.html#l00097">FSM::measurement_timing_control()</a>, <a class="el" href="_f_s_m_8cpp_source.html#l00079">FSM::new_State_definition()</a>, <a class="el" href="_usart_8cpp_source.html#l00093">Usart::print()</a>, <a class="el" href="_f_s_m_8h_source.html#l00107">FSM::timestamp</a>, and <a class="el" href="_f_s_m_8h_source.html#l00112">FSM::uart0</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
@@ -147,7 +157,7 @@ Here is the call graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Thu May 11 2017 21:27:58 for Windlogger by
+    <li class="footer">Generated on Fri May 12 2017 15:36:28 for Windlogger by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

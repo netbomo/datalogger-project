@@ -73,7 +73,7 @@ public :
 	/**
 	 * \brief This method define the next state from hardware and software flags
 	 */
-	void newState_definition ();
+	void new_State_definition ();
 
 	/**
 	 * \brief This method control if a new measure is needed
@@ -90,7 +90,6 @@ public :
  */
 	/**
 	 * \brief Call when a string from usart0 finish by "\r\n"
-	 * @param character
 	 */
 	void character_processing ();
 

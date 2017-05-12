@@ -4,7 +4,7 @@ var class_f_s_m =
     [ "character_processing", "class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254", null ],
     [ "execute", "class_f_s_m.html#a8a6e956375ea383f83fdd076badbe5a7", null ],
     [ "measurement_timing_control", "class_f_s_m.html#a96c6ea489297a70669bef5d29b3d889c", null ],
-    [ "newState_definition", "class_f_s_m.html#afca5ddfd799b975405998f984afd34f8", null ],
+    [ "new_State_definition", "class_f_s_m.html#a22fc8c194ad489ef718067ab60bcebd6", null ],
     [ "config", "class_f_s_m.html#a780fad8513827a8b3605ddd6701a4b1f", null ],
     [ "idle", "class_f_s_m.html#a0182ee82eb45295d108b4a85663656a5", null ],
     [ "measure", "class_f_s_m.html#aa346f812ebdaa751e25a2dce6d821587", null ],

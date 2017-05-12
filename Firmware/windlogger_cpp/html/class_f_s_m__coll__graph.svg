@@ -67,7 +67,7 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="325.5" y="-81.5" font-family="Helvetica,sans-Serif" font-size="10.00">&#45; second_counter</text>
 <polyline fill="none" stroke="black" points="317.5,-74.5 442.5,-74.5 "/>
 <text text-anchor="start" x="325.5" y="-62.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ FSM()</text>
-<text text-anchor="start" x="325.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ newState_definition()</text>
+<text text-anchor="start" x="325.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ new_State_definition()</text>
 <text text-anchor="start" x="325.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ measurement_timing</text>
 <text text-anchor="start" x="325.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">_control()</text>
 <text text-anchor="start" x="325.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ execute()</text>

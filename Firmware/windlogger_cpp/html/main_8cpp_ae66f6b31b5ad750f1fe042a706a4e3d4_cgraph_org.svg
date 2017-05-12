@@ -68,9 +68,9 @@
 </g>
 <!-- Node16 -->
 <g id="node17" class="node"><title>Node16</title>
-<g id="a_node17"><a xlink:href="class_f_s_m.html#afca5ddfd799b975405998f984afd34f8" target="_top" xlink:title="This method define the next state from hardware and software flags. ">
-<polygon fill="none" stroke="black" points="78,-0.5 78,-19.5 207,-19.5 207,-0.5 78,-0.5"/>
-<text text-anchor="middle" x="142.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">FSM::newState_definition</text>
+<g id="a_node17"><a xlink:href="class_f_s_m.html#a22fc8c194ad489ef718067ab60bcebd6" target="_top" xlink:title="This method define the next state from hardware and software flags. ">
+<polygon fill="none" stroke="black" points="75.5,-0.5 75.5,-19.5 209.5,-19.5 209.5,-0.5 75.5,-0.5"/>
+<text text-anchor="middle" x="142.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">FSM::new_State_definition</text>
 </a>
 </g>
 </g>
