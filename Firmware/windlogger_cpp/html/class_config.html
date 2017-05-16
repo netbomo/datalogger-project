@@ -108,7 +108,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a543dce59b66475c5108088ee4ce1cdfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="#a543dce59b66475c5108088ee4ce1cdfc">More...</a><br /></td></tr>
 <tr class="separator:a543dce59b66475c5108088ee4ce1cdfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a806f322b0d533aabdb8e796d3b1033"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a2a806f322b0d533aabdb8e796d3b1033">execute</a> ()</td></tr>
-<tr class="memdesc:a2a806f322b0d533aabdb8e796d3b1033"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execute method is the config "main function" In this method sentence from the uart are process either to display the configuration menu or to update configuration register, if it's need, the eeprom are updated.  <a href="#a2a806f322b0d533aabdb8e796d3b1033">More...</a><br /></td></tr>
+<tr class="memdesc:a2a806f322b0d533aabdb8e796d3b1033"><td class="mdescLeft">&#160;</td><td class="mdescRight">The execute method is the config "main function" In this method, sentence from the uart are process either to display the configuration menu or to update configuration register, if it's need, the eeprom are updated.  <a href="#a2a806f322b0d533aabdb8e796d3b1033">More...</a><br /></td></tr>
 <tr class="separator:a2a806f322b0d533aabdb8e796d3b1033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73b87071343f2a21ce6a5cadc1d2c1ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a73b87071343f2a21ce6a5cadc1d2c1ba">print</a> (<a class="el" href="class_usart.html">Usart</a> &amp;usart)</td></tr>
 <tr class="separator:a73b87071343f2a21ce6a5cadc1d2c1ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,12 +145,11 @@ Private Attributes</h2></td></tr>
 <tr class="separator:ad2bae4db3d13f09b64b561836d25c651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8acfceff457a2f01cac48ae21ff8ef01"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a8acfceff457a2f01cac48ae21ff8ef01">request</a> [20]</td></tr>
 <tr class="separator:a8acfceff457a2f01cac48ae21ff8ef01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae526787b09821a19cc042edc63ba9386"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#ae526787b09821a19cc042edc63ba9386">request_i</a></td></tr>
-<tr class="separator:ae526787b09821a19cc042edc63ba9386"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a855bdbf98932c8ecf9c6569c719bca97"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_config.html#a855bdbf98932c8ecf9c6569c719bca97">request_i</a></td></tr>
+<tr class="separator:a855bdbf98932c8ecf9c6569c719bca97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The class <a class="el" href="class_config.html" title="The class Config inherits from the class State. This class manage input between the FSM...">Config</a> inherits from the class <a class="el" href="class_state.html">State</a>. This class manage input between the <a class="el" href="class_f_s_m.html" title="The class FSM regroup hardware peripherals declaration and mechanic methods. ">FSM</a>, the uarts (serial interface) and eeprom. With this class, the windlogger can display eeprom saved data and update there from the uart0. It can control time update with the <a class="el" href="class_date_time.html" title="The DateTime class permit to have human readable format for the timestamp. ">DateTime</a> class to have correct convertion from a human date and time display and the unix time stamp use by the logger to timestamp data. </p>
-
+<div class="textblock">
 <p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00050">50</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abd0c571c116924871e30444b192b792a"></a>
@@ -168,9 +167,7 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Constructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00048">48</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00051">51</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
 </div>
 </div>
@@ -197,9 +194,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destructor. </p>
-
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00051">51</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00054">54</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
 </div>
 </div>
@@ -219,8 +214,6 @@ Private Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>add c to the end of request </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>is a char character </td></tr>
@@ -228,11 +221,11 @@ Private Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00120">120</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00123">123</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
 <p class="reference">References <a class="el" href="_config_8h_source.html#l00055">request</a>, and <a class="el" href="_config_8h_source.html#l00056">request_i</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_f_s_m_8cpp_source.html#l00117">FSM::character_processing()</a>, and <a class="el" href="_config_8h_source.html#l00097">endString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_f_s_m_8cpp_source.html#l00120">FSM::character_processing()</a>, and <a class="el" href="_config_8h_source.html#l00097">endString()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -264,9 +257,9 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>return the char value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00126">126</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00129">129</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>, and <a class="el" href="_config_8cpp_source.html#l00057">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>, and <a class="el" href="_config_8cpp_source.html#l00060">execute()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -301,7 +294,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00092">92</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_f_s_m_8cpp_source.html#l00117">FSM::character_processing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_f_s_m_8cpp_source.html#l00120">FSM::character_processing()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -324,15 +317,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>display all config on USART0 </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00110">110</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00113">113</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_f_s_m_8h_source.html#l00114">FSM::eeprom</a>, <a class="el" href="_usart_8cpp_source.html#l00093">Usart::print()</a>, and <a class="el" href="_f_s_m_8h_source.html#l00112">FSM::uart0</a>.</p>
+<p class="reference">References <a class="el" href="_f_s_m_8h_source.html#l00113">FSM::eeprom</a>, <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, and <a class="el" href="_f_s_m_8h_source.html#l00111">FSM::uart0</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>, and <a class="el" href="_config_8cpp_source.html#l00057">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>, and <a class="el" href="_config_8cpp_source.html#l00060">execute()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -372,13 +363,13 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00097">97</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_config_8cpp_source.html#l00120">addToRequest()</a>, <a class="el" href="_config_8cpp_source.html#l00126">atoc()</a>, <a class="el" href="_config_8cpp_source.html#l00110">display()</a>, <a class="el" href="_config_8cpp_source.html#l00153">initialize_eeprom()</a>, <a class="el" href="_config_8cpp_source.html#l00141">load_eeprom()</a>, and <a class="el" href="_config_8cpp_source.html#l00148">update_epprom()</a>.</p>
+<p class="reference">References <a class="el" href="_config_8cpp_source.html#l00123">addToRequest()</a>, <a class="el" href="_config_8cpp_source.html#l00129">atoc()</a>, <a class="el" href="_config_8cpp_source.html#l00113">display()</a>, <a class="el" href="_config_8cpp_source.html#l00156">initialize_eeprom()</a>, <a class="el" href="_config_8cpp_source.html#l00144">load_eeprom()</a>, and <a class="el" href="_config_8cpp_source.html#l00151">update_epprom()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_f_s_m_8cpp_source.html#l00117">FSM::character_processing()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_f_s_m_8cpp_source.html#l00120">FSM::character_processing()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_config_a5ae6c4f7255e895e7384fc2a4baab160_cgraph.svg" width="474" height="307"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_config_a5ae6c4f7255e895e7384fc2a4baab160_cgraph.svg" width="540" height="286"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -411,13 +402,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>The execute method is the config "main function" In this method sentence from the uart are process either to display the configuration menu or to update configuration register, if it's need, the eeprom are updated. </p>
-
 <p>Implements <a class="el" href="class_state.html#aa272f704a5f33920524fb57c80339b2f">State</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00057">57</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00060">60</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_config_8cpp_source.html#l00126">atoc()</a>, <a class="el" href="_config_8cpp_source.html#l00110">display()</a>, <a class="el" href="_f_s_m_8h_source.html#l00114">FSM::eeprom</a>, <a class="el" href="_f_s_m_8h_source.html#l00053">Eeprom::measure_counter</a>, <a class="el" href="_f_s_m_8h_source.html#l00051">Eeprom::measure_max</a>, <a class="el" href="_f_s_m_8h_source.html#l00052">Eeprom::measure_periode</a>, <a class="el" href="_f_s_m_8h_source.html#l00050">Eeprom::measure_sample_conf</a>, <a class="el" href="_usart_8cpp_source.html#l00093">Usart::print()</a>, <a class="el" href="_config_8h_source.html#l00055">request</a>, <a class="el" href="_config_8h_source.html#l00056">request_i</a>, <a class="el" href="_f_s_m_8h_source.html#l00112">FSM::uart0</a>, and <a class="el" href="_config_8cpp_source.html#l00148">update_epprom()</a>.</p>
+<p class="reference">References <a class="el" href="_config_8cpp_source.html#l00129">atoc()</a>, <a class="el" href="_config_8cpp_source.html#l00113">display()</a>, <a class="el" href="_f_s_m_8h_source.html#l00113">FSM::eeprom</a>, <a class="el" href="_f_s_m_8h_source.html#l00053">Eeprom::measure_counter</a>, <a class="el" href="_f_s_m_8h_source.html#l00051">Eeprom::measure_max</a>, <a class="el" href="_f_s_m_8h_source.html#l00052">Eeprom::measure_periode</a>, <a class="el" href="_f_s_m_8h_source.html#l00050">Eeprom::measure_sample_conf</a>, <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, <a class="el" href="_config_8h_source.html#l00055">request</a>, <a class="el" href="_config_8h_source.html#l00056">request_i</a>, <a class="el" href="_f_s_m_8h_source.html#l00111">FSM::uart0</a>, and <a class="el" href="_config_8cpp_source.html#l00151">update_epprom()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -440,19 +429,22 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Initialize the eeprom memory. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00153">153</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00156">156</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_f_s_m_8h_source.html#l00114">FSM::eeprom</a>, and <a class="el" href="_f_s_m_8h_source.html#l00049">Eeprom::structure_version</a>.</p>
+<p class="reference">References <a class="el" href="main_8h_source.html#l00041">DATA_STRUCTURE_VERSION</a>, <a class="el" href="_f_s_m_8h_source.html#l00113">FSM::eeprom</a>, <a class="el" href="_config_8cpp_source.html#l00144">load_eeprom()</a>, <a class="el" href="_f_s_m_8h_source.html#l00049">Eeprom::structure_version</a>, and <a class="el" href="_config_8cpp_source.html#l00151">update_epprom()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>, and <a class="el" href="_config_8cpp_source.html#l00144">load_eeprom()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_config_af2fee2ffae339b1e8ead1cd413e44ee3_cgraph.svg" width="331" height="96"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_config_af2fee2ffae339b1e8ead1cd413e44ee3_icgraph.svg" width="626" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_config_af2fee2ffae339b1e8ead1cd413e44ee3_icgraph.svg" width="100%" height="372"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -471,19 +463,22 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Load saved config data from the eeprom. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00141">141</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00144">144</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_f_s_m_8h_source.html#l00114">FSM::eeprom</a>.</p>
+<p class="reference">References <a class="el" href="main_8h_source.html#l00041">DATA_STRUCTURE_VERSION</a>, <a class="el" href="_f_s_m_8h_source.html#l00113">FSM::eeprom</a>, and <a class="el" href="_config_8cpp_source.html#l00156">initialize_eeprom()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>, and <a class="el" href="_f_s_m_8cpp_source.html#l00061">FSM::FSM()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>, <a class="el" href="_f_s_m_8cpp_source.html#l00064">FSM::FSM()</a>, and <a class="el" href="_config_8cpp_source.html#l00156">initialize_eeprom()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_config_ab55107c3371b6c41be6688c0989993c7_cgraph.svg" width="522" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_config_ab55107c3371b6c41be6688c0989993c7_icgraph.svg" width="654" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_config_ab55107c3371b6c41be6688c0989993c7_icgraph.svg" width="100%" height="392"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -521,9 +516,9 @@ Here is the caller graph for this function:</div>
 
 <p>Implements <a class="el" href="class_state.html#ac150b47c0f2b53152671d0698a890981">State</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00102">102</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00105">105</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_usart_8cpp_source.html#l00093">Usart::print()</a>.</p>
+<p class="reference">References <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -546,19 +541,17 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Update saved config data in the eeprom. </p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00148">148</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_config_8cpp_source.html#l00151">151</a> of file <a class="el" href="_config_8cpp_source.html">Config.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_f_s_m_8h_source.html#l00114">FSM::eeprom</a>.</p>
+<p class="reference">References <a class="el" href="_f_s_m_8h_source.html#l00113">FSM::eeprom</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>, and <a class="el" href="_config_8cpp_source.html#l00057">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_config_8h_source.html#l00097">endString()</a>, <a class="el" href="_config_8cpp_source.html#l00060">execute()</a>, and <a class="el" href="_config_8cpp_source.html#l00156">initialize_eeprom()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_config_a5fefd76d384c0a710ea0dd0d71d5d05b_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_config_a5fefd76d384c0a710ea0dd0d71d5d05b_icgraph.svg" width="100%" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
 </div>
 
 </div>
@@ -612,12 +605,12 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00055">55</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00120">addToRequest()</a>, and <a class="el" href="_config_8cpp_source.html#l00057">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00123">addToRequest()</a>, and <a class="el" href="_config_8cpp_source.html#l00060">execute()</a>.</p>
 
 </div>
 </div>
-<a id="ae526787b09821a19cc042edc63ba9386"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae526787b09821a19cc042edc63ba9386">&#9670;&nbsp;</a></span>request_i</h2>
+<a id="a855bdbf98932c8ecf9c6569c719bca97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a855bdbf98932c8ecf9c6569c719bca97">&#9670;&nbsp;</a></span>request_i</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -626,7 +619,7 @@ Here is the caller graph for this function:</div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char Config::request_i</td>
+          <td class="memname">unsigned char Config::request_i</td>
         </tr>
       </table>
   </td>
@@ -639,7 +632,7 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_config_8h_source.html#l00056">56</a> of file <a class="el" href="_config_8h_source.html">Config.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00120">addToRequest()</a>, and <a class="el" href="_config_8cpp_source.html#l00057">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00123">addToRequest()</a>, and <a class="el" href="_config_8cpp_source.html#l00060">execute()</a>.</p>
 
 </div>
 </div>
@@ -653,7 +646,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_config.html">Config</a></li>
-    <li class="footer">Generated on Fri May 12 2017 15:36:28 for Windlogger by
+    <li class="footer">Generated on Tue May 16 2017 10:17:20 for Windlogger by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

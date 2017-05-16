@@ -1,3 +1,5 @@
 <map id="FSM::FSM" name="FSM::FSM">
-<area shape="rect" id="node2" href="$class_config.html#ab55107c3371b6c41be6688c0989993c7" title="Load saved config data from the eeprom. " alt="" coords="140,5,283,32"/>
+<area shape="rect" id="node2" href="$class_config.html#ab55107c3371b6c41be6688c0989993c7" title="Load saved config data from the eeprom. " alt="" coords="140,13,283,39"/>
+<area shape="rect" id="node3" href="$class_config.html#af2fee2ffae339b1e8ead1cd413e44ee3" title="Initialize the eeprom memory. " alt="" coords="331,5,445,47"/>
+<area shape="rect" id="node4" href="$class_config.html#a5fefd76d384c0a710ea0dd0d71d5d05b" title="Update saved config data in the eeprom. " alt="" coords="493,13,651,39"/>
 </map>

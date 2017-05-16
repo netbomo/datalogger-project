@@ -1,0 +1,9 @@
+<map id="Measure::execute" name="Measure::execute">
+<area shape="rect" id="node2" href="$class_measure.html#a1518672dff4f81603a35bff08c20e9f5" title="calcul average from the data array " alt="" coords="188,5,345,32"/>
+<area shape="rect" id="node3" href="$class_measure.html#a333a5ff14469e98bed368fd3e268751f" title="this method clear data value to save news " alt="" coords="197,57,337,98"/>
+<area shape="rect" id="node4" href="$class_measure.html#adb3ffd40b37bda243c00893ffb208907" title="this method initialize frequency measurement for anemometer and RPM " alt="" coords="203,122,330,163"/>
+<area shape="rect" id="node5" href="$class_measure.html#a4390d770b19dbc51e5486fefe9f4b9d1" title="read value from anemometer and RPM " alt="" coords="199,187,334,229"/>
+<area shape="rect" id="node6" href="$class_measure.html#a313b5845f14f7c62f37db11272145320" title="read power value &#45; not define realy (see emonLib) " alt="" coords="193,253,340,294"/>
+<area shape="rect" id="node7" href="$class_measure.html#ae3c562d3b11c5e202366597b951e969b" title="read the temperature value from one DS18b20 sensor " alt="" coords="192,318,341,359"/>
+<area shape="rect" id="node8" href="$class_measure.html#add6924662bc09f06abc3ec7b6dc2c94e" title="read the windvane value en map it between 0 to 359 degres " alt="" coords="180,384,353,411"/>
+</map>

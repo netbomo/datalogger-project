@@ -1,6 +1,9 @@
 <map id="Config::update_epprom" name="Config::update_epprom">
-<area shape="rect" id="node2" href="$class_config.html#a5ae6c4f7255e895e7384fc2a4baab160" title="Config::endString" alt="" coords="211,5,333,32"/>
-<area shape="rect" id="node5" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method sentence from the uart are process ei..." alt="" coords="215,56,329,83"/>
-<area shape="rect" id="node3" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="381,5,564,32"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="612,5,663,32"/>
+<area shape="rect" id="node2" href="$class_config.html#a5ae6c4f7255e895e7384fc2a4baab160" title="Config::endString" alt="" coords="564,30,687,56"/>
+<area shape="rect" id="node5" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="211,22,325,48"/>
+<area shape="rect" id="node6" href="$class_config.html#af2fee2ffae339b1e8ead1cd413e44ee3" title="Initialize the eeprom memory. " alt="" coords="211,73,325,114"/>
+<area shape="rect" id="node3" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="735,30,917,56"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="965,30,1016,56"/>
+<area shape="rect" id="node7" href="$class_config.html#ab55107c3371b6c41be6688c0989993c7" title="Load saved config data from the eeprom. " alt="" coords="373,80,516,107"/>
+<area shape="rect" id="node8" href="$class_f_s_m.html#a2fccf1c016c43e4fa4ee512311bf9d7d" title="Class constructor. " alt="" coords="582,80,669,107"/>
 </map>

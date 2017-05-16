@@ -10,7 +10,7 @@
 <title>Graphical Class Hierarchy</title>
 <!-- Node0 -->
 <g id="node1" class="node"><title>Node0</title>
-<g id="a_node1"><a xlink:href="class_usart.html" target="_top" xlink:title="Usart">
+<g id="a_node1"><a xlink:href="class_usart.html" target="_top" xlink:title="This is the uart library for the atmega1284p. ">
 <polygon fill="none" stroke="black" points="0,-0.5 0,-19.5 41,-19.5 41,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="20.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Usart</text>
 </a>

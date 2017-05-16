@@ -3,7 +3,7 @@
 <area shape="rect" id="node3" href="$_config_8cpp.html" title="This file define the Config class. " alt="" coords="5,155,91,181"/>
 <area shape="rect" id="node4" href="$_f_s_m_8cpp.html" title="Brief description of file. " alt="" coords="115,155,189,181"/>
 <area shape="rect" id="node5" href="$main_8cpp.html" title="This is the main file, is the firmware&#39;s body. " alt="" coords="213,155,288,181"/>
-<area shape="rect" id="node6" href="$_measure_8cpp.html" title="Brief description of file. " alt="" coords="313,155,410,181"/>
-<area shape="rect" id="node7" href="$_output_8cpp.html" title="Brief description of file. " alt="" coords="434,155,521,181"/>
-<area shape="rect" id="node8" href="$_usart_8cpp.html" title="Brief description of file. " alt="" coords="545,155,623,181"/>
+<area shape="rect" id="node6" href="$_measure_8cpp.html" title="The class Measure inherits from the class State. " alt="" coords="313,155,410,181"/>
+<area shape="rect" id="node7" href="$_output_8cpp.html" title="The class Output inherits from the class State. " alt="" coords="434,155,521,181"/>
+<area shape="rect" id="node8" href="$_usart_8cpp.html" title="This is the uart library for the atmega1284p. " alt="" coords="545,155,623,181"/>
 </map>

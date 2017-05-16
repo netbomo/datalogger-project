@@ -2,7 +2,7 @@
  *******************************************************************************
  *******************************************************************************
  *
- *	Licence :
+ *	License :
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
@@ -22,12 +22,15 @@
  *
  *
  *    @file   Sleep.cpp
- *    @Author gilou
+ *    @author gilou
  *    @date   20 avr. 2017
  *    @brief  Brief description of file.
  *
  *    Detailed description of file.
  */
+
+// gets rid of annoying "deprecated conversion from string constant blah blah" warning
+#pragma GCC diagnostic ignored "-Wwrite-strings"
 
 #include <avr/io.h>
 #include <util/delay.h>

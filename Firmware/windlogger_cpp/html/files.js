@@ -14,7 +14,7 @@ var files =
       [ "FSM", "class_f_s_m.html", "class_f_s_m" ]
     ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
-    [ "main.h", "main_8h.html", null ],
+    [ "main.h", "main_8h.html", "main_8h" ],
     [ "Measure.cpp", "_measure_8cpp.html", null ],
     [ "Measure.h", "_measure_8h.html", [
       [ "Measure", "class_measure.html", "class_measure" ]

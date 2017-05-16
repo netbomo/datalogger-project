@@ -113,7 +113,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node10 -->
 <g id="node10" class="node"><title>Node10</title>
-<g id="a_node10"><a xlink:href="_measure_8h.html" target="_top" xlink:title="Measure.h">
+<g id="a_node10"><a xlink:href="_measure_8h.html" target="_top" xlink:title="The class Measure inherits from the class State. ">
 <polygon fill="none" stroke="black" points="109,-112.5 109,-131.5 171,-131.5 171,-112.5 109,-112.5"/>
 <text text-anchor="middle" x="140" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">Measure.h</text>
 </a>
@@ -126,7 +126,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node11 -->
 <g id="node11" class="node"><title>Node11</title>
-<g id="a_node11"><a xlink:href="_output_8h.html" target="_top" xlink:title="Output.h">
+<g id="a_node11"><a xlink:href="_output_8h.html" target="_top" xlink:title="The class Output inherits from the class State. ">
 <polygon fill="none" stroke="black" points="227,-112.5 227,-131.5 281,-131.5 281,-112.5 227,-112.5"/>
 <text text-anchor="middle" x="254" y="-119.5" font-family="Helvetica,sans-Serif" font-size="10.00">Output.h</text>
 </a>
@@ -198,7 +198,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node7 -->
 <g id="node7" class="node"><title>Node7</title>
-<g id="a_node7"><a xlink:href="_measure_8cpp.html" target="_top" xlink:title="Brief description of file. ">
+<g id="a_node7"><a xlink:href="_measure_8cpp.html" target="_top" xlink:title="The class Measure inherits from the class State. ">
 <polygon fill="none" stroke="black" points="82.5,-0.5 82.5,-19.5 155.5,-19.5 155.5,-0.5 82.5,-0.5"/>
 <text text-anchor="middle" x="119" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Measure.cpp</text>
 </a>
@@ -211,7 +211,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node8 -->
 <g id="node8" class="node"><title>Node8</title>
-<g id="a_node8"><a xlink:href="_output_8cpp.html" target="_top" xlink:title="Brief description of file. ">
+<g id="a_node8"><a xlink:href="_output_8cpp.html" target="_top" xlink:title="The class Output inherits from the class State. ">
 <polygon fill="none" stroke="black" points="250.5,-0.5 250.5,-19.5 315.5,-19.5 315.5,-0.5 250.5,-0.5"/>
 <text text-anchor="middle" x="283" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Output.cpp</text>
 </a>
@@ -224,7 +224,7 @@ var sectionId = 'dynsection-0';
 </g>
 <!-- Node9 -->
 <g id="node9" class="node"><title>Node9</title>
-<g id="a_node9"><a xlink:href="_usart_8cpp.html" target="_top" xlink:title="Brief description of file. ">
+<g id="a_node9"><a xlink:href="_usart_8cpp.html" target="_top" xlink:title="This is the uart library for the atmega1284p. ">
 <polygon fill="none" stroke="black" points="173.5,-0.5 173.5,-19.5 232.5,-19.5 232.5,-0.5 173.5,-0.5"/>
 <text text-anchor="middle" x="203" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Usart.cpp</text>
 </a>

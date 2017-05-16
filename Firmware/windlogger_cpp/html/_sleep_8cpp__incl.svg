@@ -48,7 +48,7 @@
 </g>
 <!-- Node4 -->
 <g id="node5" class="node"><title>Node4</title>
-<g id="a_node5"><a xlink:href="_usart_8h.html" target="_top" xlink:title="Brief description of file. ">
+<g id="a_node5"><a xlink:href="_usart_8h.html" target="_top" xlink:title="This is the uart library for the atmega1284p. ">
 <polygon fill="none" stroke="black" points="236,-56.5 236,-75.5 307,-75.5 307,-56.5 236,-56.5"/>
 <text text-anchor="middle" x="271.5" y="-63.5" font-family="Helvetica,sans-Serif" font-size="10.00">../lib/Usart.h</text>
 </a>

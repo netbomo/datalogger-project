@@ -28,7 +28,7 @@
 </g>
 <!-- Node14 -->
 <g id="node5" class="node"><title>Node14</title>
-<g id="a_node5"><a xlink:href="class_config.html#a2a806f322b0d533aabdb8e796d3b1033" target="_top" xlink:title="The execute method is the config &quot;main function&quot; In this method sentence from the uart are process ei...">
+<g id="a_node5"><a xlink:href="class_config.html#a2a806f322b0d533aabdb8e796d3b1033" target="_top" xlink:title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e...">
 <polygon fill="none" stroke="black" points="109,-0.5 109,-19.5 195,-19.5 195,-0.5 109,-0.5"/>
 <text text-anchor="middle" x="152" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Config::execute</text>
 </a>

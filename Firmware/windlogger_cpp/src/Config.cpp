@@ -33,6 +33,9 @@
  *    date and time display and the unix time stamp use by the logger to timestamp data.
  */
 
+// gets rid of annoying "deprecated conversion from string constant blah blah" warning
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+
 #include <string.h>
 #include <stdlib.h>
 #include <avr/eeprom.h>

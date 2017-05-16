@@ -14,5 +14,5 @@ var class_config =
     [ "update_epprom", "class_config.html#a5fefd76d384c0a710ea0dd0d71d5d05b", null ],
     [ "currentTime", "class_config.html#ad2bae4db3d13f09b64b561836d25c651", null ],
     [ "request", "class_config.html#a8acfceff457a2f01cac48ae21ff8ef01", null ],
-    [ "request_i", "class_config.html#ae526787b09821a19cc042edc63ba9386", null ]
+    [ "request_i", "class_config.html#a855bdbf98932c8ecf9c6569c719bca97", null ]
 ];

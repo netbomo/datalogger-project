@@ -2,12 +2,12 @@
 <area shape="rect" id="node2" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="468,88,651,114"/>
 <area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="699,88,749,114"/>
 <area shape="rect" id="node4" href="$class_config.html#a975933ecde91dc436d4ca39464cfd25f" title="display all config on USART0 " alt="" coords="140,113,249,140"/>
-<area shape="rect" id="node6" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method sentence from the uart are process ei..." alt="" coords="301,164,416,190"/>
+<area shape="rect" id="node6" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="301,164,416,190"/>
 <area shape="rect" id="node7" href="$class_f_s_m.html#a8a6e956375ea383f83fdd076badbe5a7" title="This method execute the next state. " alt="" coords="507,164,611,190"/>
 <area shape="rect" id="node8" href="$class_sleep.html#ab3745514302b8279de64428b3b60fd64" title="Sleep::print" alt="" coords="151,265,239,292"/>
-<area shape="rect" id="node9" href="$class_measure.html#adae8f3976b6e2657d084c9bfd884d2df" title="Measure::print" alt="" coords="142,316,247,342"/>
-<area shape="rect" id="node10" href="$class_output.html#ab262d6d691d31fdef115acdfc194e335" title="Output::print" alt="" coords="147,366,242,393"/>
-<area shape="rect" id="node11" href="$class_idle.html#a5235a4af815c982ef662cabe5c77e7de" title="Idle::print" alt="" coords="157,417,233,444"/>
+<area shape="rect" id="node9" href="$class_output.html#ab262d6d691d31fdef115acdfc194e335" title="Output::print" alt="" coords="147,316,242,342"/>
+<area shape="rect" id="node10" href="$class_idle.html#a5235a4af815c982ef662cabe5c77e7de" title="Idle::print" alt="" coords="157,366,233,393"/>
+<area shape="rect" id="node11" href="$class_measure.html#adae8f3976b6e2657d084c9bfd884d2df" title="Measure::print" alt="" coords="142,417,247,444"/>
 <area shape="rect" id="node12" href="$class_config.html#a73b87071343f2a21ce6a5cadc1d2c1ba" title="Config::print" alt="" coords="148,468,241,494"/>
 <area shape="rect" id="node5" href="$class_config.html#a5ae6c4f7255e895e7384fc2a4baab160" title="Config::endString" alt="" coords="297,113,420,140"/>
 </map>

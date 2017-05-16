@@ -53,7 +53,7 @@ private :
 
 	DateTime currentTime;	/**< current time is the human readable side of the timestamp. Use for configuration.*/
 	char request[20];		/**< is the char array use to save character from USART0*/
-	char request_i;			/**< this is the request string's index*/
+	unsigned char request_i;			/**< this is the request string's index*/
 
 public :
 	/**
@@ -70,7 +70,7 @@ public :
  */
 	/**
 	 *  \brief The execute method is the config "main function"
-	 *	In this method sentence from the uart are process either
+	 *	In this method, sentence from the uart are process either
 	 *	to display the configuration menu or to update configuration register,
 	 *	if it's need, the eeprom are updated.
 	 */

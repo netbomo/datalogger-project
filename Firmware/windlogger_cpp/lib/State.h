@@ -22,7 +22,7 @@
  *
  *
  *    @file   State.h
- *    @Author gilou
+ *    @author gilou
  *    @date   30 avr. 2017
  *    @brief  Brief description of file.
  *

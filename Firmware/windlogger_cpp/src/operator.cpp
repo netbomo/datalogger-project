@@ -2,7 +2,7 @@
  *******************************************************************************
  *******************************************************************************
  *
- *	Licence :
+ *	License :
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
@@ -22,7 +22,7 @@
  *
  *
  *    @file   operator.cpp
- *    @Author gilou
+ *    @author gilou
  *    @date   20 avr. 2017
  *    @brief  Brief description of file.
  *

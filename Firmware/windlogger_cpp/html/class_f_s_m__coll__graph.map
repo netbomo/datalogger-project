@@ -3,9 +3,9 @@
 <area shape="rect" id="node3" href="$class_state.html" title="{State\n||+ State()\l+ ~State()\l+ execute()\l+ print()\l}" alt="" coords="468,42,556,163"/>
 <area shape="rect" id="node6" href="$class_sleep.html" title="{Sleep\n||+ Sleep()\l+ ~Sleep()\l+ execute()\l+ print()\l}" alt="" coords="412,329,500,450"/>
 <area shape="rect" id="node7" href="$class_idle.html" title="{Idle\n||+ Idle()\l+ ~Idle()\l+ execute()\l+ print()\l}" alt="" coords="524,329,612,450"/>
-<area shape="rect" id="node8" href="$class_measure.html" title="{Measure\n|+ flag_data_frequencies\l_ready\l|+ Measure()\l+ ~Measure()\l+ execute()\l+ print()\l&#45; clear_data_array()\l&#45; freq_init_measurement()\l&#45; windvane_value()\l&#45; power_read_value()\l&#45; temperature_read_value()\l&#45; freq_read_value()\l&#45; calc_average()\l}" alt="" coords="637,270,814,509"/>
+<area shape="rect" id="node8" href="$class_measure.html" title="The class Measure inherits from the class State. @ todo comment Measure class. " alt="" coords="637,270,814,509"/>
 <area shape="rect" id="node10" href="$class_output.html" title="{Output\n|+ USART0\l+ USART1\l+ SD_CARD\l+ WIFI\l+ GPRS\l|+ Output()\l+ ~Output()\l+ execute()\l+ print()\l+ usart0_print()\l+ usart1_print()\l+ SDCard_print()\l}" alt="" coords="1029,277,1150,501"/>
 <area shape="rect" id="node4" href="$class_date_time.html" title="The DateTime class permit to have human readable format for the timestamp. " alt="" coords="5,5,123,200"/>
-<area shape="rect" id="node5" href="$class_usart.html" title="{Usart\n|+ data_udr0\l+ flag_rx0\l+ BR_9600\l+ BR_57600\l+ BR_115200\l&#45; m_usart\l|+ Usart()\l+ ~Usart()\l+ set()\l+ print()\l}" alt="" coords="285,292,387,487"/>
+<area shape="rect" id="node5" href="$class_usart.html" title="This is the uart library for the atmega1284p. " alt="" coords="285,285,387,494"/>
 <area shape="rect" id="node9" href="$struct_eeprom.html" title="The Eeprom structure regroup members need to be saved in the micro&#45;controler&#39;s eeprom. " alt="" coords="839,307,1004,472"/>
 </map>

@@ -29,6 +29,9 @@
  *    Detailed description of file.
  */
 
+// gets rid of annoying "deprecated conversion from string constant blah blah" warning
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <stdlib.h>
@@ -58,7 +61,7 @@ Usart FSM::uart0(0,Usart::BR_57600);	// This is the uart0 definition
 Eeprom FSM::eeprom;						// This is the structure of data stored in the eeprom
 
 //Class constructor
-FSM::FSM():nextState(&idle),second_counter(0){
+FSM::FSM():second_counter(0),nextState(&idle){
 
 	config.load_eeprom();
 

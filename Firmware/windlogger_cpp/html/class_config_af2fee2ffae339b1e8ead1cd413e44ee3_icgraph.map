@@ -1,5 +1,7 @@
 <map id="Config::initialize_eeprom" name="Config::initialize_eeprom">
-<area shape="rect" id="node2" href="$class_config.html#a5ae6c4f7255e895e7384fc2a4baab160" title="Config::endString" alt="" coords="168,13,291,39"/>
-<area shape="rect" id="node3" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="339,13,521,39"/>
-<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="569,13,620,39"/>
+<area shape="rect" id="node2" href="$class_config.html#a5ae6c4f7255e895e7384fc2a4baab160" title="Config::endString" alt="" coords="359,5,481,32"/>
+<area shape="rect" id="node5" href="$class_config.html#ab55107c3371b6c41be6688c0989993c7" title="Load saved config data from the eeprom. " alt="" coords="168,56,311,83"/>
+<area shape="rect" id="node3" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="529,5,712,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="760,5,811,32"/>
+<area shape="rect" id="node6" href="$class_f_s_m.html#a2fccf1c016c43e4fa4ee512311bf9d7d" title="Class constructor. " alt="" coords="377,56,463,83"/>
 </map>

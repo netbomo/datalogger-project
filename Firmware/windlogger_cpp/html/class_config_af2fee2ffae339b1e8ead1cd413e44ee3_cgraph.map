@@ -1,0 +1,4 @@
+<map id="Config::initialize_eeprom" name="Config::initialize_eeprom">
+<area shape="rect" id="node2" href="$class_config.html#ab55107c3371b6c41be6688c0989993c7" title="Load saved config data from the eeprom. " alt="" coords="175,13,318,39"/>
+<area shape="rect" id="node3" href="$class_config.html#a5fefd76d384c0a710ea0dd0d71d5d05b" title="Update saved config data in the eeprom. " alt="" coords="168,63,325,90"/>
+</map>
