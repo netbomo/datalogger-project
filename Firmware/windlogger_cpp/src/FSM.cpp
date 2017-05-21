@@ -62,6 +62,12 @@ Eeprom FSM::eeprom;						// This is the structure of data stored in the eeprom
 
 //Class constructor
 FSM::FSM():second_counter(0),nextState(&idle){
+	//
+	//	Idle idle("idle");					// this state is used just for the first time in the while loop
+	//	Config config("config");			// this state is used to download or upload configuration
+	//	Measure measure("measure");			// this state is used for measurement process
+	//	Output output("output");			// this state is used to save or send data
+	//	Sleep sleep("sleep");				// When nothing is need to do, the micro-controller go to sleep
 
 	config.load_eeprom();
 
@@ -109,8 +115,16 @@ void FSM::measurement_timing_control (){
 
 // This method execute the next state
 void FSM::execute(){
-	nextState->print(uart0);uart0.print("\r\n");
-	nextState->execute();
+
+	if(nextState->isEqual("config\0")|| nextState->isEqual("measure\0")) {
+		nextState->execute();
+	}
+	else
+	{
+		//extState->print();uart0.print("\r\n");
+		nextState->execute();
+	}
+
 }
 
 /******************************************************************************

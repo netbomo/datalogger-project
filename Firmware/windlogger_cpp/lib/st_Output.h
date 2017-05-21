@@ -35,33 +35,36 @@
 #include "../lib/State.h"
 
 class Output : public State {
-    // Attributes
-    public :
-    // Operations
-        Output ();
 
-        virtual ~Output();
+	// Attributes
+public :
+	// Operations
+	Output ();
 
-        virtual void execute ();
+	virtual ~Output();
 
-        virtual void print(Usart &usart);
+	virtual void execute ();
 
-        void usart0_print ();
+	virtual void print();
 
-        void usart1_print ();
+	bool isEqual(char *name)const;
 
-        void SDCard_print ();
+	void usart0_print ();
 
-        // Constants
-        static const unsigned char USART0 = 1;		/// enable constant for USART0
+	void usart1_print ();
 
-        static const unsigned char USART1 = 2;		/// enable constant for USART1
+	void SDCard_print ();
 
-        static const unsigned char SD_CARD = 4;	/// enable constant for SD_CARD
+	// Constants
+	static const unsigned char USART0 = 1;		/// enable constant for USART0
 
-        static const unsigned char WIFI = 8;		/// enable constant for WIFI
+	static const unsigned char USART1 = 2;		/// enable constant for USART1
 
-        static const unsigned char GPRS = 16;		/// enable constant for GPRS
+	static const unsigned char SD_CARD = 4;	/// enable constant for SD_CARD
+
+	static const unsigned char WIFI = 8;		/// enable constant for WIFI
+
+	static const unsigned char GPRS = 16;		/// enable constant for GPRS
 
 
 };

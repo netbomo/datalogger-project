@@ -32,27 +32,41 @@
 #define STATE_H_
 
 class State {
-    // Operations
-    public :
-        State ();
+protected:
+	char m_name[10];	/**< state name initialize with the constructor */
 
-        virtual ~State();
+public :
+	State();
 
-        virtual void execute () = 0;
+	virtual ~State();
 
-        virtual void print(Usart &usart) = 0;
+	virtual void execute () = 0;
+
+	virtual void print() = 0;
+
+	bool isEqual(char *name)const;
 };
 
 class Idle : public State{
-    // Operations
-    public :
-        Idle();
 
-        virtual ~Idle();
+public :
+	Idle();
 
-        virtual void execute ();
+	virtual ~Idle();
 
-        virtual void print(Usart &usart);
+	virtual void execute ();
+
+	virtual void print();
+
+	bool isEqual(char *name)const;
 };
+
+/**
+ *
+ * @param a
+ * @param b
+ * @return
+ */
+bool operator==(State const& a, State const& b);
 
 #endif /* STATE_H_ */

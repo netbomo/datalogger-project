@@ -45,10 +45,11 @@
 #include "../lib/Usart.h"
 #include "../lib/DateTime.h"
 #include "../lib/FSM.h"
-#include "../lib/Config.h"
+#include "../lib/st_Config.h"
 
-// Constructor
-Config::Config():request_i(0){}
+Config::Config():request_i(0){
+	strcpy(m_name,"config\0");
+}
 
 // Destructor
 Config::~Config(){}
@@ -102,8 +103,13 @@ void Config::execute (){
 }
 
 // It's just a simple method to display the state name, use to debug
-void Config::print(Usart &usart){
-	usart.print("config state");
+void Config::print(){
+	FSM::uart0.print(m_name);
+}
+
+
+bool Config::isEqual(char *name)const {
+	return State::isEqual(name);
 }
 
 /******************************************************************************

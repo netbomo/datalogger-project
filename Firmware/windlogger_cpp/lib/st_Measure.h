@@ -37,9 +37,12 @@
 
 /**
  * \brief The class Measure inherits from the class State.
- * @ todo comment Measure class
+ *
+ * The timing measure is organize like :
+ * @image html MEASURE_timing.svg
  */
 class Measure : public State {
+
 
 public :
 	/******************************************************************************
@@ -72,9 +75,10 @@ public :
 
 	/**
 	 * It's just a simple method to display the state name, use to debug
-	 * @param usart
 	 */
-	virtual void print(Usart &usart);
+	virtual void print();
+
+	bool isEqual(char *name)const;
 
 
 private :
@@ -108,5 +112,13 @@ private :
 	void calc_average ();
 
 };
+
+/**
+ * \brief operator == overload to compare state name
+ * @param a	first state
+ * @param b	second state to compare to a
+ * @return 1 if a.name==b.name else 0
+ */
+bool operator==(State const& a, State const& b);
 
 #endif

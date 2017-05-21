@@ -33,10 +33,11 @@
 #pragma GCC diagnostic ignored "-Wwrite-strings"
 
 #include <avr/io.h>
+#include <string.h>
 
 #include "../lib/main.h"
 #include "../lib/FSM.h"
-#include "../lib/Measure.h"
+#include "../lib/st_Measure.h"
 
 /******************************************************************************
  * static hardware flags definition
@@ -47,7 +48,9 @@ bool Measure::flag_data_frequencies_ready = 0;
 /******************************************************************************
  * Constructor and destructor
  */
-Measure::Measure(){} // Constructor
+Measure::Measure(){
+	strcpy(m_name,"measure\0");
+} // Constructor
 
 Measure::~Measure(){} // Destructor
 
@@ -82,9 +85,15 @@ void Measure::execute (){
 	PORTB &= ~_BV(LED_PIN);						// turn off the green led
 }
 
-void Measure::print(Usart &usart){
-	usart.print("measure state");		// Print sub routine
+void Measure::print(){
+	FSM::uart0.print(m_name);		// Print sub routine
 }
+
+bool Measure::isEqual(char *name)const {
+	return State::isEqual(name);
+}
+
+
 
 
 //this method clear data value to save news

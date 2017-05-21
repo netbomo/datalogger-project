@@ -32,14 +32,16 @@
 // gets rid of annoying "deprecated conversion from string constant blah blah" warning
 #pragma GCC diagnostic ignored "-Wwrite-strings"
 
+#include <string.h>
+
 #include "../lib/main.h"
 #include "../lib/FSM.h"
 #include "../lib/Usart.h"
-#include "../lib/Output.h"
+#include "../lib/st_Output.h"
 
-// Operations
-Output::Output (){
 
+Output::Output(){
+	strcpy(m_name,"output\0");
 }
 
 Output::~Output(){
@@ -65,9 +67,14 @@ void Output::execute (){
 	}
 }
 
-void Output::print(Usart &usart){
-	usart.print("output state");
+void Output::print(){
+	FSM::uart0.print(m_name);
 }
+
+bool Output::isEqual(char *name)const {
+	return State::isEqual(name);
+}
+
 
 void Output::usart0_print (){
 

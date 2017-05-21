@@ -49,8 +49,6 @@
  */
 class Config : public State {
 
-private :
-
 	DateTime currentTime;	/**< current time is the human readable side of the timestamp. Use for configuration.*/
 	char request[20];		/**< is the char array use to save character from USART0*/
 	unsigned char request_i;			/**< this is the request string's index*/
@@ -78,10 +76,10 @@ public :
 
 	/**
 	 * It's just a simple method to display the state name, use to debug
-	 * @param usart
-	 * \todo remove usart param from each state.print!
 	 */
-	virtual void print(Usart &usart);
+	virtual void print();
+
+	bool isEqual(char *name)const;
 
 /******************************************************************************
  * String tricks

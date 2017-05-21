@@ -36,11 +36,11 @@
 #define FSM__HPP
 
 #include "../lib/Usart.h"
-#include "../lib/Config.h"
-#include "../lib/Measure.h"
-#include "../lib/Output.h"
-#include "../lib/Sleep.h"
 #include "../lib/State.h"
+#include "st_Config.h"
+#include "st_Measure.h"
+#include "st_Output.h"
+#include "st_Sleep.h"
 
 /**
  * \brief The Eeprom structure regroup members need to be saved in the micro-controler's eeprom

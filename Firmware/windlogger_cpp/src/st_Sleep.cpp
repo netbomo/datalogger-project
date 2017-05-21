@@ -21,9 +21,9 @@
  *******************************************************************************
  *
  *
- *    @file   State.cpp
+ *    @file   Sleep.cpp
  *    @author gilou
- *    @date   30 avr. 2017
+ *    @date   20 avr. 2017
  *    @brief  Brief description of file.
  *
  *    Detailed description of file.
@@ -32,45 +32,35 @@
 // gets rid of annoying "deprecated conversion from string constant blah blah" warning
 #pragma GCC diagnostic ignored "-Wwrite-strings"
 
+#include <avr/io.h>
+#include <util/delay.h>
 #include <string.h>
 
 #include "../lib/FSM.h"
-#include "../lib/Usart.h"
 #include "../lib/main.h"
-#include "../lib/State.h"
+#include "../lib/Usart.h"
+#include "../lib/st_Sleep.h"
 
-State::State(){
+
+Sleep::Sleep(){
+	strcpy(m_name,"sleep\0");
+}
+
+Sleep::~Sleep(){
 
 }
 
-State::~State(){
+void Sleep::execute(){
+	_delay_ms(80);
 
+	//        	SMCR |= _BV(SE);			// enanble sleep mode
+	//        	SMCR |= _BV(SM2) | _BV(SM1) | _BV(SM0);		// Sleep mode = extended standby
 }
 
-bool State::isEqual(char *name)const {
-
-	int val = strcmp(m_name,name);
-
-	if(val==0) return true;		// strcmp return more than zero is m_name contain minimum name
-	else return false;
-}
-
-
-Idle::Idle(){
-	strcpy(m_name,"idle\0");
-}
-
-Idle::~Idle(){
-
-}
-
-void Idle::execute(){
-}
-
-void Idle::print(){
+void Sleep::print(){
 	FSM::uart0.print(m_name);
 }
 
-bool Idle::isEqual(char *name)const {
+bool Sleep::isEqual(char *name)const {
 	return State::isEqual(name);
 }
