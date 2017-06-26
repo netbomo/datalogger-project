@@ -51,8 +51,6 @@ Output::~Output(){
 }
 
 void Output::execute (){
-	print();
-	//print();
 	if(FSM::logger.output_enable||USART0){
 		usart0_print();
 	}
@@ -85,6 +83,7 @@ void Output::usart0_print (){
 
 	//strcpy(string,"\r\n");
 	FSM::uart0.print(string);
+	FSM::uart0.print("\r\n");
 	ptr_string =&string[0];
 }
 

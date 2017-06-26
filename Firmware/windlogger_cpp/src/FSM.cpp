@@ -123,16 +123,7 @@ void FSM::measurement_timing_control (){
 
 // This method execute the next state
 void FSM::execute(){
-
-	if(nextState->isEqual("config\0")|| nextState->isEqual("measure\0")) {
-		nextState->execute();
-	}
-	else
-	{
-		//extState->print();uart0.print("\r\n");
-		nextState->execute();
-	}
-
+	nextState->execute();
 }
 
 /******************************************************************************

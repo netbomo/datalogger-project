@@ -64,7 +64,7 @@ void Measure::execute (){
 	char temp_conv[10];
 
 	PORTB |= _BV(LED_PIN);						// Turn on the green led (blink each time the measure.execute() come)
-print();
+
 	if(FSM::flag_new_measure){
 		if(FSM::logger.measure_counter==0){		// if it's a new data flow
 			clear_data_array();					// clear the data array
@@ -82,7 +82,7 @@ print();
 		freq_read_value();								//	read data from anemometer and RPM
 		Measure::flag_data_frequencies_ready = 0;		//	reset the flag
 	}
-	FSM::uart0.print(itoa(FSM::logger.measure_counter,temp_conv,10));FSM::uart0.print("\r\n");
+
 	if(FSM::logger.measure_counter==FSM::logger.measure_max){
 		calc_average();									// if measurement sequence is finish, average data
 		FSM::flag_data_averages_ready=1;
