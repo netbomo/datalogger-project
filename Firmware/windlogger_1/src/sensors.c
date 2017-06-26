@@ -153,7 +153,7 @@ void dir_value(Measure *_measure)
 
 	degree = (degree+logger.degree_offset)%360;
 
-	if(degree>359) degree=359;
+	if(degree>359) degree-=359;
 
 	_measure->degree = degree;
 	//_measure->degree += degree/logger.meas_max; 	/// return the wind degree's value

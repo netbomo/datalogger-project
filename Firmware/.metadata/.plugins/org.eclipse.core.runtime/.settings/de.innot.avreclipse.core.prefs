@@ -1,3 +1,12 @@
+avrdude/configs/programmerconfig.1/baudrate=
+avrdude/configs/programmerconfig.1/description=This is the configuration for the windlogger digital board
+avrdude/configs/programmerconfig.1/name=USB_UART_CP2102
+avrdude/configs/programmerconfig.1/otherOptions=-D
+avrdude/configs/programmerconfig.1/port=/dev/ttyUSB0
+avrdude/configs/programmerconfig.1/postAvrdudeDelayMs=
+avrdude/configs/programmerconfig.1/ppresetline=
+avrdude/configs/programmerconfig.1/ppvccline=
+avrdude/configs/programmerconfig.1/programmer=arduino
 avrdudepropertypage/previewexpanded=false
 avrdudepropertypage/weight_preview_collapsed=50
 avrdudepropertypage/weight_preview_expanded=20

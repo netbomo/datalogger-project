@@ -1097,3 +1097,1203 @@ java.net.UnknownHostException: anb0s.github.io: Nom ou service inconnu
 	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
 	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-04-26 09:57:28.734 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-26 09:58:12.315
+!MESSAGE Connection to http://download.eclipse.org/releases/neon/p2.index failed on download.eclipse.org: Nom ou service inconnu. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org: Nom ou service inconnu
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-26 09:58:12.594
+!MESSAGE Unknown Host: http://download.eclipse.org/releases/neon/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-26 09:58:12.659
+!MESSAGE Connection to http://download.eclipse.org/egit/updates/p2.index failed on download.eclipse.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-26 09:58:12.880
+!MESSAGE Connection to http://download.eclipse.org/egit/updates/content.xml.xz failed on download.eclipse.org. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-26 09:58:13.084
+!MESSAGE Unknown Host: http://download.eclipse.org/egit/updates/content.xml.xz
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2017-04-26 09:58:33.159
+!MESSAGE Connection to http://anb0s.github.io/eclox/p2.index failed on anb0s.github.io: Nom ou service inconnu. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: anb0s.github.io: Nom ou service inconnu
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:131)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-04-26 09:58:33.377
+!MESSAGE Unknown Host: http://anb0s.github.io/eclox/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: anb0s.github.io
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui 4 0 2017-04-26 09:58:45.707
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalArgumentException: Argument cannot be null)
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4536)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4154)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+Caused by: java.lang.IllegalArgumentException: Argument cannot be null
+	at org.eclipse.swt.SWT.error(SWT.java:4514)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.SWT.error(SWT.java:4419)
+	at org.eclipse.swt.custom.StyledText.setText(StyledText.java:10128)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractAnnotationHover$AnnotationInformationControl.createAnnotationInformation(AbstractAnnotationHover.java:320)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractAnnotationHover$AnnotationInformationControl.deferredCreateContent(AbstractAnnotationHover.java:272)
+	at org.eclipse.cdt.internal.ui.text.c.hover.AbstractAnnotationHover$AnnotationInformationControl.setInput(AbstractAnnotationHover.java:176)
+	at org.eclipse.jface.internal.text.InformationControlReplacer.showInformationControl(InformationControlReplacer.java:154)
+	at org.eclipse.jface.text.AbstractInformationControlManager.internalShowInformationControl(AbstractInformationControlManager.java:1177)
+	at org.eclipse.jface.text.AbstractInformationControlManager.presentInformation(AbstractInformationControlManager.java:1163)
+	at org.eclipse.jface.text.AbstractInformationControlManager.setInformation(AbstractInformationControlManager.java:428)
+	at org.eclipse.jface.internal.text.InformationControlReplacer.computeInformation(InformationControlReplacer.java:113)
+	at org.eclipse.jface.text.AbstractInformationControlManager.doShowInformation(AbstractInformationControlManager.java:1144)
+	at org.eclipse.jface.text.AbstractInformationControlManager.showInformation(AbstractInformationControlManager.java:1134)
+	at org.eclipse.jface.internal.text.InformationControlReplacer.replaceInformationControl(InformationControlReplacer.java:100)
+	at org.eclipse.jface.text.AbstractInformationControlManager.replaceInformationControl(AbstractInformationControlManager.java:1311)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager.replaceInformationControl(AbstractHoverInformationControlManager.java:801)
+	at org.eclipse.jface.text.TextViewerHoverManager.replaceInformationControl(TextViewerHoverManager.java:303)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager$1$1.run(AbstractHoverInformationControlManager.java:865)
+	at org.eclipse.ui.internal.UILockListener.doPendingWork(UILockListener.java:162)
+	at org.eclipse.ui.internal.UISynchronizer$3.run(UISynchronizer.java:154)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	... 24 more
+!SESSION 2017-04-26 10:43:59.204 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -data /home/gilou/git_repos/datalogger-project/Firmware -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-26 13:33:02.768
+!MESSAGE Indexed 'windlogger_cpp' (9 sources, 26 headers) in 1,56 sec: 578 declarations; 1 156 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-26 13:33:52.335
+!MESSAGE Indexed 'windlogger_cpp' (9 sources, 26 headers) in 0,973 sec: 578 declarations; 1 157 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-04-29 06:16:43.937 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-30 19:32:01.599
+!MESSAGE Indexed 'windlogger_cpp' (9 sources, 29 headers) in 0,754 sec: 671 declarations; 1 509 references; 0 unresolved inclusions; 1 syntax errors; 5 unresolved names (0,23 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-30 19:32:21.318
+!MESSAGE Indexed 'windlogger_cpp' (9 sources, 29 headers) in 0,85 sec: 671 declarations; 1 509 references; 0 unresolved inclusions; 1 syntax errors; 5 unresolved names (0,23 %)
+!SESSION 2017-05-05 07:53:53.774 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.jobs 2 2 2017-05-05 07:54:32.985
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.ui.internal.Workbench$55
+!SESSION 2017-05-09 09:48:51.313 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -data /home/gilou/git_repos/datalogger-project/Firmware -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-09 14:27:04.071
+!MESSAGE Indexed 'windlogger_cpp' (10 sources, 32 headers) in 1,04 sec: 690 declarations; 1 677 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-09 14:27:18.311
+!MESSAGE Indexed 'windlogger_cpp' (10 sources, 32 headers) in 0,605 sec: 690 declarations; 1 677 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-05-09 16:53:53.257 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -data /home/gilou/git_repos/datalogger-project/Firmware -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-05-09 20:23:24.423
+!MESSAGE Unknown Host: http://download.eclipse.org/releases/neon/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-05-09 20:23:24.642
+!MESSAGE Unknown Host: http://anb0s.github.io/eclox/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: anb0s.github.io
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-05-09 20:23:29.620
+!MESSAGE Unknown Host: http://download.eclipse.org/eclipse/updates/4.6/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-05-10 10:04:07.493 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-05-10 10:04:13.475
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2017-05-10 12:44:21.542 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -data /home/gilou/git_repos/datalogger-project/Firmware -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-10 16:53:39.690
+!MESSAGE Indexed 'windlogger_cpp' (10 sources, 32 headers) in 0,833 sec: 716 declarations; 1 734 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-05-10 18:37:54.247 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:07:27.504
+!MESSAGE Error encountered. PROJECT_BRIEF: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:07:27.560
+!MESSAGE Error encountered. PROJECT_BRIEF: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:07:28.961
+!MESSAGE Error encountered. PROJECT_LOGO: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:07:28.965
+!MESSAGE Error encountered. PROJECT_LOGO: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:07:39.337
+!MESSAGE Error encountered. ALLOW_UNICODE_NAMES: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:07:39.341
+!MESSAGE Error encountered. ALLOW_UNICODE_NAMES: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:09:05.540
+!MESSAGE Error encountered. STRIP_FROM_PATH: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:09:52.427
+!MESSAGE Error encountered. TAB_SIZE: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:10:32.512
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:10:32.515
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:10:58.968
+!MESSAGE Error encountered. SIP_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:10:58.971
+!MESSAGE Error encountered. SIP_SUPPORT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:11:00.768
+!MESSAGE Error encountered. IDL_PROPERTY_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:11:00.771
+!MESSAGE Error encountered. IDL_PROPERTY_SUPPORT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:11:21.624
+!MESSAGE Error encountered. IDL_PROPERTY_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:11:21.628
+!MESSAGE Error encountered. IDL_PROPERTY_SUPPORT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:11:40.055
+!MESSAGE Error encountered. INLINE_GROUPED_CLASSES: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:11:40.058
+!MESSAGE Error encountered. INLINE_GROUPED_CLASSES: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:14:15.146
+!MESSAGE Error encountered. MAX_INITIALIZER_LINES: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:17:37.579
+!MESSAGE Error encountered. HTML_FILE_EXTENSION: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:20:00.559
+!MESSAGE Error encountered. ENUM_VALUES_PER_LINE: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:20:05.017
+!MESSAGE Error encountered. TREEVIEW_WIDTH: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 12:23:28.109
+!MESSAGE Error encountered. MAX_DOT_GRAPH_DEPTH: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:35:59.814
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:35:59.816
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:35:59.824
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:35:59.826
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:02.253
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:02.258
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:02.591
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:02.596
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:02.603
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:02.604
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:03.222
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:03.225
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:03.269
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:03.273
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.103
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.106
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.334
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.336
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.342
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.344
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.370
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.372
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.429
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.431
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.437
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:07.438
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:08.745
+!MESSAGE Error encountered. CLANG_ASSISTED_PARSING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:08.748
+!MESSAGE Error encountered. CLANG_ASSISTED_PARSING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:09.130
+!MESSAGE Error encountered. CLANG_ASSISTED_PARSING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:09.132
+!MESSAGE Error encountered. CLANG_ASSISTED_PARSING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:59.031
+!MESSAGE Error encountered. UML_LIMIT_NUM_FIELDS: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:36:59.034
+!MESSAGE Error encountered. UML_LIMIT_NUM_FIELDS: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:37:24.642
+!MESSAGE Error encountered. MAX_DOT_GRAPH_DEPTH: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:38:27.152
+!MESSAGE Error encountered. INTERACTIVE_SVG: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:38:27.155
+!MESSAGE Error encountered. INTERACTIVE_SVG: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:38:27.377
+!MESSAGE Error encountered. INTERACTIVE_SVG: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:38:27.383
+!MESSAGE Error encountered. INTERACTIVE_SVG: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:43:21.427
+!MESSAGE Error encountered. PROJECT_BRIEF: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:43:21.429
+!MESSAGE Error encountered. PROJECT_BRIEF: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:43:23.013
+!MESSAGE Error encountered. USE_MDFILE_AS_MAINPAGE: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:43:23.015
+!MESSAGE Error encountered. USE_MDFILE_AS_MAINPAGE: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:43:23.023
+!MESSAGE Error encountered. USE_MDFILE_AS_MAINPAGE: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:43:23.025
+!MESSAGE Error encountered. USE_MDFILE_AS_MAINPAGE: missing or wrong TYPE property.
+
+!ENTRY org.eclipse.ui 4 0 2017-05-11 16:46:16.753
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Failed to execute runnable (java.lang.IllegalArgumentException: Comparison method violates its general contract!)
+	at org.eclipse.swt.SWT.error(SWT.java:4533)
+	at org.eclipse.swt.SWT.error(SWT.java:4448)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4536)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:4154)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1121)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1022)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:150)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:693)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:610)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:138)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:673)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:610)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1519)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1492)
+Caused by: java.lang.IllegalArgumentException: Comparison method violates its general contract!
+	at java.util.TimSort.mergeHi(TimSort.java:899)
+	at java.util.TimSort.mergeAt(TimSort.java:516)
+	at java.util.TimSort.mergeForceCollapse(TimSort.java:457)
+	at java.util.TimSort.sort(TimSort.java:254)
+	at java.util.Arrays.sort(Arrays.java:1438)
+	at org.eclipse.jface.viewers.TreePathViewerSorter.sort(TreePathViewerSorter.java:102)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.getSortedChildren(AbstractTreeViewer.java:640)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.updateChildren(AbstractTreeViewer.java:2633)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefreshStruct(AbstractTreeViewer.java:1913)
+	at org.eclipse.jface.viewers.TreeViewer.internalRefreshStruct(TreeViewer.java:669)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1888)
+	at org.eclipse.jface.viewers.AbstractTreeViewer.internalRefresh(AbstractTreeViewer.java:1845)
+	at org.eclipse.ui.navigator.CommonViewer.internalRefresh(CommonViewer.java:529)
+	at org.eclipse.jface.viewers.StructuredViewer.lambda$1(StructuredViewer.java:1542)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1458)
+	at org.eclipse.jface.viewers.TreeViewer.preservingSelection(TreeViewer.java:354)
+	at org.eclipse.jface.viewers.StructuredViewer.preservingSelection(StructuredViewer.java:1419)
+	at org.eclipse.jface.viewers.StructuredViewer.refresh(StructuredViewer.java:1542)
+	at org.eclipse.jface.viewers.ColumnViewer.refresh(ColumnViewer.java:535)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:343)
+	at org.eclipse.ui.navigator.CommonViewer.refresh(CommonViewer.java:492)
+	at org.eclipse.cdt.ui.CElementContentProvider$RefreshElement.refresh(CElementContentProvider.java:367)
+	at org.eclipse.cdt.ui.CElementContentProvider$1.run(CElementContentProvider.java:452)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
+	... 24 more
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:47:38.150
+!MESSAGE Error encountered. UML_LIMIT_NUM_FIELDS: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 16:47:38.155
+!MESSAGE Error encountered. UML_LIMIT_NUM_FIELDS: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-11 17:13:07.300
+!MESSAGE Error encountered. TAB_SIZE: missing or wrong TYPE property.
+
+!ENTRY org.eclipse.egit.core 4 0 2017-05-11 21:33:07.569
+!MESSAGE An exception occurred during push on URI https://github.com/netbomo/datalogger-project.git: https://github.com/netbomo/datalogger-project.git: cannot open git-receive-pack
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/netbomo/datalogger-project.git: cannot open git-receive-pack
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:180)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:215)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:84)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/netbomo/datalogger-project.git: cannot open git-receive-pack
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:566)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:420)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1310)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:169)
+	... 4 more
+Caused by: java.net.UnknownHostException: github.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:668)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1181)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1546)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:338)
+	at org.eclipse.jgit.transport.http.JDKHttpConnection.getResponseCode(JDKHttpConnection.java:99)
+	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:202)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:504)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-11 21:33:07.597
+!MESSAGE Can't connect to any repository: https://github.com/netbomo/datalogger-project.git (https://github.com/netbomo/datalogger-project.git: cannot open git-receive-pack)
+
+!ENTRY org.eclipse.egit.core 4 0 2017-05-11 21:34:02.933
+!MESSAGE An exception occurred during push on URI https://github.com/netbomo/datalogger-project.git: https://github.com/netbomo/datalogger-project.git: cannot open git-receive-pack
+!STACK 0
+org.eclipse.jgit.api.errors.TransportException: https://github.com/netbomo/datalogger-project.git: cannot open git-receive-pack
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:180)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:215)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:84)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:57)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+Caused by: org.eclipse.jgit.errors.TransportException: https://github.com/netbomo/datalogger-project.git: cannot open git-receive-pack
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:566)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:420)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:160)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1310)
+	at org.eclipse.jgit.api.PushCommand.call(PushCommand.java:169)
+	... 4 more
+Caused by: java.net.UnknownHostException: github.com
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:668)
+	at sun.net.NetworkClient.doConnect(NetworkClient.java:175)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:432)
+	at sun.net.www.http.HttpClient.openServer(HttpClient.java:527)
+	at sun.net.www.protocol.https.HttpsClient.<init>(HttpsClient.java:264)
+	at sun.net.www.protocol.https.HttpsClient.New(HttpsClient.java:367)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.getNewHttpClient(AbstractDelegateHttpsURLConnection.java:191)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1181)
+	at sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1032)
+	at sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:177)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1546)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1474)
+	at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)
+	at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:338)
+	at org.eclipse.jgit.transport.http.JDKHttpConnection.getResponseCode(JDKHttpConnection.java:99)
+	at org.eclipse.jgit.util.HttpSupport.response(HttpSupport.java:202)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:504)
+	... 8 more
+
+!ENTRY org.eclipse.egit.ui 4 0 2017-05-11 21:34:02.939
+!MESSAGE Can't connect to any repository: https://github.com/netbomo/datalogger-project.git (https://github.com/netbomo/datalogger-project.git: cannot open git-receive-pack)
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:26.001
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:26.006
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:26.015
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:26.016
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:26.052
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:26.054
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:26.059
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:26.061
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:32.197
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:32.200
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:33.166
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:46:33.169
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:36.506
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:36.508
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:36.515
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:36.517
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:48.469
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:48.471
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:48.504
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:48.506
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:48.529
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:48.531
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:48.537
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 15:54:48.538
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.core 4 0 2017-05-15 16:18:24.074
+!MESSAGE : invalid custom doxygen identifier found.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:24:22.657
+!MESSAGE Error encountered. PROJECT_BRIEF: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:24:22.659
+!MESSAGE Error encountered. PROJECT_BRIEF: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:24:23.906
+!MESSAGE Error encountered. PROJECT_LOGO: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:24:23.909
+!MESSAGE Error encountered. PROJECT_LOGO: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:24:28.033
+!MESSAGE Error encountered. PROJECT_LOGO: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:24:28.036
+!MESSAGE Error encountered. PROJECT_LOGO: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:24:43.274
+!MESSAGE Error encountered. ALLOW_UNICODE_NAMES: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:24:43.277
+!MESSAGE Error encountered. ALLOW_UNICODE_NAMES: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:25:27.179
+!MESSAGE Error encountered. ABBREVIATE_BRIEF: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:05.919
+!MESSAGE Error encountered. STRIP_FROM_PATH: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:17.388
+!MESSAGE Error encountered. STRIP_FROM_INC_PATH: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:40.995
+!MESSAGE Error encountered. TAB_SIZE: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:43.318
+!MESSAGE Error encountered. TCL_SUBST: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:43.321
+!MESSAGE Error encountered. TCL_SUBST: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:54.134
+!MESSAGE Error encountered. OPTIMIZE_OUTPUT_VHDL: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:54.136
+!MESSAGE Error encountered. OPTIMIZE_OUTPUT_VHDL: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:55.885
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:55.888
+!MESSAGE Error encountered. EXTENSION_MAPPING: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:57.251
+!MESSAGE Error encountered. MARKDOWN_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:57.252
+!MESSAGE Error encountered. MARKDOWN_SUPPORT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:58.548
+!MESSAGE Error encountered. AUTOLINK_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:26:58.551
+!MESSAGE Error encountered. AUTOLINK_SUPPORT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:18.693
+!MESSAGE Error encountered. SIP_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:18.697
+!MESSAGE Error encountered. SIP_SUPPORT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:22.190
+!MESSAGE Error encountered. IDL_PROPERTY_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:22.193
+!MESSAGE Error encountered. IDL_PROPERTY_SUPPORT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:33.580
+!MESSAGE Error encountered. INLINE_GROUPED_CLASSES: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:33.584
+!MESSAGE Error encountered. INLINE_GROUPED_CLASSES: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:34.156
+!MESSAGE Error encountered. INLINE_SIMPLE_STRUCTS: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:34.158
+!MESSAGE Error encountered. INLINE_SIMPLE_STRUCTS: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:34.763
+!MESSAGE Error encountered. TYPEDEF_HIDES_STRUCT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:34.764
+!MESSAGE Error encountered. TYPEDEF_HIDES_STRUCT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:39.222
+!MESSAGE Error encountered. EXTRACT_PACKAGE: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:27:39.225
+!MESSAGE Error encountered. EXTRACT_PACKAGE: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:29:02.614
+!MESSAGE Error encountered. MAX_INITIALIZER_LINES: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:29:05.397
+!MESSAGE Error encountered. SHOW_FILES: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:29:05.399
+!MESSAGE Error encountered. SHOW_FILES: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:29:06.269
+!MESSAGE Error encountered. SHOW_NAMESPACES: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:29:06.273
+!MESSAGE Error encountered. SHOW_NAMESPACES: missing or wrong TYPE property.
+!SESSION 2017-05-15 16:30:19.917 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:31:38.339
+!MESSAGE Error encountered. TAB_SIZE: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:32:34.350
+!MESSAGE Error encountered. LAYOUT_FILE: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-15 16:32:34.352
+!MESSAGE Error encountered. LAYOUT_FILE: missing or wrong TYPE property.
+!SESSION 2017-05-16 10:16:48.058 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-16 10:19:39.683
+!MESSAGE Error encountered. MARKDOWN_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-16 10:19:39.716
+!MESSAGE Error encountered. MARKDOWN_SUPPORT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-16 10:19:39.752
+!MESSAGE Error encountered. MARKDOWN_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-16 10:19:39.760
+!MESSAGE Error encountered. MARKDOWN_SUPPORT: missing or wrong TYPE property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-16 10:19:42.696
+!MESSAGE Error encountered. MARKDOWN_SUPPORT: missing TEXT property.
+
+!ENTRY org.gna.eclox.ui 4 0 2017-05-16 10:19:42.700
+!MESSAGE Error encountered. MARKDOWN_SUPPORT: missing or wrong TYPE property.
+!SESSION 2017-05-21 10:38:14.117 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -data /home/gilou/git_repos/datalogger-project/Firmware -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-05-21 11:51:29.845
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2017-05-21 11:51:29.884
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.core.resources 4 372 2017-05-21 11:51:29.903
+!MESSAGE Resource '/windlogger_1' is not open.
+
+!ENTRY org.eclipse.core.resources 4 372 2017-05-21 11:51:30.021
+!MESSAGE Resource '/windlogger_dev_output_0310' is not open.
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-21 20:33:47.638
+!MESSAGE Indexed 'windlogger_cpp' (11 sources, 33 headers) in 0,941 sec: 765 declarations; 1 846 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-21 20:34:17.718
+!MESSAGE Indexed 'windlogger_cpp' (11 sources, 33 headers) in 0,731 sec: 765 declarations; 1 846 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-05-22 13:28:08.550 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-22 15:46:20.073
+!MESSAGE Indexed 'windlogger_cpp' (12 sources, 34 headers) in 1,76 sec: 780 declarations; 1 927 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-05-23 00:15:52.562 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2017-05-23 00:16:33.832
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: dev.eclipse.org: Nom ou service inconnu. ; version: 2.0.4.v20170307-1435
+!STACK 0
+java.net.UnknownHostException: dev.eclipse.org: Nom ou service inconnu
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:102)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:319)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:184)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:206)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:68)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Thread.java:745)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-05-23 00:26:18.097
+!MESSAGE Unknown Host: http://download.eclipse.org/releases/neon/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-05-23 00:26:38.422
+!MESSAGE Unknown Host: http://anb0s.github.io/eclox/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: anb0s.github.io
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2017-05-24 16:06:16.941 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-24 16:42:02.737
+!MESSAGE Indexed 'windlogger_cpp' (12 sources, 34 headers) in 1,49 sec: 798 declarations; 1 975 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-05-24 16:44:39.684 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-24 17:23:08.798
+!MESSAGE Indexed 'test_inherite' (0 sources, 0 headers) in 0 sec: 0 declarations; 0 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-24 18:14:45.847
+!MESSAGE Indexed 'windlogger_cpp' (13 sources, 35 headers) in 0,879 sec: 768 declarations; 1 853 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,076 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-24 18:17:36.835
+!MESSAGE Indexed 'windlogger_cpp' (13 sources, 35 headers) in 0,641 sec: 768 declarations; 1 856 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-05-24 18:18:23.998 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-24 18:19:30.878
+!MESSAGE Indexed 'windlogger_cpp' (13 sources, 35 headers) in 2,03 sec: 768 declarations; 1 856 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-05-24 22:08:41.132
+!MESSAGE Unknown Host: http://anb0s.github.io/eclox/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: anb0s.github.io
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1006 2017-05-24 22:08:41.282
+!MESSAGE Unknown Host: http://download.eclipse.org/eclipse/updates/4.6/compositeContent.xml
+!STACK 0
+java.net.UnknownHostException: download.eclipse.org
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1280)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:44)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:259)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:159)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-05-24 22:30:46.728
+!MESSAGE Indexed 'windlogger_cpp' (13 sources, 35 headers) in 0,972 sec: 813 declarations; 2 018 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.ui 4 0 2017-05-24 22:57:25.911
+!MESSAGE Cannot work without declarator
+!SESSION 2017-06-26 09:11:02.814 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2017-06-26 09:43:07.672
+!MESSAGE Unable to connect to repository http://download.eclipse.org/releases/neon/compositeContent.xml
+!STACK 0
+java.net.ConnectException: Le réseau n'est pas accessible (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2017-06-26 09:43:08.055
+!MESSAGE Unable to connect to repository http://anb0s.github.io/eclox/compositeContent.xml
+!STACK 0
+java.net.ConnectException: Le réseau n'est pas accessible (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 4 1002 2017-06-26 09:43:12.748
+!MESSAGE Unable to connect to repository http://download.eclipse.org/eclipse/updates/4.6/compositeContent.xml
+!STACK 0
+java.net.ConnectException: Le réseau n'est pas accessible (connect failed)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.apache.http.conn.scheme.PlainSocketFactory.connectSocket(PlainSocketFactory.java:117)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:177)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.open(ManagedClientConnectionImpl.java:304)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:611)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:446)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientFileSystemBrowser.runRequest(HttpClientFileSystemBrowser.java:263)
+	at org.eclipse.ecf.provider.filetransfer.browse.AbstractFileSystemBrowser$DirectoryJob.run(AbstractFileSystemBrowser.java:69)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)

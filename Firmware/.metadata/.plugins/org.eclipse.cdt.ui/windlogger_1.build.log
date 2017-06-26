@@ -1,4 +1,4 @@
-12:05:13 **** Incremental Build of configuration Release for project windlogger_1 ****
+16:08:51 **** Incremental Build of configuration Release for project windlogger_1 ****
 make all 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega1284p windlogger_1.elf
@@ -16,5 +16,5 @@ Data:        979 bytes (6.0% Full)
 Finished building: sizedummy
  
 
-12:05:13 Build Finished (took 117ms)
+16:08:51 Build Finished (took 136ms)
 

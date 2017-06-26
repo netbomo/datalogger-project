@@ -115,7 +115,6 @@ void Measure::freq_init_measurement (){
 //read the windvane value en map it between 0 to 359 degres
 void Measure::windvane_value (){
 	FSM::windvane.read_value(FSM::logger.measure_counter);
-	FSM::windvane.print_data_array();
 }
 
 // read power value - not define realy (see emonLib)

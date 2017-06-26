@@ -21,11 +21,7 @@
 	</section>
 	<section name="GitCommitMessageComponent">
 		<list key="/home/gilou/git_repos/datalogger-project/.git">
-			<item value="false"/>
-			<item value="gilou &lt;gilou@tripalium.org&gt;"/>
-			<item value="&#x0A;&#x0A;Signed-off-by: gilou &lt;gilou@tripalium.org&gt;&#x0A;"/>
-			<item value="gilou &lt;gilou@tripalium.org&gt;"/>
-			<item value="878ea32b8cdea0fda25fd1592274115ec7d9dc6a"/>
+			<item value="empty"/>
 		</list>
 	</section>
 	<section name="org.eclipse.egit.ui.internal.staging.StagingView">

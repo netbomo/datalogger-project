@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item value="Default C++ source template" key="LastUsedSourceTemplate"/>
+	<item value="Default C++ header template" key="LastUsedHeaderTemplate"/>
+	<section name="org.eclipse.cdt.ui.OPEN_ACTION_SELECTION_DIALOG_SECTION">
+		<item value="384" key="DIALOG_WIDTH"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="439" key="DIALOG_HEIGHT"/>
+		<item value="649" key="DIALOG_X_ORIGIN"/>
+		<item value="233" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
+		<item value="168" key="size.height"/>
+		<item value="707" key="size.width"/>
+	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="true" key="stubSelected1"/>
+		<item value="true" key="stubVirtual1"/>
+		<item value="false" key="namespaceSelected"/>
+		<item value="false" key="stubInline0"/>
+		<item value="false" key="stubInline1"/>
+		<item value="" key="namespace"/>
+		<item value="false" key="testFileSelected"/>
+		<item value="true" key="stubSelected0"/>
+	</section>
+	<section name="PDOMSearchPage">
+		<item value="false" key="caseSensitive"/>
+		<item value="227191" key="searchFlags"/>
+		<list key="previousPatterns">
+			<item value="flag_data_averages_ready"/>
+			<item value="measure_counter"/>
+			<item value="baudrate"/>
+			<item value="bauderate"/>
+			<item value="measureCounter"/>
+			<item value="data_udr0"/>
+			<item value="FSM::timestamp"/>
+		</list>
 	</section>
 	<section name="org.eclipse.cdt.internal.ui.preferences.EditTemplateDialog_dialogBounds">
 		<item value="813" key="DIALOG_WIDTH"/>
@@ -15,5 +50,22 @@
 	<section name="CRenameRefactoringInputPage">
 	</section>
 	<section name="completion_proposal_size">
+	</section>
+	<section name="org.eclipse.cdt.internal.ui.wizards.classwizard.NewBaseClassSelectionDialogSettings">
+		<item value="false" key="show_enums"/>
+		<item value="false" key="show_unions"/>
+		<item value="false" key="show_macros"/>
+		<item value="true" key="show_classes"/>
+		<item value="false" key="show_functions"/>
+		<item value="true" key="show_lowlevel"/>
+		<item value="false" key="show_namespaces"/>
+		<item value="false" key="show_enumerators"/>
+		<item value="true" key="show_structs"/>
+		<item value="496" key="x"/>
+		<item value="376" key="width"/>
+		<item value="306" key="y"/>
+		<item value="false" key="show_typedefs"/>
+		<item value="false" key="show_variables"/>
+		<item value="669" key="height"/>
 	</section>
 </section>
