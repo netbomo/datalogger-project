@@ -34,6 +34,7 @@
 
 #include <avr/io.h>
 #include <string.h>
+#include <stdlib.h>
 
 #include "../lib/main.h"
 #include "../lib/FSM.h"
@@ -59,17 +60,20 @@ Measure::~Measure(){} // Destructor
  * inherits from State
  */
 void Measure::execute (){
-	PORTB |= _BV(LED_PIN);						// Turn on the green led (blink each time the measure.execute() come)
 
+	char temp_conv[10];
+
+	PORTB |= _BV(LED_PIN);						// Turn on the green led (blink each time the measure.execute() come)
+print();
 	if(FSM::flag_new_measure){
-		if(FSM::eeprom.measure_counter==0){		// if it's a new data flow
+		if(FSM::logger.measure_counter==0){		// if it's a new data flow
 			clear_data_array();					// clear the data array
 		}
 		freq_init_measurement();				// init frequencies measurement
 		windvane_value();						// read the value from the windvane, convert it in 0-359° value
 		power_read_value();						// do power measurement todo à préciser!
 		temperature_read_value();				// read temperature from the DS18B20
-		FSM::eeprom.measure_counter++;			// increase the measureCounter
+		FSM::logger.measure_counter++;			// increase the measureCounter
 
 		FSM::flag_new_measure = 0;				// reset the flag
 	}
@@ -78,8 +82,10 @@ void Measure::execute (){
 		freq_read_value();								//	read data from anemometer and RPM
 		Measure::flag_data_frequencies_ready = 0;		//	reset the flag
 	}
-	if(FSM::eeprom.measure_counter==FSM::eeprom.measure_max){
+	FSM::uart0.print(itoa(FSM::logger.measure_counter,temp_conv,10));FSM::uart0.print("\r\n");
+	if(FSM::logger.measure_counter==FSM::logger.measure_max){
 		calc_average();									// if measurement sequence is finish, average data
+		FSM::flag_data_averages_ready=1;
 	}
 
 	PORTB &= ~_BV(LED_PIN);						// turn off the green led
@@ -108,7 +114,8 @@ void Measure::freq_init_measurement (){
 
 //read the windvane value en map it between 0 to 359 degres
 void Measure::windvane_value (){
-
+	FSM::windvane.read_value(FSM::logger.measure_counter);
+	FSM::windvane.print_data_array();
 }
 
 // read power value - not define realy (see emonLib)
@@ -128,6 +135,7 @@ void Measure::freq_read_value (){
 
 // calcul average from the data array
 void Measure::calc_average (){
-	FSM::eeprom.measure_counter=0;	// initialize the next measure
+	FSM::windvane.calc_average();
+	FSM::logger.measure_counter=0;	// initialize the next measure
 
 }

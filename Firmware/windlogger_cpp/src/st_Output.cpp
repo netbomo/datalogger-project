@@ -42,6 +42,8 @@
 
 Output::Output(){
 	strcpy(m_name,"output\0");
+	ptr_string = string;
+	FSM::logger.output_enable=USART0;
 }
 
 Output::~Output(){
@@ -49,20 +51,21 @@ Output::~Output(){
 }
 
 void Output::execute (){
+	print();
 	//print();
-	if(FSM::eeprom.output_enable||USART0){
+	if(FSM::logger.output_enable||USART0){
 		usart0_print();
 	}
-	if(FSM::eeprom.output_enable||USART1){
+	if(FSM::logger.output_enable||USART1){
 		usart1_print();
 	}
-	if(FSM::eeprom.output_enable||SD_CARD){
+	if(FSM::logger.output_enable||SD_CARD){
 		SDCard_print();
 	}
-	if(FSM::eeprom.output_enable||WIFI){
+	if(FSM::logger.output_enable||WIFI){
 		usart1_print();
 	}
-	if(FSM::eeprom.output_enable||GPRS){
+	if(FSM::logger.output_enable||GPRS){
 		usart1_print();
 	}
 }
@@ -77,7 +80,12 @@ bool Output::isEqual(char *name)const {
 
 
 void Output::usart0_print (){
+	ptr_string =&string[0];
+	FSM::windvane.print_average(ptr_string);  /// pas fonctionnel
 
+	//strcpy(string,"\r\n");
+	FSM::uart0.print(string);
+	ptr_string =&string[0];
 }
 
 void Output::usart1_print (){

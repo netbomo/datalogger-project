@@ -38,6 +38,7 @@
 
 #include "../lib/main.h"
 #include "../lib/FSM.h"
+#include "../lib/Sensor.h"
 #include "../lib/State.h"
 #include "../lib/Usart.h"
 
@@ -58,19 +59,23 @@ unsigned long int FSM::timestamp = 0;		// timestamp is an uint32 to stock the cu
  */
 Usart FSM::uart0(0,Usart::BR_57600);	// This is the uart0 definition
 
-Eeprom FSM::eeprom;						// This is the structure of data stored in the eeprom
+Logger FSM::logger;						// This is the structure of data stored in the eeprom
+
+
+Anemometer FSM::anemo1;					// Anemometer 1 definition
+Windvane FSM::windvane(2);				// Windvane sensor definition
+
 
 //Class constructor
 FSM::FSM():second_counter(0),nextState(&idle){
-	//
-	//	Idle idle("idle");					// this state is used just for the first time in the while loop
-	//	Config config("config");			// this state is used to download or upload configuration
-	//	Measure measure("measure");			// this state is used for measurement process
-	//	Output output("output");			// this state is used to save or send data
-	//	Sleep sleep("sleep");				// When nothing is need to do, the micro-controller go to sleep
 
-	config.load_eeprom();
+	config.load_logger();				// call the eeprom configuration from the config state
 
+				// initialize each sensors from the sensors_param structure, Be careful! for each new sensor, increase the eeprom.sensor_counter
+	windvane.load_param();
+
+
+	// Timer2 initialisation : use for the Real Time Clock, it generate second hit.
 	TIMSK2 |= _BV(TOIE2);				// enable overflow interrupt
 	TCNT2 = 0;
 	TCCR2B = _BV(CS22) | _BV(CS20); 	// prescaler for overload interrupt each 1 second : CS2[2:0]=101;
@@ -78,7 +83,10 @@ FSM::FSM():second_counter(0),nextState(&idle){
 
 	sei();								// enable interrupt
 
-	config.load_eeprom();
+}
+
+FSM::~FSM(){
+
 }
 
 /******************************************************************************
@@ -106,7 +114,7 @@ void FSM::new_State_definition(){
 void FSM::measurement_timing_control (){
 	second_counter++;						// Use a second counter to compare with the measure_stamp
 
-	if(second_counter==eeprom.measure_periode)
+	if(second_counter==logger.measure_periode)
 	{
 		flag_new_measure = 1;				// if it's true, we can do a new measure
 		second_counter=0;					// reset the counter

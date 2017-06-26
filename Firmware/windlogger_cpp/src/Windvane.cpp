@@ -6,7 +6,7 @@
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
- *     any later version.
+ *    any later version.
  *
  *    This program is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -16,58 +16,33 @@
  *    You should have received a copy of the GNU General Public License
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- *
+ * 
  *******************************************************************************
  *******************************************************************************
  *
  *
- *    @file   Output.h
+ *    @file   Windvane.cpp
  *    @author gilou
- *    @date   20 avr. 2017
- *    @brief  The class Output inherits from the class State.
+ *    @date   23 mai 2017
+ *    @brief  Brief description of file.
  *
- *    @todo Detailed description of file.
+ *    Detailed description of file.
  */
 
-#ifndef OUTPUT__HPP
-#define OUTPUT__HPP
+#include <string.h>
 
-#include "../lib/State.h"
+#include "../lib/Windvane.h"
 
-class Output : public State {
-private:
-	char string[50];
-	char *ptr_string;
-public :
-	// Operations
-	Output ();
+Windvane::Windvane(unsigned char id):Sensor(id) {
+}
 
-	virtual ~Output();
+Windvane::~Windvane() {
+}
 
-	virtual void execute ();
+char* Windvane::print(char *string){
+	return strcpy(string,"windvane");
+}
 
-	virtual void print();
-
-	bool isEqual(char *name)const;
-
-	void usart0_print ();
-
-	void usart1_print ();
-
-	void SDCard_print ();
-
-	// Constants
-	static const unsigned char USART0 = 1;		/// enable constant for USART0
-
-	static const unsigned char USART1 = 2;		/// enable constant for USART1
-
-	static const unsigned char SD_CARD = 4;	/// enable constant for SD_CARD
-
-	static const unsigned char WIFI = 8;		/// enable constant for WIFI
-
-	static const unsigned char GPRS = 16;		/// enable constant for GPRS
-
-
-};
-
-#endif
+void Windvane::read_value(unsigned char measure_number){
+	m_data[measure_number]=(adc_value(6)*m_factor)+m_offset; // channel 6 for the windvane
+}

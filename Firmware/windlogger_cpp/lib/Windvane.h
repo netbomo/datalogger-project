@@ -6,7 +6,7 @@
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
- *     any later version.
+ *    any later version.
  *
  *    This program is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -16,58 +16,38 @@
  *    You should have received a copy of the GNU General Public License
  *    along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *
- *
+ * 
  *******************************************************************************
  *******************************************************************************
  *
  *
- *    @file   Output.h
+ *    @file   Windvane.h
  *    @author gilou
- *    @date   20 avr. 2017
- *    @brief  The class Output inherits from the class State.
+ *    @date   23 mai 2017
+ *    @brief  Brief description of file.
  *
- *    @todo Detailed description of file.
+ *    Detailed description of file.
  */
+#ifndef WINDVANE_H_
+#define WINDVANE_H_
 
-#ifndef OUTPUT__HPP
-#define OUTPUT__HPP
+#include "../lib/Sensor.h"
 
-#include "../lib/State.h"
+class Windvane: public Sensor {
+public:
+	Windvane(unsigned char id);
+	virtual ~Windvane();
 
-class Output : public State {
-private:
-	char string[50];
-	char *ptr_string;
-public :
-	// Operations
-	Output ();
+	/**
+	 * This method need to be overload to personalize config display for the sensor
+	 * @return return string pointer
+	 */
+	char* print(char *string);
 
-	virtual ~Output();
-
-	virtual void execute ();
-
-	virtual void print();
-
-	bool isEqual(char *name)const;
-
-	void usart0_print ();
-
-	void usart1_print ();
-
-	void SDCard_print ();
-
-	// Constants
-	static const unsigned char USART0 = 1;		/// enable constant for USART0
-
-	static const unsigned char USART1 = 2;		/// enable constant for USART1
-
-	static const unsigned char SD_CARD = 4;	/// enable constant for SD_CARD
-
-	static const unsigned char WIFI = 8;		/// enable constant for WIFI
-
-	static const unsigned char GPRS = 16;		/// enable constant for GPRS
-
-
+	/**
+	 * This method read the sensors value, needs to be implemented for each sensor
+	 */
+	void read_value(unsigned char measure_number);
 };
 
-#endif
+#endif /* WINDVANE_H_ */

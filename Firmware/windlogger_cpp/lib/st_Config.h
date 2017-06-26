@@ -117,25 +117,25 @@ public :
 	unsigned char atoc(char string[]);
 
 /******************************************************************************
- * Eeprom management
+ * Logger management
  */
 	/**
 	 * \brief Load saved config data from the eeprom
 	 * \return void
 	 */
-	void load_eeprom ();
+	void load_logger();
 
 	/**
 	 * \brief Update saved config data in the eeprom
 	 * \return void
 	 */
-	void update_epprom ();
+	void update_logger ();
 
 	/**
 	 * \brief Initialize the eeprom memory
 	 * \return void
 	 */
-	void initialize_eeprom ();
+	void initialize_logger ();
 
 };
 

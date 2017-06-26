@@ -54,10 +54,9 @@ int main(){
 	FSM fsm; 					//	FSM instance, that is the state machine mechanism
 
 /******************************************************************************
- * If verbose mode is select ($01=1), display some infos on the uart0
+ * @todo If verbose mode is select ($01=1), display some infos on the uart0
  */
-	fsm.uart0.print("Initialization");		// print on uart0 "initialisation"
-	///@todo use a verbose flag to write info others than data on uart0
+	fsm.uart0.print("Initialization\r\n");		// print on uart0 "initialisation"
 
 /******************************************************************************
  * Initialize main scope variable

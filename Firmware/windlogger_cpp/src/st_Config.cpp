@@ -71,29 +71,35 @@ void Config::execute (){
 		double arg_f = atof(request + 4);
 
 		switch (item) {
-		case 0:
+		case 0:	// choose measurement periode parameter
 			switch (arg_uc) {
 			case 0:	// no measurement, use at the first wake up
-				FSM::eeprom.measure_sample_conf = 0;FSM::eeprom.measure_max = 0;FSM::eeprom.measure_periode = 0;
-				update_epprom();	FSM::eeprom.measure_counter =0;
+				FSM::logger.measure_sample_conf = 0;FSM::logger.measure_max = 0;FSM::logger.measure_periode = 0;
+				update_logger();	FSM::logger.measure_counter =0;
 				break;
 			case 1:	// Config 1 : 2 measures in 10 secondes
-				FSM::eeprom.measure_sample_conf = 1;FSM::eeprom.measure_max = 2;FSM::eeprom.measure_periode = 5;
-				update_epprom();	FSM::eeprom.measure_counter =0;
+				FSM::logger.measure_sample_conf = 1;FSM::logger.measure_max = 2;FSM::logger.measure_periode = 5;
+				update_logger();	FSM::logger.measure_counter =0;
 				break;
 			case 2:	// Config 2 : 4 measures in 1 minute
-				FSM::eeprom.measure_sample_conf = 2;FSM::eeprom.measure_max = 4;FSM::eeprom.measure_periode = 15;
-				update_epprom();	FSM::eeprom.measure_counter =0;
+				FSM::logger.measure_sample_conf = 2;FSM::logger.measure_max = 4;FSM::logger.measure_periode = 15;
+				update_logger();	FSM::logger.measure_counter =0;
 				break;
 			case 3:	// Config 3 : 10 measures in 10 minutes
-				FSM::eeprom.measure_sample_conf = 3;FSM::eeprom.measure_max = 10;FSM::eeprom.measure_periode = 60;
-				update_epprom();	FSM::eeprom.measure_counter =0;
+				FSM::logger.measure_sample_conf = 3;FSM::logger.measure_max = 10;FSM::logger.measure_periode = 60;
+				update_logger();	FSM::logger.measure_counter =0;
 				break;
 			default:
 				FSM::uart0.print("Not a correct value");
 				break;
 			}
 			break;
+			case 31:	// set windvane factor, update eeprom method in the setter
+				FSM::windvane.set_factor(arg_f);
+				break;
+			case 32:	// set windvane offset, update eeprom method in the setter
+				FSM::windvane.set_offset(arg_f);
+				break;
 			default:
 				break;
 		}
@@ -121,8 +127,8 @@ void Config::display(){
 
 	FSM::uart0.print("Configuration :\r\n");
 	FSM::uart0.print("eeprom :\r\n");
-	FSM::uart0.print("$00=");FSM::uart0.print(itoa(FSM::eeprom.measure_sample_conf,conversion_string,10));FSM::uart0.print("	0: not measure,1: 10s average,2:1min average,3:10min average.\r\n");
-	//FSM::uart0.print("	nb of measure = ");FSM::uart0.print(itoa(FSM::eeprom.measure_max,conversion_string,10));FSM::uart0.print("	periode = ");FSM::uart0.print(itoa(FSM::eeprom.measure_periode,conversion_string,10));FSM::uart0.print("\r\n");
+	FSM::uart0.print("$00=");FSM::uart0.print(itoa(FSM::logger.measure_sample_conf,conversion_string,10));FSM::uart0.print("	0: not measure,1: 10s average,2:1min average,3:10min average.\r\n");
+	FSM::windvane.print_config();
 }
 
 //addToRequest : add c to the end of request
@@ -147,25 +153,25 @@ unsigned char Config::atoc(char string[])
  * Eeprom management
  */
 // Load saved config data from the eeprom
-void Config::load_eeprom (){
-	eeprom_read_block(&FSM::eeprom,0,sizeof(Eeprom));
-	if(FSM::eeprom.structure_version != DATA_STRUCTURE_VERSION) initialize_eeprom();
+void Config::load_logger(){
+	eeprom_read_block(&FSM::logger,0,sizeof(Logger));
+	if(FSM::logger.structure_version != DATA_STRUCTURE_VERSION) initialize_logger();
 
 }
 
 //Update saved config data in the eeprom
-void Config::update_epprom (){
-	eeprom_update_block(&FSM::eeprom,0,sizeof(Eeprom));
+void Config::update_logger (){
+	eeprom_update_block(&FSM::logger,0,sizeof(Logger));
 }
 
 // Initialize the eeprom memory
-void Config::initialize_eeprom (){
-	eeprom_update_block(0,0,sizeof(Eeprom));
+void Config::initialize_logger (){
+	eeprom_update_block(0,0,sizeof(Logger));
 
-	FSM::eeprom.structure_version = DATA_STRUCTURE_VERSION;
+	FSM::logger.structure_version = DATA_STRUCTURE_VERSION;
 
-	update_epprom();
+	update_logger();
 
-	load_eeprom();
+	load_logger();
 }
 
