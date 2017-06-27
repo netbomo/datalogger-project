@@ -65,18 +65,18 @@ Logger FSM::logger;						// This is the structure of data stored in the eeprom
 Anemometer FSM::anemo1(0);					// Anemometer 1 definition
 Anemometer FSM::anemo2(1);					// Anemometer 1 definition
 Windvane FSM::windvane(2);				// Windvane sensor definition
-
+Power FSM::powerAC(0,0,1);
 
 //Class constructor
 FSM::FSM():second_counter(0),nextState(&idle){
 
 	config.load_logger();				// call the eeprom configuration from the config state
 
+	// initialize each sensors from the sensors_param structure, Be careful! for each new sensor, increase the eeprom.sensor_counter
 	anemo1.load_param();
 	anemo2.load_param();
-
-	// initialize each sensors from the sensors_param structure, Be careful! for each new sensor, increase the eeprom.sensor_counter
 	windvane.load_param();
+	powerAC.load_param();
 
 
 	// Timer2 initialisation : use for the Real Time Clock, it generate second hit.

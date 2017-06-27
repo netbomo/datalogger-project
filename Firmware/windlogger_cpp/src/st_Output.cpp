@@ -78,16 +78,17 @@ bool Output::isEqual(char *name)const {
 
 
 void Output::usart0_print (){
-	char tmp_char[10];	// char array used for number to string conversion
+	char tmp_char[20];	// char array used for number to string conversion
 
 	strcpy(string,itoa(15,tmp_char,10));				// Start by copy node number
 	strcat(string," ");									// todo change " " separation by a variable
-	strcat(string,itoa(FSM::timestamp,tmp_char,10));	// Add timestamp
+	strcat(string,ultoa(FSM::timestamp,tmp_char,10));	// Add timestamp
 	strcat(string," ");
 
 	FSM::anemo1.print_average(1,string);					// add data average
 	FSM::anemo2.print_average(1,string);					// add data average
 	FSM::windvane.print_average(0,string);
+	FSM::powerAC.print_average(2,string);
 
 	strcat(string,"\r\n");								// Close string
 

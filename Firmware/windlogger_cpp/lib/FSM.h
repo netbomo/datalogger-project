@@ -38,12 +38,13 @@
 #include "../lib/Usart.h"
 #include "../lib/Windvane.h"
 #include "../lib/Anemometer.h"
+#include "../lib/Power.h"
 
 #include "../lib/State.h"
-#include "st_Config.h"
-#include "st_Measure.h"
-#include "st_Output.h"
-#include "st_Sleep.h"
+#include "../lib/st_Config.h"
+#include "../lib/st_Measure.h"
+#include "../lib/st_Output.h"
+#include "../lib/st_Sleep.h"
 
 
 /**
@@ -126,6 +127,7 @@ public :
 	static Anemometer anemo1;		/**< this is the anemometer 1 declaration */
 	static Anemometer anemo2;		/**< this is the anemometer 2 declaration */
 	static Windvane windvane;		/**< this is the windvane declaration */
+	static Power powerAC;			/**< this is the powerAC declaration */
 
 
 private :
