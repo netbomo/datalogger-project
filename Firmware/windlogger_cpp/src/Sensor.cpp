@@ -44,11 +44,11 @@
  * Class constructor and destructor
  */
 Sensor::Sensor(unsigned char id):m_id(id),m_average(0) {
-	load_param();
 	m_eeprom_addr = EEPROM_OFFSET + m_id*8;		/**< This calc permit to store sensor data each 16 bytes after the EEPROM_OFFSET */
+	load_param();
 }
 Sensor::~Sensor() {
-	// TODO Auto-generated destructor stub
+
 }
 
 /******************************************************************************
@@ -63,12 +63,12 @@ char* Sensor::print(char *string){
 }
 
 // This method print the sensor configuration for the sensor. It's a good idea to overload this function to do it more explicit for each sensor.
-void Sensor::print_config(){
+void Sensor::print_config(char arg_id1[], char arg_id2[]){
 	char temp_conv[10];
 
-	FSM::uart0.print("Sensor	"); FSM::uart0.print(print(temp_conv));
-	FSM::uart0.print("	Factor:	");	FSM::uart0.print(dtostrf(m_factor,0,3,temp_conv));
-	FSM::uart0.print("	Offset:	");	FSM::uart0.print(dtostrf(m_offset,0,3,temp_conv)); FSM::uart0.print("\r\n");
+	FSM::uart0.print("Sensor	"); FSM::uart0.print(print(temp_conv)); FSM::uart0.print("	");
+	FSM::uart0.print(arg_id1); FSM::uart0.print(" Factor: "); FSM::uart0.print(dtostrf(m_factor,0,3,temp_conv)); FSM::uart0.print("	");
+	FSM::uart0.print(arg_id2); FSM::uart0.print(" Offset: "); FSM::uart0.print(dtostrf(m_offset,0,3,temp_conv)); FSM::uart0.print("\r\n");
 
 }
 
@@ -83,10 +83,11 @@ void Sensor::calc_average(){
 }
 
 // The print_average method print the average's value in the string.
-char* Sensor::print_average(char *string){
+char* Sensor::print_average(unsigned char prec, char *string){
 	char temp_conv[10];
-	dtostrf(m_average,0,3,temp_conv);
-	strcpy(string,temp_conv);
+	dtostrf(m_average,0,prec,temp_conv);
+	strcat(string,temp_conv);
+	strcat(string," ");
 	return string;
 }
 

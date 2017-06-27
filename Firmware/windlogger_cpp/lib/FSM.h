@@ -51,6 +51,7 @@
  */
 struct Logger{
 	unsigned int structure_version;		/**< This permit to improve the structure by auto reset eeprom data when the structure evolve to prevent data bad reading */
+	unsigned char node_id;				/**< The node id, permit identify each datalogger (0 - 255)*/
 	unsigned char measure_sample_conf;	/**< Measurement sampling (0: no measure, 1 : 10 secs, 2: 1 min, 3: 10 min...) */
 	unsigned char measure_max;			/**< Measure_max is the number of measure by measure_sample_conf (ex by minute or by 10 minutes...). !Be careful! is a new configuration is create, the Sensor::MAX_DATA_SAMPLE needs to be adjust to the highest value of measure_max! */
 	unsigned char measure_periode;		/**< Measure_periode is the interval between two measures in seconds */
@@ -105,6 +106,7 @@ public :
 	static bool flag_new_measure;			/**< set when time come for a new measure */
 	static bool flag_data_averages_ready;	/**< set when each averages are calculated and ready for the OUTPUT state */
 	static bool flag_config_request;		/**< set when a string from usart0 finish by "\r\n" */
+	static bool flag_data_frequencies_ready;/**< Set when the timer3 overflow, data are ready*/
 
 	/******************************************************************************
 	 * static global variable
@@ -121,8 +123,8 @@ public :
 	/******************************************************************************
 	 * static sensors list
 	 */
-	static Anemometer anemo1;		/**< this is the anemometer 1 definition */
-	static Anemometer anemo2;
+	static Anemometer anemo1;		/**< this is the anemometer 1 declaration */
+	static Anemometer anemo2;		/**< this is the anemometer 2 declaration */
 	static Windvane windvane;		/**< this is the windvane declaration */
 
 

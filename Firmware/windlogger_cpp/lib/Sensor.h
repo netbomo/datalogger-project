@@ -78,7 +78,7 @@ public:
 	/**
 	 * \brief This method print the sensor configuration for the sensor. It's a good idea to overload this function to do it more explicit for each sensor.
 	 */
-	void print_config();
+	void print_config(char arg_id1[], char arg_id2[]);
 
 	/**
 	* \brief This method calculate the average from the data array.
@@ -88,7 +88,7 @@ public:
 	/**
 	 * \brief The print_average method print the average's value in the string.
 	 */
-	char* print_average(char *string);
+	char* print_average(unsigned char prec, char *string);
 
 	void print_data_array()const;
 

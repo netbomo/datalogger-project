@@ -40,11 +40,6 @@
 #include "../lib/FSM.h"
 #include "../lib/st_Measure.h"
 
-/******************************************************************************
- * static hardware flags definition
- */
-bool Measure::flag_data_frequencies_ready = 0;
-
 
 /******************************************************************************
  * Constructor and destructor
@@ -60,13 +55,12 @@ Measure::~Measure(){} // Destructor
  * inherits from State
  */
 void Measure::execute (){
-
-	char temp_conv[10];
-
 	PORTB |= _BV(LED_PIN);						// Turn on the green led (blink each time the measure.execute() come)
 
 	if(FSM::flag_new_measure){
+		//FSM::uart0.print("flag_new_measure\r\n");
 		if(FSM::logger.measure_counter==0){		// if it's a new data flow
+			//FSM::uart0.print("reset measure_counter\r\n");
 			clear_data_array();					// clear the data array
 		}
 		freq_init_measurement();				// init frequencies measurement
@@ -78,14 +72,16 @@ void Measure::execute (){
 		FSM::flag_new_measure = 0;				// reset the flag
 	}
 
-	if(Measure::flag_data_frequencies_ready){
+	if(FSM::flag_data_frequencies_ready){
+		//FSM::uart0.print("flag_data_frequencies_ready\r\n");
 		freq_read_value();								//	read data from anemometer and RPM
-		Measure::flag_data_frequencies_ready = 0;		//	reset the flag
+		FSM::flag_data_frequencies_ready = 0;		//	reset the flag
 	}
 
 	if(FSM::logger.measure_counter==FSM::logger.measure_max){
 		calc_average();									// if measurement sequence is finish, average data
 		FSM::flag_data_averages_ready=1;
+		//FSM::uart0.print("flag_data_averages_ready\r\n");
 	}
 
 	PORTB &= ~_BV(LED_PIN);						// turn off the green led
@@ -109,7 +105,8 @@ void Measure::clear_data_array (){
 
 //this method initialize frequency measurement for anemometer and RPM
 void Measure::freq_init_measurement (){
-
+	FSM::anemo1.start();
+	FSM::anemo2.start();
 }
 
 //read the windvane value en map it between 0 to 359 degres
@@ -129,12 +126,17 @@ void Measure::temperature_read_value (){
 
 // read value from anemometer and RPM
 void Measure::freq_read_value (){
-
+	FSM::anemo1.read_value(FSM::logger.measure_counter);
+	FSM::anemo2.read_value(FSM::logger.measure_counter);
 }
 
 // calcul average from the data array
 void Measure::calc_average (){
+	// For each sensor, calc average
+	FSM::anemo1.calc_average();
+	FSM::anemo2.calc_average();
 	FSM::windvane.calc_average();
+
 	FSM::logger.measure_counter=0;	// initialize the next measure
 
 }

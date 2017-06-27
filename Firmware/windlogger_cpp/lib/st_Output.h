@@ -37,7 +37,6 @@
 class Output : public State {
 private:
 	char string[50];
-	char *ptr_string;
 public :
 	// Operations
 	Output ();

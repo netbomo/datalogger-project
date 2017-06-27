@@ -62,6 +62,7 @@ void Config::execute (){
 	//print();
 	if(request[0]=='$'&&request[1]=='$'){
 		display();		// display on the usart0 the config menu
+		/// @todo correct display bug
 	}
 	else if (request[0]=='$'&& request[3]=='=') {
 		uint8_t item = atoc(request + 1);
@@ -94,6 +95,22 @@ void Config::execute (){
 				break;
 			}
 			break;
+			case 01:	// Set the Node id number
+				FSM::logger.node_id = arg_uc;
+				update_logger();
+				break;
+			case 11:	// set anemometer 1 factor, update eeprom method in the setter
+				FSM::anemo1.set_factor(arg_f);
+				break;
+			case 12:	// set anemometer 1 offset, update eeprom method in the setter
+				FSM::anemo1.set_offset(arg_f);
+				break;
+			case 21:	// set anemometer 2 factor, update eeprom method in the setter
+				FSM::anemo2.set_factor(arg_f);
+				break;
+			case 22:	// set anemometer 2 offset, update eeprom method in the setter
+				FSM::anemo2.set_offset(arg_f);
+				break;
 			case 31:	// set windvane factor, update eeprom method in the setter
 				FSM::windvane.set_factor(arg_f);
 				break;
@@ -103,6 +120,7 @@ void Config::execute (){
 			default:
 				break;
 		}
+		display();	// display config after modification
 	}
 	else FSM::uart0.print("Bad request");
 	request_i=0;
@@ -128,7 +146,13 @@ void Config::display(){
 	FSM::uart0.print("Configuration :\r\n");
 	FSM::uart0.print("eeprom :\r\n");
 	FSM::uart0.print("$00=");FSM::uart0.print(itoa(FSM::logger.measure_sample_conf,conversion_string,10));FSM::uart0.print("	0: not measure,1: 10s average,2:1min average,3:10min average.\r\n");
-	FSM::windvane.print_config();
+	FSM::uart0.print("Node id $01= ");FSM::uart0.print(itoa(FSM::logger.node_id,conversion_string,10));FSM::uart0.print("	permit identify each datalogger (0 - 255).\r\n");
+
+	FSM::anemo1.print_config("$11","$12");
+	FSM::anemo2.print_config("$21","$22");
+	FSM::windvane.print_config("$31","$32");
+
+	FSM::uart0.print("\r\n");
 }
 
 //addToRequest : add c to the end of request

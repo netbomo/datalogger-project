@@ -60,6 +60,13 @@ unsigned long int getDateTime (){
 
 // test if the year is leap or not
 bool isLeap (unsigned int year){
-
-	return 0;
+	if(year%4==0)
+	{
+		if(year%100==0){
+			if(year%400==0)return 1;
+			else return 0;
+		}
+		else return 1;
+	}
+	else return 0;
 }

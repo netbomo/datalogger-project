@@ -48,6 +48,7 @@
 bool FSM::flag_new_measure = 0;			// set when time come for a new measure
 bool FSM::flag_data_averages_ready = 0;	// set when each averages are calculated and ready for the OUTPUT state
 bool FSM::flag_config_request = 0;		// set when a string from usart0 finish by "\r\n"
+bool FSM::flag_data_frequencies_ready = 0;
 
 /******************************************************************************
  * static global variable definition need to be out of constructor or function.
@@ -61,8 +62,8 @@ Usart FSM::uart0(0,Usart::BR_57600);	// This is the uart0 definition
 
 Logger FSM::logger;						// This is the structure of data stored in the eeprom
 
-
-Anemometer FSM::anemo1;					// Anemometer 1 definition
+Anemometer FSM::anemo1(0);					// Anemometer 1 definition
+Anemometer FSM::anemo2(1);					// Anemometer 1 definition
 Windvane FSM::windvane(2);				// Windvane sensor definition
 
 
@@ -71,7 +72,10 @@ FSM::FSM():second_counter(0),nextState(&idle){
 
 	config.load_logger();				// call the eeprom configuration from the config state
 
-				// initialize each sensors from the sensors_param structure, Be careful! for each new sensor, increase the eeprom.sensor_counter
+	anemo1.load_param();
+	anemo2.load_param();
+
+	// initialize each sensors from the sensors_param structure, Be careful! for each new sensor, increase the eeprom.sensor_counter
 	windvane.load_param();
 
 
@@ -98,7 +102,7 @@ void FSM::new_State_definition(){
 		flag_config_request = 0;							// Reset flag
 		nextState = &config;								// priority 1 : config request process
 	}
-	else if(flag_new_measure||measure.flag_data_frequencies_ready) nextState = &measure;		// priority 2 : do measurement stuff
+	else if(flag_new_measure||flag_data_frequencies_ready) nextState = &measure;		// priority 2 : do measurement stuff
 
 	else if(flag_data_averages_ready) {
 		flag_data_averages_ready = 0;					// Reset flag
@@ -107,7 +111,6 @@ void FSM::new_State_definition(){
 	else nextState = &sleep;								// priority 4 : go to sleep
 
 
-	//uart0.print("------->"); nextState->print(uart0); uart0.print("\r\n"); //r_nextState.print(); usart0.print("\r\n");
 }
 
 // This method control if a new measure is needed
@@ -123,6 +126,7 @@ void FSM::measurement_timing_control (){
 
 // This method execute the next state
 void FSM::execute(){
+	//nextState->print();
 	nextState->execute();
 }
 
