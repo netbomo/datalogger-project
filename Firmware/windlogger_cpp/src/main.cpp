@@ -48,6 +48,8 @@ int main(){
 /******************************************************************************
  * Hardware initialization
  */
+	DDRA = 0x00;	// All adc in input mode
+
 	DDRB = 0xF0;				//	config the port B
 	PORTB = 0x00;				//	set all portb 's bits to low
 
@@ -56,7 +58,7 @@ int main(){
 /******************************************************************************
  * @todo If verbose mode is select ($01=1), display some infos on the uart0
  */
-	//fsm.uart0.print("Initialization -anemo1\r\n");		// print on uart0 "initialisation"
+	fsm.uart0.print("Initialization\r\n");		// print on uart0 "initialisation"
 
 /******************************************************************************
  * Initialize main scope variable

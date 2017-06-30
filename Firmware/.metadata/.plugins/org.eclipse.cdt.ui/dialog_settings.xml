@@ -10,8 +10,8 @@
 		<item value="233" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
-		<item value="168" key="size.height"/>
-		<item value="707" key="size.width"/>
+		<item value="156" key="size.height"/>
+		<item value="695" key="size.width"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
@@ -29,6 +29,19 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="m_i_pin"/>
+			<item value="READVCC_CALIBRATION_CONST"/>
+			<item value="output_enable"/>
+			<item value="break"/>
+			<item value="55"/>
+			<item value="print_config"/>
+			<item value="readVcc"/>
+			<item value="v_phase"/>
+			<item value="sumP"/>
+			<item value="NUMBER_OF_SENSORS"/>
+			<item value="TCNT1_tmp"/>
+			<item value="anemo1_counter"/>
+			<item value="Measure::flag_data_averages_ready"/>
 			<item value="flag_data_averages_ready"/>
 			<item value="measure_counter"/>
 			<item value="baudrate"/>

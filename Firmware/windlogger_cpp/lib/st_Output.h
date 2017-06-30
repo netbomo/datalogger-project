@@ -36,7 +36,8 @@
 
 class Output : public State {
 private:
-	char string[50];
+	char string[100];		/// take care about string length! if data are bigger than strng length ->> soft reset.
+
 public :
 	// Operations
 	Output ();

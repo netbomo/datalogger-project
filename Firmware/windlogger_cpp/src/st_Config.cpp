@@ -171,7 +171,7 @@ void Config::display(){
 	//FSM::anemo1.print_config("$11","$12");
 	//FSM::anemo2.print_config("$21","$22");
 	FSM::windvane.print_config("$31","$32");
-	FSM::powerAC.print_config("$51"," $52"," $53","$54"," $55");
+	FSM::powerAC.print_config("$51"," $52"," $53","$54"," $55"," $56");
 
 	FSM::uart0.print("\r\n");
 }

@@ -71,7 +71,7 @@ public:
 	/**
 	 * Class constructor
 	 */
-	Power(unsigned char id, unsigned char v_pin, unsigned char  i_pin);
+	Power(unsigned char v_pin, unsigned char  i_pin, unsigned char id);
 
 	/**
 	 * class destructor
@@ -115,7 +115,7 @@ public:
 	/**
 	 * \brief This method print the configuration for the power measurement. It's a good idea to overload this function to do it more explicit for each sensor.
 	 */
-	void print_config(char arg_id1[], char arg_id2[],char arg_id3[], char arg_id4[],char arg_id5[]);
+	void print_config(char arg_id1[], char arg_id2[],char arg_id3[], char arg_id4[],char arg_id5[],char arg_id6[]);
 
 	/**
 	* \brief This method calculate the mean RMS voltage, mean RMS current, active power, apparent power and power factor from the data array.
@@ -181,10 +181,12 @@ protected:
 	 * power data
 	 */
 	double p_data[MAX_DATA_SAMPLE]={0.0};	/**< this is the data array where where real power data is stored and used to calculate the average. */
-	double p_average;	/**< there is the result from the power average */
 	double s_data[MAX_DATA_SAMPLE]={0.0};	/**< this is the data array where where apparent power data is stored and used to calculate the average. */
 	double pf_data[MAX_DATA_SAMPLE]={0.0};	/**< this is the data array where where power factor data is stored and used to calculate the average. */
 
+	double p_average;	/**< there is the result from the real power average */
+	double s_average;	/**< there is the result from the apparent power average */
+	double pf_average;	/**< there is the result from the power factor average */
 
 	/******************************************************************************
 	 * voltage data
@@ -208,17 +210,13 @@ protected:
 	 * Calculation variables
 	 */
 
-	double realPower;	/**< Variable that holds the real Power yield */
-	double apparentPower;	/**< Variable that holds the apparent Power yield */
-	double powerFactor;	/** Variable that holds the power factor */
-	double Vrms;	/** Variable that holds the RMS voltage */
-	double Irms;	/** Variable that holds the RMS current */
 	double Vmeas;	/** Variable that holds measurement */
 	double Imeas;	/** Variable that holds current measurement */
-	double Pcalc;	/** Variable that holds the RMS current */
 	double Vshifted;	/** Variable that holds the voltage value after phase compensation*/
 	long double sumP, sumV, sumI;
 	double referenceV;
+	double v_filtered, i_filtered;
+	long showSupply;
 
 
 	/******************************************************************************

@@ -65,7 +65,7 @@ Anemometer::~Anemometer() {
 }
 
 char* Anemometer::print(char *string){
-	char temp_char[4];
+	char temp_char[6];
 	 strcpy(string,"Anemometer ");
 	 strcat(string,itoa(m_id,temp_char,10));
 	return string;

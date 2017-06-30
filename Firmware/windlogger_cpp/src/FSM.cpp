@@ -65,7 +65,7 @@ Logger FSM::logger;						// This is the structure of data stored in the eeprom
 Anemometer FSM::anemo1(0);					// Anemometer 1 definition
 Anemometer FSM::anemo2(1);					// Anemometer 1 definition
 Windvane FSM::windvane(2);				// Windvane sensor definition
-Power FSM::powerAC(0,0,1);
+Power FSM::powerAC(0,1,0);				//  v_pin, i_pin, id
 
 //Class constructor
 FSM::FSM():second_counter(0),nextState(&idle){
@@ -110,7 +110,7 @@ void FSM::new_State_definition(){
 	}
 	else nextState = &sleep;								// priority 4 : go to sleep
 
-
+	//FSM::uart0.print("nextState = "); nextState->print();  FSM::uart0.print("\r\n");
 }
 
 // This method control if a new measure is needed

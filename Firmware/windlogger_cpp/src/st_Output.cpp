@@ -66,6 +66,8 @@ void Output::execute (){
 	if(FSM::logger.output_enable||GPRS){
 		usart1_print();
 	}
+
+	FSM::uart0.print("exit output\r\n");
 }
 
 void Output::print(){
@@ -88,7 +90,7 @@ void Output::usart0_print (){
 	FSM::anemo1.print_average(1,string);					// add data average
 	FSM::anemo2.print_average(1,string);					// add data average
 	FSM::windvane.print_average(0,string);
-	FSM::powerAC.print_average(2,string);
+	FSM::powerAC.print_average(3,string);
 
 	strcat(string,"\r\n");								// Close string
 

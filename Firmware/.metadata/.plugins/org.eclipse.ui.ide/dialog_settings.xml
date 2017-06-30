@@ -5,6 +5,7 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="/home/gilou/git_repos/datalogger-project/Firmware/test_atmega1284p"/>
 			<item value="/home/gilou/git_repos/datalogger-project/Firmware/windlogger_1/"/>
 			<item value="/home/gilou/git_repos/datalogger-project/Firmware/windlogger_dev_output_0310"/>
 		</list>

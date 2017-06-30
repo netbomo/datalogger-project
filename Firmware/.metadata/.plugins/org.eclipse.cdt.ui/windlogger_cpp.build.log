@@ -1,20 +1,86 @@
-11:47:07 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+19:46:17 **** Incremental Build of configuration Debug for project windlogger_cpp ****
 make all 
+Building file: ../src/Power.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/Power.d" -MT"src/Power.o" -c -o "src/Power.o" "../src/Power.cpp"
+../src/Power.cpp: In member function ‘void Power::load_param()’:
+../src/Power.cpp:275:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  m_v_pin = eeprom_read_float((float*)m_eeprom_addr);
+                                      ^
+../src/Power.cpp:276:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  m_i_pin = eeprom_read_float((float*)m_eeprom_addr+2);
+                                      ^
+../src/Power.cpp:277:39: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  v_factor = eeprom_read_float((float*)m_eeprom_addr+4);
+                                       ^
+../src/Power.cpp:278:39: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  v_offset = eeprom_read_float((float*)m_eeprom_addr+9);
+                                       ^
+../src/Power.cpp:279:38: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  v_phase = eeprom_read_float((float*)m_eeprom_addr+14);
+                                      ^
+../src/Power.cpp:280:39: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  i_factor = eeprom_read_float((float*)m_eeprom_addr+19);
+                                       ^
+../src/Power.cpp:281:39: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  i_offset = eeprom_read_float((float*)m_eeprom_addr+24);
+                                       ^
+../src/Power.cpp: In member function ‘void Power::update_param()’:
+../src/Power.cpp:286:30: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_float((float*)m_eeprom_addr,m_v_pin);
+                              ^
+../src/Power.cpp:287:30: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_float((float*)m_eeprom_addr+2,m_i_pin);
+                              ^
+../src/Power.cpp:288:30: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_float((float*)m_eeprom_addr+4,v_factor);
+                              ^
+../src/Power.cpp:289:30: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_float((float*)m_eeprom_addr+9,v_offset);
+                              ^
+../src/Power.cpp:290:30: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_float((float*)m_eeprom_addr+14,v_phase);
+                              ^
+../src/Power.cpp:291:30: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_float((float*)m_eeprom_addr+19,i_factor);
+                              ^
+../src/Power.cpp:292:30: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_float((float*)m_eeprom_addr+24,i_offset);
+                              ^
+Finished building: ../src/Power.cpp
+ 
+Building target: windlogger_cpp.elf
+Invoking: AVR C++ Linker
+avr-g++ -Wl,-Map,windlogger_cpp.map,--cref -mrelax -Wl,--gc-sections -mmcu=atmega1284p -o "windlogger_cpp.elf"  ./src/Anemometer.o ./src/DateTime.o ./src/FSM.o ./src/Power.o ./src/Sensor.o ./src/State.o ./src/Usart.o ./src/Windvane.o ./src/main.o ./src/operator.o ./src/st_Config.o ./src/st_Measure.o ./src/st_Output.o ./src/st_Sleep.o   
+Finished building target: windlogger_cpp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S windlogger_cpp.elf  >"windlogger_cpp.lss"
+Finished building: windlogger_cpp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex windlogger_cpp.elf  "windlogger_cpp.hex"
+Finished building: windlogger_cpp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex windlogger_cpp.elf  "windlogger_cpp.eep"
+Finished building: windlogger_cpp.eep
+ 
 Invoking: Print Size
 avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
 AVR Memory Usage
 ----------------
 Device: atmega1284p
 
-Program:    7716 bytes (5.9% Full)
+Program:   13856 bytes (10.6% Full)
 (.text + .data + .bootloader)
 
-Data:        477 bytes (2.9% Full)
+Data:       1144 bytes (7.0% Full)
 (.data + .bss + .noinit)
 
 
 Finished building: sizedummy
  
 
-11:47:07 Build Finished (took 115ms)
+19:46:18 Build Finished (took 558ms)
 

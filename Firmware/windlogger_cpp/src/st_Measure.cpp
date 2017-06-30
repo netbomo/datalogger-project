@@ -116,8 +116,8 @@ void Measure::windvane_value (){
 
 // read power value - not define realy (see emonLib)
 void Measure::power_read_value (){
-	FSM::powerAC.read_rms_value(FSM::logger.measure_counter,3, 1000);
-	FSM::powerAC.print_data_array();
+	FSM::powerAC.read_rms_value(FSM::logger.measure_counter,3, 2000);
+	//FSM::powerAC.print_data_array();
 }
 
 // read the temperature value from one DS18b20 sensor
