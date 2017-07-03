@@ -63,8 +63,8 @@ int main(){
 /******************************************************************************
  * Initialize main scope variable
  */
-    unsigned long int timestamp_old = 0;	// this variable is check if a new second come for the timing management
-
+    unsigned char second_old = 0;	// this variable is check if a new second come for the timing management
+    second_old = fsm.rtc.get_second();
 
 /******************************************************************************
  * If all initialization are ok, start the program
@@ -80,10 +80,14 @@ int main(){
 			fsm.uart0.flag_rx0 = 0;			// and reset the flag
 		}
 
+
+
 		// If a new second comes
-		if(timestamp_old!=fsm.timestamp){
+		FSM::rtc.get_date();
+//		mettre à jour le timestamp
+		if(second_old!=fsm.rtc.get_second()){
 			fsm.measurement_timing_control ();	// check if time comes to do a new measure or not
-			 timestamp_old = fsm.timestamp;		// update timestamp_old
+			second_old = fsm.rtc.get_second();		// update timestamp_old
 		}
 
 	/******************************************************************************

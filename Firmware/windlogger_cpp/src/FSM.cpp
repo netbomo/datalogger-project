@@ -59,11 +59,13 @@ unsigned long int FSM::timestamp = 0;		// timestamp is an uint32 to stock the cu
  * static class definition need to be out of constructor or function. That refer to hardware peripherals
  */
 Usart FSM::uart0(0,Usart::BR_57600);	// This is the uart0 definition
+TWI FSM::twi;							// this is the twi definition
+RTC FSM::rtc;								// this is the rtc definition
 
 Logger FSM::logger;						// This is the structure of data stored in the eeprom
 
-Anemometer FSM::anemo1(0);					// Anemometer 1 definition
-Anemometer FSM::anemo2(1);					// Anemometer 1 definition
+Anemometer FSM::anemo1(0);				// Anemometer 1 definition
+Anemometer FSM::anemo2(1);				// Anemometer 1 definition
 Windvane FSM::windvane(2);				// Windvane sensor definition
 Power FSM::powerAC(0,1,0);				//  v_pin, i_pin, id
 
@@ -79,11 +81,12 @@ FSM::FSM():second_counter(0),nextState(&idle){
 	powerAC.load_param();
 
 
-	// Timer2 initialisation : use for the Real Time Clock, it generate second hit.
-	TIMSK2 |= _BV(TOIE2);				// enable overflow interrupt
-	TCNT2 = 0;
-	TCCR2B = _BV(CS22) | _BV(CS20); 	// prescaler for overload interrupt each 1 second : CS2[2:0]=101;
-	ASSR |=  _BV(AS2);					// Set the bit AS2 in the ASSR register to clock the timer 2 from the external crystal
+	// now, we use external rtc pcf8563 on the TWI
+//	// Timer2 initialisation : use for the Real Time Clock, it generate second hit.
+//	TIMSK2 |= _BV(TOIE2);				// enable overflow interrupt
+//	TCNT2 = 0;
+//	TCCR2B = _BV(CS22) | _BV(CS20); 	// prescaler for overload interrupt each 1 second : CS2[2:0]=101;
+//	ASSR |=  _BV(AS2);					// Set the bit AS2 in the ASSR register to clock the timer 2 from the external crystal
 
 	sei();								// enable interrupt
 
@@ -115,9 +118,11 @@ void FSM::new_State_definition(){
 
 // This method control if a new measure is needed
 void FSM::measurement_timing_control (){
-	second_counter++;						// Use a second counter to compare with the measure_stamp
+	//corriger avec lecture registre second
 
-	if(second_counter==logger.measure_periode)
+	//second_counter++;						// Use a second counter to compare with the measure_stamp
+
+	if((rtc.get_second()%logger.measure_periode)==0)
 	{
 		flag_new_measure = 1;				// if it's true, we can do a new measure
 		second_counter=0;					// reset the counter

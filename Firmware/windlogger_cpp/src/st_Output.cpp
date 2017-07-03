@@ -51,6 +51,7 @@ Output::~Output(){
 }
 
 void Output::execute (){
+	FSM::timestamp = FSM::rtc.get_timestamp();
 	if(FSM::logger.output_enable||USART0){
 		usart0_print();
 	}
@@ -67,7 +68,7 @@ void Output::execute (){
 		usart1_print();
 	}
 
-	FSM::uart0.print("exit output\r\n");
+	//FSM::uart0.print("exit output\r\n");
 }
 
 void Output::print(){
@@ -84,6 +85,7 @@ void Output::usart0_print (){
 
 	strcpy(string,itoa(15,tmp_char,10));				// Start by copy node number
 	strcat(string," ");									// todo change " " separation by a variable
+	//strcat(string,itoa(FSM::rtc.get_second(),tmp_char,10));
 	strcat(string,ultoa(FSM::timestamp,tmp_char,10));	// Add timestamp
 	strcat(string," ");
 

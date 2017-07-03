@@ -36,6 +36,8 @@
 #define FSM__HPP
 
 #include "../lib/Usart.h"
+#include "../lib/TWI.h"
+#include "../lib/RTC.h"
 #include "../lib/Windvane.h"
 #include "../lib/Anemometer.h"
 #include "../lib/Power.h"
@@ -118,6 +120,8 @@ public :
 	 * static class, that refer to hardware peripherals
 	 */
 	static Usart uart0;				/**< This is the uart0 declaration */
+	static TWI twi;					/**< This is the twi declaration */
+	static RTC rtc;					/**< This is the rtc declaration */
 
 	static Logger logger;			/**< This is the structure of data stored in the eeprom */
 
