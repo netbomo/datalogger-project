@@ -1,4 +1,9 @@
 <map id="Usart::set" name="Usart::set">
 <area shape="rect" id="node2" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="133,5,316,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="364,5,415,32"/>
+<area shape="rect" id="node4" href="$class_sensor.html#aa03d707dfa7562805b77f9040831418b" title="Sensor::print_data\l_array" alt="" coords="161,57,289,98"/>
+<area shape="rect" id="node7" href="$class_power.html#acd77541eabe8feb58e0b73154268cdd2" title="Power::print_data_array" alt="" coords="145,123,305,149"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="406,5,457,32"/>
+<area shape="rect" id="node5" href="$class_sensor.html#ad713fef719161b27e6b93a0d3a371e0c" title="Sensor::set_offset" alt="" coords="367,68,496,95"/>
+<area shape="rect" id="node6" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="547,95,661,121"/>
+<area shape="rect" id="node8" href="$class_power.html#a1e7595ee0b3b0439d979ffeab785d0d8" title="Power::set_i_offset" alt="" coords="364,120,499,147"/>
 </map>

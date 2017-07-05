@@ -1,5 +1,11 @@
 <map id="Output::execute" name="Output::execute">
-<area shape="rect" id="node2" href="$class_output.html#a2d62a7d56d1731d8f100ad850642d04c" title="Output::SDCard_print" alt="" coords="168,5,316,32"/>
-<area shape="rect" id="node3" href="$class_output.html#af4bc42d2d3bb3b2a98782f0df0eba133" title="Output::usart0_print" alt="" coords="173,56,311,83"/>
-<area shape="rect" id="node4" href="$class_output.html#a943b106620d1c711e838298a4c4233af" title="Output::usart1_print" alt="" coords="173,107,311,133"/>
+<area shape="rect" id="node2" href="$class_r_t_c.html#ad0c4545ccad338b30faab6a125833843" title="RTC::get_timestamp" alt="" coords="170,5,314,32"/>
+<area shape="rect" id="node5" href="$class_output.html#a2d62a7d56d1731d8f100ad850642d04c" title="Output::SDCard_print" alt="" coords="168,56,316,83"/>
+<area shape="rect" id="node6" href="$class_output.html#af4bc42d2d3bb3b2a98782f0df0eba133" title="Output::usart0_print" alt="" coords="173,107,311,133"/>
+<area shape="rect" id="node10" href="$class_output.html#a943b106620d1c711e838298a4c4233af" title="Output::usart1_print" alt="" coords="173,157,311,184"/>
+<area shape="rect" id="node3" href="$class_r_t_c.html#a20900a7f5bd95b1928bf2d08a0de687c" title="RTC::time_to_epoch" alt="" coords="367,5,510,32"/>
+<area shape="rect" id="node4" href="$class_r_t_c.html#ae36ee3d564befce64eff1e8f610cb6d6" title="RTC::is_leap_year" alt="" coords="561,5,692,32"/>
+<area shape="rect" id="node7" href="$class_sensor.html#a38a47820684e5ff0f61ad32b8afbde45" title="The print_average method print the average&#39;s value in the string. " alt="" coords="364,56,513,83"/>
+<area shape="rect" id="node8" href="$class_power.html#a6c1622c43b34a31d8929674b33433c20" title="The print_average method print the average&#39;s value in the string. " alt="" coords="366,107,511,133"/>
+<area shape="rect" id="node9" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="395,157,482,184"/>
 </map>

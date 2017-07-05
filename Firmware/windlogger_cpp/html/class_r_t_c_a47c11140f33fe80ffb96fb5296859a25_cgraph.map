@@ -1,0 +1,7 @@
+<map id="RTC::update_reg" name="RTC::update_reg">
+<area shape="rect" id="node2" href="$class_t_w_i.html#a1f2dc98a8c2e00dca3a0c76ee1ea1020" title="TWI::set_char" alt="" coords="176,56,281,83"/>
+<area shape="rect" id="node6" href="$class_r_t_c.html#a85d7813e4900f346f811c0c01dc5cb89" title="RTC::utoBCD" alt="" coords="176,107,281,133"/>
+<area shape="rect" id="node3" href="$class_t_w_i.html#a130b2bf159b768c28ae0d4129c556711" title="TWI::start" alt="" coords="347,5,428,32"/>
+<area shape="rect" id="node4" href="$class_t_w_i.html#a6bde06891e3037d407b28a4ecbc3386f" title="TWI::get_status" alt="" coords="329,56,445,83"/>
+<area shape="rect" id="node5" href="$class_t_w_i.html#a3ed950888f040e24dc9dcb0ba65d17f1" title="TWI::stop" alt="" coords="347,107,427,133"/>
+</map>

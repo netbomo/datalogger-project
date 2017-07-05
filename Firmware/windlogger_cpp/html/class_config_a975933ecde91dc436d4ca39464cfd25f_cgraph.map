@@ -1,3 +1,8 @@
 <map id="Config::display" name="Config::display">
-<area shape="rect" id="node2" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="163,5,249,32"/>
+<area shape="rect" id="node2" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="354,26,441,53"/>
+<area shape="rect" id="node3" href="$class_sensor.html#aa14d1a074d1079cff037fd01ed74897c" title="This method print the sensor configuration for the sensor. It&#39;s a good idea to overload this function..." alt="" coords="163,77,301,103"/>
+<area shape="rect" id="node5" href="$class_r_t_c.html#a59f014e14e774bf372dcf0d5d64e6717" title="RTC::print_config" alt="" coords="169,26,295,53"/>
+<area shape="rect" id="node6" href="$class_power.html#afd1c8cab1d4549eb45be61bdd34ae97d" title="This method print the configuration for the power measurement. It&#39;s a good idea to overload this func..." alt="" coords="165,127,299,154"/>
+<area shape="rect" id="node4" href="$class_sensor.html#a9478b09a17b24105c0fe5b32e988224a" title="Sensor::print" alt="" coords="349,77,445,103"/>
+<area shape="rect" id="node7" href="$class_power.html#a3a915a3ea9b9017cae450959ef8af3de" title="Power::print" alt="" coords="351,127,443,154"/>
 </map>

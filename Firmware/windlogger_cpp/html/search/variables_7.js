@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['led_5fpin',['LED_PIN',['../main_8h.html#ac754eb719b41bc1ce7e0fd413f94de5f',1,'main.h']]]
+  ['hours',['hours',['../struct_time.html#a923071f79bcff98211770aeb87a79275',1,'Time::hours()'],['../class_r_t_c.html#a00f48532bc2e4ed7dbf04b0dd3f7a2f5',1,'RTC::HOURS()']]]
 ];

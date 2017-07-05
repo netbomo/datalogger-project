@@ -6,5 +6,6 @@ var searchData=
   ['datetime',['DateTime',['../class_date_time.html',1,'DateTime'],['../class_date_time.html#ac2c1181de2aed99df5295dde0e4e61b4',1,'DateTime::DateTime()']]],
   ['datetime_2ecpp',['DateTime.cpp',['../_date_time_8cpp.html',1,'']]],
   ['datetime_2eh',['DateTime.h',['../_date_time_8h.html',1,'']]],
+  ['day',['day',['../struct_time.html#a72425697a34c40a7a15c0fc0926a5c2a',1,'Time::day()'],['../class_r_t_c.html#acacbe271d4d7163db9ba90a0b627d0cd',1,'RTC::DAY()']]],
   ['display',['display',['../class_config.html#a975933ecde91dc436d4ca39464cfd25f',1,'Config']]]
 ];

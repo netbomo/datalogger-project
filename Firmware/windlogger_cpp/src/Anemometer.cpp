@@ -33,8 +33,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#include "../lib/FSM.h"
 #include "../lib/Anemometer.h"
+#include "../lib/FSM.h"
 
 Anemometer::Anemometer(unsigned char id):Sensor(id) {
 	if(m_id==0){
@@ -72,24 +72,28 @@ char* Anemometer::print(char *string){
 }
 
 void Anemometer::read_value(unsigned char measure_number){
-	double tmp_value = 0;
+	if(is_enable()){
+		double tmp_value = 0;
 
-	if(m_id==0)
-	{
-		if(TCNT0!=0)									// Control to not devide 0
-		{
-			tmp_value = TCNT0 /  TIMER3_OVF_PERIODE;	// Convert pulse in hertz
-		}
-	}
-	else if(m_id==1)
-	{
-		if(TCNT1!=0)									// Control to not devide 0
-		{
-			tmp_value = TCNT1 /  TIMER3_OVF_PERIODE;	// Convert pulse in hertz
-		}
+			if(m_id==0)
+			{
+				if(TCNT0!=0)									// Control to not devide 0
+				{
+					tmp_value = TCNT0 /  TIMER3_OVF_PERIODE;	// Convert pulse in hertz
+				}
+			}
+			else if(m_id==1)
+			{
+				if(TCNT1!=0)									// Control to not devide 0
+				{
+					tmp_value = TCNT1 /  TIMER3_OVF_PERIODE;	// Convert pulse in hertz
+				}
+			}
+
+			m_data[measure_number]=(tmp_value * m_factor) + m_offset; 	// apply the factor and offset before save the data
+			if(m_data[measure_number] == m_offset) m_data[measure_number] = 0;
 	}
 
-	m_data[measure_number]=(tmp_value * m_factor) + m_offset; 	// apply the factor and offset before save the data
 }
 
 void Anemometer::start(){

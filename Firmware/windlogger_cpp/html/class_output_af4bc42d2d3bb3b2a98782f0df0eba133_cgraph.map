@@ -1,0 +1,5 @@
+<map id="Output::usart0_print" name="Output::usart0_print">
+<area shape="rect" id="node2" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="222,5,309,32"/>
+<area shape="rect" id="node3" href="$class_sensor.html#a38a47820684e5ff0f61ad32b8afbde45" title="The print_average method print the average&#39;s value in the string. " alt="" coords="191,56,340,83"/>
+<area shape="rect" id="node4" href="$class_power.html#a6c1622c43b34a31d8929674b33433c20" title="The print_average method print the average&#39;s value in the string. " alt="" coords="193,107,338,133"/>
+</map>

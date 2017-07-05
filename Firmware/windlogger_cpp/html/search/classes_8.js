@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usart',['Usart',['../class_usart.html',1,'']]]
+  ['power',['Power',['../class_power.html',1,'']]]
 ];

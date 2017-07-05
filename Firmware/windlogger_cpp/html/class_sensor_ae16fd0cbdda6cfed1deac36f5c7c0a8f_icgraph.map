@@ -1,0 +1,6 @@
+<map id="Sensor::calc_average" name="Sensor::calc_average">
+<area shape="rect" id="node2" href="$class_measure.html#a1518672dff4f81603a35bff08c20e9f5" title="calcul average from the data array " alt="" coords="201,5,359,32"/>
+<area shape="rect" id="node4" href="$class_sensor.html#ad713fef719161b27e6b93a0d3a371e0c" title="Sensor::set_offset" alt="" coords="215,56,345,83"/>
+<area shape="rect" id="node3" href="$class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ..." alt="" coords="407,5,533,32"/>
+<area shape="rect" id="node5" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="413,56,527,83"/>
+</map>

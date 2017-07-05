@@ -83,29 +83,34 @@ $(document).ready(function(){initNavTree('class_output.html','');});
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="class_output-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Output Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_output_8h_source.html">Output.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="st___output_8h_source.html">st_Output.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Output:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_output__coll__graph.svg" width="132" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_output__coll__graph.svg" width="132" height="448"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a428c663520336477a12f1a33504eb067"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a428c663520336477a12f1a33504eb067">Output</a> ()</td></tr>
+<tr class="memdesc:a428c663520336477a12f1a33504eb067"><td class="mdescLeft">&#160;</td><td class="mdescRight">take care about string length! if data are bigger than strng length -&gt;&gt; soft reset.  <a href="#a428c663520336477a12f1a33504eb067">More...</a><br /></td></tr>
 <tr class="separator:a428c663520336477a12f1a33504eb067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d0840daf98bea49e4dc471f235eeab"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a61d0840daf98bea49e4dc471f235eeab">~Output</a> ()</td></tr>
 <tr class="separator:a61d0840daf98bea49e4dc471f235eeab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a087f4330e641bb4682ab2862bca7a1af"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a087f4330e641bb4682ab2862bca7a1af">execute</a> ()</td></tr>
 <tr class="separator:a087f4330e641bb4682ab2862bca7a1af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab262d6d691d31fdef115acdfc194e335"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#ab262d6d691d31fdef115acdfc194e335">print</a> (<a class="el" href="class_usart.html">Usart</a> &amp;usart)</td></tr>
-<tr class="separator:ab262d6d691d31fdef115acdfc194e335"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0391d9c2b71e45617b6c0ebc57a4266e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a0391d9c2b71e45617b6c0ebc57a4266e">print</a> ()</td></tr>
+<tr class="separator:a0391d9c2b71e45617b6c0ebc57a4266e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8fc00d64eadd62201e6f83b276df3c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#aca8fc00d64eadd62201e6f83b276df3c">isEqual</a> (char *name) const</td></tr>
+<tr class="separator:aca8fc00d64eadd62201e6f83b276df3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4bc42d2d3bb3b2a98782f0df0eba133"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#af4bc42d2d3bb3b2a98782f0df0eba133">usart0_print</a> ()</td></tr>
 <tr class="separator:af4bc42d2d3bb3b2a98782f0df0eba133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a943b106620d1c711e838298a4c4233af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a943b106620d1c711e838298a4c4233af">usart1_print</a> ()</td></tr>
@@ -117,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab91bb1dd5aa6260ab2a456581daf9ec2 inherit pub_methods_class_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afab438d92b90dc18d194dbd9c9c8bab3 inherit pub_methods_class_state"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#afab438d92b90dc18d194dbd9c9c8bab3">~State</a> ()</td></tr>
 <tr class="separator:afab438d92b90dc18d194dbd9c9c8bab3 inherit pub_methods_class_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43f24f0ded5d92264fd806d0681353c0 inherit pub_methods_class_state"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#a43f24f0ded5d92264fd806d0681353c0">isEqual</a> (char *name) const</td></tr>
+<tr class="separator:a43f24f0ded5d92264fd806d0681353c0 inherit pub_methods_class_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -134,10 +141,21 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a7ccc32f33dc6d4a9ac68c3b2c09f9bf8"><td class="memItemLeft" align="right" valign="top">static const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a7ccc32f33dc6d4a9ac68c3b2c09f9bf8">GPRS</a> = 16</td></tr>
 <tr class="memdesc:a7ccc32f33dc6d4a9ac68c3b2c09f9bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">enable constant for WIFI  <a href="#a7ccc32f33dc6d4a9ac68c3b2c09f9bf8">More...</a><br /></td></tr>
 <tr class="separator:a7ccc32f33dc6d4a9ac68c3b2c09f9bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a75ffef69f3224859cb1e87112096274e"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_output.html#a75ffef69f3224859cb1e87112096274e">string</a> [100]</td></tr>
+<tr class="separator:a75ffef69f3224859cb1e87112096274e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_state"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_state')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_state.html">State</a></td></tr>
+<tr class="memitem:aa694bf2659b70ed9567e677135f01958 inherit pro_attribs_class_state"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_state.html#aa694bf2659b70ed9567e677135f01958">m_name</a> [10]</td></tr>
+<tr class="separator:aa694bf2659b70ed9567e677135f01958 inherit pro_attribs_class_state"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_output_8h_source.html#l00037">37</a> of file <a class="el" href="_output_8h_source.html">Output.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8h_source.html#l00037">37</a> of file <a class="el" href="st___output_8h_source.html">st_Output.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a428c663520336477a12f1a33504eb067"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a428c663520336477a12f1a33504eb067">&#9670;&nbsp;</a></span>Output()</h2>
@@ -154,7 +172,9 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8cpp_source.html#l00041">41</a> of file <a class="el" href="_output_8cpp_source.html">Output.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8cpp_source.html#l00044">44</a> of file <a class="el" href="st___output_8cpp_source.html">st_Output.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_f_s_m_8h_source.html#l00126">FSM::logger</a>, <a class="el" href="_state_8h_source.html#l00036">State::m_name</a>, <a class="el" href="_f_s_m_8h_source.html#l00063">Logger::output_enable</a>, and <a class="el" href="st___output_8h_source.html#l00060">USART0</a>.</p>
 
 </div>
 </div>
@@ -181,7 +201,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8cpp_source.html#l00045">45</a> of file <a class="el" href="_output_8cpp_source.html">Output.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8cpp_source.html#l00049">49</a> of file <a class="el" href="st___output_8cpp_source.html">st_Output.cpp</a>.</p>
 
 </div>
 </div>
@@ -211,19 +231,48 @@ Static Public Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="class_state.html#aa272f704a5f33920524fb57c80339b2f">State</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_output_8cpp_source.html#l00049">49</a> of file <a class="el" href="_output_8cpp_source.html">Output.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8cpp_source.html#l00053">53</a> of file <a class="el" href="st___output_8cpp_source.html">st_Output.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_f_s_m_8h_source.html#l00113">FSM::eeprom</a>, <a class="el" href="_output_8h_source.html#l00064">GPRS</a>, <a class="el" href="_output_8h_source.html#l00060">SD_CARD</a>, <a class="el" href="_output_8cpp_source.html#l00080">SDCard_print()</a>, <a class="el" href="_output_8h_source.html#l00056">USART0</a>, <a class="el" href="_output_8cpp_source.html#l00072">usart0_print()</a>, <a class="el" href="_output_8h_source.html#l00058">USART1</a>, <a class="el" href="_output_8cpp_source.html#l00076">usart1_print()</a>, and <a class="el" href="_output_8h_source.html#l00062">WIFI</a>.</p>
+<p class="reference">References <a class="el" href="_r_t_c_8cpp_source.html#l00280">RTC::get_timestamp()</a>, <a class="el" href="st___output_8h_source.html#l00068">GPRS</a>, <a class="el" href="_f_s_m_8h_source.html#l00126">FSM::logger</a>, <a class="el" href="_f_s_m_8h_source.html#l00124">FSM::rtc</a>, <a class="el" href="st___output_8h_source.html#l00064">SD_CARD</a>, <a class="el" href="st___output_8cpp_source.html#l00106">SDCard_print()</a>, <a class="el" href="_f_s_m_8h_source.html#l00117">FSM::timestamp</a>, <a class="el" href="st___output_8h_source.html#l00060">USART0</a>, <a class="el" href="st___output_8cpp_source.html#l00083">usart0_print()</a>, <a class="el" href="st___output_8h_source.html#l00062">USART1</a>, <a class="el" href="st___output_8cpp_source.html#l00102">usart1_print()</a>, and <a class="el" href="st___output_8h_source.html#l00066">WIFI</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_a087f4330e641bb4682ab2862bca7a1af_cgraph.svg" width="322" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_output_a087f4330e641bb4682ab2862bca7a1af_cgraph.svg" width="100%" height="442"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 
 </div>
 </div>
-<a id="ab262d6d691d31fdef115acdfc194e335"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab262d6d691d31fdef115acdfc194e335">&#9670;&nbsp;</a></span>print()</h2>
+<a id="aca8fc00d64eadd62201e6f83b276df3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8fc00d64eadd62201e6f83b276df3c">&#9670;&nbsp;</a></span>isEqual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Output::isEqual </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="st___output_8cpp_source.html#l00078">78</a> of file <a class="el" href="st___output_8cpp_source.html">st_Output.cpp</a>.</p>
+
+<p class="reference">References <a class="el" href="_state_8cpp_source.html#l00050">State::isEqual()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_aca8fc00d64eadd62201e6f83b276df3c_cgraph.svg" width="275" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a0391d9c2b71e45617b6c0ebc57a4266e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0391d9c2b71e45617b6c0ebc57a4266e">&#9670;&nbsp;</a></span>print()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -234,8 +283,7 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="memname">void Output::print </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_usart.html">Usart</a> &amp;&#160;</td>
-          <td class="paramname"><em>usart</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -246,15 +294,16 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_state.html#ac150b47c0f2b53152671d0698a890981">State</a>.</p>
+<p>Implements <a class="el" href="class_state.html#aab9f9bdfd9b969637024b17c388da39f">State</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_output_8cpp_source.html#l00068">68</a> of file <a class="el" href="_output_8cpp_source.html">Output.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8cpp_source.html#l00074">74</a> of file <a class="el" href="st___output_8cpp_source.html">st_Output.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>.</p>
+<p class="reference">References <a class="el" href="_state_8h_source.html#l00036">State::m_name</a>, <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, and <a class="el" href="_f_s_m_8h_source.html#l00122">FSM::uart0</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_ab262d6d691d31fdef115acdfc194e335_cgraph.svg" width="240" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_a0391d9c2b71e45617b6c0ebc57a4266e_cgraph.svg" width="240" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -274,13 +323,14 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8cpp_source.html#l00080">80</a> of file <a class="el" href="_output_8cpp_source.html">Output.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8cpp_source.html#l00106">106</a> of file <a class="el" href="st___output_8cpp_source.html">st_Output.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_output_8cpp_source.html#l00049">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___output_8cpp_source.html#l00053">execute()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_a2d62a7d56d1731d8f100ad850642d04c_icgraph.svg" width="322" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_a2d62a7d56d1731d8f100ad850642d04c_icgraph.svg" width="322" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -300,13 +350,22 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8cpp_source.html#l00072">72</a> of file <a class="el" href="_output_8cpp_source.html">Output.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8cpp_source.html#l00083">83</a> of file <a class="el" href="st___output_8cpp_source.html">st_Output.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_output_8cpp_source.html#l00049">execute()</a>.</p>
+<p class="reference">References <a class="el" href="_f_s_m_8h_source.html#l00131">FSM::anemo1</a>, <a class="el" href="_f_s_m_8h_source.html#l00132">FSM::anemo2</a>, <a class="el" href="_f_s_m_8h_source.html#l00134">FSM::powerAC</a>, <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, <a class="el" href="_sensor_8cpp_source.html#l00086">Sensor::print_average()</a>, <a class="el" href="_power_8cpp_source.html#l00237">Power::print_average()</a>, <a class="el" href="_f_s_m_8h_source.html#l00117">FSM::timestamp</a>, <a class="el" href="_f_s_m_8h_source.html#l00122">FSM::uart0</a>, and <a class="el" href="_f_s_m_8h_source.html#l00133">FSM::windvane</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="st___output_8cpp_source.html#l00053">execute()</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_af4bc42d2d3bb3b2a98782f0df0eba133_cgraph.svg" width="346" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_af4bc42d2d3bb3b2a98782f0df0eba133_icgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_af4bc42d2d3bb3b2a98782f0df0eba133_icgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -326,13 +385,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8cpp_source.html#l00076">76</a> of file <a class="el" href="_output_8cpp_source.html">Output.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8cpp_source.html#l00102">102</a> of file <a class="el" href="st___output_8cpp_source.html">st_Output.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_output_8cpp_source.html#l00049">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___output_8cpp_source.html#l00053">execute()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_a943b106620d1c711e838298a4c4233af_icgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_output_a943b106620d1c711e838298a4c4233af_icgraph.svg" width="311" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
 </div>
 
 </div>
@@ -358,9 +418,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8h_source.html#l00064">64</a> of file <a class="el" href="_output_8h_source.html">Output.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8h_source.html#l00068">68</a> of file <a class="el" href="st___output_8h_source.html">st_Output.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_output_8cpp_source.html#l00049">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___output_8cpp_source.html#l00053">execute()</a>.</p>
 
 </div>
 </div>
@@ -384,9 +444,33 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8h_source.html#l00060">60</a> of file <a class="el" href="_output_8h_source.html">Output.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8h_source.html#l00064">64</a> of file <a class="el" href="st___output_8h_source.html">st_Output.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_output_8cpp_source.html#l00049">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___output_8cpp_source.html#l00053">execute()</a>.</p>
+
+</div>
+</div>
+<a id="a75ffef69f3224859cb1e87112096274e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75ffef69f3224859cb1e87112096274e">&#9670;&nbsp;</a></span>string</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char Output::string[100]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="st___output_8h_source.html#l00039">39</a> of file <a class="el" href="st___output_8h_source.html">st_Output.h</a>.</p>
 
 </div>
 </div>
@@ -410,9 +494,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8h_source.html#l00056">56</a> of file <a class="el" href="_output_8h_source.html">Output.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8h_source.html#l00060">60</a> of file <a class="el" href="st___output_8h_source.html">st_Output.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_output_8cpp_source.html#l00049">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___output_8cpp_source.html#l00053">execute()</a>, and <a class="el" href="st___output_8cpp_source.html#l00044">Output()</a>.</p>
 
 </div>
 </div>
@@ -436,9 +520,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8h_source.html#l00058">58</a> of file <a class="el" href="_output_8h_source.html">Output.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8h_source.html#l00062">62</a> of file <a class="el" href="st___output_8h_source.html">st_Output.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_output_8cpp_source.html#l00049">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___output_8cpp_source.html#l00053">execute()</a>.</p>
 
 </div>
 </div>
@@ -462,15 +546,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_output_8h_source.html#l00062">62</a> of file <a class="el" href="_output_8h_source.html">Output.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="st___output_8h_source.html#l00066">66</a> of file <a class="el" href="st___output_8h_source.html">st_Output.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_output_8cpp_source.html#l00049">execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___output_8cpp_source.html#l00053">execute()</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li><a class="el" href="_output_8h_source.html">Output.h</a></li>
-<li><a class="el" href="_output_8cpp_source.html">Output.cpp</a></li>
+<li><a class="el" href="st___output_8h_source.html">st_Output.h</a></li>
+<li><a class="el" href="st___output_8cpp_source.html">st_Output.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -478,7 +562,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_output.html">Output</a></li>
-    <li class="footer">Generated on Tue May 16 2017 10:31:27 for Windlogger by
+    <li class="footer">Generated on Mon Jul 3 2017 10:43:34 for Windlogger by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

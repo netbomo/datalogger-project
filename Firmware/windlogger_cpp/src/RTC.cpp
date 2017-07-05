@@ -32,8 +32,8 @@
 #include <avr/io.h>
 #include <stdlib.h>
 
-#include "../lib/FSM.h"
 #include "../lib/RTC.h"
+#include "../lib/FSM.h"
 
 RTC::RTC() {
 	// constant timestamp au 01/01/2016 à 00:00:00 :1451599200
@@ -237,15 +237,15 @@ uint8_t RTC::get_date()
 	//renvoi 0 si fonction executée sans erreur
 }
 
-char RTC::a2toBCD (char *s_nombre) // le pointeur s_nombre pointe la dizaine du nombre à convertir, s_nombre+1 pointe l'unité
+char RTC::a2toBCD (char &s_nombre) // le pointeur s_nombre pointe la dizaine du nombre à convertir, s_nombre+1 pointe l'unité
 
 {
 	uint8_t temp_unit;  	//variable temporaire recevant la valeur entière du caractère "unité" du pointeur string
 	uint8_t temp_diz_unit; 	//variable temporaire recevant la valeur entière du caractère "dizaine" du pointeur string
 	uint8_t conversion=0;	//variable recevant la conversion du nombre "string" en BCD
 
-	temp_unit = (uint8_t) (*(s_nombre+1) - '0');		// le pointeur s_nombre+1 pointe l'unité du nombre à convertir
-	temp_diz_unit = (uint8_t) (*s_nombre - '0');		// le pointeur s_nombre pointe la dizaine du nombre à convertir
+	temp_unit = (uint8_t) ((s_nombre+1) - '0');		// le pointeur s_nombre+1 pointe l'unité du nombre à convertir
+	temp_diz_unit = (uint8_t) (s_nombre - '0');		// le pointeur s_nombre pointe la dizaine du nombre à convertir
 
 
 	conversion = (temp_diz_unit << 4)|temp_unit;		/// décalage de 4 bits des dizaine pour coder le nombre en BCD sur 2 quartets (1 octet)
@@ -258,30 +258,13 @@ uint8_t RTC::utoBCD(uint8_t _data)
 	return (number/10<<4) | (number%10);
 }
 
-
-
-uint8_t RTC::update(char *s_datetime)
-{
-	uint8_t pcf8563[7]; 							//tableau contenant les 7 registres de la RTC (h/min/sec/j/DAY/mois/année)
-
-	pcf8563[0] = (uint8_t)a2toBCD(s_datetime+11); 					//stock la valeur converti des index 11 et 12 correspondant aux sec et diz de sec
-	pcf8563[1] = (uint8_t)a2toBCD(s_datetime+9); 					//stock la valeur converti des index 9 et 11 correspondant aux min et diz de min
-	pcf8563[2] = (uint8_t)a2toBCD(s_datetime+7);  					//stock la valeur converti des index 7 et 8 correspondant aux heure et diz de heure
-	pcf8563[4] = (uint8_t)(s_datetime[0] -'0'); 					//stock la valeur converti de l'index 0 correspont au jour (Dim., lun. etc...)
-	pcf8563[3] = (uint8_t)a2toBCD(s_datetime+1);  					//stock la valeur converti de l'index 1 et 2 correspont au numéro du jour
-	pcf8563[5] = (uint8_t)a2toBCD(s_datetime+3);  					//stock la valeur converti de l'index 3 et 4 correspont au numéro du mois
-	pcf8563[6] = (uint8_t)a2toBCD(s_datetime+5);  					//stock la valeur converti de l'index 5 et 6 correspont au numéro de l'année
-
-	return FSM::twi.print(0xA2, 0x02, 7,pcf8563);					//réinitialise le RTC avec le contenu du tableau Ds1307
-}
-
 void RTC::update_reg(uint8_t reg, uint8_t data)
 {
 
 	FSM::twi.set_char(0xA2, reg, utoBCD(data));					//réinitialise le RTC avec le contenu du tableau Ds1307
 }
 
-void RTC::print(){
+void RTC::print_config(){
 	char conv_string[10];
 
 	FSM::uart0.print("Time :\r\n");

@@ -1,0 +1,5 @@
+<map id="Sensor::adc_value" name="Sensor::adc_value">
+<area shape="rect" id="node2" href="$class_windvane.html#ae61d5d71151e53c900b2f10b5f7a9d67" title="Windvane::read_value" alt="" coords="184,5,335,32"/>
+<area shape="rect" id="node3" href="$class_measure.html#add6924662bc09f06abc3ec7b6dc2c94e" title="read the windvane value en map it between 0 to 359 degres " alt="" coords="383,5,556,32"/>
+<area shape="rect" id="node4" href="$class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ..." alt="" coords="604,5,731,32"/>
+</map>

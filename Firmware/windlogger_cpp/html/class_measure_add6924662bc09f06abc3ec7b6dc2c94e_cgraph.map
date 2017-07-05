@@ -1,0 +1,4 @@
+<map id="Measure::windvane_value" name="Measure::windvane_value">
+<area shape="rect" id="node2" href="$class_windvane.html#ae61d5d71151e53c900b2f10b5f7a9d67" title="Windvane::read_value" alt="" coords="227,5,377,32"/>
+<area shape="rect" id="node3" href="$class_sensor.html#ad46f537d694b7cd559a46fd187574164" title="This method read return int value from the ADC channel. " alt="" coords="425,5,556,32"/>
+</map>

@@ -92,7 +92,8 @@ $(document).ready(function(){initNavTree('main_8h.html','');});
 <div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8h__dep__incl.svg" width="100%" height="496"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="main_8h__dep__incl.svg" width="100%" height="552"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+</div>
 </div>
 </div>
 <p><a href="main_8h_source.html">Go to the source code of this file.</a></p>
@@ -101,9 +102,16 @@ This graph shows which files directly or indirectly include this file:</div>
 Variables</h2></td></tr>
 <tr class="memitem:ac754eb719b41bc1ce7e0fd413f94de5f"><td class="memItemLeft" align="right" valign="top">static const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ac754eb719b41bc1ce7e0fd413f94de5f">LED_PIN</a> = 7</td></tr>
 <tr class="separator:ac754eb719b41bc1ce7e0fd413f94de5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a592240154ad6f450da6915f08c1d1e1c"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a592240154ad6f450da6915f08c1d1e1c">DATA_STRUCTURE_VERSION</a> = 051017</td></tr>
-<tr class="memdesc:a592240154ad6f450da6915f08c1d1e1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED_PIN is on the PB7 pin.  <a href="#a592240154ad6f450da6915f08c1d1e1c">More...</a><br /></td></tr>
+<tr class="memitem:acb12c3b1cdfbce185ff6e4927775ef20"><td class="memItemLeft" align="right" valign="top">static const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#acb12c3b1cdfbce185ff6e4927775ef20">PIN_WINDVANE</a> = 0</td></tr>
+<tr class="memdesc:acb12c3b1cdfbce185ff6e4927775ef20"><td class="mdescLeft">&#160;</td><td class="mdescRight">LED_PIN is on the PB7 pin.  <a href="#acb12c3b1cdfbce185ff6e4927775ef20">More...</a><br /></td></tr>
+<tr class="separator:acb12c3b1cdfbce185ff6e4927775ef20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a592240154ad6f450da6915f08c1d1e1c"><td class="memItemLeft" align="right" valign="top">static const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a592240154ad6f450da6915f08c1d1e1c">DATA_STRUCTURE_VERSION</a> = 062717</td></tr>
 <tr class="separator:a592240154ad6f450da6915f08c1d1e1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3b3102114199127791c0dec3fd79125"><td class="memItemLeft" align="right" valign="top">static const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#ac3b3102114199127791c0dec3fd79125">MAX_DATA_SAMPLE</a> = 10</td></tr>
+<tr class="memdesc:ac3b3102114199127791c0dec3fd79125"><td class="mdescLeft">&#160;</td><td class="mdescRight">use date of the data structure's revision  <a href="#ac3b3102114199127791c0dec3fd79125">More...</a><br /></td></tr>
+<tr class="separator:ac3b3102114199127791c0dec3fd79125"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87ecaf0e94b667c49791e0435080ca8d"><td class="memItemLeft" align="right" valign="top">static const unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8h.html#a87ecaf0e94b667c49791e0435080ca8d">EEPROM_OFFSET</a> = 30</td></tr>
+<tr class="separator:a87ecaf0e94b667c49791e0435080ca8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>License : This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.</p>
@@ -124,7 +132,7 @@ Variables</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const unsigned int DATA_STRUCTURE_VERSION = 051017</td>
+          <td class="memname">const unsigned int DATA_STRUCTURE_VERSION = 062717</td>
         </tr>
       </table>
   </td>
@@ -134,9 +142,36 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00041">41</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00043">43</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_config_8cpp_source.html#l00156">Config::initialize_eeprom()</a>, and <a class="el" href="_config_8cpp_source.html#l00144">Config::load_eeprom()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00243">Config::initialize_logger()</a>, and <a class="el" href="st___config_8cpp_source.html#l00231">Config::load_logger()</a>.</p>
+
+</div>
+</div>
+<a id="a87ecaf0e94b667c49791e0435080ca8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87ecaf0e94b667c49791e0435080ca8d">&#9670;&nbsp;</a></span>EEPROM_OFFSET</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned char EEPROM_OFFSET = 30</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>this is the eeprom offset use to save sensor parameters </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00046">46</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00049">Power::Power()</a>, and <a class="el" href="_sensor_8cpp_source.html#l00046">Sensor::Sensor()</a>.</p>
 
 </div>
 </div>
@@ -162,7 +197,57 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00035">35</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_measure_8cpp_source.html#l00058">Measure::execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___measure_8cpp_source.html#l00057">Measure::execute()</a>.</p>
+
+</div>
+</div>
+<a id="ac3b3102114199127791c0dec3fd79125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3b3102114199127791c0dec3fd79125">&#9670;&nbsp;</a></span>MAX_DATA_SAMPLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned char MAX_DATA_SAMPLE = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>this needs to be the same as the highest value of FSM::eeprom.measure_max. From now, the highest possible value is 10 (10mins average). </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00045">45</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
+
+</div>
+</div>
+<a id="acb12c3b1cdfbce185ff6e4927775ef20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb12c3b1cdfbce185ff6e4927775ef20">&#9670;&nbsp;</a></span>PIN_WINDVANE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const unsigned char PIN_WINDVANE = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>windvane pin constant </p>
+
+<p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00037">37</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
 
 </div>
 </div>
@@ -172,7 +257,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_97aefd0d527b934f1d99a682da8fe6a9.html">lib</a></li><li class="navelem"><a class="el" href="main_8h.html">main.h</a></li>
-    <li class="footer">Generated on Tue May 16 2017 10:31:27 for Windlogger by
+    <li class="footer">Generated on Mon Jul 3 2017 10:43:34 for Windlogger by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

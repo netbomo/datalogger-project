@@ -33,9 +33,9 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 
-#include "../lib/FSM.h"
 #include "../lib/main.h"
 #include "../lib/Usart.h"
+#include "../lib/FSM.h"
 
 /******************************************************************************
  * static software flags definition need to be out of constructor or function.

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['measure',['Measure',['../class_measure.html',1,'']]]
+  ['logger',['Logger',['../struct_logger.html',1,'']]]
 ];

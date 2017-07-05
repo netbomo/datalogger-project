@@ -1,18 +1,31 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="104,241,287,267"/>
-<area shape="rect" id="node6" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="729,342,815,369"/>
-<area shape="rect" id="node13" href="$class_f_s_m.html#a8a6e956375ea383f83fdd076badbe5a7" title="This method execute the next state. " alt="" coords="143,418,247,445"/>
-<area shape="rect" id="node16" href="$class_f_s_m.html#a96c6ea489297a70669bef5d29b3d889c" title="This method control if a new measure is needed. " alt="" coords="106,469,285,511"/>
-<area shape="rect" id="node17" href="$class_f_s_m.html#a22fc8c194ad489ef718067ab60bcebd6" title="This method define the next state from hardware and software flags. " alt="" coords="106,535,285,562"/>
-<area shape="rect" id="node3" href="$class_config.html#a3f8d043789557191686ae632ebe6a571" title="add c to the end of request " alt="" coords="513,266,667,293"/>
-<area shape="rect" id="node4" href="$class_usart.html#a86c9264f48dabbc3d97fa32d2d02d22d" title="USART char sender function. " alt="" coords="360,114,440,141"/>
-<area shape="rect" id="node5" href="$class_config.html#aad107d2aa88bbf57a728ec0c650a6f84" title="Config::backspace" alt="" coords="335,165,465,191"/>
-<area shape="rect" id="node7" href="$class_config.html#a5ae6c4f7255e895e7384fc2a4baab160" title="Config::endString" alt="" coords="339,215,461,242"/>
-<area shape="rect" id="node8" href="$class_config.html#a975933ecde91dc436d4ca39464cfd25f" title="display all config on USART0 " alt="" coords="535,215,645,242"/>
-<area shape="rect" id="node9" href="$class_config.html#a890e1d585e9ae670a6cccaf196250870" title="Config::atoc" alt="" coords="543,63,637,90"/>
-<area shape="rect" id="node10" href="$class_config.html#ab55107c3371b6c41be6688c0989993c7" title="Load saved config data from the eeprom. " alt="" coords="519,114,661,141"/>
-<area shape="rect" id="node11" href="$class_config.html#af2fee2ffae339b1e8ead1cd413e44ee3" title="Initialize the eeprom memory. " alt="" coords="715,107,829,148"/>
-<area shape="rect" id="node12" href="$class_config.html#a5fefd76d384c0a710ea0dd0d71d5d05b" title="Update saved config data in the eeprom. " alt="" coords="877,63,1035,90"/>
-<area shape="rect" id="node14" href="$class_state.html#ac150b47c0f2b53152671d0698a890981" title="State::print" alt="" coords="357,469,443,495"/>
-<area shape="rect" id="node15" href="$class_state.html#aa272f704a5f33920524fb57c80339b2f" title="State::execute" alt="" coords="347,519,453,546"/>
+<area shape="rect" id="node2" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="104,335,287,361"/>
+<area shape="rect" id="node6" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="933,233,1019,260"/>
+<area shape="rect" id="node18" href="$class_f_s_m.html#a8a6e956375ea383f83fdd076badbe5a7" title="This method execute the next state. " alt="" coords="143,512,247,539"/>
+<area shape="rect" id="node20" href="$class_r_t_c.html#a6e75afc10029f384081b814c2450e0fa" title="RTC::get_date" alt="" coords="141,563,249,589"/>
+<area shape="rect" id="node28" href="$class_r_t_c.html#a64fff0b6517be73f463e7741a8f0a200" title="RTC::get_second" alt="" coords="337,672,463,699"/>
+<area shape="rect" id="node29" href="$class_f_s_m.html#a96c6ea489297a70669bef5d29b3d889c" title="This method control if a new measure is needed. " alt="" coords="106,614,285,655"/>
+<area shape="rect" id="node30" href="$class_f_s_m.html#a22fc8c194ad489ef718067ab60bcebd6" title="This method define the next state from hardware and software flags. " alt="" coords="106,731,285,757"/>
+<area shape="rect" id="node3" href="$class_config.html#a3f8d043789557191686ae632ebe6a571" title="add c to the end of request " alt="" coords="513,259,667,285"/>
+<area shape="rect" id="node4" href="$class_usart.html#a86c9264f48dabbc3d97fa32d2d02d22d" title="USART char sender function. " alt="" coords="360,360,440,387"/>
+<area shape="rect" id="node5" href="$class_config.html#aad107d2aa88bbf57a728ec0c650a6f84" title="Config::backspace" alt="" coords="335,411,465,437"/>
+<area shape="rect" id="node7" href="$class_config.html#a5ae6c4f7255e895e7384fc2a4baab160" title="Config::endString" alt="" coords="339,157,461,184"/>
+<area shape="rect" id="node8" href="$class_config.html#a975933ecde91dc436d4ca39464cfd25f" title="display all config on USART0 " alt="" coords="535,157,645,184"/>
+<area shape="rect" id="node14" href="$class_config.html#a890e1d585e9ae670a6cccaf196250870" title="Config::atoc" alt="" coords="543,208,637,235"/>
+<area shape="rect" id="node15" href="$class_config.html#ab2f7c3fc31f5a2c4e115860474dd8f55" title="Load saved config data from the eeprom. " alt="" coords="523,99,657,125"/>
+<area shape="rect" id="node16" href="$class_config.html#ad634dbd3d1afb02eac176fd4f0150614" title="Initialize the eeprom memory. " alt="" coords="727,41,841,82"/>
+<area shape="rect" id="node17" href="$class_config.html#a4cda6b3fcf08b798afe3bf1311450b0c" title="Update saved config data in the eeprom. " alt="" coords="901,19,1051,45"/>
+<area shape="rect" id="node9" href="$class_sensor.html#aa14d1a074d1079cff037fd01ed74897c" title="This method print the sensor configuration for the sensor. It&#39;s a good idea to overload this function..." alt="" coords="715,107,853,133"/>
+<area shape="rect" id="node11" href="$class_power.html#afd1c8cab1d4549eb45be61bdd34ae97d" title="This method print the configuration for the power measurement. It&#39;s a good idea to overload this func..." alt="" coords="717,157,851,184"/>
+<area shape="rect" id="node13" href="$class_r_t_c.html#a59f014e14e774bf372dcf0d5d64e6717" title="RTC::print_config" alt="" coords="721,259,847,285"/>
+<area shape="rect" id="node10" href="$class_sensor.html#a9478b09a17b24105c0fe5b32e988224a" title="Sensor::print" alt="" coords="928,107,1024,133"/>
+<area shape="rect" id="node12" href="$class_power.html#a3a915a3ea9b9017cae450959ef8af3de" title="Power::print" alt="" coords="930,157,1022,184"/>
+<area shape="rect" id="node19" href="$class_state.html#aa272f704a5f33920524fb57c80339b2f" title="State::execute" alt="" coords="347,512,453,539"/>
+<area shape="rect" id="node21" href="$class_t_w_i.html#a3e375d4c03edae3f0c8263a330eddd8d" title="TWI::receive" alt="" coords="351,613,449,640"/>
+<area shape="rect" id="node22" href="$class_t_w_i.html#a130b2bf159b768c28ae0d4129c556711" title="TWI::start" alt="" coords="549,512,631,539"/>
+<area shape="rect" id="node23" href="$class_t_w_i.html#a6bde06891e3037d407b28a4ecbc3386f" title="TWI::get_status" alt="" coords="532,563,648,589"/>
+<area shape="rect" id="node24" href="$class_t_w_i.html#a29a1270e7b1ee2b573c1a32e3214ac57" title="TWI::restart" alt="" coords="544,613,636,640"/>
+<area shape="rect" id="node25" href="$class_t_w_i.html#ab5cefdcf75964a3ce2ed54303de56614" title="TWI::get_ack" alt="" coords="539,664,641,691"/>
+<area shape="rect" id="node26" href="$class_t_w_i.html#a8fb1629575f81558db83b54955470136" title="TWI::get_nack" alt="" coords="536,715,644,741"/>
+<area shape="rect" id="node27" href="$class_t_w_i.html#a3ed950888f040e24dc9dcb0ba65d17f1" title="TWI::stop" alt="" coords="550,765,630,792"/>
 </map>

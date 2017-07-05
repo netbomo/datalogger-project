@@ -75,11 +75,14 @@ void Measure::execute (){
 	if(FSM::flag_data_frequencies_ready){
 		//FSM::uart0.print("flag_data_frequencies_ready\r\n");
 		freq_read_value();								//	read data from anemometer and RPM
-		FSM::flag_data_frequencies_ready = 0;		//	reset the flag
+		FSM::flag_data_frequencies_ready = 0;			//	reset the flag
 	}
 
 	if(FSM::logger.measure_counter==FSM::logger.measure_max){
 		calc_average();									// if measurement sequence is finish, average data
+
+		FSM::timestamp = FSM::rtc.get_timestamp();		// Save the timestamp associate
+
 		FSM::flag_data_averages_ready=1;
 		//FSM::uart0.print("flag_data_averages_ready\r\n");
 	}
@@ -88,7 +91,7 @@ void Measure::execute (){
 }
 
 void Measure::print(){
-	FSM::uart0.print(m_name);		// Print sub routine
+	FSM::uart0.print(m_name);		// Print name
 }
 
 bool Measure::isEqual(char *name)const {
@@ -116,7 +119,7 @@ void Measure::windvane_value (){
 
 // read power value - not define realy (see emonLib)
 void Measure::power_read_value (){
-	FSM::powerAC.read_rms_value(FSM::logger.measure_counter,3, 2000);
+	FSM::powerAC.read_dc_value(FSM::logger.measure_counter, 500); // mesure number, number of crossing, timeout = time_you_want/((1/f_clock)*1024) = 32ms/((1/16MHz=*1024) = 500
 	//FSM::powerAC.print_data_array();
 }
 

@@ -1,0 +1,4 @@
+<map id="TWI::set_char" name="TWI::set_char">
+<area shape="rect" id="node2" href="$class_r_t_c.html#a47c11140f33fe80ffb96fb5296859a25" title="Function to update a register in the pcf8563 This function is use in the st_config class..." alt="" coords="159,5,281,32"/>
+<area shape="rect" id="node3" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="329,5,444,32"/>
+</map>

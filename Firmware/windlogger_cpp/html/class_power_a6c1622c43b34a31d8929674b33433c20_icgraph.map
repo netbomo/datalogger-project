@@ -1,0 +1,6 @@
+<map id="Power::print_average" name="Power::print_average">
+<area shape="rect" id="node2" href="$class_power.html#a1e7595ee0b3b0439d979ffeab785d0d8" title="Power::set_i_offset" alt="" coords="200,5,335,32"/>
+<area shape="rect" id="node4" href="$class_output.html#af4bc42d2d3bb3b2a98782f0df0eba133" title="Output::usart0_print" alt="" coords="199,56,336,83"/>
+<area shape="rect" id="node3" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="384,5,499,32"/>
+<area shape="rect" id="node5" href="$class_output.html#a087f4330e641bb4682ab2862bca7a1af" title="Output::execute" alt="" coords="384,56,499,83"/>
+</map>

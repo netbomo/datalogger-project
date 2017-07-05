@@ -43,7 +43,6 @@
 
 #include "../lib/main.h"
 #include "../lib/Usart.h"
-#include "../lib/DateTime.h"
 #include "../lib/FSM.h"
 #include "../lib/st_Config.h"
 
@@ -95,36 +94,45 @@ void Config::execute (){
 				break;
 			}
 			break;
-		case 01:	// Set the Node id number
-			FSM::logger.node_id = arg_uc;
-			update_logger();
-			break;
-		case 02:
-			FSM::timestamp = strtoul(request + 4,NULL,10);
-			break;
-		case 11:	// set anemometer 1 factor, update eeprom method in the setter
-			FSM::anemo1.set_factor(arg_f);
-			break;
-		case 12:	// set anemometer 1 offset, update eeprom method in the setter
-			FSM::anemo1.set_offset(arg_f);
-			break;
-		case 21:	// set anemometer 2 factor, update eeprom method in the setter
-			FSM::anemo2.set_factor(arg_f);
-			break;
-		case 22:	// set anemometer 2 offset, update eeprom method in the setter
-			FSM::anemo2.set_offset(arg_f);
-			break;
-		case 31:	// set windvane factor, update eeprom method in the setter
-			FSM::windvane.set_factor(arg_f);
-			break;
-		case 32:	// set windvane offset, update eeprom method in the setter
-			FSM::windvane.set_offset(arg_f);
-			break;
-		case 51:	// set windvane factor, update eeprom method in the setter
-			FSM::powerAC.set_v_factor(arg_f);
-			break;
-		case 52:	// set windvane offset, update eeprom method in the setter
-			FSM::powerAC.set_v_offset(arg_f);
+			case 01:	// Set the Node id number
+				FSM::logger.node_id = arg_uc;
+				update_logger();
+				break;
+			case 02:
+				FSM::timestamp = strtoul(request + 4,NULL,10);
+				break;
+			case 10:	// set anemometer 1 factor, update eeprom method in the setter
+				FSM::anemo1.set_enable(arg_uc);
+				break;
+			case 11:	// set anemometer 1 factor, update eeprom method in the setter
+				FSM::anemo1.set_factor(arg_f);
+				break;
+			case 12:	// set anemometer 1 offset, update eeprom method in the setter
+				FSM::anemo1.set_offset(arg_f);
+				break;
+			case 20:	// set anemometer 1 factor, update eeprom method in the setter
+				FSM::anemo2.set_enable(arg_uc);
+				break;
+			case 21:	// set anemometer 2 factor, update eeprom method in the setter
+				FSM::anemo2.set_factor(arg_f);
+				break;
+			case 22:	// set anemometer 2 offset, update eeprom method in the setter
+				FSM::anemo2.set_offset(arg_f);
+				break;
+			case 30:	// set anemometer 1 factor, update eeprom method in the setter
+				FSM::windvane.set_enable(arg_uc);
+				break;
+			case 31:	// set windvane factor, update eeprom method in the setter
+				FSM::windvane.set_factor(arg_f);
+				break;
+			case 32:	// set windvane offset, update eeprom method in the setter
+				FSM::windvane.set_offset(arg_f);
+				break;
+			case 51:	// set windvane factor, update eeprom method in the setter
+				FSM::powerAC.set_v_factor(arg_f);
+				break;
+			case 52:	// set windvane offset, update eeprom method in the setter
+				FSM::powerAC.set_v_offset(arg_f);
 			break;
 		case 53:	// set windvane factor, update eeprom method in the setter
 			FSM::powerAC.set_v_phase(arg_f);
@@ -195,13 +203,15 @@ void Config::display(){
 	FSM::uart0.print("$00=");FSM::uart0.print(itoa(FSM::logger.measure_sample_conf,conversion_string,10));FSM::uart0.print("	0: not measure,1: 10s average,2:1min average,3:10min average.\r\n");
 	FSM::uart0.print("Node id $01= ");FSM::uart0.print(itoa(FSM::logger.node_id,conversion_string,10));FSM::uart0.print("	permit identify each datalogger (0 - 255).\r\n");
 	FSM::uart0.print("timestamp $02= "); FSM::uart0.print(ultoa(FSM::timestamp,conversion_string,10));FSM::uart0.print("	update with the current timestamp.\r\n");
+	FSM::uart0.print("\r\n");
 
-	//FSM::anemo1.print_config("$11","$12");
-	//FSM::anemo2.print_config("$21","$22");
-	FSM::windvane.print_config("$31","$32");
+	//FSM::anemo1.print_config("$10","$11","$12");
+	//FSM::anemo2.print_config("$20","$21","$22");
+	FSM::windvane.print_config("$30","$31","$32");
 	FSM::powerAC.print_config("$51"," $52"," $53","$54"," $55"," $56");
 
-	FSM::rtc.print();
+	FSM::uart0.print("\r\n");
+	FSM::rtc.print_config();
 
 	FSM::uart0.print("\r\n");
 }

@@ -1,0 +1,4 @@
+<map id="Measure::calc_average" name="Measure::calc_average">
+<area shape="rect" id="node2" href="$class_power.html#a09a87034c397af2cfb7289fe1fbe5830" title="This method calculate the mean RMS voltage, mean RMS current, active power, apparent power and power ..." alt="" coords="229,5,340,32"/>
+<area shape="rect" id="node3" href="$class_sensor.html#ae16fd0cbdda6cfed1deac36f5c7c0a8f" title="This method calculate the average from the data array. " alt="" coords="211,56,359,83"/>
+</map>

@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['uart0',['uart0',['../class_f_s_m.html#aed8217a95a9b1a85eae75cad81913115',1,'FSM']]],
-  ['usart0',['USART0',['../class_output.html#a180cf4bc4e10bd5c13aa7b781e40c279',1,'Output']]],
-  ['usart1',['USART1',['../class_output.html#aac634079f5edcaf4e26830336b0020e1',1,'Output']]]
+  ['p_5faverage',['p_average',['../class_power.html#a051b8c146d2905a6caee87ca58b5731e',1,'Power']]],
+  ['p_5fdata',['p_data',['../class_power.html#acdfd891da5957f6d21d90073d4058d33',1,'Power']]],
+  ['pf_5faverage',['pf_average',['../class_power.html#a13ceecfc624e184cace821c7f3d26ebf',1,'Power']]],
+  ['pf_5fdata',['pf_data',['../class_power.html#a530372f9fa7cd47fb17e001f734d7569',1,'Power']]],
+  ['pin_5fwindvane',['PIN_WINDVANE',['../main_8h.html#acb12c3b1cdfbce185ff6e4927775ef20',1,'main.h']]],
+  ['powerac',['powerAC',['../class_f_s_m.html#ac6cf69f07a8ad6e90a999ae68f128fbe',1,'FSM']]]
 ];

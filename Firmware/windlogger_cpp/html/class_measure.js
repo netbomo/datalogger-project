@@ -7,9 +7,9 @@ var class_measure =
     [ "execute", "class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2", null ],
     [ "freq_init_measurement", "class_measure.html#adb3ffd40b37bda243c00893ffb208907", null ],
     [ "freq_read_value", "class_measure.html#a4390d770b19dbc51e5486fefe9f4b9d1", null ],
+    [ "isEqual", "class_measure.html#ab7d61a122c14b9c5e9652dc802938275", null ],
     [ "power_read_value", "class_measure.html#a313b5845f14f7c62f37db11272145320", null ],
-    [ "print", "class_measure.html#adae8f3976b6e2657d084c9bfd884d2df", null ],
+    [ "print", "class_measure.html#aefee38ede6aa57eba025010be261df46", null ],
     [ "temperature_read_value", "class_measure.html#ae3c562d3b11c5e202366597b951e969b", null ],
-    [ "windvane_value", "class_measure.html#add6924662bc09f06abc3ec7b6dc2c94e", null ],
-    [ "flag_data_frequencies_ready", "class_measure.html#abfca5a21b25c0a18abcc0a9d4af6e8b8", null ]
+    [ "windvane_value", "class_measure.html#add6924662bc09f06abc3ec7b6dc2c94e", null ]
 ];

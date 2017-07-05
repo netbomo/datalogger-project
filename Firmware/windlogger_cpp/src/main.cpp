@@ -58,7 +58,7 @@ int main(){
 /******************************************************************************
  * @todo If verbose mode is select ($01=1), display some infos on the uart0
  */
-	fsm.uart0.print("Initialization\r\n");		// print on uart0 "initialisation"
+	//fsm.uart0.print("Initialization\r\n");		// print on uart0 "initialisation"
 
 /******************************************************************************
  * Initialize main scope variable

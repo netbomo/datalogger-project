@@ -112,6 +112,11 @@ public:
 	 * This method read the sensors value for the power class and calculates the rms values. Needs a reference V to calculate power.
 	 */
 	void read_rms_value(unsigned char measure_number, unsigned int crossings, unsigned int timeout);
+
+
+	void read_dc_value(unsigned char measure_number, unsigned int timeout);
+
+
 	/**
 	 * \brief This method print the configuration for the power measurement. It's a good idea to overload this function to do it more explicit for each sensor.
 	 */
@@ -126,6 +131,8 @@ public:
 	 * \brief The print_average method print the average's value in the string.
 	 */
 	char* print_average(unsigned char prec, char *string);
+
+	char* print_dc_average(unsigned char prec, char *string);
 
 	void print_data_array()const;
 

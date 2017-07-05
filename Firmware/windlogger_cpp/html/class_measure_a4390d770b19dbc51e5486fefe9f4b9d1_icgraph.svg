@@ -8,22 +8,22 @@
  viewBox="0.00 0.00 240.00 39.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 35)">
 <title>Measure::freq_read_value</title>
-<!-- Node23 -->
-<g id="node1" class="node"><title>Node23</title>
+<!-- Node35 -->
+<g id="node1" class="node"><title>Node35</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-30.5 101,-30.5 101,-0.5 0,-0.5"/>
 <text text-anchor="start" x="8" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Measure::freq_read</text>
 <text text-anchor="middle" x="50.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">_value</text>
 </g>
-<!-- Node24 -->
-<g id="node2" class="node"><title>Node24</title>
+<!-- Node36 -->
+<g id="node2" class="node"><title>Node36</title>
 <g id="a_node2"><a xlink:href="class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" target="_top" xlink:title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ...">
 <polygon fill="none" stroke="black" points="137,-6 137,-25 232,-25 232,-6 137,-6"/>
 <text text-anchor="middle" x="184.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">Measure::execute</text>
 </a>
 </g>
 </g>
-<!-- Node23&#45;&gt;Node24 -->
-<g id="edge1" class="edge"><title>Node23&#45;&gt;Node24</title>
+<!-- Node35&#45;&gt;Node36 -->
+<g id="edge1" class="edge"><title>Node35&#45;&gt;Node36</title>
 <path fill="none" stroke="midnightblue" d="M111.043,-15.5C119.663,-15.5 128.432,-15.5 136.753,-15.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="111.028,-12.0001 101.027,-15.5 111.027,-19.0001 111.028,-12.0001"/>
 </g>

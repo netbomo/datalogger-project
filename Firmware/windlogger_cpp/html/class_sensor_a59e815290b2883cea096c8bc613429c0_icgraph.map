@@ -1,0 +1,4 @@
+<map id="Sensor::read_value" name="Sensor::read_value">
+<area shape="rect" id="node2" href="$class_sensor.html#ad713fef719161b27e6b93a0d3a371e0c" title="Sensor::set_offset" alt="" coords="188,5,317,32"/>
+<area shape="rect" id="node3" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="365,5,480,32"/>
+</map>

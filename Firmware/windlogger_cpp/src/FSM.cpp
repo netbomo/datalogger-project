@@ -67,7 +67,7 @@ Logger FSM::logger;						// This is the structure of data stored in the eeprom
 Anemometer FSM::anemo1(0);				// Anemometer 1 definition
 Anemometer FSM::anemo2(1);				// Anemometer 1 definition
 Windvane FSM::windvane(2);				// Windvane sensor definition
-Power FSM::powerAC(0,1,0);				//  v_pin, i_pin, id
+Power FSM::powerAC(7,5,0);				///  todo v_pin, i_pin, id
 
 //Class constructor
 FSM::FSM():second_counter(0),nextState(&idle){
@@ -79,6 +79,11 @@ FSM::FSM():second_counter(0),nextState(&idle){
 	anemo2.load_param();
 	windvane.load_param();
 	powerAC.load_param();
+
+
+//	for(unsigned char i = 0; i<10 ;++i){
+//		powerAC.read_rms_value(i,4,500);
+//	}
 
 
 	// now, we use external rtc pcf8563 on the TWI

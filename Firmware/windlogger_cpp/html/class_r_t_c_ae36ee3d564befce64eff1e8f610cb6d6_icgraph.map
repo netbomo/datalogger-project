@@ -1,0 +1,5 @@
+<map id="RTC::is_leap_year" name="RTC::is_leap_year">
+<area shape="rect" id="node2" href="$class_r_t_c.html#a20900a7f5bd95b1928bf2d08a0de687c" title="RTC::time_to_epoch" alt="" coords="184,5,327,32"/>
+<area shape="rect" id="node3" href="$class_r_t_c.html#ad0c4545ccad338b30faab6a125833843" title="RTC::get_timestamp" alt="" coords="375,5,519,32"/>
+<area shape="rect" id="node4" href="$class_output.html#a087f4330e641bb4682ab2862bca7a1af" title="Output::execute" alt="" coords="567,5,681,32"/>
+</map>
