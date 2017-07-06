@@ -10,6 +10,7 @@ var class_power =
     [ "print_average", "class_power.html#a6c1622c43b34a31d8929674b33433c20", null ],
     [ "print_config", "class_power.html#afd1c8cab1d4549eb45be61bdd34ae97d", null ],
     [ "print_data_array", "class_power.html#acd77541eabe8feb58e0b73154268cdd2", null ],
+    [ "read_dc_value", "class_power.html#a50f94a7bfd7a6d2aff52d4ed003c2cd6", null ],
     [ "read_rms_value", "class_power.html#ace64df3181f3dfce89b8a1f8608e16eb", null ],
     [ "readVcc", "class_power.html#a50a207b74105ff65f34f8f8917eed65f", null ],
     [ "set_i_factor", "class_power.html#a3dc8a4eeb7a87fa3a73cad504187173d", null ],

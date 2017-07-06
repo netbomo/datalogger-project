@@ -107,7 +107,7 @@
 </g>
 <!-- Node36 -->
 <g id="node6" class="node"><title>Node36</title>
-<g id="a_node6"><a xlink:href="class_sensor.html#aa14d1a074d1079cff037fd01ed74897c" target="_top" xlink:title="This method print the sensor configuration for the sensor. It&#39;s a good idea to overload this function...">
+<g id="a_node6"><a xlink:href="class_sensor.html#a0e1288d8b8594192f9d65819c185764f" target="_top" xlink:title="This method print the sensor configuration for the sensor. It&#39;s a good idea to overload this function...">
 <polygon fill="none" stroke="black" points="283,-192.682 283,-211.682 387,-211.682 387,-192.682 283,-192.682"/>
 <text text-anchor="middle" x="335" y="-199.682" font-family="Helvetica,sans-Serif" font-size="10.00">Sensor::print_config</text>
 </a>

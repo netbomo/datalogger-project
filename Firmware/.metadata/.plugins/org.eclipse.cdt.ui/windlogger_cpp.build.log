@@ -1,20 +1,26 @@
-19:51:14 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+17:51:41 **** Incremental Build of configuration Debug for project windlogger_cpp ****
 make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
-AVR Memory Usage
-----------------
-Device: atmega1284p
-
-Program:   16302 bytes (12.4% Full)
-(.text + .data + .bootloader)
-
-Data:       1533 bytes (9.4% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
+Building file: ../src/st_Output.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/st_Output.d" -MT"src/st_Output.o" -c -o "src/st_Output.o" "../src/st_Output.cpp"
+Finished building: ../src/st_Output.cpp
  
+Building file: ../src/st_Sleep.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/st_Sleep.d" -MT"src/st_Sleep.o" -c -o "src/st_Sleep.o" "../src/st_Sleep.cpp"
+Finished building: ../src/st_Sleep.cpp
+ 
+Building target: windlogger_cpp.elf
+Invoking: AVR C++ Linker
+avr-g++ -Wl,-Map,windlogger_cpp.map,--cref -mrelax -Wl,--gc-sections -mmcu=atmega1284p -o "windlogger_cpp.elf"  ./src/Anemometer.o ./src/FSM.o ./src/Power.o ./src/RTC.o ./src/Sensor.o ./src/State.o ./src/TWI.o ./src/Usart.o ./src/Windvane.o ./src/main.o ./src/operator.o ./src/powerAC.o ./src/powerDC.o ./src/st_Config.o ./src/st_Measure.o ./src/st_Output.o ./src/st_Sleep.o   
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:60 : référence indéfinie vers « Power::read_dc_value(unsigned char, unsigned int) »
+../src/st_Measure.cpp:112 : référence indéfinie vers « Power::calc_all() »
+./src/Power.o : Dans la fonction « Power::readVcc() » :
+../src/Power.cpp:156 : référence indéfinie vers « Power::print(char*) »
+collect2: error: ld returned 1 exit status
+makefile:66 : la recette pour la cible « windlogger_cpp.elf » a échouée
+make: *** [windlogger_cpp.elf] Erreur 1
 
-19:51:14 Build Finished (took 170ms)
+17:51:41 Build Finished (took 373ms)
 

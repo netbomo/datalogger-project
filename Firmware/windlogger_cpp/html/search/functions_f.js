@@ -4,6 +4,7 @@ var searchData=
   ['sensor',['Sensor',['../class_sensor.html#a15ed927071583a82e4ef79b9fb9fde9a',1,'Sensor']]],
   ['set',['set',['../class_t_w_i.html#a1d56957b51c377dc01739bfefacd3d29',1,'TWI::set()'],['../class_usart.html#a86c9264f48dabbc3d97fa32d2d02d22d',1,'Usart::set()']]],
   ['set_5fchar',['set_char',['../class_t_w_i.html#a1f2dc98a8c2e00dca3a0c76ee1ea1020',1,'TWI']]],
+  ['set_5fenable',['set_enable',['../class_sensor.html#aad89726b9c769ca2dbf7b121bae54b2e',1,'Sensor']]],
   ['set_5ffactor',['set_factor',['../class_sensor.html#aed192cfaa131d7e89dadf6da01e9d609',1,'Sensor']]],
   ['set_5fi_5ffactor',['set_i_factor',['../class_power.html#a3dc8a4eeb7a87fa3a73cad504187173d',1,'Power']]],
   ['set_5fi_5foffset',['set_i_offset',['../class_power.html#a1e7595ee0b3b0439d979ffeab785d0d8',1,'Power']]],

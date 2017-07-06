@@ -1,17 +1,30 @@
 <map id="Measure::execute" name="Measure::execute">
-<area shape="rect" id="node2" href="$class_measure.html#a1518672dff4f81603a35bff08c20e9f5" title="calcul average from the data array " alt="" coords="188,31,345,57"/>
-<area shape="rect" id="node5" href="$class_measure.html#a333a5ff14469e98bed368fd3e268751f" title="this method clear data value to save news " alt="" coords="197,82,337,123"/>
-<area shape="rect" id="node6" href="$class_measure.html#adb3ffd40b37bda243c00893ffb208907" title="this method initialize frequency measurement for anemometer and RPM " alt="" coords="203,147,330,189"/>
-<area shape="rect" id="node8" href="$class_measure.html#a4390d770b19dbc51e5486fefe9f4b9d1" title="read value from anemometer and RPM " alt="" coords="199,213,334,254"/>
-<area shape="rect" id="node10" href="$class_measure.html#a313b5845f14f7c62f37db11272145320" title="read power value &#45; not define realy (see emonLib) " alt="" coords="193,278,340,319"/>
-<area shape="rect" id="node13" href="$class_measure.html#ae3c562d3b11c5e202366597b951e969b" title="read the temperature value from one DS18b20 sensor " alt="" coords="192,343,341,385"/>
-<area shape="rect" id="node14" href="$class_measure.html#add6924662bc09f06abc3ec7b6dc2c94e" title="read the windvane value en map it between 0 to 359 degres " alt="" coords="180,409,353,436"/>
-<area shape="rect" id="node3" href="$class_power.html#a09a87034c397af2cfb7289fe1fbe5830" title="This method calculate the mean RMS voltage, mean RMS current, active power, apparent power and power ..." alt="" coords="429,5,540,32"/>
-<area shape="rect" id="node4" href="$class_sensor.html#ae16fd0cbdda6cfed1deac36f5c7c0a8f" title="This method calculate the average from the data array. " alt="" coords="411,56,559,83"/>
-<area shape="rect" id="node7" href="$class_anemometer.html#a142b28b2f221433f1fefd7f26b4a40c1" title="Anemometer::start" alt="" coords="419,155,550,181"/>
-<area shape="rect" id="node9" href="$class_anemometer.html#a9be3b4b392ef08ef29c769e6ce4bebf4" title="Anemometer::read_value" alt="" coords="401,220,568,247"/>
-<area shape="rect" id="node11" href="$class_power.html#ace64df3181f3dfce89b8a1f8608e16eb" title="Power::read_rms_value" alt="" coords="405,285,564,312"/>
-<area shape="rect" id="node12" href="$class_power.html#a1e33445a6a18766a77c5304292efcb4f" title="This method read return int value from the ADC channel. " alt="" coords="618,285,745,312"/>
-<area shape="rect" id="node15" href="$class_windvane.html#ae61d5d71151e53c900b2f10b5f7a9d67" title="Windvane::read_value" alt="" coords="409,409,560,436"/>
-<area shape="rect" id="node16" href="$class_sensor.html#ad46f537d694b7cd559a46fd187574164" title="This method read return int value from the ADC channel. " alt="" coords="616,409,747,436"/>
+<area shape="rect" id="node2" href="$class_measure.html#a1518672dff4f81603a35bff08c20e9f5" title="calcul average from the data array " alt="" coords="188,73,345,100"/>
+<area shape="rect" id="node16" href="$class_measure.html#a333a5ff14469e98bed368fd3e268751f" title="this method clear data value to save news " alt="" coords="197,125,337,166"/>
+<area shape="rect" id="node17" href="$class_measure.html#adb3ffd40b37bda243c00893ffb208907" title="this method initialize frequency measurement for anemometer and RPM " alt="" coords="203,190,330,231"/>
+<area shape="rect" id="node19" href="$class_measure.html#a4390d770b19dbc51e5486fefe9f4b9d1" title="read value from anemometer and RPM " alt="" coords="199,255,334,297"/>
+<area shape="rect" id="node21" href="$class_r_t_c.html#ad0c4545ccad338b30faab6a125833843" title="RTC::get_timestamp" alt="" coords="195,321,339,348"/>
+<area shape="rect" id="node24" href="$class_measure.html#a313b5845f14f7c62f37db11272145320" title="read power value &#45; not define realy (see emonLib) " alt="" coords="193,373,340,414"/>
+<area shape="rect" id="node26" href="$class_measure.html#ae3c562d3b11c5e202366597b951e969b" title="read the temperature value from one DS18b20 sensor " alt="" coords="192,438,341,479"/>
+<area shape="rect" id="node27" href="$class_measure.html#add6924662bc09f06abc3ec7b6dc2c94e" title="read the windvane value en map it between 0 to 359 degres " alt="" coords="180,504,353,531"/>
+<area shape="rect" id="node3" href="$class_power.html#a09a87034c397af2cfb7289fe1fbe5830" title="This method calculate the mean RMS voltage, mean RMS current, active power, apparent power and power ..." alt="" coords="429,73,540,100"/>
+<area shape="rect" id="node4" href="$class_sensor.html#ae16fd0cbdda6cfed1deac36f5c7c0a8f" title="This method calculate the average from the data array. " alt="" coords="411,136,559,163"/>
+<area shape="rect" id="node5" href="$class_sensor.html#a4e88d49608387ab4f65734913e514109" title="Sensor::is_enable" alt="" coords="618,136,745,163"/>
+<area shape="rect" id="node6" href="$class_sensor.html#a9478b09a17b24105c0fe5b32e988224a" title="Sensor::print" alt="" coords="996,59,1092,85"/>
+<area shape="rect" id="node7" href="$class_sensor.html#a59e815290b2883cea096c8bc613429c0" title="Sensor::read_value" alt="" coords="804,35,939,61"/>
+<area shape="rect" id="node8" href="$class_sensor.html#a0e1288d8b8594192f9d65819c185764f" title="This method print the sensor configuration for the sensor. It&#39;s a good idea to overload this function..." alt="" coords="802,85,941,112"/>
+<area shape="rect" id="node10" href="$class_sensor.html#a38a47820684e5ff0f61ad32b8afbde45" title="The print_average method print the average&#39;s value in the string. " alt="" coords="797,136,946,163"/>
+<area shape="rect" id="node11" href="$class_sensor.html#aa03d707dfa7562805b77f9040831418b" title="Sensor::print_data\l_array" alt="" coords="807,187,935,229"/>
+<area shape="rect" id="node13" href="$class_sensor.html#a953410c8a76c3b718349000a11e6160e" title="Load saved parameters for sensors from the eeprom. " alt="" coords="802,253,941,280"/>
+<area shape="rect" id="node14" href="$class_sensor.html#abf05dcc164ceadf01fa48c32fbaf040a" title="Update saved parameters for sensors in the eeprom. " alt="" coords="795,304,948,331"/>
+<area shape="rect" id="node15" href="$class_sensor.html#a4a9eb446ca4c73268ec6d93b959273f9" title="Initialize the eeprom memory. " alt="" coords="812,355,931,397"/>
+<area shape="rect" id="node9" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="1001,113,1087,140"/>
+<area shape="rect" id="node12" href="$class_usart.html#a86c9264f48dabbc3d97fa32d2d02d22d" title="USART char sender function. " alt="" coords="1004,195,1084,221"/>
+<area shape="rect" id="node18" href="$class_anemometer.html#a142b28b2f221433f1fefd7f26b4a40c1" title="Anemometer::start" alt="" coords="419,197,550,224"/>
+<area shape="rect" id="node20" href="$class_anemometer.html#a9be3b4b392ef08ef29c769e6ce4bebf4" title="Anemometer::read_value" alt="" coords="401,255,568,281"/>
+<area shape="rect" id="node22" href="$class_r_t_c.html#a20900a7f5bd95b1928bf2d08a0de687c" title="RTC::time_to_epoch" alt="" coords="413,321,556,348"/>
+<area shape="rect" id="node23" href="$class_r_t_c.html#ae36ee3d564befce64eff1e8f610cb6d6" title="RTC::is_leap_year" alt="" coords="616,321,747,348"/>
+<area shape="rect" id="node25" href="$class_power.html#a50f94a7bfd7a6d2aff52d4ed003c2cd6" title="Power::read_dc_value" alt="" coords="409,380,560,407"/>
+<area shape="rect" id="node28" href="$class_windvane.html#ae61d5d71151e53c900b2f10b5f7a9d67" title="Windvane::read_value" alt="" coords="409,504,560,531"/>
+<area shape="rect" id="node29" href="$class_sensor.html#ad46f537d694b7cd559a46fd187574164" title="This method read return int value from the ADC channel. " alt="" coords="616,504,747,531"/>
 </map>

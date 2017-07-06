@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['usart',['Usart',['../class_usart.html',1,'']]]
+  ['windvane',['Windvane',['../class_windvane.html',1,'']]]
 ];

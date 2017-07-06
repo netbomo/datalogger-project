@@ -129,19 +129,19 @@ void Config::execute (){
 				FSM::windvane.set_offset(arg_f);
 				break;
 			case 51:	// set windvane factor, update eeprom method in the setter
-				FSM::powerAC.set_v_factor(arg_f);
+				FSM::pDC.set_v_factor(arg_f);
 				break;
 			case 52:	// set windvane offset, update eeprom method in the setter
-				FSM::powerAC.set_v_offset(arg_f);
+				FSM::pDC.set_v_offset(arg_f);
 			break;
 		case 53:	// set windvane factor, update eeprom method in the setter
-			FSM::powerAC.set_v_phase(arg_f);
+			FSM::pDC.set_v_phase(arg_f);
 			break;
 		case 54:	// set windvane offset, update eeprom method in the setter
-			FSM::powerAC.set_i_factor(arg_f);
+			FSM::pDC.set_i_factor(arg_f);
 			break;
 		case 55:	// set windvane factor, update eeprom method in the setter
-			FSM::powerAC.set_i_offset(arg_f);
+			FSM::pDC.set_i_offset(arg_f);
 			break;
 		case 91:
 			if(arg_uc>=0 &&arg_uc<60)	FSM::rtc.update_reg(FSM::rtc.SECS,arg_uc);
@@ -208,7 +208,7 @@ void Config::display(){
 	//FSM::anemo1.print_config("$10","$11","$12");
 	//FSM::anemo2.print_config("$20","$21","$22");
 	FSM::windvane.print_config("$30","$31","$32");
-	FSM::powerAC.print_config("$51"," $52"," $53","$54"," $55"," $56");
+	FSM::pDC.print_config("$51"," $52"," $53","$54");
 
 	FSM::uart0.print("\r\n");
 	FSM::rtc.print_config();

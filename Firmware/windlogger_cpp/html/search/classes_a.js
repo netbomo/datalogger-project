@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sensor',['Sensor',['../class_sensor.html',1,'']]],
-  ['sleep',['Sleep',['../class_sleep.html',1,'']]],
-  ['state',['State',['../class_state.html',1,'']]]
+  ['time',['Time',['../struct_time.html',1,'']]],
+  ['twi',['TWI',['../class_t_w_i.html',1,'']]]
 ];

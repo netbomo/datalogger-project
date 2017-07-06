@@ -54,39 +54,39 @@ var sectionId = 'dynsection-15';
 <svg id="graph" class="graph">
 <g id="viewport">
 <title>Config::update_logger</title>
-<!-- Node113 -->
-<g id="node1" class="node"><title>Node113</title>
+<!-- Node109 -->
+<g id="node1" class="node"><title>Node109</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-50 0,-69 112,-69 112,-50 0,-50"/>
 <text text-anchor="middle" x="56" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">Config::update_logger</text>
 </g>
-<!-- Node114 -->
-<g id="node2" class="node"><title>Node114</title>
+<!-- Node110 -->
+<g id="node2" class="node"><title>Node110</title>
 <g id="a_node2"><a xlink:href="class_config.html#a5ae6c4f7255e895e7384fc2a4baab160" target="_top" xlink:title="Config::endString">
 <polygon fill="none" stroke="black" points="407,-44 407,-63 499,-63 499,-44 407,-44"/>
 <text text-anchor="middle" x="453" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">Config::endString</text>
 </a>
 </g>
 </g>
-<!-- Node113&#45;&gt;Node114 -->
-<g id="edge1" class="edge"><title>Node113&#45;&gt;Node114</title>
+<!-- Node109&#45;&gt;Node110 -->
+<g id="edge1" class="edge"><title>Node109&#45;&gt;Node110</title>
 <path fill="none" stroke="midnightblue" d="M103.882,-71.2113C117.972,-74.2086 133.531,-77.0057 148,-78.5 239.787,-87.98 347.466,-72.972 406.878,-62.4201"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="104.439,-67.75 93.9195,-69.0092 102.928,-74.5851 104.439,-67.75"/>
 </g>
-<!-- Node117 -->
-<g id="node5" class="node"><title>Node117</title>
+<!-- Node113 -->
+<g id="node5" class="node"><title>Node113</title>
 <g id="a_node5"><a xlink:href="class_config.html#a2a806f322b0d533aabdb8e796d3b1033" target="_top" xlink:title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e...">
 <polygon fill="none" stroke="black" points="148,-50 148,-69 234,-69 234,-50 148,-50"/>
 <text text-anchor="middle" x="191" y="-57" font-family="Helvetica,sans-Serif" font-size="10.00">Config::execute</text>
 </a>
 </g>
 </g>
-<!-- Node113&#45;&gt;Node117 -->
-<g id="edge4" class="edge"><title>Node113&#45;&gt;Node117</title>
+<!-- Node109&#45;&gt;Node113 -->
+<g id="edge4" class="edge"><title>Node109&#45;&gt;Node113</title>
 <path fill="none" stroke="midnightblue" d="M122.326,-59.5C130.951,-59.5 139.603,-59.5 147.7,-59.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="122.249,-56.0001 112.249,-59.5 122.248,-63.0001 122.249,-56.0001"/>
 </g>
-<!-- Node118 -->
-<g id="node6" class="node"><title>Node118</title>
+<!-- Node114 -->
+<g id="node6" class="node"><title>Node114</title>
 <g id="a_node6"><a xlink:href="class_config.html#ad634dbd3d1afb02eac176fd4f0150614" target="_top" xlink:title="Initialize the eeprom memory. ">
 <polygon fill="none" stroke="black" points="148,-0.5 148,-30.5 234,-30.5 234,-0.5 148,-0.5"/>
 <text text-anchor="start" x="156" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">Config::initialize</text>
@@ -94,75 +94,75 @@ var sectionId = 'dynsection-15';
 </a>
 </g>
 </g>
-<!-- Node113&#45;&gt;Node118 -->
-<g id="edge5" class="edge"><title>Node113&#45;&gt;Node118</title>
+<!-- Node109&#45;&gt;Node114 -->
+<g id="edge5" class="edge"><title>Node109&#45;&gt;Node114</title>
 <path fill="none" stroke="midnightblue" d="M95.6414,-46.7164C111.996,-41.306 131.094,-34.9878 147.814,-29.4563"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="94.2536,-43.4889 85.859,-49.9527 96.4523,-50.1346 94.2536,-43.4889"/>
 </g>
-<!-- Node115 -->
-<g id="node3" class="node"><title>Node115</title>
+<!-- Node111 -->
+<g id="node3" class="node"><title>Node111</title>
 <g id="a_node3"><a xlink:href="class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" target="_top" xlink:title="Call when a string from usart0 finish by &quot;\r\n&quot;. ">
 <polygon fill="none" stroke="black" points="535,-44 535,-63 672,-63 672,-44 535,-44"/>
 <text text-anchor="middle" x="603.5" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">FSM::character_processing</text>
 </a>
 </g>
 </g>
-<!-- Node114&#45;&gt;Node115 -->
-<g id="edge2" class="edge"><title>Node114&#45;&gt;Node115</title>
+<!-- Node110&#45;&gt;Node111 -->
+<g id="edge2" class="edge"><title>Node110&#45;&gt;Node111</title>
 <path fill="none" stroke="midnightblue" d="M509.633,-53.5C517.908,-53.5 526.513,-53.5 534.999,-53.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="509.362,-50.0001 499.362,-53.5 509.362,-57.0001 509.362,-50.0001"/>
 </g>
-<!-- Node116 -->
-<g id="node4" class="node"><title>Node116</title>
+<!-- Node112 -->
+<g id="node4" class="node"><title>Node112</title>
 <g id="a_node4"><a xlink:href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" target="_top" xlink:title="main">
 <polygon fill="none" stroke="black" points="708,-44 708,-63 746,-63 746,-44 708,-44"/>
 <text text-anchor="middle" x="727" y="-51" font-family="Helvetica,sans-Serif" font-size="10.00">main</text>
 </a>
 </g>
 </g>
-<!-- Node115&#45;&gt;Node116 -->
-<g id="edge3" class="edge"><title>Node115&#45;&gt;Node116</title>
+<!-- Node111&#45;&gt;Node112 -->
+<g id="edge3" class="edge"><title>Node111&#45;&gt;Node112</title>
 <path fill="none" stroke="midnightblue" d="M682.013,-53.5C691.457,-53.5 700.315,-53.5 707.572,-53.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="682.001,-50.0001 672.001,-53.5 682.001,-57.0001 682.001,-50.0001"/>
 </g>
-<!-- Node118&#45;&gt;Node114 -->
-<g id="edge6" class="edge"><title>Node118&#45;&gt;Node114</title>
+<!-- Node114&#45;&gt;Node110 -->
+<g id="edge6" class="edge"><title>Node114&#45;&gt;Node110</title>
 <path fill="none" stroke="midnightblue" d="M244.203,-29.2435C252.782,-31.2054 261.61,-33.047 270,-34.5 316.328,-42.5231 369.919,-47.6198 406.891,-50.4923"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="244.825,-25.794 234.288,-26.9011 243.215,-32.6065 244.825,-25.794"/>
 </g>
-<!-- Node119 -->
-<g id="node7" class="node"><title>Node119</title>
+<!-- Node115 -->
+<g id="node7" class="node"><title>Node115</title>
 <g id="a_node7"><a xlink:href="class_config.html#ab2f7c3fc31f5a2c4e115860474dd8f55" target="_top" xlink:title="Load saved config data from the eeprom. ">
 <polygon fill="none" stroke="black" points="270,-6 270,-25 371,-25 371,-6 270,-6"/>
 <text text-anchor="middle" x="320.5" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">Config::load_logger</text>
 </a>
 </g>
 </g>
-<!-- Node118&#45;&gt;Node119 -->
-<g id="edge7" class="edge"><title>Node118&#45;&gt;Node119</title>
+<!-- Node114&#45;&gt;Node115 -->
+<g id="edge7" class="edge"><title>Node114&#45;&gt;Node115</title>
 <path fill="none" stroke="midnightblue" d="M244.263,-8.84835C252.743,-8.70172 261.503,-8.71905 269.916,-8.90035"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="244.009,-5.35363 234.102,-9.10853 244.188,-12.3513 244.009,-5.35363"/>
 </g>
-<!-- Node119&#45;&gt;Node114 -->
-<g id="edge8" class="edge"><title>Node119&#45;&gt;Node114</title>
+<!-- Node115&#45;&gt;Node110 -->
+<g id="edge8" class="edge"><title>Node115&#45;&gt;Node110</title>
 <path fill="none" stroke="midnightblue" d="M364.052,-27.8906C381.923,-33.0945 402.39,-39.0541 419.08,-43.9141"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="365.01,-24.5244 354.431,-25.089 363.053,-31.2453 365.01,-24.5244"/>
 </g>
-<!-- Node119&#45;&gt;Node118 -->
-<g id="edge10" class="edge"><title>Node119&#45;&gt;Node118</title>
+<!-- Node115&#45;&gt;Node114 -->
+<g id="edge10" class="edge"><title>Node115&#45;&gt;Node114</title>
 <path fill="none" stroke="midnightblue" d="M259.807,-22.2378C251.123,-22.29 242.339,-22.1745 234.102,-21.8915"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="259.965,-25.7361 269.916,-22.0996 259.869,-18.7368 259.965,-25.7361"/>
 </g>
-<!-- Node120 -->
-<g id="node8" class="node"><title>Node120</title>
+<!-- Node116 -->
+<g id="node8" class="node"><title>Node116</title>
 <g id="a_node8"><a xlink:href="class_f_s_m.html#a2fccf1c016c43e4fa4ee512311bf9d7d" target="_top" xlink:title="Class constructor. ">
 <polygon fill="none" stroke="black" points="420.5,-6 420.5,-25 485.5,-25 485.5,-6 420.5,-6"/>
 <text text-anchor="middle" x="453" y="-13" font-family="Helvetica,sans-Serif" font-size="10.00">FSM::FSM</text>
 </a>
 </g>
 </g>
-<!-- Node119&#45;&gt;Node120 -->
-<g id="edge9" class="edge"><title>Node119&#45;&gt;Node120</title>
+<!-- Node115&#45;&gt;Node116 -->
+<g id="edge9" class="edge"><title>Node115&#45;&gt;Node116</title>
 <path fill="none" stroke="midnightblue" d="M381.351,-15.5C394.742,-15.5 408.438,-15.5 420.162,-15.5"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="381.209,-12.0001 371.209,-15.5 381.209,-19.0001 381.209,-12.0001"/>
 </g>

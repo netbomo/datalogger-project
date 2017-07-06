@@ -38,8 +38,6 @@
  */
 
 
-
-
 #ifndef POWER_H_
 #define POWER_H_
 
@@ -65,6 +63,7 @@
 class Power {
 
 public:
+	//blabla
 	/******************************************************************************
 	 * Constructor and destructor
 	 */
@@ -132,7 +131,7 @@ public:
 	 */
 	char* print_average(unsigned char prec, char *string);
 
-	char* print_dc_average(unsigned char prec, char *string);
+
 
 	void print_data_array()const;
 
@@ -192,8 +191,6 @@ protected:
 	double pf_data[MAX_DATA_SAMPLE]={0.0};	/**< this is the data array where where power factor data is stored and used to calculate the average. */
 
 	double p_average;	/**< there is the result from the real power average */
-	double s_average;	/**< there is the result from the apparent power average */
-	double pf_average;	/**< there is the result from the power factor average */
 
 	/******************************************************************************
 	 * voltage data

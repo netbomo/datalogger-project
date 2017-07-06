@@ -9,7 +9,7 @@
 <area shape="rect" id="node13" href="$class_config.html#ad634dbd3d1afb02eac176fd4f0150614" title="Initialize the eeprom memory. " alt="" coords="434,107,549,149"/>
 <area shape="rect" id="node14" href="$class_config.html#ab2f7c3fc31f5a2c4e115860474dd8f55" title="Load saved config data from the eeprom. " alt="" coords="623,72,758,99"/>
 <area shape="rect" id="node15" href="$class_config.html#a4cda6b3fcf08b798afe3bf1311450b0c" title="Update saved config data in the eeprom. " alt="" coords="616,123,765,149"/>
-<area shape="rect" id="node8" href="$class_sensor.html#aa14d1a074d1079cff037fd01ed74897c" title="This method print the sensor configuration for the sensor. It&#39;s a good idea to overload this function..." alt="" coords="621,224,760,251"/>
+<area shape="rect" id="node8" href="$class_sensor.html#a0e1288d8b8594192f9d65819c185764f" title="This method print the sensor configuration for the sensor. It&#39;s a good idea to overload this function..." alt="" coords="621,224,760,251"/>
 <area shape="rect" id="node10" href="$class_r_t_c.html#a59f014e14e774bf372dcf0d5d64e6717" title="RTC::print_config" alt="" coords="628,275,753,301"/>
 <area shape="rect" id="node11" href="$class_power.html#afd1c8cab1d4549eb45be61bdd34ae97d" title="This method print the configuration for the power measurement. It&#39;s a good idea to overload this func..." alt="" coords="623,173,758,200"/>
 <area shape="rect" id="node9" href="$class_sensor.html#a9478b09a17b24105c0fe5b32e988224a" title="Sensor::print" alt="" coords="813,224,909,251"/>

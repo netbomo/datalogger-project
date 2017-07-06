@@ -4,10 +4,6 @@ var files =
     [ "Anemometer.h", "_anemometer_8h.html", [
       [ "Anemometer", "class_anemometer.html", "class_anemometer" ]
     ] ],
-    [ "DateTime.cpp", "_date_time_8cpp.html", "_date_time_8cpp" ],
-    [ "DateTime.h", "_date_time_8h.html", [
-      [ "DateTime", "class_date_time.html", "class_date_time" ]
-    ] ],
     [ "FSM.cpp", "_f_s_m_8cpp.html", "_f_s_m_8cpp" ],
     [ "FSM.h", "_f_s_m_8h.html", [
       [ "Logger", "struct_logger.html", "struct_logger" ],
@@ -18,6 +14,14 @@ var files =
     [ "operator.cpp", "operator_8cpp.html", "operator_8cpp" ],
     [ "Power.cpp", "_power_8cpp.html", null ],
     [ "Power.h", "_power_8h.html", "_power_8h" ],
+    [ "powerAC.cpp", "power_a_c_8cpp.html", null ],
+    [ "powerAC.h", "power_a_c_8h.html", [
+      [ "powerAC", "classpower_a_c.html", "classpower_a_c" ]
+    ] ],
+    [ "powerDC.cpp", "power_d_c_8cpp.html", null ],
+    [ "powerDC.h", "power_d_c_8h.html", [
+      [ "powerDC", "classpower_d_c.html", "classpower_d_c" ]
+    ] ],
     [ "RTC.cpp", "_r_t_c_8cpp.html", null ],
     [ "RTC.h", "_r_t_c_8h.html", [
       [ "Time", "struct_time.html", "struct_time" ],

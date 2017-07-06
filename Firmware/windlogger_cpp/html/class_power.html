@@ -121,6 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3a915a3ea9b9017cae450959ef8af3de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace64df3181f3dfce89b8a1f8608e16eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_power.html#ace64df3181f3dfce89b8a1f8608e16eb">read_rms_value</a> (unsigned char measure_number, unsigned int crossings, unsigned int timeout)</td></tr>
 <tr class="separator:ace64df3181f3dfce89b8a1f8608e16eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50f94a7bfd7a6d2aff52d4ed003c2cd6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_power.html#a50f94a7bfd7a6d2aff52d4ed003c2cd6">read_dc_value</a> (unsigned char measure_number, unsigned int timeout)</td></tr>
+<tr class="separator:a50f94a7bfd7a6d2aff52d4ed003c2cd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd1c8cab1d4549eb45be61bdd34ae97d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_power.html#afd1c8cab1d4549eb45be61bdd34ae97d">print_config</a> (char arg_id1[], char arg_id2[], char arg_id3[], char arg_id4[], char arg_id5[], char arg_id6[])</td></tr>
 <tr class="memdesc:afd1c8cab1d4549eb45be61bdd34ae97d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method print the configuration for the power measurement. It's a good idea to overload this function to do it more explicit for each sensor.  <a href="#afd1c8cab1d4549eb45be61bdd34ae97d">More...</a><br /></td></tr>
 <tr class="separator:afd1c8cab1d4549eb45be61bdd34ae97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,7 +225,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_power.html" title="The Power class is the base container for measuring and calculating power. ">Power</a> class gives base layer for any type of power calculation, either AC or DC. Take a look on pow_** class for more details. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00065">65</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00063">63</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="abbef246caaa88630e3c02ce5ade952ff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbef246caaa88630e3c02ce5ade952ff">&#9670;&nbsp;</a></span>Power()</h2>
@@ -261,12 +263,11 @@ Protected Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00049">49</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00228">checkVCross</a>, <a class="el" href="main_8h_source.html#l00046">EEPROM_OFFSET</a>, <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, <a class="el" href="_power_8h_source.html#l00232">m_eeprom_addr</a>, <a class="el" href="_power_8h_source.html#l00230">m_id</a>, <a class="el" href="_power_8h_source.html#l00197">v_offset</a>, and <a class="el" href="_power_8h_source.html#l00213">Vmeas</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00234">checkVCross</a>, <a class="el" href="main_8h_source.html#l00046">EEPROM_OFFSET</a>, <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, <a class="el" href="_power_8h_source.html#l00238">m_eeprom_addr</a>, <a class="el" href="_power_8h_source.html#l00236">m_id</a>, <a class="el" href="_power_8h_source.html#l00203">v_offset</a>, and <a class="el" href="_power_8h_source.html#l00219">Vmeas</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_abbef246caaa88630e3c02ce5ade952ff_cgraph.svg" width="298" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_abbef246caaa88630e3c02ce5ade952ff_cgraph.svg" width="298" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -342,13 +343,13 @@ Here is the call graph for this function:</div>
 <p>wait for conversion to complete</p>
 <p>Stop the ADC (reduce power) </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00308">308</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00323">323</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_power_a1e33445a6a18766a77c5304292efcb4f_icgraph.svg" width="100%" height="378"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_power_a1e33445a6a18766a77c5304292efcb4f_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -369,11 +370,11 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00208">208</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00209">209</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00204">i_average</a>, <a class="el" href="_power_8h_source.html#l00203">i_data</a>, <a class="el" href="_f_s_m_8h_source.html#l00126">FSM::logger</a>, <a class="el" href="_f_s_m_8h_source.html#l00059">Logger::measure_max</a>, <a class="el" href="_power_8h_source.html#l00187">p_average</a>, <a class="el" href="_power_8h_source.html#l00183">p_data</a>, <a class="el" href="_power_8h_source.html#l00189">pf_average</a>, <a class="el" href="_power_8h_source.html#l00185">pf_data</a>, <a class="el" href="_power_8h_source.html#l00188">s_average</a>, <a class="el" href="_power_8h_source.html#l00184">s_data</a>, <a class="el" href="_power_8h_source.html#l00195">v_average</a>, and <a class="el" href="_power_8h_source.html#l00194">v_data</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00210">i_average</a>, <a class="el" href="_power_8h_source.html#l00209">i_data</a>, <a class="el" href="_f_s_m_8h_source.html#l00126">FSM::logger</a>, <a class="el" href="_f_s_m_8h_source.html#l00059">Logger::measure_max</a>, <a class="el" href="_power_8h_source.html#l00193">p_average</a>, <a class="el" href="_power_8h_source.html#l00189">p_data</a>, <a class="el" href="_power_8h_source.html#l00195">pf_average</a>, <a class="el" href="_power_8h_source.html#l00194">s_average</a>, <a class="el" href="_power_8h_source.html#l00201">v_average</a>, and <a class="el" href="_power_8h_source.html#l00200">v_data</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="st___measure_8cpp_source.html#l00135">Measure::calc_average()</a>, and <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___measure_8cpp_source.html#l00138">Measure::calc_average()</a>, and <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -399,9 +400,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00296">296</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00311">311</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -427,15 +428,15 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00274">274</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00289">289</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00205">i_factor</a>, <a class="el" href="_power_8h_source.html#l00206">i_offset</a>, <a class="el" href="_power_8h_source.html#l00232">m_eeprom_addr</a>, <a class="el" href="_power_8h_source.html#l00178">m_i_pin</a>, <a class="el" href="_power_8h_source.html#l00177">m_v_pin</a>, <a class="el" href="_power_8h_source.html#l00196">v_factor</a>, <a class="el" href="_power_8h_source.html#l00197">v_offset</a>, and <a class="el" href="_power_8h_source.html#l00198">v_phase</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00211">i_factor</a>, <a class="el" href="_power_8h_source.html#l00212">i_offset</a>, <a class="el" href="_power_8h_source.html#l00238">m_eeprom_addr</a>, <a class="el" href="_power_8h_source.html#l00184">m_i_pin</a>, <a class="el" href="_power_8h_source.html#l00183">m_v_pin</a>, <a class="el" href="_power_8h_source.html#l00202">v_factor</a>, <a class="el" href="_power_8h_source.html#l00203">v_offset</a>, and <a class="el" href="_power_8h_source.html#l00204">v_phase</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_f_s_m_8cpp_source.html#l00073">FSM::FSM()</a>, <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, and <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, <a class="el" href="power_d_c_8cpp_source.html#l00037">powerDC::powerDC()</a>, and <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_a56a921dc1756f980b6b28e024f2c913c_icgraph.svg" width="491" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_a56a921dc1756f980b6b28e024f2c913c_icgraph.svg" width="496" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -468,13 +469,13 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00066">66</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00230">m_id</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00236">m_id</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, and <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_power_a3a915a3ea9b9017cae450959ef8af3de_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_power_a3a915a3ea9b9017cae450959ef8af3de_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -506,15 +507,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00237">237</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00238">238</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00204">i_average</a>, <a class="el" href="_power_8h_source.html#l00187">p_average</a>, <a class="el" href="_power_8h_source.html#l00189">pf_average</a>, <a class="el" href="_power_8h_source.html#l00188">s_average</a>, and <a class="el" href="_power_8h_source.html#l00195">v_average</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00210">i_average</a>, <a class="el" href="_power_8h_source.html#l00193">p_average</a>, and <a class="el" href="_power_8h_source.html#l00201">v_average</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>, and <a class="el" href="st___output_8cpp_source.html#l00083">Output::usart0_print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_a6c1622c43b34a31d8929674b33433c20_icgraph.svg" width="504" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_a6c1622c43b34a31d8929674b33433c20_icgraph.svg" width="515" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -572,9 +573,9 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00074">74</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00205">i_factor</a>, <a class="el" href="_power_8h_source.html#l00206">i_offset</a>, <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, <a class="el" href="_power_8cpp_source.html#l00066">print()</a>, <a class="el" href="_power_8h_source.html#l00219">showSupply</a>, <a class="el" href="_f_s_m_8h_source.html#l00122">FSM::uart0</a>, <a class="el" href="_power_8h_source.html#l00196">v_factor</a>, <a class="el" href="_power_8h_source.html#l00197">v_offset</a>, and <a class="el" href="_power_8h_source.html#l00198">v_phase</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00211">i_factor</a>, <a class="el" href="_power_8h_source.html#l00212">i_offset</a>, <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, <a class="el" href="_power_8cpp_source.html#l00066">print()</a>, <a class="el" href="_power_8h_source.html#l00225">showSupply</a>, <a class="el" href="_f_s_m_8h_source.html#l00122">FSM::uart0</a>, <a class="el" href="_power_8h_source.html#l00202">v_factor</a>, <a class="el" href="_power_8h_source.html#l00203">v_offset</a>, and <a class="el" href="_power_8h_source.html#l00204">v_phase</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00190">Config::display()</a>, and <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00198">Config::display()</a>, <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -584,7 +585,7 @@ Here is the call graph for this function:</div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_power_afd1c8cab1d4549eb45be61bdd34ae97d_icgraph.svg" width="100%" height="366"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="class_power_afd1c8cab1d4549eb45be61bdd34ae97d_icgraph.svg" width="100%" height="404"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 
@@ -605,21 +606,56 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00257">257</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00272">272</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00203">i_data</a>, <a class="el" href="_f_s_m_8h_source.html#l00126">FSM::logger</a>, <a class="el" href="_f_s_m_8h_source.html#l00059">Logger::measure_max</a>, <a class="el" href="_power_8h_source.html#l00183">p_data</a>, <a class="el" href="_power_8h_source.html#l00185">pf_data</a>, <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, <a class="el" href="_power_8h_source.html#l00184">s_data</a>, <a class="el" href="_usart_8cpp_source.html#l00084">Usart::set()</a>, <a class="el" href="_f_s_m_8h_source.html#l00122">FSM::uart0</a>, and <a class="el" href="_power_8h_source.html#l00194">v_data</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00209">i_data</a>, <a class="el" href="_f_s_m_8h_source.html#l00126">FSM::logger</a>, <a class="el" href="_f_s_m_8h_source.html#l00059">Logger::measure_max</a>, <a class="el" href="_power_8h_source.html#l00189">p_data</a>, <a class="el" href="_power_8h_source.html#l00191">pf_data</a>, <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, <a class="el" href="_power_8h_source.html#l00190">s_data</a>, <a class="el" href="_usart_8cpp_source.html#l00084">Usart::set()</a>, <a class="el" href="_f_s_m_8h_source.html#l00122">FSM::uart0</a>, and <a class="el" href="_power_8h_source.html#l00200">v_data</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_acd77541eabe8feb58e0b73154268cdd2_cgraph.svg" width="306" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_acd77541eabe8feb58e0b73154268cdd2_cgraph.svg" width="306" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_acd77541eabe8feb58e0b73154268cdd2_icgraph.svg" width="516" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_acd77541eabe8feb58e0b73154268cdd2_icgraph.svg" width="530" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a50f94a7bfd7a6d2aff52d4ed003c2cd6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50f94a7bfd7a6d2aff52d4ed003c2cd6">&#9670;&nbsp;</a></span>read_dc_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Power::read_dc_value </td>
+          <td>(</td>
+          <td class="paramtype">unsigned char&#160;</td>
+          <td class="paramname"><em>measure_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>timeout</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="reference">Referenced by <a class="el" href="st___measure_8cpp_source.html#l00121">Measure::power_read_value()</a>, and <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_a50f94a7bfd7a6d2aff52d4ed003c2cd6_icgraph.svg" width="531" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -661,19 +697,19 @@ Here is the caller graph for this function:</div>
 
 <p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00089">89</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00169">ADC_COUNTS</a>, <a class="el" href="_power_8cpp_source.html#l00308">adc_value()</a>, <a class="el" href="_power_8h_source.html#l00228">checkVCross</a>, <a class="el" href="_power_8h_source.html#l00203">i_data</a>, <a class="el" href="_power_8h_source.html#l00205">i_factor</a>, <a class="el" href="_power_8h_source.html#l00218">i_filtered</a>, <a class="el" href="_power_8h_source.html#l00206">i_offset</a>, <a class="el" href="_power_8h_source.html#l00214">Imeas</a>, <a class="el" href="_power_8h_source.html#l00228">lastVCross</a>, <a class="el" href="_power_8h_source.html#l00177">m_v_pin</a>, <a class="el" href="_power_8h_source.html#l00183">p_data</a>, <a class="el" href="_power_8h_source.html#l00185">pf_data</a>, <a class="el" href="_power_8h_source.html#l00217">referenceV</a>, <a class="el" href="_power_8h_source.html#l00184">s_data</a>, <a class="el" href="_power_8h_source.html#l00219">showSupply</a>, <a class="el" href="_power_8h_source.html#l00226">startV</a>, <a class="el" href="_power_8h_source.html#l00216">sumI</a>, <a class="el" href="_power_8h_source.html#l00216">sumP</a>, <a class="el" href="_power_8h_source.html#l00216">sumV</a>, <a class="el" href="_power_8h_source.html#l00194">v_data</a>, <a class="el" href="_power_8h_source.html#l00196">v_factor</a>, <a class="el" href="_power_8h_source.html#l00218">v_filtered</a>, <a class="el" href="_power_8h_source.html#l00197">v_offset</a>, <a class="el" href="_power_8h_source.html#l00198">v_phase</a>, <a class="el" href="_power_8h_source.html#l00213">Vmeas</a>, and <a class="el" href="_power_8h_source.html#l00215">Vshifted</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00175">ADC_COUNTS</a>, <a class="el" href="_power_8cpp_source.html#l00323">adc_value()</a>, <a class="el" href="_power_8h_source.html#l00234">checkVCross</a>, <a class="el" href="_power_8h_source.html#l00209">i_data</a>, <a class="el" href="_power_8h_source.html#l00211">i_factor</a>, <a class="el" href="_power_8h_source.html#l00224">i_filtered</a>, <a class="el" href="_power_8h_source.html#l00212">i_offset</a>, <a class="el" href="_power_8h_source.html#l00220">Imeas</a>, <a class="el" href="_power_8h_source.html#l00234">lastVCross</a>, <a class="el" href="_power_8h_source.html#l00189">p_data</a>, <a class="el" href="_power_8h_source.html#l00191">pf_data</a>, <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, <a class="el" href="_power_8h_source.html#l00223">referenceV</a>, <a class="el" href="_power_8h_source.html#l00190">s_data</a>, <a class="el" href="_power_8h_source.html#l00225">showSupply</a>, <a class="el" href="_power_8h_source.html#l00232">startV</a>, <a class="el" href="_power_8h_source.html#l00222">sumI</a>, <a class="el" href="_power_8h_source.html#l00222">sumP</a>, <a class="el" href="_power_8h_source.html#l00222">sumV</a>, <a class="el" href="_f_s_m_8h_source.html#l00122">FSM::uart0</a>, <a class="el" href="_power_8h_source.html#l00200">v_data</a>, <a class="el" href="_power_8h_source.html#l00202">v_factor</a>, <a class="el" href="_power_8h_source.html#l00224">v_filtered</a>, <a class="el" href="_power_8h_source.html#l00203">v_offset</a>, <a class="el" href="_power_8h_source.html#l00204">v_phase</a>, <a class="el" href="_power_8h_source.html#l00219">Vmeas</a>, and <a class="el" href="_power_8h_source.html#l00221">Vshifted</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="st___measure_8cpp_source.html#l00118">Measure::power_read_value()</a>, and <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_ace64df3181f3dfce89b8a1f8608e16eb_cgraph.svg" width="344" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_ace64df3181f3dfce89b8a1f8608e16eb_cgraph.svg" width="344" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_ace64df3181f3dfce89b8a1f8608e16eb_icgraph.svg" width="539" height="104"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_ace64df3181f3dfce89b8a1f8608e16eb_icgraph.svg" width="515" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 
@@ -702,17 +738,18 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>VCC</dd></dl>
-<p>Draft for the moment, not used </p>
+<p>Draft for the moment, not used</p>
+<p>@ todo add 2.5V ref voltage on adc5 </p>
 <p>Use internal 1.1V voltage reference and read Vcc/2 on the channel 5</p>
 <p>ADEN : conversion enable, ADPS[2:0] : divide the ADC frequency clock, ADSC : start one conversion</p>
 <p>wait for conversion to complete</p>
 <p>Stop the ADC (reduce power) </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00330">330</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00347">347</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, <a class="el" href="_power_8h_source.html#l00054">READVCC_CALIBRATION_CONST</a>, and <a class="el" href="_f_s_m_8h_source.html#l00122">FSM::uart0</a>.</p>
+<p class="reference">References <a class="el" href="_usart_8cpp_source.html#l00099">Usart::print()</a>, <a class="el" href="_power_8h_source.html#l00052">READVCC_CALIBRATION_CONST</a>, and <a class="el" href="_f_s_m_8h_source.html#l00122">FSM::uart0</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -752,11 +789,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00099">99</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00098">98</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00205">i_factor</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00211">i_factor</a>, and <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00061">Config::execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00060">Config::execute()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -796,15 +833,15 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00101">101</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00100">100</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, <a class="el" href="_power_8h_source.html#l00206">i_offset</a>, <a class="el" href="_power_8cpp_source.html#l00296">initialize_param()</a>, <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00066">print()</a>, <a class="el" href="_power_8cpp_source.html#l00237">print_average()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00257">print_data_array()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8cpp_source.html#l00330">readVcc()</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">References <a class="el" href="_power_8cpp_source.html#l00209">calc_all()</a>, <a class="el" href="_power_8h_source.html#l00212">i_offset</a>, <a class="el" href="_power_8cpp_source.html#l00311">initialize_param()</a>, <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00066">print()</a>, <a class="el" href="_power_8cpp_source.html#l00238">print_average()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00272">print_data_array()</a>, <a class="el" href="class_power.html#a50f94a7bfd7a6d2aff52d4ed003c2cd6">read_dc_value()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8cpp_source.html#l00347">readVcc()</a>, and <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00061">Config::execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00060">Config::execute()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_a1e7595ee0b3b0439d979ffeab785d0d8_cgraph.svg" width="528" height="494"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_power_a1e7595ee0b3b0439d979ffeab785d0d8_cgraph.svg" width="528" height="544"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
@@ -840,11 +877,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00089">89</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00088">88</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>, and <a class="el" href="_power_8h_source.html#l00196">v_factor</a>.</p>
+<p class="reference">References <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>, and <a class="el" href="_power_8h_source.html#l00202">v_factor</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00061">Config::execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00060">Config::execute()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -884,11 +921,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00091">91</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00090">90</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>, and <a class="el" href="_power_8h_source.html#l00197">v_offset</a>.</p>
+<p class="reference">References <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>, and <a class="el" href="_power_8h_source.html#l00203">v_offset</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00061">Config::execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00060">Config::execute()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -928,11 +965,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00093">93</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00092">92</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>, and <a class="el" href="_power_8h_source.html#l00198">v_phase</a>.</p>
+<p class="reference">References <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>, and <a class="el" href="_power_8h_source.html#l00204">v_phase</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00061">Config::execute()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___config_8cpp_source.html#l00060">Config::execute()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -964,11 +1001,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00285">285</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8cpp_source.html#l00300">300</a> of file <a class="el" href="_power_8cpp_source.html">Power.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_power_8h_source.html#l00205">i_factor</a>, <a class="el" href="_power_8h_source.html#l00206">i_offset</a>, <a class="el" href="_power_8h_source.html#l00232">m_eeprom_addr</a>, <a class="el" href="_power_8h_source.html#l00178">m_i_pin</a>, <a class="el" href="_power_8h_source.html#l00177">m_v_pin</a>, <a class="el" href="_power_8h_source.html#l00196">v_factor</a>, <a class="el" href="_power_8h_source.html#l00197">v_offset</a>, and <a class="el" href="_power_8h_source.html#l00198">v_phase</a>.</p>
+<p class="reference">References <a class="el" href="_power_8h_source.html#l00211">i_factor</a>, <a class="el" href="_power_8h_source.html#l00212">i_offset</a>, <a class="el" href="_power_8h_source.html#l00238">m_eeprom_addr</a>, <a class="el" href="_power_8h_source.html#l00184">m_i_pin</a>, <a class="el" href="_power_8h_source.html#l00183">m_v_pin</a>, <a class="el" href="_power_8h_source.html#l00202">v_factor</a>, <a class="el" href="_power_8h_source.html#l00203">v_offset</a>, and <a class="el" href="_power_8h_source.html#l00204">v_phase</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00099">set_i_factor()</a>, <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>, <a class="el" href="_power_8h_source.html#l00089">set_v_factor()</a>, <a class="el" href="_power_8h_source.html#l00091">set_v_offset()</a>, and <a class="el" href="_power_8h_source.html#l00093">set_v_phase()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8h_source.html#l00098">set_i_factor()</a>, <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>, <a class="el" href="_power_8h_source.html#l00088">set_v_factor()</a>, <a class="el" href="_power_8h_source.html#l00090">set_v_offset()</a>, and <a class="el" href="_power_8h_source.html#l00092">set_v_phase()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -999,9 +1036,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00169">169</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00175">175</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1063,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Used to measure number of times threshold is crossed. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00228">228</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00234">234</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
 
@@ -1053,9 +1090,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>there is the result from the m_data average </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00204">204</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00210">210</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, and <a class="el" href="_power_8cpp_source.html#l00237">print_average()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00209">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00238">print_average()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1080,9 +1117,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this is the phase delay of the voltage offset. It initial value is zero. Change it if you want add an offset to the sensor's data. this is the where current data is stored and used to calculate the average. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00203">203</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00209">209</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00257">print_data_array()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00209">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00272">print_data_array()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1106,9 +1143,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00205">205</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00211">211</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00099">set_i_factor()</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00098">set_i_factor()</a>, <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1132,9 +1169,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00218">218</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00224">224</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1159,9 +1196,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this is the current calibartion factor. it initial value is 1, but if the sensor data need to be multiply, change the factor value. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00206">206</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00212">212</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00101">set_i_offset()</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00100">set_i_offset()</a>, <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1186,9 +1223,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Variable that holds measurement </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00214">214</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00220">220</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1212,7 +1249,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00228">228</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00234">234</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
 
@@ -1239,9 +1276,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>This is the eeprom address calc from the m_id and the EEPROM_OFFSET </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00232">232</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00238">238</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, <a class="el" href="power_d_c_8cpp_source.html#l00037">powerDC::powerDC()</a>, and <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>.</p>
 
 </div>
 </div>
@@ -1265,9 +1302,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00178">178</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00184">184</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, and <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>.</p>
 
 </div>
 </div>
@@ -1292,9 +1329,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this the sensor's id in the Eeprom::sensor_counter </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00230">230</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00236">236</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, and <a class="el" href="_power_8cpp_source.html#l00066">print()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, <a class="el" href="power_d_c_8cpp_source.html#l00037">powerDC::powerDC()</a>, <a class="el" href="_power_8cpp_source.html#l00066">print()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1318,9 +1355,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00177">177</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00183">183</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, and <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>.</p>
 
 </div>
 </div>
@@ -1345,9 +1382,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>there is the result from the real power average </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00187">187</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00193">193</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, and <a class="el" href="_power_8cpp_source.html#l00237">print_average()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00209">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00238">print_average()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1372,9 +1409,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this is the data array where where real power data is stored and used to calculate the average. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00183">183</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00189">189</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00257">print_data_array()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00209">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00272">print_data_array()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1399,9 +1436,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>there is the result from the power factor average </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00189">189</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00195">195</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, and <a class="el" href="_power_8cpp_source.html#l00237">print_average()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00209">calc_all()</a>.</p>
 
 </div>
 </div>
@@ -1426,9 +1463,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this is the data array where where power factor data is stored and used to calculate the average. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00185">185</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00191">191</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00257">print_data_array()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00272">print_data_array()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
 
 </div>
 </div>
@@ -1452,7 +1489,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00217">217</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00223">223</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
 
@@ -1479,9 +1516,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>there is the result from the apparent power average </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00188">188</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00194">194</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, and <a class="el" href="_power_8cpp_source.html#l00237">print_average()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00209">calc_all()</a>.</p>
 
 </div>
 </div>
@@ -1506,9 +1543,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this is the data array where where apparent power data is stored and used to calculate the average. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00184">184</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00190">190</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00257">print_data_array()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00272">print_data_array()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
 
 </div>
 </div>
@@ -1532,9 +1569,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00219">219</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00225">225</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1558,7 +1595,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00226">226</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00232">232</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
 
@@ -1584,9 +1621,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00216">216</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00222">222</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1611,9 +1648,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Variable that holds the voltage value after phase compensation </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00216">216</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00222">222</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1637,9 +1674,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00216">216</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00222">222</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1664,9 +1701,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>there is the result from the m_data average </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00195">195</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00201">201</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, and <a class="el" href="_power_8cpp_source.html#l00237">print_average()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00209">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00238">print_average()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1691,9 +1728,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this is the data array where voltage data is stored and used to calculate the average. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00194">194</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00200">200</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00208">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00257">print_data_array()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00209">calc_all()</a>, <a class="el" href="_power_8cpp_source.html#l00272">print_data_array()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1717,9 +1754,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00196">196</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00202">202</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00089">set_v_factor()</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00088">set_v_factor()</a>, <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1743,7 +1780,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00218">218</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00224">224</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
 
@@ -1770,9 +1807,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this is the voltage calibration factor. it initial value is 1, but if the sensor data need to be multiply, change the factor value. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00197">197</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00203">203</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00091">set_v_offset()</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, <a class="el" href="power_d_c_8cpp_source.html#l00037">powerDC::powerDC()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00090">set_v_offset()</a>, <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1797,9 +1834,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this is the voltage offset. It initial value is zero. Change it if you want add an offset to the sensor's data. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00198">198</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00204">204</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00274">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00093">set_v_phase()</a>, and <a class="el" href="_power_8cpp_source.html#l00285">update_param()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00289">load_param()</a>, <a class="el" href="_power_8cpp_source.html#l00074">print_config()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, <a class="el" href="_power_8h_source.html#l00092">set_v_phase()</a>, and <a class="el" href="_power_8cpp_source.html#l00300">update_param()</a>.</p>
 
 </div>
 </div>
@@ -1824,9 +1861,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>this is the current offset. It initial value is zero. Change it if you want add an offset to the sensor's data. </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00213">213</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00219">219</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, and <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00049">Power()</a>, <a class="el" href="power_d_c_8cpp_source.html#l00037">powerDC::powerDC()</a>, <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>, and <a class="el" href="power_d_c_8cpp_source.html#l00046">powerDC::~powerDC()</a>.</p>
 
 </div>
 </div>
@@ -1851,7 +1888,7 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Variable that holds current measurement </p>
 
-<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00215">215</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_power_8h_source.html#l00221">221</a> of file <a class="el" href="_power_8h_source.html">Power.h</a>.</p>
 
 <p class="reference">Referenced by <a class="el" href="_power_8cpp_source.html#l00089">read_rms_value()</a>.</p>
 
@@ -1860,6 +1897,7 @@ Here is the caller graph for this function:</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="_power_8h_source.html">Power.h</a></li>
 <li><a class="el" href="_power_8cpp_source.html">Power.cpp</a></li>
+<li><a class="el" href="power_d_c_8cpp_source.html">powerDC.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -1867,7 +1905,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_power.html">Power</a></li>
-    <li class="footer">Generated on Mon Jul 3 2017 10:43:34 for Windlogger by
+    <li class="footer">Generated on Thu Jul 6 2017 11:01:59 for Windlogger by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

@@ -1,0 +1,11 @@
+<map id="powerDC::~powerDC" name="powerDC::~powerDC">
+<area shape="rect" id="node2" href="$class_power.html#a1e33445a6a18766a77c5304292efcb4f" title="This method read return int value from the ADC channel. " alt="" coords="223,5,349,32"/>
+<area shape="rect" id="node3" href="$classpower_d_c.html#a40f07c9ad76eeb92bee1f3ff6089cb79" title="powerDC::calc_averages" alt="" coords="201,56,371,83"/>
+<area shape="rect" id="node4" href="$classpower_d_c.html#a9fc8afc5bbffeb373e02ee0f3cb71298" title="powerDC::read_values" alt="" coords="209,107,363,133"/>
+<area shape="rect" id="node5" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="421,309,508,336"/>
+<area shape="rect" id="node6" href="$class_power.html#a3a915a3ea9b9017cae450959ef8af3de" title="Power::print" alt="" coords="419,183,511,209"/>
+<area shape="rect" id="node7" href="$class_power.html#a6c1622c43b34a31d8929674b33433c20" title="The print_average method print the average&#39;s value in the string. " alt="" coords="213,259,359,285"/>
+<area shape="rect" id="node8" href="$class_power.html#afd1c8cab1d4549eb45be61bdd34ae97d" title="This method print the configuration for the power measurement. It&#39;s a good idea to overload this func..." alt="" coords="219,208,353,235"/>
+<area shape="rect" id="node9" href="$class_power.html#acd77541eabe8feb58e0b73154268cdd2" title="Power::print_data_array" alt="" coords="206,360,366,387"/>
+<area shape="rect" id="node10" href="$class_usart.html#a86c9264f48dabbc3d97fa32d2d02d22d" title="USART char sender function. " alt="" coords="425,385,505,412"/>
+</map>

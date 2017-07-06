@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['power',['Power',['../class_power.html',1,'']]]
+  ['rtc',['RTC',['../class_r_t_c.html',1,'']]]
 ];

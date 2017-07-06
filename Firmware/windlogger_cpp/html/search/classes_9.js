@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['rtc',['RTC',['../class_r_t_c.html',1,'']]]
+  ['sensor',['Sensor',['../class_sensor.html',1,'']]],
+  ['sleep',['Sleep',['../class_sleep.html',1,'']]],
+  ['state',['State',['../class_state.html',1,'']]]
 ];

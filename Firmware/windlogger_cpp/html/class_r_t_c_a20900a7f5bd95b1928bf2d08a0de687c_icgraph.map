@@ -1,4 +1,4 @@
 <map id="RTC::time_to_epoch" name="RTC::time_to_epoch">
 <area shape="rect" id="node2" href="$class_r_t_c.html#ad0c4545ccad338b30faab6a125833843" title="RTC::get_timestamp" alt="" coords="196,5,340,32"/>
-<area shape="rect" id="node3" href="$class_output.html#a087f4330e641bb4682ab2862bca7a1af" title="Output::execute" alt="" coords="388,5,503,32"/>
+<area shape="rect" id="node3" href="$class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ..." alt="" coords="388,5,515,32"/>
 </map>

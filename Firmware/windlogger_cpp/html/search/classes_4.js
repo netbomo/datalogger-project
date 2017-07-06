@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['idle',['Idle',['../class_idle.html',1,'']]]
+  ['logger',['Logger',['../struct_logger.html',1,'']]]
 ];

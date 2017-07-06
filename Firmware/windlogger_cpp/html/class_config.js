@@ -13,7 +13,6 @@ var class_config =
     [ "load_logger", "class_config.html#ab2f7c3fc31f5a2c4e115860474dd8f55", null ],
     [ "print", "class_config.html#a145fb48e8056b0f8f5ce92d6184e73f9", null ],
     [ "update_logger", "class_config.html#a4cda6b3fcf08b798afe3bf1311450b0c", null ],
-    [ "currentTime", "class_config.html#ad2bae4db3d13f09b64b561836d25c651", null ],
     [ "request", "class_config.html#a8acfceff457a2f01cac48ae21ff8ef01", null ],
     [ "request_i", "class_config.html#a855bdbf98932c8ecf9c6569c719bca97", null ]
 ];

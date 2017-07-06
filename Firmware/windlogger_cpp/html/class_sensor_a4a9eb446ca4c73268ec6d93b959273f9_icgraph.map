@@ -1,4 +1,11 @@
 <map id="Sensor::initialize_param" name="Sensor::initialize_param">
-<area shape="rect" id="node2" href="$class_sensor.html#ad713fef719161b27e6b93a0d3a371e0c" title="Sensor::set_offset" alt="" coords="172,13,301,39"/>
-<area shape="rect" id="node3" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="349,13,464,39"/>
+<area shape="rect" id="node2" href="$class_sensor.html#a4e88d49608387ab4f65734913e514109" title="Sensor::is_enable" alt="" coords="172,71,299,98"/>
+<area shape="rect" id="node3" href="$class_anemometer.html#a9be3b4b392ef08ef29c769e6ce4bebf4" title="Anemometer::read_value" alt="" coords="347,17,513,43"/>
+<area shape="rect" id="node6" href="$class_sensor.html#ae16fd0cbdda6cfed1deac36f5c7c0a8f" title="This method calculate the average from the data array. " alt="" coords="356,71,504,98"/>
+<area shape="rect" id="node8" href="$class_sensor.html#a38a47820684e5ff0f61ad32b8afbde45" title="The print_average method print the average&#39;s value in the string. " alt="" coords="355,122,505,149"/>
+<area shape="rect" id="node4" href="$class_measure.html#a4390d770b19dbc51e5486fefe9f4b9d1" title="read value from anemometer and RPM " alt="" coords="573,5,707,47"/>
+<area shape="rect" id="node5" href="$class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ..." alt="" coords="767,42,893,69"/>
+<area shape="rect" id="node7" href="$class_measure.html#a1518672dff4f81603a35bff08c20e9f5" title="calcul average from the data array " alt="" coords="561,71,719,98"/>
+<area shape="rect" id="node9" href="$class_output.html#af4bc42d2d3bb3b2a98782f0df0eba133" title="Output::usart0_print" alt="" coords="571,122,709,149"/>
+<area shape="rect" id="node10" href="$class_output.html#a087f4330e641bb4682ab2862bca7a1af" title="Output::execute" alt="" coords="773,122,887,149"/>
 </map>

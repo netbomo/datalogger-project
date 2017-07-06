@@ -92,7 +92,7 @@ void Output::usart0_print (){
 	FSM::anemo1.print_average(1,string);					// add data average
 	FSM::anemo2.print_average(1,string);					// add data average
 	FSM::windvane.print_average(0,string);
-	FSM::powerAC.print_dc_average(3,string);
+	FSM::pDC.print_average(3,string);
 
 	strcat(string,"\r\n");								// Close string
 

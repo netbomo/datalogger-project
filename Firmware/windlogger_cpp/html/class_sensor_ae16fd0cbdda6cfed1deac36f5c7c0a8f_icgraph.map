@@ -1,6 +1,10 @@
 <map id="Sensor::calc_average" name="Sensor::calc_average">
 <area shape="rect" id="node2" href="$class_measure.html#a1518672dff4f81603a35bff08c20e9f5" title="calcul average from the data array " alt="" coords="201,5,359,32"/>
-<area shape="rect" id="node4" href="$class_sensor.html#ad713fef719161b27e6b93a0d3a371e0c" title="Sensor::set_offset" alt="" coords="215,56,345,83"/>
-<area shape="rect" id="node3" href="$class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ..." alt="" coords="407,5,533,32"/>
-<area shape="rect" id="node5" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="413,56,527,83"/>
+<area shape="rect" id="node4" href="$class_sensor.html#a4e88d49608387ab4f65734913e514109" title="Sensor::is_enable" alt="" coords="217,72,343,99"/>
+<area shape="rect" id="node3" href="$class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ..." alt="" coords="807,17,933,44"/>
+<area shape="rect" id="node5" href="$class_anemometer.html#a9be3b4b392ef08ef29c769e6ce4bebf4" title="Anemometer::read_value" alt="" coords="407,47,573,73"/>
+<area shape="rect" id="node7" href="$class_sensor.html#a38a47820684e5ff0f61ad32b8afbde45" title="The print_average method print the average&#39;s value in the string. " alt="" coords="415,97,565,124"/>
+<area shape="rect" id="node6" href="$class_measure.html#a4390d770b19dbc51e5486fefe9f4b9d1" title="read value from anemometer and RPM " alt="" coords="623,39,757,81"/>
+<area shape="rect" id="node8" href="$class_output.html#af4bc42d2d3bb3b2a98782f0df0eba133" title="Output::usart0_print" alt="" coords="621,105,759,132"/>
+<area shape="rect" id="node9" href="$class_output.html#a087f4330e641bb4682ab2862bca7a1af" title="Output::execute" alt="" coords="813,105,927,132"/>
 </map>

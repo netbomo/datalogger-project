@@ -8,21 +8,21 @@
  viewBox="0.00 0.00 188.00 28.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 24)">
 <title>Measure::print</title>
-<!-- Node45 -->
-<g id="node1" class="node"><title>Node45</title>
+<!-- Node80 -->
+<g id="node1" class="node"><title>Node80</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 79,-19.5 79,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="39.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Measure::print</text>
 </g>
-<!-- Node46 -->
-<g id="node2" class="node"><title>Node46</title>
+<!-- Node81 -->
+<g id="node2" class="node"><title>Node81</title>
 <g id="a_node2"><a xlink:href="class_usart.html#ab236d7c399791bbe1431f85e9b60f601" target="_top" xlink:title="USART string sender function. ">
 <polygon fill="none" stroke="black" points="115,-0.5 115,-19.5 180,-19.5 180,-0.5 115,-0.5"/>
 <text text-anchor="middle" x="147.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Usart::print</text>
 </a>
 </g>
 </g>
-<!-- Node45&#45;&gt;Node46 -->
-<g id="edge1" class="edge"><title>Node45&#45;&gt;Node46</title>
+<!-- Node80&#45;&gt;Node81 -->
+<g id="edge1" class="edge"><title>Node80&#45;&gt;Node81</title>
 <path fill="none" stroke="midnightblue" d="M79.0683,-10C87.401,-10 96.2488,-10 104.699,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="104.747,-13.5001 114.747,-10 104.747,-6.5001 104.747,-13.5001"/>
 </g>

@@ -2487,3 +2487,36 @@ Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp
 
 !ENTRY org.eclipse.cdt.core 1 0 2017-06-29 15:31:16.883
 !MESSAGE Indexed 'test_atmega1284p' (4 sources, 19 headers) in 0,658 sec: 348 declarations; 974 references; 0 unresolved inclusions; 1 syntax errors; 18 unresolved names (1,3 %)
+!SESSION 2017-07-03 21:47:44.136 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-07-03 22:11:29.101
+!MESSAGE Indexed 'windlogger_cpp' (16 sources, 38 headers) in 2,05 sec: 1 113 declarations; 3 573 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-07-03 22:13:31.255 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-07-03 22:16:04.267
+!MESSAGE Indexed 'windlogger_cpp' (16 sources, 38 headers) in 4,65 sec: 1 113 declarations; 3 573 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+!SESSION 2017-07-05 11:37:17.529 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-07-05 11:56:10.370
+!MESSAGE Indexed 'windlogger_cpp' (15 sources, 37 headers) in 2,2 sec: 1 079 declarations; 3 556 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-07-05 11:57:04.900
+!MESSAGE Indexed 'windlogger_cpp' (15 sources, 37 headers) in 1,38 sec: 1 079 declarations; 3 556 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)

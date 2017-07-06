@@ -4,7 +4,7 @@ var searchData=
   ['s_5fdata',['s_data',['../class_power.html#a024a8979191fa6325ec25081357bb745',1,'Power']]],
   ['sd_5fcard',['SD_CARD',['../class_output.html#a988af4cf1bb1697548670893871f424c',1,'Output']]],
   ['second_5fcounter',['second_counter',['../class_f_s_m.html#a76adf6b596d6741090f61b637d2080c8',1,'FSM']]],
-  ['secs',['SECS',['../class_r_t_c.html#a8aef1347e74cb0aff5ca517492201fe0',1,'RTC::SECS()'],['../struct_time.html#ac1e2672ed42ccd30fba37267ca076f10',1,'Time::secs()']]],
+  ['secs',['secs',['../struct_time.html#ac1e2672ed42ccd30fba37267ca076f10',1,'Time::secs()'],['../class_r_t_c.html#a8aef1347e74cb0aff5ca517492201fe0',1,'RTC::SECS()']]],
   ['sensors_5fenable',['sensors_enable',['../struct_logger.html#a4fd7d2e97c0db0d1045f6022f3b7bde4',1,'Logger']]],
   ['showsupply',['showSupply',['../class_power.html#a8d5873963ebaa83456075a7b9d587ff4',1,'Power']]],
   ['sleep',['sleep',['../class_f_s_m.html#af60b2de7424483c8a3656ee70dc33f1e',1,'FSM']]],

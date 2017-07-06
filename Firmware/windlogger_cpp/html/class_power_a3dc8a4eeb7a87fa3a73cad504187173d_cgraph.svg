@@ -8,21 +8,21 @@
  viewBox="0.00 0.00 257.00 28.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 24)">
 <title>Power::set_i_factor</title>
-<!-- Node71 -->
-<g id="node1" class="node"><title>Node71</title>
+<!-- Node77 -->
+<g id="node1" class="node"><title>Node77</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 101,-19.5 101,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="50.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Power::set_i_factor</text>
 </g>
-<!-- Node72 -->
-<g id="node2" class="node"><title>Node72</title>
+<!-- Node78 -->
+<g id="node2" class="node"><title>Node78</title>
 <g id="a_node2"><a xlink:href="class_power.html#a5ccffd2344ef9aefbcdb780187d38ca3" target="_top" xlink:title="Update saved parameters for sensors in the eeprom. ">
 <polygon fill="none" stroke="black" points="137,-0.5 137,-19.5 249,-19.5 249,-0.5 137,-0.5"/>
 <text text-anchor="middle" x="193" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Power::update_param</text>
 </a>
 </g>
 </g>
-<!-- Node71&#45;&gt;Node72 -->
-<g id="edge1" class="edge"><title>Node71&#45;&gt;Node72</title>
+<!-- Node77&#45;&gt;Node78 -->
+<g id="edge1" class="edge"><title>Node77&#45;&gt;Node78</title>
 <path fill="none" stroke="midnightblue" d="M101.035,-10C109.326,-10 118.039,-10 126.654,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="126.69,-13.5001 136.69,-10 126.69,-6.5001 126.69,-13.5001"/>
 </g>

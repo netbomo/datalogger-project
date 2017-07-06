@@ -1,9 +1,11 @@
 var hierarchy =
 [
-    [ "DateTime", "class_date_time.html", null ],
     [ "FSM", "class_f_s_m.html", null ],
     [ "Logger", "struct_logger.html", null ],
-    [ "Power", "class_power.html", null ],
+    [ "Power", "class_power.html", [
+      [ "powerDC", "classpower_d_c.html", null ]
+    ] ],
+    [ "powerAC", "classpower_a_c.html", null ],
     [ "RTC", "class_r_t_c.html", null ],
     [ "Sensor", "class_sensor.html", [
       [ "Anemometer", "class_anemometer.html", null ],

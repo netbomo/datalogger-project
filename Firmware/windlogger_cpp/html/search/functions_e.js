@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['read_5fdc_5fvalue',['read_dc_value',['../class_power.html#a50f94a7bfd7a6d2aff52d4ed003c2cd6',1,'Power']]],
   ['read_5frms_5fvalue',['read_rms_value',['../class_power.html#ace64df3181f3dfce89b8a1f8608e16eb',1,'Power']]],
   ['read_5fvalue',['read_value',['../class_anemometer.html#a9be3b4b392ef08ef29c769e6ce4bebf4',1,'Anemometer::read_value()'],['../class_sensor.html#a59e815290b2883cea096c8bc613429c0',1,'Sensor::read_value()'],['../class_windvane.html#ae61d5d71151e53c900b2f10b5f7a9d67',1,'Windvane::read_value()']]],
   ['readvcc',['readVcc',['../class_power.html#a50a207b74105ff65f34f8f8917eed65f',1,'Power']]],

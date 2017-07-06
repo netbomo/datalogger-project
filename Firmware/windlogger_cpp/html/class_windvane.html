@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('class_windvane.html','');});
 <div class="dynheader">
 Collaboration diagram for Windvane:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_windvane__coll__graph.svg" width="146" height="522"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_windvane__coll__graph.svg" width="146" height="566"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -115,11 +115,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aed192cfaa131d7e89dadf6da01e9d609 inherit pub_methods_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad713fef719161b27e6b93a0d3a371e0c inherit pub_methods_class_sensor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#ad713fef719161b27e6b93a0d3a371e0c">set_offset</a> (double offset)</td></tr>
 <tr class="separator:ad713fef719161b27e6b93a0d3a371e0c inherit pub_methods_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad89726b9c769ca2dbf7b121bae54b2e inherit pub_methods_class_sensor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#aad89726b9c769ca2dbf7b121bae54b2e">set_enable</a> (double enable)</td></tr>
+<tr class="separator:aad89726b9c769ca2dbf7b121bae54b2e inherit pub_methods_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e88d49608387ab4f65734913e514109 inherit pub_methods_class_sensor"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#a4e88d49608387ab4f65734913e514109">is_enable</a> () const</td></tr>
+<tr class="separator:a4e88d49608387ab4f65734913e514109 inherit pub_methods_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59e815290b2883cea096c8bc613429c0 inherit pub_methods_class_sensor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#a59e815290b2883cea096c8bc613429c0">read_value</a> (unsigned char measure_number)</td></tr>
 <tr class="separator:a59e815290b2883cea096c8bc613429c0 inherit pub_methods_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa14d1a074d1079cff037fd01ed74897c inherit pub_methods_class_sensor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#aa14d1a074d1079cff037fd01ed74897c">print_config</a> (char arg_id1[], char arg_id2[])</td></tr>
-<tr class="memdesc:aa14d1a074d1079cff037fd01ed74897c inherit pub_methods_class_sensor"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method print the sensor configuration for the sensor. It's a good idea to overload this function to do it more explicit for each sensor.  <a href="class_sensor.html#aa14d1a074d1079cff037fd01ed74897c">More...</a><br /></td></tr>
-<tr class="separator:aa14d1a074d1079cff037fd01ed74897c inherit pub_methods_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e1288d8b8594192f9d65819c185764f inherit pub_methods_class_sensor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#a0e1288d8b8594192f9d65819c185764f">print_config</a> (char arg_id0[], char arg_id1[], char arg_id2[])</td></tr>
+<tr class="memdesc:a0e1288d8b8594192f9d65819c185764f inherit pub_methods_class_sensor"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method print the sensor configuration for the sensor. It's a good idea to overload this function to do it more explicit for each sensor.  <a href="class_sensor.html#a0e1288d8b8594192f9d65819c185764f">More...</a><br /></td></tr>
+<tr class="separator:a0e1288d8b8594192f9d65819c185764f inherit pub_methods_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae16fd0cbdda6cfed1deac36f5c7c0a8f inherit pub_methods_class_sensor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#ae16fd0cbdda6cfed1deac36f5c7c0a8f">calc_average</a> ()</td></tr>
 <tr class="memdesc:ae16fd0cbdda6cfed1deac36f5c7c0a8f inherit pub_methods_class_sensor"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method calculate the average from the data array.  <a href="class_sensor.html#ae16fd0cbdda6cfed1deac36f5c7c0a8f">More...</a><br /></td></tr>
 <tr class="separator:ae16fd0cbdda6cfed1deac36f5c7c0a8f inherit pub_methods_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +151,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_attribs_class_sensor"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_sensor')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_sensor.html">Sensor</a></td></tr>
 <tr class="memitem:aea832f1516eac5ac6621e551b94c69e5 inherit pro_attribs_class_sensor"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#aea832f1516eac5ac6621e551b94c69e5">m_id</a></td></tr>
 <tr class="separator:aea832f1516eac5ac6621e551b94c69e5 inherit pro_attribs_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd1037ea6d2e2f8b9416b02e647dd322 inherit pro_attribs_class_sensor"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#abd1037ea6d2e2f8b9416b02e647dd322">m_enable</a></td></tr>
+<tr class="separator:abd1037ea6d2e2f8b9416b02e647dd322 inherit pro_attribs_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87b45ca236d2c7386420458cf9d38d2d inherit pro_attribs_class_sensor"><td class="memItemLeft" align="right" valign="top">unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#a87b45ca236d2c7386420458cf9d38d2d">m_eeprom_addr</a></td></tr>
 <tr class="separator:a87b45ca236d2c7386420458cf9d38d2d inherit pro_attribs_class_sensor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada23659223e6987889a393dfdad26230 inherit pro_attribs_class_sensor"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sensor.html#ada23659223e6987889a393dfdad26230">m_data</a> [<a class="el" href="main_8h.html#ac3b3102114199127791c0dec3fd79125">MAX_DATA_SAMPLE</a>] ={0.0}</td></tr>
@@ -260,20 +266,18 @@ Additional Inherited Members</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_windvane_8cpp_source.html#l00046">46</a> of file <a class="el" href="_windvane_8cpp_source.html">Windvane.cpp</a>.</p>
 
-<p class="reference">References <a class="el" href="_sensor_8cpp_source.html#l00131">Sensor::adc_value()</a>, <a class="el" href="_sensor_8h_source.html#l00124">Sensor::m_data</a>, <a class="el" href="_sensor_8h_source.html#l00128">Sensor::m_factor</a>, and <a class="el" href="_sensor_8h_source.html#l00130">Sensor::m_offset</a>.</p>
+<p class="reference">References <a class="el" href="_sensor_8cpp_source.html#l00139">Sensor::adc_value()</a>, <a class="el" href="_sensor_8h_source.html#l00133">Sensor::m_data</a>, <a class="el" href="_sensor_8h_source.html#l00137">Sensor::m_factor</a>, and <a class="el" href="_sensor_8h_source.html#l00139">Sensor::m_offset</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="st___measure_8cpp_source.html#l00113">Measure::windvane_value()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="st___measure_8cpp_source.html#l00116">Measure::windvane_value()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_windvane_ae61d5d71151e53c900b2f10b5f7a9d67_cgraph.svg" width="340" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_windvane_ae61d5d71151e53c900b2f10b5f7a9d67_cgraph.svg" width="340" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="class_windvane_ae61d5d71151e53c900b2f10b5f7a9d67_icgraph.svg" width="558" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="class_windvane_ae61d5d71151e53c900b2f10b5f7a9d67_icgraph.svg" width="558" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 
 </div>
@@ -288,7 +292,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_windvane.html">Windvane</a></li>
-    <li class="footer">Generated on Mon Jul 3 2017 10:43:34 for Windlogger by
+    <li class="footer">Generated on Thu Jul 6 2017 11:01:59 for Windlogger by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
   </ul>

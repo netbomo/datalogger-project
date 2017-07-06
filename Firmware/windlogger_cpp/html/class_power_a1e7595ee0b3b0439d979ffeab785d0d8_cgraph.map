@@ -2,14 +2,15 @@
 <area shape="rect" id="node2" href="$class_power.html#a09a87034c397af2cfb7289fe1fbe5830" title="This method calculate the mean RMS voltage, mean RMS current, active power, apparent power and power ..." alt="" coords="213,5,323,32"/>
 <area shape="rect" id="node3" href="$class_power.html#ab6160d70ae5088f1923347e1e2c4a62a" title="Initialize the eeprom memory. " alt="" coords="189,56,347,83"/>
 <area shape="rect" id="node4" href="$class_power.html#a56a921dc1756f980b6b28e024f2c913c" title="Load saved parameters for sensors from the eeprom. " alt="" coords="201,107,335,133"/>
-<area shape="rect" id="node5" href="$class_power.html#a3a915a3ea9b9017cae450959ef8af3de" title="Power::print" alt="" coords="413,208,505,235"/>
-<area shape="rect" id="node6" href="$class_power.html#a6c1622c43b34a31d8929674b33433c20" title="The print_average method print the average&#39;s value in the string. " alt="" coords="195,208,341,235"/>
-<area shape="rect" id="node7" href="$class_power.html#afd1c8cab1d4549eb45be61bdd34ae97d" title="This method print the configuration for the power measurement. It&#39;s a good idea to overload this func..." alt="" coords="201,259,335,285"/>
-<area shape="rect" id="node9" href="$class_power.html#acd77541eabe8feb58e0b73154268cdd2" title="Power::print_data_array" alt="" coords="188,360,348,387"/>
-<area shape="rect" id="node11" href="$class_power.html#ace64df3181f3dfce89b8a1f8608e16eb" title="Power::read_rms_value" alt="" coords="189,411,347,437"/>
-<area shape="rect" id="node13" href="$class_power.html#a50a207b74105ff65f34f8f8917eed65f" title="Reads the VCC used during the ADC conversion. " alt="" coords="211,309,325,336"/>
-<area shape="rect" id="node14" href="$class_power.html#a5ccffd2344ef9aefbcdb780187d38ca3" title="Update saved parameters for sensors in the eeprom. " alt="" coords="193,461,343,488"/>
-<area shape="rect" id="node8" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="416,309,503,336"/>
-<area shape="rect" id="node10" href="$class_usart.html#a86c9264f48dabbc3d97fa32d2d02d22d" title="USART char sender function. " alt="" coords="419,360,499,387"/>
-<area shape="rect" id="node12" href="$class_power.html#a1e33445a6a18766a77c5304292efcb4f" title="This method read return int value from the ADC channel. " alt="" coords="396,411,523,437"/>
+<area shape="rect" id="node5" href="$class_power.html#a3a915a3ea9b9017cae450959ef8af3de" title="Power::print" alt="" coords="413,183,505,209"/>
+<area shape="rect" id="node6" href="$class_power.html#a6c1622c43b34a31d8929674b33433c20" title="The print_average method print the average&#39;s value in the string. " alt="" coords="195,411,341,437"/>
+<area shape="rect" id="node7" href="$class_power.html#afd1c8cab1d4549eb45be61bdd34ae97d" title="This method print the configuration for the power measurement. It&#39;s a good idea to overload this func..." alt="" coords="201,208,335,235"/>
+<area shape="rect" id="node9" href="$class_power.html#acd77541eabe8feb58e0b73154268cdd2" title="Power::print_data_array" alt="" coords="188,309,348,336"/>
+<area shape="rect" id="node11" href="$class_power.html#a50f94a7bfd7a6d2aff52d4ed003c2cd6" title="Power::read_dc_value" alt="" coords="193,461,343,488"/>
+<area shape="rect" id="node12" href="$class_power.html#ace64df3181f3dfce89b8a1f8608e16eb" title="Power::read_rms_value" alt="" coords="189,360,347,387"/>
+<area shape="rect" id="node14" href="$class_power.html#a50a207b74105ff65f34f8f8917eed65f" title="Reads the VCC used during the ADC conversion. " alt="" coords="211,259,325,285"/>
+<area shape="rect" id="node15" href="$class_power.html#a5ccffd2344ef9aefbcdb780187d38ca3" title="Update saved parameters for sensors in the eeprom. " alt="" coords="193,512,343,539"/>
+<area shape="rect" id="node8" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="416,259,503,285"/>
+<area shape="rect" id="node10" href="$class_usart.html#a86c9264f48dabbc3d97fa32d2d02d22d" title="USART char sender function. " alt="" coords="419,309,499,336"/>
+<area shape="rect" id="node13" href="$class_power.html#a1e33445a6a18766a77c5304292efcb4f" title="This method read return int value from the ADC channel. " alt="" coords="396,360,523,387"/>
 </map>

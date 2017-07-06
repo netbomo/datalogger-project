@@ -27,7 +27,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_anemometer_8cpp.html",
-"class_sleep.html#ae198e0867de4921a6b2e89885a14d547"
+"class_t_w_i.html#a8fb1629575f81558db83b54955470136"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

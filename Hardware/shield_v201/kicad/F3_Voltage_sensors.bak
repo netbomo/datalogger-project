@@ -593,7 +593,6 @@ Wire Wire Line
 	8575 1550 8975 1550
 Wire Wire Line
 	8575 1750 8975 1750
-Connection ~ 9750 2075
 Connection ~ 9350 1750
 $Comp
 L MCP6002 U2
