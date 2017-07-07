@@ -63,7 +63,7 @@ void Config::execute (){
 		display();		// display on the usart0 the config menu
 		/// @todo correct display bug
 	}
-	else if (request[0]=='$'&& request[3]=='=') {
+	else if (request[0]=='$'&& request[3]=='=') {		///@todo neeeds to slit this function in class method
 		uint8_t item = atoc(request + 1);
 
 		uint8_t arg_uc = atoi(request + 4);
@@ -134,10 +134,7 @@ void Config::execute (){
 			case 52:	// set windvane offset, update eeprom method in the setter
 				FSM::pDC.set_v_offset(arg_f);
 			break;
-		case 53:	// set windvane factor, update eeprom method in the setter
-			FSM::pDC.set_v_phase(arg_f);
-			break;
-		case 54:	// set windvane offset, update eeprom method in the setter
+		case 53:	// set windvane offset, update eeprom method in the setter
 			FSM::pDC.set_i_factor(arg_f);
 			break;
 		case 55:	// set windvane factor, update eeprom method in the setter
@@ -208,7 +205,7 @@ void Config::display(){
 	//FSM::anemo1.print_config("$10","$11","$12");
 	//FSM::anemo2.print_config("$20","$21","$22");
 	FSM::windvane.print_config("$30","$31","$32");
-	FSM::pDC.print_config("$51"," $52"," $53","$54");
+	FSM::pDC.print_config("$51"," $52"," $53"," $54");
 
 	FSM::uart0.print("\r\n");
 	FSM::rtc.print_config();

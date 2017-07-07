@@ -67,7 +67,7 @@ Logger FSM::logger;						// This is the structure of data stored in the eeprom
 Anemometer FSM::anemo1(0);				// Anemometer 1 definition
 Anemometer FSM::anemo2(1);				// Anemometer 1 definition
 Windvane FSM::windvane(2);				// Windvane sensor definition
-powerDC FSM::pDC(7,5,0);				///  todo v_pin, i_pin, id
+powerDC FSM::pDC(7,4,0);				// voltage pin, current pin, id
 
 //Class constructor
 FSM::FSM():second_counter(0),nextState(&idle){
@@ -125,9 +125,10 @@ void FSM::new_State_definition(){
 void FSM::measurement_timing_control (){
 	//corriger avec lecture registre second
 
-	//second_counter++;						// Use a second counter to compare with the measure_stamp
+	second_counter++;						// Use a second counter to compare with the measure_stamp
 
-	if((rtc.get_second()%logger.measure_periode)==0)
+	if((second_counter%logger.measure_periode)==0)
+	//	if((rtc.get_second()%logger.measure_periode)==0)
 	{
 		flag_new_measure = 1;				// if it's true, we can do a new measure
 		second_counter=0;					// reset the counter

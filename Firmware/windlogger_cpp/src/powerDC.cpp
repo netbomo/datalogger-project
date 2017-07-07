@@ -62,6 +62,9 @@ void powerDC::read_values(unsigned char measure_number, unsigned int timeout){
 
 	  unsigned long start = TCNT3;    //millis()-start makes sure it doesn't get stuck in the loop if there is an error.
 
+	  char temp_char[10];
+	  //FSM::uart0.print("m_v_pin : ");FSM::uart0.print(itoa(m_v_pin,temp_char,10));FSM::uart0.print("	m_i_pin : 0");FSM::uart0.print(itoa(m_i_pin,temp_char,10));FSM::uart0.print(" m_id : ");FSM::uart0.print(itoa(m_id,temp_char,10));FSM::uart0.print("\r\n");
+
    //-------------------------------------------------------------------------------------------------------------------------
    // 2) Main measurement loop
    //-------------------------------------------------------------------------------------------------------------------------
@@ -70,13 +73,13 @@ void powerDC::read_values(unsigned char measure_number, unsigned int timeout){
 
    while ((exit_by_timeout))
    {
-	   char temp_char[12];
+	   //char temp_char[12];
 
 	   numberOfSamples++; //Count number of times looped.
 
-	   ///@ todo use m_v_pin and m_i_pin def and correct the bug
-	   Vmeas=adc_value(7); // channel ?? for the voltage compensated with the offset
-	   Imeas=adc_value(4); // channel ?? for the current compensated with the offset
+
+	   Vmeas=adc_value(m_v_pin); // channel ?? for the voltage compensated with the offset
+	   Imeas=adc_value(m_i_pin); // channel ?? for the current compensated with the offset
 
 	   // display measures
 	   //FSM::uart0.print(dtostrf(Vmeas,0,3,temp_char));FSM::uart0.print("	");FSM::uart0.print(dtostrf(Imeas,0,3,temp_char));FSM::uart0.print("\r\n");
@@ -161,9 +164,9 @@ void powerDC::print_config(char arg_id1[], char arg_id2[],char arg_id3[], char a
 
 	FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
 	FSM::uart0.print(arg_id1); FSM::uart0.print(" Voltage Factor: ");	FSM::uart0.print(dtostrf(v_factor,0,3,temp_conv));
-	FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: ");	FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));
+	FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: ");	FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));FSM::uart0.print("\r\n");
 	FSM::uart0.print(arg_id3); FSM::uart0.print(" Current Factor: ");	FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
-	FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: ");	FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv)); //FSM::uart0.print("\r\n");
+	FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: ");	FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv));FSM::uart0.print("\r\n"); //FSM::uart0.print("\r\n");
 }
 
 char* powerDC::print_average(unsigned char prec, char *string){

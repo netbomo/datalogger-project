@@ -102,12 +102,12 @@
 			   numberOfSamples++; //Count number of times looped.
 			   referenceV = Vmeas; //Used for delay/phase compensation
 
-			   ///@ todo use m_v_pin and m_i_pin def and correct the bug
-			   Vmeas=adc_value(7); // channel ?? for the voltage compensated with the offset
-			   Imeas=adc_value(5); // channel ?? for the current compensated with the offset
+
+			   Vmeas=adc_value(m_v_pin); // channel ?? for the voltage compensated with the offset
+			   Imeas=adc_value(m_i_pin); // channel ?? for the current compensated with the offset
 
 			   // display measures
-			    FSM::uart0.print(dtostrf(Vmeas,0,3,temp_char));FSM::uart0.print("	");FSM::uart0.print(dtostrf(Imeas,0,3,temp_char));FSM::uart0.print("\r\n");
+			    //FSM::uart0.print(dtostrf(Vmeas,0,3,temp_char));FSM::uart0.print("	");FSM::uart0.print(dtostrf(Imeas,0,3,temp_char));FSM::uart0.print("\r\n");
 
 
 			   //-----------------------------------------------------------------------------

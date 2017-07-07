@@ -63,57 +63,26 @@ Power::~Power() {
  * Power class methods
  */
 
-// This method print the sensor configuration for the sensor. It's a good idea to overload this function to do it more explicit for each sensor.
-void Power::print_config(char arg_id1[], char arg_id2[],char arg_id3[], char arg_id4[],char arg_id5[],char arg_id6[]){
-
-
-}
-
-
-// The print_average method print the average's value in the string.
-char* Power::print_average(unsigned char prec, char *string){
-	char temp_conv[12];
-	dtostrf(v_average,0,prec,temp_conv);
-	strcat(string,temp_conv);
-	strcat(string," ");
-	dtostrf(i_average,0,prec,temp_conv);
-	strcat(string,temp_conv);
-	strcat(string," ");
-	dtostrf(p_average,0,prec,temp_conv);
-//	strcat(string,temp_conv);
-//	strcat(string," ");
-//	dtostrf(s_average,0,prec,temp_conv);
-//	strcat(string,temp_conv);
-//	strcat(string," ");
-//	dtostrf(pf_average,0,prec,temp_conv);
-	strcat(string,temp_conv);
-	strcat(string," ");
-	return string;
-}
 
 /******************************************************************************
  * sens_param management
  */
 // Load saved parameters for sensors from the eeprom
 void Power::load_param(){
-	m_v_pin = eeprom_read_float((float*)m_eeprom_addr);
-	m_i_pin = eeprom_read_float((float*)m_eeprom_addr+2);
-	v_factor = eeprom_read_float((float*)m_eeprom_addr+4);
-	v_offset = eeprom_read_float((float*)m_eeprom_addr+9);
-	v_phase = eeprom_read_float((float*)m_eeprom_addr+14);
-	i_factor = eeprom_read_float((float*)m_eeprom_addr+19);
-	i_offset = eeprom_read_float((float*)m_eeprom_addr+24);
+	v_factor = eeprom_read_float((float*)m_eeprom_addr);
+	v_offset = eeprom_read_float((float*)m_eeprom_addr+5);
+	v_phase = eeprom_read_float((float*)m_eeprom_addr+10);
+	i_factor = eeprom_read_float((float*)m_eeprom_addr+15);
+	i_offset = eeprom_read_float((float*)m_eeprom_addr+20);
 }
 
 // Update saved parameters for sensors in the eeprom
 void Power::update_param(){
-	eeprom_update_float((float*)m_eeprom_addr,m_v_pin);
-	eeprom_update_float((float*)m_eeprom_addr+2,m_i_pin);
-	eeprom_update_float((float*)m_eeprom_addr+4,v_factor);
-	eeprom_update_float((float*)m_eeprom_addr+9,v_offset);
-	eeprom_update_float((float*)m_eeprom_addr+14,v_phase);
-	eeprom_update_float((float*)m_eeprom_addr+19,i_factor);
-	eeprom_update_float((float*)m_eeprom_addr+24,i_offset);
+	eeprom_update_float((float*)m_eeprom_addr,v_factor);
+	eeprom_update_float((float*)m_eeprom_addr+5,v_offset);
+	eeprom_update_float((float*)m_eeprom_addr+10,v_phase);
+	eeprom_update_float((float*)m_eeprom_addr+15,i_factor);
+	eeprom_update_float((float*)m_eeprom_addr+20,i_offset);
 }
 
 // Initialize the eeprom memory and the sens_param array
@@ -153,53 +122,54 @@ int Power::adc_value(unsigned char channel) // Has to be rewritten
  */
 
 
-long Power::readVcc() {
-	long vRef1100;
-
-// calib 1100mV Vref
-#if defined(__AVR_ATmega644__) || defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__)
-	ADMUX = _BV(REFS0) | _BV(MUX4) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
-#endif
-
-#if defined(__AVR__)
-	_delay_ms(2);                                        // Wait for Vref to settle
-#endif
-	ADCSRA |= _BV(ADSC);                             // Convert
-	while (bit_is_set(ADCSRA,ADSC));
-	vRef1100 = ADCL;
-	vRef1100 |= ADCH<<8;
-	//vRef1100 = READVCC_CALIBRATION_CONST / vRef1100;  //1100mV*1024 ADC steps http://openenergymonitor.org/emon/node/1186
-
-	char temp_char[12];
-	FSM::uart0.print(dtostrf(vRef1100,0,3,temp_char));FSM::uart0.print("\r\n");
-
-	ADCSRA |= _BV(ADSC);                             // Convert
-	while (bit_is_set(ADCSRA,ADSC));
-	vRef1100 = ADCL;
-	vRef1100 |= ADCH<<8;
-	vRef1100 = READVCC_CALIBRATION_CONST / vRef1100;  //1100mV*1024 ADC steps http://openenergymonitor.org/emon/node/1186
-
-	FSM::uart0.print(dtostrf(vRef1100,0,3,temp_char));FSM::uart0.print("\r\n");
-
-	// use 1100mV vref to correct AVCC
-	ADMUX = (1<<REFS1)| (1<<REFS0)| 5;													/// Use internal 1.1V voltage reference and read Vcc/2 on the channel 5
-	ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS0) | (1<<ADSC);		/// ADEN : conversion enable, ADPS[2:0] : divide the ADC frequency clock, ADSC : start one conversion
-
-	while (ADCSRA & (1<<ADSC)); 												/// wait for conversion to complete
-
-	ADCSRA = 0x00;																/// Stop the ADC (reduce power)
-
-	long temp = ADCL;
-	temp |= ADCH<<8;
-
-	FSM::uart0.print(dtostrf(temp,0,3,temp_char));FSM::uart0.print("\r\n");
-
-	double Vref_filtered = (temp * vRef1100) / 1100;
-
-	Vref_filtered = Vref_filtered *5 / 1024;
-	FSM::uart0.print(dtostrf(temp,0,3,temp_char));FSM::uart0.print("\r\n");
-
-	return temp;
-
-
-}
+//long Power::readVcc() {
+//	long vRef1100;
+//
+////// calib 1100mV Vref
+////#if defined(__AVR_ATmega644__) || defined(__AVR_ATmega644P__) || defined(__AVR_ATmega1284__) || defined(__AVR_ATmega1284P__)
+////	ADMUX = _BV(REFS0) | _BV(MUX4) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
+////#endif
+////
+////#if defined(__AVR__)
+////	_delay_ms(2);                                        // Wait for Vref to settle
+////#endif
+////	ADCSRA |= _BV(ADSC);                             // Convert
+////	while (bit_is_set(ADCSRA,ADSC));
+////	vRef1100 = ADCL;
+////	vRef1100 |= ADCH<<8;
+////	//vRef1100 = READVCC_CALIBRATION_CONST / vRef1100;  //1100mV*1024 ADC steps http://openenergymonitor.org/emon/node/1186
+////
+////	char temp_char[12];
+////	FSM::uart0.print(dtostrf(vRef1100,0,3,temp_char));FSM::uart0.print("\r\n");
+////
+////	ADCSRA |= _BV(ADSC);                             // Convert
+////	while (bit_is_set(ADCSRA,ADSC));
+////	vRef1100 = ADCL;
+////	vRef1100 |= ADCH<<8;
+////	vRef1100 = READVCC_CALIBRATION_CONST / vRef1100;  //1100mV*1024 ADC steps http://openenergymonitor.org/emon/node/1186
+////
+////	FSM::uart0.print(dtostrf(vRef1100,0,3,temp_char));FSM::uart0.print("\r\n");
+////
+////	// use 1100mV vref to correct AVCC
+////	ADMUX = (1<<REFS1)| (1<<REFS0)| 5;													/// Use internal 1.1V voltage reference and read Vcc/2 on the channel 5
+////	ADCSRA = (1<<ADEN) | (1<<ADPS2) | (1<<ADPS0) | (1<<ADSC);		/// ADEN : conversion enable, ADPS[2:0] : divide the ADC frequency clock, ADSC : start one conversion
+////
+////	while (ADCSRA & (1<<ADSC)); 												/// wait for conversion to complete
+////
+////	ADCSRA = 0x00;																/// Stop the ADC (reduce power)
+////
+//	long temp = 0;
+////	long temp = ADCL;
+////	temp |= ADCH<<8;
+////
+////	FSM::uart0.print(dtostrf(temp,0,3,temp_char));FSM::uart0.print("\r\n");
+////
+////	double Vref_filtered = (temp * vRef1100) / 1100;
+////
+////	Vref_filtered = Vref_filtered *5 / 1024;
+////	FSM::uart0.print(dtostrf(temp,0,3,temp_char));FSM::uart0.print("\r\n");
+//
+//	return temp;
+//
+//
+//}

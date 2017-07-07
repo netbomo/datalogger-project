@@ -63,7 +63,6 @@
 class Power {
 
 public:
-	//blabla
 	/******************************************************************************
 	 * Constructor and destructor
 	 */
@@ -99,42 +98,6 @@ public:
 
 	inline void set_i_offset(double offset) {i_offset=offset; update_param();}
 
-	/******************************************************************************
-	 * Power class methods
-	 */
-	/**
-	 * This method displays the config for the power class
-	 * @return return string pointer
-	 */
-	virtual char* print(char *string);
-	/**
-	 * This method read the sensors value for the power class and calculates the rms values. Needs a reference V to calculate power.
-	 */
-	void read_rms_value(unsigned char measure_number, unsigned int crossings, unsigned int timeout);
-
-
-	void read_dc_value(unsigned char measure_number, unsigned int timeout);
-
-
-	/**
-	 * \brief This method print the configuration for the power measurement. It's a good idea to overload this function to do it more explicit for each sensor.
-	 */
-	void print_config(char arg_id1[], char arg_id2[],char arg_id3[], char arg_id4[],char arg_id5[],char arg_id6[]);
-
-	/**
-	* \brief This method calculate the mean RMS voltage, mean RMS current, active power, apparent power and power factor from the data array.
-	*/
-	void calc_all();
-
-	/**
-	 * \brief The print_average method print the average's value in the string.
-	 */
-	char* print_average(unsigned char prec, char *string);
-
-
-
-	void print_data_array()const;
-
 
 	/******************************************************************************
 	 * sens_param management
@@ -162,7 +125,7 @@ public:
 	 * \return void
 	 */
 
-	long readVcc();
+	//long readVcc();
 
 
 
