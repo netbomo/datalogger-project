@@ -41,6 +41,7 @@
 #include "../lib/Sensor.h"
 #include "../lib/State.h"
 #include "../lib/Usart.h"
+#include "../lib/SDcard.h"
 
 /******************************************************************************
  * static software flags definition need to be out of constructor or function.
@@ -60,7 +61,9 @@ unsigned long int FSM::timestamp = 0;		// timestamp is an uint32 to stock the cu
  */
 Usart FSM::uart0(0,Usart::BR_57600);	// This is the uart0 definition
 TWI FSM::twi;							// this is the twi definition
+SPI FSM::spi;
 RTC FSM::rtc;								// this is the rtc definition
+SDcard FSM::SD;
 
 Logger FSM::logger;						// This is the structure of data stored in the eeprom
 

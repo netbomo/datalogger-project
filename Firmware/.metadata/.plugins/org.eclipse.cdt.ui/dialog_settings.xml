@@ -29,6 +29,9 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="unusedSectors"/>
+			<item value="firstDataSector"/>
+			<item value="fileSize"/>
 			<item value="datetime"/>
 			<item value="m_i_pin"/>
 			<item value="READVCC_CALIBRATION_CONST"/>

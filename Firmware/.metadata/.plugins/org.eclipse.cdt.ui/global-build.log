@@ -1,164 +1,1823 @@
-10:52:08 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+14:53:55 **** Build of configuration Debug for project windlogger_cpp ****
 make all 
-Building file: ../src/powerAC.cpp
-Invoking: AVR C++ Compiler
-avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/powerAC.d" -MT"src/powerAC.o" -c -o "src/powerAC.o" "../src/powerAC.cpp"
-../src/powerAC.cpp: In member function ‘void powerAC::read_values(unsigned char, unsigned char, unsigned int)’:
-../src/powerAC.cpp:100:12: warning: unused variable ‘temp_char’ [-Wunused-variable]
-       char temp_char[12];
-            ^
-../src/powerAC.cpp: In member function ‘void powerAC::print_config(char*, char*, char*, char*, char*, char*)’:
-../src/powerAC.cpp:223:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
-                              ^
-../src/powerAC.cpp:223:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
-                                                                                           ^
-../src/powerAC.cpp:224:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print(arg_id1); FSM::uart0.print(" Voltage Factor: "); FSM::uart0.print(dtostrf(v_factor,0,3,temp_conv));
-                                                                   ^
-../src/powerAC.cpp:225:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));
-                                                                    ^
-../src/powerAC.cpp:226:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print(arg_id3); FSM::uart0.print(" Voltage  Delay: "); FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
-                                                                   ^
-../src/powerAC.cpp:226:143: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print(arg_id3); FSM::uart0.print(" Voltage  Delay: "); FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
-                                                                                                                                               ^
-../src/powerAC.cpp:227:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print(arg_id4); FSM::uart0.print(" Current Factor: "); FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
-                                                                   ^
-../src/powerAC.cpp:228:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print(arg_id5); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv)); //FSM::uart0.print("\r\n");
-                                                                    ^
-../src/powerAC.cpp:229:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print(arg_id6); FSM::uart0.print(" Supply Voltage: "); FSM::uart0.print(dtostrf(showSupply,0,3,temp_conv)); FSM::uart0.print("\r\n");
-                                                                   ^
-../src/powerAC.cpp:229:146: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print(arg_id6); FSM::uart0.print(" Supply Voltage: "); FSM::uart0.print(dtostrf(showSupply,0,3,temp_conv)); FSM::uart0.print("\r\n");
-                                                                                                                                                  ^
-../src/powerAC.cpp: In member function ‘void powerAC::print_data_array()’:
-../src/powerAC.cpp:255:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.print("\r\n");
-                          ^
-../src/powerAC.cpp:258:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                ^
-../src/powerAC.cpp:258:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                       ^
-../src/powerAC.cpp:259:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                ^
-../src/powerAC.cpp:259:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                       ^
-../src/powerAC.cpp:260:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                ^
-../src/powerAC.cpp:260:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                       ^
-../src/powerAC.cpp:261:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" s ");FSM::uart0.print(dtostrf(s_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                ^
-../src/powerAC.cpp:261:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" s ");FSM::uart0.print(dtostrf(s_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                       ^
-../src/powerAC.cpp:262:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" pf ");FSM::uart0.print(dtostrf(pf_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                 ^
-../src/powerAC.cpp:262:121: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.set(i+'0');FSM::uart0.print(" pf ");FSM::uart0.print(dtostrf(pf_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                         ^
-Finished building: ../src/powerAC.cpp
- 
-Building file: ../src/powerDC.cpp
-Invoking: AVR C++ Compiler
-avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/powerDC.d" -MT"src/powerDC.o" -c -o "src/powerDC.o" "../src/powerDC.cpp"
-../src/powerDC.cpp: In member function ‘void powerDC::read_values(unsigned char, unsigned int)’:
-../src/powerDC.cpp:65:9: warning: unused variable ‘temp_char’ [-Wunused-variable]
-    char temp_char[10];
-         ^
-../src/powerDC.cpp: In member function ‘void powerDC::print_config(char*, char*, char*, char*)’:
-../src/powerDC.cpp:165:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
-                            ^
-../src/powerDC.cpp:165:89: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
-                                                                                         ^
-../src/powerDC.cpp:166:65: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id1); FSM::uart0.print(" Voltage Factor: "); FSM::uart0.print(dtostrf(v_factor,0,3,temp_conv));
-                                                                 ^
-../src/powerDC.cpp:167:66: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));FSM::uart0.print("\r\n");
-                                                                  ^
-../src/powerDC.cpp:167:142: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));FSM::uart0.print("\r\n");
-                                                                                                                                              ^
-../src/powerDC.cpp:168:65: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id3); FSM::uart0.print(" Current Factor: "); FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
-                                                                 ^
-../src/powerDC.cpp:169:66: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv));FSM::uart0.print("\r\n"); //FSM::uart0.print("\r\n");
-                                                                  ^
-../src/powerDC.cpp:169:142: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv));FSM::uart0.print("\r\n"); //FSM::uart0.print("\r\n");
-                                                                                                                                              ^
-../src/powerDC.cpp: In member function ‘void powerDC::print_data_array()’:
-../src/powerDC.cpp:188:25: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print("\r\n");
-                         ^
-../src/powerDC.cpp:191:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                               ^
-../src/powerDC.cpp:191:118: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                      ^
-../src/powerDC.cpp:192:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                               ^
-../src/powerDC.cpp:192:118: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                      ^
-../src/powerDC.cpp:193:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                               ^
-../src/powerDC.cpp:193:118: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                      ^
-Finished building: ../src/powerDC.cpp
- 
 Building target: windlogger_cpp.elf
 Invoking: AVR C++ Linker
-avr-g++ -Wl,-Map,windlogger_cpp.map,--cref -mrelax -Wl,--gc-sections -mmcu=atmega1284p -o "windlogger_cpp.elf"  ./src/Anemometer.o ./src/FSM.o ./src/Power.o ./src/RTC.o ./src/Sensor.o ./src/State.o ./src/TWI.o ./src/Usart.o ./src/Windvane.o ./src/main.o ./src/operator.o ./src/powerAC.o ./src/powerDC.o ./src/st_Config.o ./src/st_Measure.o ./src/st_Output.o ./src/st_Sleep.o   
-Finished building target: windlogger_cpp.elf
+avr-g++ -Wl,-Map,windlogger_cpp.map,--cref -mrelax -Wl,--gc-sections -mmcu=atmega1284p -o "windlogger_cpp.elf"  ./src/Anemometer.o ./src/FAT32.o ./src/FSM.o ./src/Power.o ./src/RTC.o ./src/SDcard.o ./src/SPI.o ./src/Sensor.o ./src/State.o ./src/TWI.o ./src/Usart.o ./src/Windvane.o ./src/fct_SDCard.o ./src/main.o ./src/operator.o ./src/powerAC.o ./src/powerDC.o ./src/st_Config.o ./src/st_Measure.o ./src/st_Output.o ./src/st_Sleep.o   
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+/usr/lib/gcc/avr/4.9.2/../../../avr/bin/ld : Désactivation de la relâche : il ne pourra pas travailler avec des définitions multiples
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FAT32.o : Dans la fonction « writeFile(char*, char*) » :
+../src/FAT32.cpp:388 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+makefile:66 : la recette pour la cible « windlogger_cpp.elf » a échouée
+../src/FSM.cpp:73 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/FSM.o : Dans la fonction « _GLOBAL__sub_D_firstDataSector » :
+../src/FSM.cpp:73 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Power.o : Dans la fonction « Power::adc_value(unsigned char) » :
+../src/Power.cpp:103 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/RTC.o : Dans la fonction « RTC::get_timestamp() » :
+../src/RTC.cpp:280 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « cardType »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « buffer »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « SDHC_flag »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « totalBlocks »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « startBlock »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Sensor.o : Dans la fonction « Sensor::adc_value(unsigned char) » :
+../src/Sensor.cpp:141 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/State.o : Dans la fonction « Idle::isEqual(char*) const » :
+../src/State.cpp:75 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/Usart.o : Dans la fonction « Usart::print(char*) » :
+../src/Usart.cpp:99 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « SDHC_flag »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « cardType »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « buffer »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « totalBlocks »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « startBlock »
+./src/FAT32.o:../src/FAT32.cpp:388 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/main.o : Dans la fonction « main » :
+../src/main.cpp:47 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerAC.o : Dans la fonction « powerAC::print_data_array() » :
+../src/powerAC.cpp:253 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/powerDC.o : Dans la fonction « powerDC::print_data_array() » :
+../src/powerDC.cpp:186 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Config.o : Dans la fonction « Config::load_logger() » :
+../src/st_Config.cpp:238 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Measure.o : Dans la fonction « Measure::execute() » :
+../src/st_Measure.cpp:57 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Output.o : Dans la fonction « Output::execute() » :
+../src/st_Output.cpp:54 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « freeClusterCountUpdated »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « appendStartCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « fileSize »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « appendFileLocation »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « appendFileSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « unusedSectors »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « reservedSectorCount »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « sectorPerCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « bytesPerSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « totalClusters »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « rootCluster »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+./src/st_Sleep.o : Dans la fonction « Sleep::isEqual(char*) const » :
+../src/st_Sleep.cpp:65 : définitions multiples de « firstDataSector »
+./src/Anemometer.o:../src/Anemometer.cpp:114 : défini pour la première fois ici
+collect2: error: ld returned 1 exit status
+make: *** [windlogger_cpp.elf] Erreur 1
+15:01:06 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+make all 
+Building file: ../src/Anemometer.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/Anemometer.d" -MT"src/Anemometer.o" -c -o "src/Anemometer.o" "../src/Anemometer.cpp"
+Finished building: ../src/Anemometer.cpp
  
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S windlogger_cpp.elf  >"windlogger_cpp.lss"
-Finished building: windlogger_cpp.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex windlogger_cpp.elf  "windlogger_cpp.hex"
-Finished building: windlogger_cpp.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex windlogger_cpp.elf  "windlogger_cpp.eep"
-Finished building: windlogger_cpp.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
-AVR Memory Usage
-----------------
-Device: atmega1284p
-
-Program:   14896 bytes (11.4% Full)
-(.text + .data + .bootloader)
-
-Data:       1474 bytes (9.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
+Building file: ../src/FAT32.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/FAT32.d" -MT"src/FAT32.o" -c -o "src/FAT32.o" "../src/FAT32.cpp"
+../src/FAT32.cpp: In function ‘unsigned char getBootSectorData()’:
+../src/FAT32.cpp:33:1: error: ‘unusedSectors’ was not declared in this scope
+ unusedSectors = 0;
+ ^
+../src/FAT32.cpp:52:1: error: ‘bytesPerSector’ was not declared in this scope
+ bytesPerSector = bpb->SbytesPerSector;
+ ^
+../src/FAT32.cpp:54:1: error: ‘sectorPerCluster’ was not declared in this scope
+ sectorPerCluster = bpb->SsectorPerCluster;
+ ^
+../src/FAT32.cpp:56:1: error: ‘reservedSectorCount’ was not declared in this scope
+ reservedSectorCount = bpb->SreservedSectorCount;
+ ^
+../src/FAT32.cpp:57:1: error: ‘rootCluster’ was not declared in this scope
+ rootCluster = bpb->SrootCluster;// + (sector / sectorPerCluster) +1;
+ ^
+../src/FAT32.cpp:58:1: error: ‘firstDataSector’ was not declared in this scope
+ firstDataSector = bpb->ShiddenSectors + reservedSectorCount + (bpb->SnumberofFATs * bpb->SFATsize_F32);
+ ^
+../src/FAT32.cpp:63:1: error: ‘totalClusters’ was not declared in this scope
+ totalClusters = dataSectors / sectorPerCluster;
+ ^
+../src/FAT32.cpp:66:24: error: ‘TOTAL_FREE’ was not declared in this scope
+ if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+                        ^
+../src/FAT32.cpp:66:36: error: ‘GET’ was not declared in this scope
+ if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+                                    ^
+../src/FAT32.cpp:66:42: error: ‘getSetFreeCluster’ was not declared in this scope
+ if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+                                          ^
+../src/FAT32.cpp:67:6: error: ‘freeClusterCountUpdated’ was not declared in this scope
+      freeClusterCountUpdated = 0;
+      ^
+../src/FAT32.cpp:69:3: error: ‘freeClusterCountUpdated’ was not declared in this scope
+   freeClusterCountUpdated = 1;
+   ^
+../src/FAT32.cpp: In function ‘long unsigned int getFirstSector(long unsigned int)’:
+../src/FAT32.cpp:80:34: error: ‘sectorPerCluster’ was not declared in this scope
+   return (((clusterNumber - 2) * sectorPerCluster) + firstDataSector);
+                                  ^
+../src/FAT32.cpp:80:54: error: ‘firstDataSector’ was not declared in this scope
+   return (((clusterNumber - 2) * sectorPerCluster) + firstDataSector);
+                                                      ^
+../src/FAT32.cpp: In function ‘long unsigned int getSetNextCluster(long unsigned int, unsigned char, long unsigned int)’:
+../src/FAT32.cpp:100:18: error: ‘unusedSectors’ was not declared in this scope
+ FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
+                  ^
+../src/FAT32.cpp:100:34: error: ‘reservedSectorCount’ was not declared in this scope
+ FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
+                                  ^
+../src/FAT32.cpp:100:79: error: ‘bytesPerSector’ was not declared in this scope
+ FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
+                                                                               ^
+../src/FAT32.cpp:112:15: error: ‘GET’ was not declared in this scope
+ if(get_set == GET)
+               ^
+../src/FAT32.cpp: In function ‘long unsigned int getSetFreeCluster(unsigned char, unsigned char, long unsigned int)’:
+../src/FAT32.cpp:137:20: error: ‘unusedSectors’ was not declared in this scope
+ SD_readSingleBlock(unusedSectors + 1);
+                    ^
+../src/FAT32.cpp:142:16: error: ‘GET’ was not declared in this scope
+  if(get_set == GET)
+                ^
+../src/FAT32.cpp:144:20: error: ‘TOTAL_FREE’ was not declared in this scope
+    if(totOrNext == TOTAL_FREE)
+                    ^
+../src/FAT32.cpp:151:20: error: ‘TOTAL_FREE’ was not declared in this scope
+    if(totOrNext == TOTAL_FREE)
+                    ^
+../src/FAT32.cpp: In function ‘dir_Structure* findFiles(unsigned char, char*)’:
+../src/FAT32.cpp:176:11: error: ‘rootCluster’ was not declared in this scope
+ cluster = rootCluster; //root cluster
+           ^
+../src/FAT32.cpp:182:29: error: ‘sectorPerCluster’ was not declared in this scope
+    for(sector = 0; sector < sectorPerCluster; sector++)
+                             ^
+../src/FAT32.cpp:187:17: error: ‘bytesPerSector’ was not declared in this scope
+      for(i=0; i<bytesPerSector; i+=32)
+                 ^
+../src/FAT32.cpp:191:28: error: ‘EMPTY’ was not declared in this scope
+         if(dir->name[0] == EMPTY) //indicates end of the file list of the directory
+                            ^
+../src/FAT32.cpp:193:16: error: ‘DELETE’ was not declared in this scope
+     if(flag == DELETE)
+                ^
+../src/FAT32.cpp:197:23: error: ‘DELETED’ was not declared in this scope
+   if((dir->name[0] != DELETED) && (dir->attrib != ATTR_LONG_NAME))
+                       ^
+../src/FAT32.cpp:197:51: error: ‘ATTR_LONG_NAME’ was not declared in this scope
+   if((dir->name[0] != DELETED) && (dir->attrib != ATTR_LONG_NAME))
+                                                   ^
+../src/FAT32.cpp:199:23: error: ‘GET_FILE’ was not declared in this scope
+           if((flag == GET_FILE) || (flag == DELETE))
+                       ^
+../src/FAT32.cpp:199:45: error: ‘DELETE’ was not declared in this scope
+           if((flag == GET_FILE) || (flag == DELETE))
+                                             ^
+../src/FAT32.cpp:207:8: error: ‘appendFileSector’ was not declared in this scope
+        appendFileSector = firstSector + sector;
+        ^
+../src/FAT32.cpp:208:5: error: ‘appendFileLocation’ was not declared in this scope
+     appendFileLocation = i;
+     ^
+../src/FAT32.cpp:209:5: error: ‘appendStartCluster’ was not declared in this scope
+     appendStartCluster = (((unsigned long) dir->firstClusterHI) << 16) | dir->firstClusterLO;
+     ^
+../src/FAT32.cpp:210:5: error: ‘fileSize’ was not declared in this scope
+     fileSize = dir->SfileSize;
+     ^
+../src/FAT32.cpp:215:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      FSM::uart0.print("\r\nDeleting..\r\n\r\n");
+                                               ^
+../src/FAT32.cpp:222:24: error: ‘ADD’ was not declared in this scope
+      freeMemoryUpdate (ADD, dir->SfileSize);
+                        ^
+../src/FAT32.cpp:222:43: error: ‘freeMemoryUpdate’ was not declared in this scope
+      freeMemoryUpdate (ADD, dir->SfileSize);
+                                           ^
+../src/FAT32.cpp:225:35: error: ‘NEXT_FREE’ was not declared in this scope
+      cluster = getSetFreeCluster (NEXT_FREE, GET, 0); 
+                                   ^
+../src/FAT32.cpp:225:46: error: ‘GET’ was not declared in this scope
+      cluster = getSetFreeCluster (NEXT_FREE, GET, 0); 
+                                              ^
+../src/FAT32.cpp:227:40: error: ‘SET’ was not declared in this scope
+          getSetFreeCluster (NEXT_FREE, SET, firstCluster);
+                                        ^
+../src/FAT32.cpp:233:39: error: ‘SET’ was not declared in this scope
+      getSetNextCluster (firstCluster, SET, 0);
+                                       ^
+../src/FAT32.cpp:236:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("File deleted!");
+                                       ^
+../src/FAT32.cpp:246:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+            FSM::uart0.print("\r\n");
+                                   ^
+../src/FAT32.cpp:252:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("   ");
+                           ^
+../src/FAT32.cpp:255:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         FSM::uart0.print("FILE" );
+                                 ^
+../src/FAT32.cpp:256:31: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         FSM::uart0.print("   ");
+                               ^
+../src/FAT32.cpp:257:24: error: ‘LOW’ was not declared in this scope
+         displayMemory (LOW, dir->SfileSize);
+                        ^
+../src/FAT32.cpp:257:43: error: ‘displayMemory’ was not declared in this scope
+         displayMemory (LOW, dir->SfileSize);
+                                           ^
+../src/FAT32.cpp:260:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      if(dir->attrib == 0x10) FSM::uart0.print("DIR");
+                                                    ^
+../src/FAT32.cpp:261:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      else FSM::uart0.print("ROOT");
+                                  ^
+../src/FAT32.cpp:267:43: error: ‘GET’ was not declared in this scope
+    cluster = (getSetNextCluster (cluster, GET, 0));
+                                           ^
+../src/FAT32.cpp:273:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("Error in getting cluster");
+                                                ^
+../src/FAT32.cpp:174:6: warning: unused variable ‘temp_char’ [-Wunused-variable]
+ char temp_char[15];
+      ^
+../src/FAT32.cpp: In function ‘unsigned char readFile(unsigned char, char*)’:
+../src/FAT32.cpp:295:34: error: ‘convertFileName’ was not declared in this scope
+ error = convertFileName (fileName); //convert fileName into FAT format
+                                  ^
+../src/FAT32.cpp:298:18: error: ‘GET_FILE’ was not declared in this scope
+ dir = findFiles (GET_FILE, fileName); //get the file location
+                  ^
+../src/FAT32.cpp:301:14: error: ‘READ’ was not declared in this scope
+   if(flag == READ) return (1);
+              ^
+../src/FAT32.cpp:305:12: error: ‘VERIFY’ was not declared in this scope
+ if(flag == VERIFY) return (1); //specified file name is already existing
+            ^
+../src/FAT32.cpp:311:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ FSM::uart0.print("\r\n\r\n");
+                            ^
+../src/FAT32.cpp:317:14: error: ‘sectorPerCluster’ was not declared in this scope
+   for(j=0; j<sectorPerCluster; j++)
+              ^
+../src/FAT32.cpp:327:41: error: ‘GET’ was not declared in this scope
+   cluster = getSetNextCluster (cluster, GET, 0);
+                                         ^
+../src/FAT32.cpp:329:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print("Error in getting cluster");
+                                               ^
+../src/FAT32.cpp: In function ‘unsigned char convertFileName(char*)’:
+../src/FAT32.cpp:351:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print("Invalid fileName..");
+                                       ^
+../src/FAT32.cpp: In function ‘unsigned char writeFile(char*, char*)’:
+../src/FAT32.cpp:394:15: error: ‘VERIFY’ was not declared in this scope
+ j = readFile (VERIFY, fileName);
+               ^
+../src/FAT32.cpp:400:13: error: ‘appendStartCluster’ was not declared in this scope
+   cluster = appendStartCluster;
+             ^
+../src/FAT32.cpp:404:47: error: ‘GET’ was not declared in this scope
+     nextCluster = getSetNextCluster (cluster, GET, 0);
+                                               ^
+../src/FAT32.cpp:405:23: error: ‘EOF’ was not declared in this scope
+     if(nextCluster == EOF) break;
+                       ^
+../src/FAT32.cpp:410:13: error: ‘fileSize’ was not declared in this scope
+   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
+             ^
+../src/FAT32.cpp:410:40: error: ‘sectorPerCluster’ was not declared in this scope
+   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
+                                        ^
+../src/FAT32.cpp:410:59: error: ‘bytesPerSector’ was not declared in this scope
+   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
+                                                           ^
+../src/FAT32.cpp:418:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.print("\r\n");
+                          ^
+../src/FAT32.cpp:421:32: error: ‘NEXT_FREE’ was not declared in this scope
+   cluster = getSetFreeCluster (NEXT_FREE, GET, 0);
+                                ^
+../src/FAT32.cpp:421:43: error: ‘GET’ was not declared in this scope
+   cluster = getSetFreeCluster (NEXT_FREE, GET, 0);
+                                           ^
+../src/FAT32.cpp:422:16: error: ‘totalClusters’ was not declared in this scope
+   if(cluster > totalClusters)
+                ^
+../src/FAT32.cpp:423:16: error: ‘rootCluster’ was not declared in this scope
+      cluster = rootCluster;
+                ^
+../src/FAT32.cpp:425:42: error: ‘searchNextFreeCluster’ was not declared in this scope
+   cluster = searchNextFreeCluster(cluster);
+                                          ^
+../src/FAT32.cpp:428:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("\r\n");
+                              ^
+../src/FAT32.cpp:429:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print(" No free cluster!");
+                                           ^
+../src/FAT32.cpp:432:30: error: ‘SET’ was not declared in this scope
+   getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
+                              ^
+../src/FAT32.cpp:432:35: error: ‘EOF’ was not declared in this scope
+   getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
+                                   ^
+../src/FAT32.cpp:436:3: error: ‘fileSize’ was not declared in this scope
+   fileSize = 0;
+   ^
+../src/FAT32.cpp:448:8: error: ‘fileSize’ was not declared in this scope
+    i = fileSize % bytesPerSector;
+        ^
+../src/FAT32.cpp:448:19: error: ‘bytesPerSector’ was not declared in this scope
+    i = fileSize % bytesPerSector;
+                   ^
+../src/FAT32.cpp:465:3: error: ‘fileSize’ was not declared in this scope
+   fileSize++;
+   ^
+../src/FAT32.cpp:472:13: error: ‘sectorPerCluster’ was not declared in this scope
+     if(j == sectorPerCluster) {j = 0; break;}
+             ^
+../src/FAT32.cpp:475:35: error: ‘MAX_STRING_SIZE’ was not declared in this scope
+    } while((data != '\n') && (k < MAX_STRING_SIZE)); //stop when newline character is found
+                                   ^
+../src/FAT32.cpp:489:47: error: ‘searchNextFreeCluster’ was not declared in this scope
+    cluster = searchNextFreeCluster(prevCluster); //look for a free cluster starting from the current cluster
+                                               ^
+../src/FAT32.cpp:493:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("\r\n");
+                              ^
+../src/FAT32.cpp:494:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print(" No free cluster!");
+                                           ^
+../src/FAT32.cpp:498:35: error: ‘SET’ was not declared in this scope
+    getSetNextCluster(prevCluster, SET, cluster);
+                                   ^
+../src/FAT32.cpp:499:36: error: ‘EOF’ was not declared in this scope
+    getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
+                                    ^
+../src/FAT32.cpp:502:20: error: ‘NEXT_FREE’ was not declared in this scope
+ getSetFreeCluster (NEXT_FREE, SET, cluster); //update FSinfo next free cluster entry
+                    ^
+../src/FAT32.cpp:502:31: error: ‘SET’ was not declared in this scope
+ getSetFreeCluster (NEXT_FREE, SET, cluster); //update FSinfo next free cluster entry
+                               ^
+../src/FAT32.cpp:509:23: error: ‘appendFileSector’ was not declared in this scope
+   SD_readSingleBlock (appendFileSector);    
+                       ^
+../src/FAT32.cpp:510:42: error: ‘appendFileLocation’ was not declared in this scope
+   dir = (struct dir_Structure *) &buffer[appendFileLocation]; 
+                                          ^
+../src/FAT32.cpp:515:17: error: ‘fileSize’ was not declared in this scope
+   extraMemory = fileSize - dir->SfileSize;
+                 ^
+../src/FAT32.cpp:518:21: error: ‘REMOVE’ was not declared in this scope
+   freeMemoryUpdate (REMOVE, extraMemory); //updating free memory count in FSinfo sector;
+                     ^
+../src/FAT32.cpp:518:40: error: ‘freeMemoryUpdate’ was not declared in this scope
+   freeMemoryUpdate (REMOVE, extraMemory); //updating free memory count in FSinfo sector;
+                                        ^
+../src/FAT32.cpp:521:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.print("\r\n");
+                          ^
+../src/FAT32.cpp:529:15: error: ‘rootCluster’ was not declared in this scope
+ prevCluster = rootCluster; //root cluster
+               ^
+../src/FAT32.cpp:535:29: error: ‘sectorPerCluster’ was not declared in this scope
+    for(sector = 0; sector < sectorPerCluster; sector++)
+                             ^
+../src/FAT32.cpp:540:17: error: ‘bytesPerSector’ was not declared in this scope
+      for(i=0; i<bytesPerSector; i+=32)
+                 ^
+../src/FAT32.cpp:551:29: error: ‘EMPTY’ was not declared in this scope
+         if((dir->name[0] == EMPTY) || (dir->name[0] == DELETED))  //looking for an empty slot to enter file info
+                             ^
+../src/FAT32.cpp:551:56: error: ‘DELETED’ was not declared in this scope
+         if((dir->name[0] == EMPTY) || (dir->name[0] == DELETED))  //looking for an empty slot to enter file info
+                                                        ^
+../src/FAT32.cpp:555:19: error: ‘ATTR_ARCHIVE’ was not declared in this scope
+     dir->attrib = ATTR_ARCHIVE; //settting file attribute as 'archive'
+                   ^
+../src/FAT32.cpp:565:22: error: ‘fileSize’ was not declared in this scope
+     dir->SfileSize = fileSize;
+                      ^
+../src/FAT32.cpp:570:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("\r\n");
+                            ^
+../src/FAT32.cpp:571:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("\r\n");
+                            ^
+../src/FAT32.cpp:574:23: error: ‘REMOVE’ was not declared in this scope
+     freeMemoryUpdate (REMOVE, fileSize); //updating free memory count in FSinfo sector
+                       ^
+../src/FAT32.cpp:574:39: error: ‘freeMemoryUpdate’ was not declared in this scope
+     freeMemoryUpdate (REMOVE, fileSize); //updating free memory count in FSinfo sector
+                                       ^
+../src/FAT32.cpp:580:46: error: ‘GET’ was not declared in this scope
+    cluster = getSetNextCluster (prevCluster, GET, 0);
+                                              ^
+../src/FAT32.cpp:584:21: error: ‘EOF’ was not declared in this scope
+       if(cluster == EOF)   //this situation will come when total files in root is multiple of (32*sectorPerCluster)
+                     ^
+../src/FAT32.cpp:586:46: error: ‘searchNextFreeCluster’ was not declared in this scope
+   cluster = searchNextFreeCluster(prevCluster); //find next cluster for root directory entries
+                                              ^
+../src/FAT32.cpp:593:45: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      FSM::uart0.print("End of Cluster Chain");
+                                             ^
+../src/FAT32.cpp:598:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("Error in getting cluster");
+                                                ^
+../src/FAT32.cpp: In function ‘long unsigned int searchNextFreeCluster(long unsigned int)’:
+../src/FAT32.cpp:621:41: error: ‘totalClusters’ was not declared in this scope
+     for(cluster =startCluster; cluster <totalClusters; cluster+=128) 
+                                         ^
+../src/FAT32.cpp:623:16: error: ‘unusedSectors’ was not declared in this scope
+       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
+                ^
+../src/FAT32.cpp:623:32: error: ‘reservedSectorCount’ was not declared in this scope
+       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
+                                ^
+../src/FAT32.cpp:623:71: error: ‘bytesPerSector’ was not declared in this scope
+       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
+                                                                       ^
+../src/FAT32.cpp: In function ‘void displayMemory(unsigned char, long unsigned int)’:
+../src/FAT32.cpp:658:14: error: ‘HIGH’ was not declared in this scope
+   if(flag == HIGH)  memoryString[13] = 'K';
+              ^
+../src/FAT32.cpp: In function ‘void deleteFile(char*)’:
+../src/FAT32.cpp:674:14: error: ‘DELETE’ was not declared in this scope
+   findFiles (DELETE, fileName);
+              ^
+../src/FAT32.cpp: In function ‘void freeMemoryUpdate(unsigned char, long unsigned int)’:
+../src/FAT32.cpp:693:6: error: ‘freeClusterCountUpdated’ was not declared in this scope
+   if(freeClusterCountUpdated)
+      ^
+../src/FAT32.cpp:695:36: error: ‘TOTAL_FREE’ was not declared in this scope
+  freeClusters = getSetFreeCluster (TOTAL_FREE, GET, 0);
+                                    ^
+../src/FAT32.cpp:695:48: error: ‘GET’ was not declared in this scope
+  freeClusters = getSetFreeCluster (TOTAL_FREE, GET, 0);
+                                                ^
+../src/FAT32.cpp:696:13: error: ‘ADD’ was not declared in this scope
+  if(flag == ADD)
+             ^
+../src/FAT32.cpp:700:33: error: ‘SET’ was not declared in this scope
+  getSetFreeCluster (TOTAL_FREE, SET, freeClusters);
+                                 ^
+../src/FAT32.cpp: In function ‘long unsigned int getFirstSector(long unsigned int)’:
+../src/FAT32.cpp:81:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/subdir.mk:78 : la recette pour la cible « src/FAT32.o » a échouée
+make: *** [src/FAT32.o] Erreur 1
+15:04:19 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+make all 
+Building file: ../src/FAT32.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/FAT32.d" -MT"src/FAT32.o" -c -o "src/FAT32.o" "../src/FAT32.cpp"
+../src/FAT32.cpp: In function ‘unsigned char getBootSectorData()’:
+../src/FAT32.cpp:43:1: error: ‘unusedSectors’ was not declared in this scope
+ unusedSectors = 0;
+ ^
+../src/FAT32.cpp:62:1: error: ‘bytesPerSector’ was not declared in this scope
+ bytesPerSector = bpb->SbytesPerSector;
+ ^
+../src/FAT32.cpp:64:1: error: ‘sectorPerCluster’ was not declared in this scope
+ sectorPerCluster = bpb->SsectorPerCluster;
+ ^
+../src/FAT32.cpp:66:1: error: ‘reservedSectorCount’ was not declared in this scope
+ reservedSectorCount = bpb->SreservedSectorCount;
+ ^
+../src/FAT32.cpp:67:1: error: ‘rootCluster’ was not declared in this scope
+ rootCluster = bpb->SrootCluster;// + (sector / sectorPerCluster) +1;
+ ^
+../src/FAT32.cpp:68:1: error: ‘firstDataSector’ was not declared in this scope
+ firstDataSector = bpb->ShiddenSectors + reservedSectorCount + (bpb->SnumberofFATs * bpb->SFATsize_F32);
+ ^
+../src/FAT32.cpp:73:1: error: ‘totalClusters’ was not declared in this scope
+ totalClusters = dataSectors / sectorPerCluster;
+ ^
+../src/FAT32.cpp:76:24: error: ‘TOTAL_FREE’ was not declared in this scope
+ if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+                        ^
+../src/FAT32.cpp:76:36: error: ‘GET’ was not declared in this scope
+ if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+                                    ^
+../src/FAT32.cpp:76:42: error: ‘getSetFreeCluster’ was not declared in this scope
+ if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+                                          ^
+../src/FAT32.cpp:77:6: error: ‘freeClusterCountUpdated’ was not declared in this scope
+      freeClusterCountUpdated = 0;
+      ^
+../src/FAT32.cpp:79:3: error: ‘freeClusterCountUpdated’ was not declared in this scope
+   freeClusterCountUpdated = 1;
+   ^
+../src/FAT32.cpp: In function ‘long unsigned int getFirstSector(long unsigned int)’:
+../src/FAT32.cpp:90:34: error: ‘sectorPerCluster’ was not declared in this scope
+   return (((clusterNumber - 2) * sectorPerCluster) + firstDataSector);
+                                  ^
+../src/FAT32.cpp:90:54: error: ‘firstDataSector’ was not declared in this scope
+   return (((clusterNumber - 2) * sectorPerCluster) + firstDataSector);
+                                                      ^
+../src/FAT32.cpp: In function ‘long unsigned int getSetNextCluster(long unsigned int, unsigned char, long unsigned int)’:
+../src/FAT32.cpp:110:18: error: ‘unusedSectors’ was not declared in this scope
+ FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
+                  ^
+../src/FAT32.cpp:110:34: error: ‘reservedSectorCount’ was not declared in this scope
+ FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
+                                  ^
+../src/FAT32.cpp:110:79: error: ‘bytesPerSector’ was not declared in this scope
+ FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
+                                                                               ^
+../src/FAT32.cpp:122:15: error: ‘GET’ was not declared in this scope
+ if(get_set == GET)
+               ^
+../src/FAT32.cpp: In function ‘long unsigned int getSetFreeCluster(unsigned char, unsigned char, long unsigned int)’:
+../src/FAT32.cpp:147:20: error: ‘unusedSectors’ was not declared in this scope
+ SD_readSingleBlock(unusedSectors + 1);
+                    ^
+../src/FAT32.cpp:152:16: error: ‘GET’ was not declared in this scope
+  if(get_set == GET)
+                ^
+../src/FAT32.cpp:154:20: error: ‘TOTAL_FREE’ was not declared in this scope
+    if(totOrNext == TOTAL_FREE)
+                    ^
+../src/FAT32.cpp:161:20: error: ‘TOTAL_FREE’ was not declared in this scope
+    if(totOrNext == TOTAL_FREE)
+                    ^
+../src/FAT32.cpp: In function ‘dir_Structure* findFiles(unsigned char, char*)’:
+../src/FAT32.cpp:186:11: error: ‘rootCluster’ was not declared in this scope
+ cluster = rootCluster; //root cluster
+           ^
+../src/FAT32.cpp:192:29: error: ‘sectorPerCluster’ was not declared in this scope
+    for(sector = 0; sector < sectorPerCluster; sector++)
+                             ^
+../src/FAT32.cpp:197:17: error: ‘bytesPerSector’ was not declared in this scope
+      for(i=0; i<bytesPerSector; i+=32)
+                 ^
+../src/FAT32.cpp:201:28: error: ‘EMPTY’ was not declared in this scope
+         if(dir->name[0] == EMPTY) //indicates end of the file list of the directory
+                            ^
+../src/FAT32.cpp:203:16: error: ‘DELETE’ was not declared in this scope
+     if(flag == DELETE)
+                ^
+../src/FAT32.cpp:207:23: error: ‘DELETED’ was not declared in this scope
+   if((dir->name[0] != DELETED) && (dir->attrib != ATTR_LONG_NAME))
+                       ^
+../src/FAT32.cpp:207:51: error: ‘ATTR_LONG_NAME’ was not declared in this scope
+   if((dir->name[0] != DELETED) && (dir->attrib != ATTR_LONG_NAME))
+                                                   ^
+../src/FAT32.cpp:209:23: error: ‘GET_FILE’ was not declared in this scope
+           if((flag == GET_FILE) || (flag == DELETE))
+                       ^
+../src/FAT32.cpp:209:45: error: ‘DELETE’ was not declared in this scope
+           if((flag == GET_FILE) || (flag == DELETE))
+                                             ^
+../src/FAT32.cpp:217:8: error: ‘appendFileSector’ was not declared in this scope
+        appendFileSector = firstSector + sector;
+        ^
+../src/FAT32.cpp:218:5: error: ‘appendFileLocation’ was not declared in this scope
+     appendFileLocation = i;
+     ^
+../src/FAT32.cpp:219:5: error: ‘appendStartCluster’ was not declared in this scope
+     appendStartCluster = (((unsigned long) dir->firstClusterHI) << 16) | dir->firstClusterLO;
+src/subdir.mk:78 : la recette pour la cible « src/FAT32.o » a échouée
+     ^
+../src/FAT32.cpp:220:5: error: ‘fileSize’ was not declared in this scope
+     fileSize = dir->SfileSize;
+     ^
+../src/FAT32.cpp:225:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      FSM::uart0.print("\r\nDeleting..\r\n\r\n");
+                                               ^
+../src/FAT32.cpp:232:24: error: ‘ADD’ was not declared in this scope
+      freeMemoryUpdate (ADD, dir->SfileSize);
+                        ^
+../src/FAT32.cpp:232:43: error: ‘freeMemoryUpdate’ was not declared in this scope
+      freeMemoryUpdate (ADD, dir->SfileSize);
+                                           ^
+../src/FAT32.cpp:235:35: error: ‘NEXT_FREE’ was not declared in this scope
+      cluster = getSetFreeCluster (NEXT_FREE, GET, 0); 
+                                   ^
+../src/FAT32.cpp:235:46: error: ‘GET’ was not declared in this scope
+      cluster = getSetFreeCluster (NEXT_FREE, GET, 0); 
+                                              ^
+../src/FAT32.cpp:237:40: error: ‘SET’ was not declared in this scope
+          getSetFreeCluster (NEXT_FREE, SET, firstCluster);
+                                        ^
+../src/FAT32.cpp:243:39: error: ‘SET’ was not declared in this scope
+      getSetNextCluster (firstCluster, SET, 0);
+                                       ^
+../src/FAT32.cpp:246:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("File deleted!");
+                                       ^
+../src/FAT32.cpp:256:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+            FSM::uart0.print("\r\n");
+                                   ^
+../src/FAT32.cpp:262:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("   ");
+                           ^
+../src/FAT32.cpp:265:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         FSM::uart0.print("FILE" );
+                                 ^
+../src/FAT32.cpp:266:31: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         FSM::uart0.print("   ");
+                               ^
+../src/FAT32.cpp:267:24: error: ‘LOW’ was not declared in this scope
+         displayMemory (LOW, dir->SfileSize);
+                        ^
+../src/FAT32.cpp:267:43: error: ‘displayMemory’ was not declared in this scope
+         displayMemory (LOW, dir->SfileSize);
+                                           ^
+../src/FAT32.cpp:270:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      if(dir->attrib == 0x10) FSM::uart0.print("DIR");
+                                                    ^
+../src/FAT32.cpp:271:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      else FSM::uart0.print("ROOT");
+                                  ^
+../src/FAT32.cpp:277:43: error: ‘GET’ was not declared in this scope
+    cluster = (getSetNextCluster (cluster, GET, 0));
+                                           ^
+../src/FAT32.cpp:283:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("Error in getting cluster");
+                                                ^
+../src/FAT32.cpp:184:6: warning: unused variable ‘temp_char’ [-Wunused-variable]
+ char temp_char[15];
+      ^
+../src/FAT32.cpp: In function ‘unsigned char readFile(unsigned char, char*)’:
+../src/FAT32.cpp:305:34: error: ‘convertFileName’ was not declared in this scope
+ error = convertFileName (fileName); //convert fileName into FAT format
+                                  ^
+../src/FAT32.cpp:308:18: error: ‘GET_FILE’ was not declared in this scope
+ dir = findFiles (GET_FILE, fileName); //get the file location
+                  ^
+../src/FAT32.cpp:311:14: error: ‘READ’ was not declared in this scope
+   if(flag == READ) return (1);
+              ^
+../src/FAT32.cpp:315:12: error: ‘VERIFY’ was not declared in this scope
+ if(flag == VERIFY) return (1); //specified file name is already existing
+            ^
+../src/FAT32.cpp:321:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ FSM::uart0.print("\r\n\r\n");
+                            ^
+../src/FAT32.cpp:327:14: error: ‘sectorPerCluster’ was not declared in this scope
+   for(j=0; j<sectorPerCluster; j++)
+              ^
+../src/FAT32.cpp:337:41: error: ‘GET’ was not declared in this scope
+   cluster = getSetNextCluster (cluster, GET, 0);
+                                         ^
+../src/FAT32.cpp:339:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print("Error in getting cluster");
+                                               ^
+../src/FAT32.cpp: In function ‘unsigned char convertFileName(char*)’:
+../src/FAT32.cpp:361:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print("Invalid fileName..");
+                                       ^
+../src/FAT32.cpp: In function ‘unsigned char writeFile(char*, char*)’:
+../src/FAT32.cpp:404:15: error: ‘VERIFY’ was not declared in this scope
+ j = readFile (VERIFY, fileName);
+               ^
+../src/FAT32.cpp:410:13: error: ‘appendStartCluster’ was not declared in this scope
+   cluster = appendStartCluster;
+             ^
+../src/FAT32.cpp:414:47: error: ‘GET’ was not declared in this scope
+     nextCluster = getSetNextCluster (cluster, GET, 0);
+                                               ^
+../src/FAT32.cpp:415:23: error: ‘EOF’ was not declared in this scope
+     if(nextCluster == EOF) break;
+                       ^
+../src/FAT32.cpp:420:13: error: ‘fileSize’ was not declared in this scope
+   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
+             ^
+../src/FAT32.cpp:420:40: error: ‘sectorPerCluster’ was not declared in this scope
+   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
+                                        ^
+../src/FAT32.cpp:420:59: error: ‘bytesPerSector’ was not declared in this scope
+   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
+                                                           ^
+../src/FAT32.cpp:428:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.print("\r\n");
+                          ^
+../src/FAT32.cpp:431:32: error: ‘NEXT_FREE’ was not declared in this scope
+   cluster = getSetFreeCluster (NEXT_FREE, GET, 0);
+                                ^
+../src/FAT32.cpp:431:43: error: ‘GET’ was not declared in this scope
+   cluster = getSetFreeCluster (NEXT_FREE, GET, 0);
+                                           ^
+../src/FAT32.cpp:432:16: error: ‘totalClusters’ was not declared in this scope
+   if(cluster > totalClusters)
+                ^
+../src/FAT32.cpp:433:16: error: ‘rootCluster’ was not declared in this scope
+      cluster = rootCluster;
+                ^
+../src/FAT32.cpp:435:42: error: ‘searchNextFreeCluster’ was not declared in this scope
+   cluster = searchNextFreeCluster(cluster);
+                                          ^
+../src/FAT32.cpp:438:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("\r\n");
+                              ^
+../src/FAT32.cpp:439:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print(" No free cluster!");
+                                           ^
+../src/FAT32.cpp:442:30: error: ‘SET’ was not declared in this scope
+   getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
+                              ^
+../src/FAT32.cpp:442:35: error: ‘EOF’ was not declared in this scope
+   getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
+                                   ^
+../src/FAT32.cpp:446:3: error: ‘fileSize’ was not declared in this scope
+   fileSize = 0;
+   ^
+../src/FAT32.cpp:458:8: error: ‘fileSize’ was not declared in this scope
+    i = fileSize % bytesPerSector;
+        ^
+../src/FAT32.cpp:458:19: error: ‘bytesPerSector’ was not declared in this scope
+    i = fileSize % bytesPerSector;
+                   ^
+../src/FAT32.cpp:475:3: error: ‘fileSize’ was not declared in this scope
+   fileSize++;
+   ^
+../src/FAT32.cpp:482:13: error: ‘sectorPerCluster’ was not declared in this scope
+     if(j == sectorPerCluster) {j = 0; break;}
+             ^
+../src/FAT32.cpp:485:35: error: ‘MAX_STRING_SIZE’ was not declared in this scope
+    } while((data != '\n') && (k < MAX_STRING_SIZE)); //stop when newline character is found
+                                   ^
+../src/FAT32.cpp:499:47: error: ‘searchNextFreeCluster’ was not declared in this scope
+    cluster = searchNextFreeCluster(prevCluster); //look for a free cluster starting from the current cluster
+                                               ^
+../src/FAT32.cpp:503:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("\r\n");
+                              ^
+../src/FAT32.cpp:504:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print(" No free cluster!");
+                                           ^
+../src/FAT32.cpp:508:35: error: ‘SET’ was not declared in this scope
+    getSetNextCluster(prevCluster, SET, cluster);
+                                   ^
+../src/FAT32.cpp:509:36: error: ‘EOF’ was not declared in this scope
+    getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
+                                    ^
+../src/FAT32.cpp:512:20: error: ‘NEXT_FREE’ was not declared in this scope
+ getSetFreeCluster (NEXT_FREE, SET, cluster); //update FSinfo next free cluster entry
+                    ^
+../src/FAT32.cpp:512:31: error: ‘SET’ was not declared in this scope
+ getSetFreeCluster (NEXT_FREE, SET, cluster); //update FSinfo next free cluster entry
+                               ^
+../src/FAT32.cpp:519:23: error: ‘appendFileSector’ was not declared in this scope
+   SD_readSingleBlock (appendFileSector);    
+                       ^
+../src/FAT32.cpp:520:42: error: ‘appendFileLocation’ was not declared in this scope
+   dir = (struct dir_Structure *) &buffer[appendFileLocation]; 
+                                          ^
+../src/FAT32.cpp:525:17: error: ‘fileSize’ was not declared in this scope
+   extraMemory = fileSize - dir->SfileSize;
+                 ^
+../src/FAT32.cpp:528:21: error: ‘REMOVE’ was not declared in this scope
+   freeMemoryUpdate (REMOVE, extraMemory); //updating free memory count in FSinfo sector;
+                     ^
+../src/FAT32.cpp:528:40: error: ‘freeMemoryUpdate’ was not declared in this scope
+   freeMemoryUpdate (REMOVE, extraMemory); //updating free memory count in FSinfo sector;
+                                        ^
+../src/FAT32.cpp:531:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.print("\r\n");
+                          ^
+../src/FAT32.cpp:539:15: error: ‘rootCluster’ was not declared in this scope
+ prevCluster = rootCluster; //root cluster
+               ^
+../src/FAT32.cpp:545:29: error: ‘sectorPerCluster’ was not declared in this scope
+    for(sector = 0; sector < sectorPerCluster; sector++)
+                             ^
+../src/FAT32.cpp:550:17: error: ‘bytesPerSector’ was not declared in this scope
+      for(i=0; i<bytesPerSector; i+=32)
+                 ^
+../src/FAT32.cpp:561:29: error: ‘EMPTY’ was not declared in this scope
+         if((dir->name[0] == EMPTY) || (dir->name[0] == DELETED))  //looking for an empty slot to enter file info
+                             ^
+../src/FAT32.cpp:561:56: error: ‘DELETED’ was not declared in this scope
+         if((dir->name[0] == EMPTY) || (dir->name[0] == DELETED))  //looking for an empty slot to enter file info
+                                                        ^
+../src/FAT32.cpp:565:19: error: ‘ATTR_ARCHIVE’ was not declared in this scope
+     dir->attrib = ATTR_ARCHIVE; //settting file attribute as 'archive'
+                   ^
+../src/FAT32.cpp:575:22: error: ‘fileSize’ was not declared in this scope
+     dir->SfileSize = fileSize;
+                      ^
+../src/FAT32.cpp:580:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("\r\n");
+                            ^
+../src/FAT32.cpp:581:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("\r\n");
+                            ^
+../src/FAT32.cpp:584:23: error: ‘REMOVE’ was not declared in this scope
+     freeMemoryUpdate (REMOVE, fileSize); //updating free memory count in FSinfo sector
+                       ^
+../src/FAT32.cpp:584:39: error: ‘freeMemoryUpdate’ was not declared in this scope
+     freeMemoryUpdate (REMOVE, fileSize); //updating free memory count in FSinfo sector
+                                       ^
+../src/FAT32.cpp:590:46: error: ‘GET’ was not declared in this scope
+    cluster = getSetNextCluster (prevCluster, GET, 0);
+                                              ^
+../src/FAT32.cpp:594:21: error: ‘EOF’ was not declared in this scope
+       if(cluster == EOF)   //this situation will come when total files in root is multiple of (32*sectorPerCluster)
+                     ^
+../src/FAT32.cpp:596:46: error: ‘searchNextFreeCluster’ was not declared in this scope
+   cluster = searchNextFreeCluster(prevCluster); //find next cluster for root directory entries
+                                              ^
+../src/FAT32.cpp:603:45: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      FSM::uart0.print("End of Cluster Chain");
+                                             ^
+../src/FAT32.cpp:608:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("Error in getting cluster");
+                                                ^
+../src/FAT32.cpp: In function ‘long unsigned int searchNextFreeCluster(long unsigned int)’:
+../src/FAT32.cpp:631:41: error: ‘totalClusters’ was not declared in this scope
+     for(cluster =startCluster; cluster <totalClusters; cluster+=128) 
+                                         ^
+../src/FAT32.cpp:633:16: error: ‘unusedSectors’ was not declared in this scope
+       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
+                ^
+../src/FAT32.cpp:633:32: error: ‘reservedSectorCount’ was not declared in this scope
+       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
+                                ^
+../src/FAT32.cpp:633:71: error: ‘bytesPerSector’ was not declared in this scope
+       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
+                                                                       ^
+../src/FAT32.cpp: In function ‘void displayMemory(unsigned char, long unsigned int)’:
+../src/FAT32.cpp:668:14: error: ‘HIGH’ was not declared in this scope
+   if(flag == HIGH)  memoryString[13] = 'K';
+              ^
+../src/FAT32.cpp: In function ‘void deleteFile(char*)’:
+../src/FAT32.cpp:684:14: error: ‘DELETE’ was not declared in this scope
+   findFiles (DELETE, fileName);
+              ^
+../src/FAT32.cpp: In function ‘void freeMemoryUpdate(unsigned char, long unsigned int)’:
+../src/FAT32.cpp:703:6: error: ‘freeClusterCountUpdated’ was not declared in this scope
+   if(freeClusterCountUpdated)
+      ^
+../src/FAT32.cpp:705:36: error: ‘TOTAL_FREE’ was not declared in this scope
+  freeClusters = getSetFreeCluster (TOTAL_FREE, GET, 0);
+                                    ^
+../src/FAT32.cpp:705:48: error: ‘GET’ was not declared in this scope
+  freeClusters = getSetFreeCluster (TOTAL_FREE, GET, 0);
+                                                ^
+../src/FAT32.cpp:706:13: error: ‘ADD’ was not declared in this scope
+  if(flag == ADD)
+             ^
+../src/FAT32.cpp:710:33: error: ‘SET’ was not declared in this scope
+  getSetFreeCluster (TOTAL_FREE, SET, freeClusters);
+                                 ^
+../src/FAT32.cpp: In function ‘long unsigned int getFirstSector(long unsigned int)’:
+../src/FAT32.cpp:91:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/FAT32.o] Erreur 1
+15:05:58 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+make all 
+Building file: ../src/FAT32.cpp
+../src/FAT32.cpp: In function ‘unsigned char getBootSectorData()’:
+../src/FAT32.cpp:53:1: error: ‘unusedSectors’ was not declared in this scope
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/FAT32.d" -MT"src/FAT32.o" -c -o "src/FAT32.o" "../src/FAT32.cpp"
+src/subdir.mk:78 : la recette pour la cible « src/FAT32.o » a échouée
+ unusedSectors = 0;
+ ^
+../src/FAT32.cpp:72:1: error: ‘bytesPerSector’ was not declared in this scope
+ bytesPerSector = bpb->SbytesPerSector;
+ ^
+../src/FAT32.cpp:74:1: error: ‘sectorPerCluster’ was not declared in this scope
+ sectorPerCluster = bpb->SsectorPerCluster;
+ ^
+../src/FAT32.cpp:76:1: error: ‘reservedSectorCount’ was not declared in this scope
+ reservedSectorCount = bpb->SreservedSectorCount;
+ ^
+../src/FAT32.cpp:77:1: error: ‘rootCluster’ was not declared in this scope
+ rootCluster = bpb->SrootCluster;// + (sector / sectorPerCluster) +1;
+ ^
+../src/FAT32.cpp:78:1: error: ‘firstDataSector’ was not declared in this scope
+ firstDataSector = bpb->ShiddenSectors + reservedSectorCount + (bpb->SnumberofFATs * bpb->SFATsize_F32);
+ ^
+../src/FAT32.cpp:83:1: error: ‘totalClusters’ was not declared in this scope
+ totalClusters = dataSectors / sectorPerCluster;
+ ^
+../src/FAT32.cpp:86:24: error: ‘TOTAL_FREE’ was not declared in this scope
+ if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+                        ^
+../src/FAT32.cpp:86:36: error: ‘GET’ was not declared in this scope
+ if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+                                    ^
+../src/FAT32.cpp:86:42: error: ‘getSetFreeCluster’ was not declared in this scope
+ if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+                                          ^
+../src/FAT32.cpp:87:6: error: ‘freeClusterCountUpdated’ was not declared in this scope
+      freeClusterCountUpdated = 0;
+      ^
+../src/FAT32.cpp:89:3: error: ‘freeClusterCountUpdated’ was not declared in this scope
+   freeClusterCountUpdated = 1;
+   ^
+../src/FAT32.cpp: In function ‘long unsigned int getFirstSector(long unsigned int)’:
+../src/FAT32.cpp:100:34: error: ‘sectorPerCluster’ was not declared in this scope
+   return (((clusterNumber - 2) * sectorPerCluster) + firstDataSector);
+                                  ^
+../src/FAT32.cpp:100:54: error: ‘firstDataSector’ was not declared in this scope
+   return (((clusterNumber - 2) * sectorPerCluster) + firstDataSector);
+                                                      ^
+../src/FAT32.cpp: In function ‘long unsigned int getSetNextCluster(long unsigned int, unsigned char, long unsigned int)’:
+../src/FAT32.cpp:120:18: error: ‘unusedSectors’ was not declared in this scope
+ FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
+                  ^
+../src/FAT32.cpp:120:34: error: ‘reservedSectorCount’ was not declared in this scope
+ FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
+                                  ^
+../src/FAT32.cpp:120:79: error: ‘bytesPerSector’ was not declared in this scope
+ FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
+                                                                               ^
+../src/FAT32.cpp:132:15: error: ‘GET’ was not declared in this scope
+ if(get_set == GET)
+               ^
+../src/FAT32.cpp: In function ‘long unsigned int getSetFreeCluster(unsigned char, unsigned char, long unsigned int)’:
+../src/FAT32.cpp:157:20: error: ‘unusedSectors’ was not declared in this scope
+ SD_readSingleBlock(unusedSectors + 1);
+                    ^
+../src/FAT32.cpp:162:16: error: ‘GET’ was not declared in this scope
+  if(get_set == GET)
+                ^
+../src/FAT32.cpp:164:20: error: ‘TOTAL_FREE’ was not declared in this scope
+    if(totOrNext == TOTAL_FREE)
+                    ^
+../src/FAT32.cpp:171:20: error: ‘TOTAL_FREE’ was not declared in this scope
+    if(totOrNext == TOTAL_FREE)
+                    ^
+../src/FAT32.cpp: In function ‘dir_Structure* findFiles(unsigned char, char*)’:
+../src/FAT32.cpp:196:11: error: ‘rootCluster’ was not declared in this scope
+ cluster = rootCluster; //root cluster
+           ^
+../src/FAT32.cpp:202:29: error: ‘sectorPerCluster’ was not declared in this scope
+    for(sector = 0; sector < sectorPerCluster; sector++)
+                             ^
+../src/FAT32.cpp:207:17: error: ‘bytesPerSector’ was not declared in this scope
+      for(i=0; i<bytesPerSector; i+=32)
+                 ^
+../src/FAT32.cpp:211:28: error: ‘EMPTY’ was not declared in this scope
+         if(dir->name[0] == EMPTY) //indicates end of the file list of the directory
+                            ^
+../src/FAT32.cpp:213:16: error: ‘DELETE’ was not declared in this scope
+     if(flag == DELETE)
+                ^
+../src/FAT32.cpp:217:23: error: ‘DELETED’ was not declared in this scope
+   if((dir->name[0] != DELETED) && (dir->attrib != ATTR_LONG_NAME))
+                       ^
+../src/FAT32.cpp:217:51: error: ‘ATTR_LONG_NAME’ was not declared in this scope
+   if((dir->name[0] != DELETED) && (dir->attrib != ATTR_LONG_NAME))
+                                                   ^
+../src/FAT32.cpp:219:23: error: ‘GET_FILE’ was not declared in this scope
+           if((flag == GET_FILE) || (flag == DELETE))
+                       ^
+../src/FAT32.cpp:219:45: error: ‘DELETE’ was not declared in this scope
+           if((flag == GET_FILE) || (flag == DELETE))
+                                             ^
+../src/FAT32.cpp:227:8: error: ‘appendFileSector’ was not declared in this scope
+        appendFileSector = firstSector + sector;
+        ^
+../src/FAT32.cpp:228:5: error: ‘appendFileLocation’ was not declared in this scope
+     appendFileLocation = i;
+     ^
+../src/FAT32.cpp:229:5: error: ‘appendStartCluster’ was not declared in this scope
+     appendStartCluster = (((unsigned long) dir->firstClusterHI) << 16) | dir->firstClusterLO;
+     ^
+../src/FAT32.cpp:230:5: error: ‘fileSize’ was not declared in this scope
+     fileSize = dir->SfileSize;
+     ^
+../src/FAT32.cpp:235:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      FSM::uart0.print("\r\nDeleting..\r\n\r\n");
+                                               ^
+../src/FAT32.cpp:242:24: error: ‘ADD’ was not declared in this scope
+      freeMemoryUpdate (ADD, dir->SfileSize);
+                        ^
+../src/FAT32.cpp:242:43: error: ‘freeMemoryUpdate’ was not declared in this scope
+      freeMemoryUpdate (ADD, dir->SfileSize);
+                                           ^
+../src/FAT32.cpp:245:35: error: ‘NEXT_FREE’ was not declared in this scope
+      cluster = getSetFreeCluster (NEXT_FREE, GET, 0); 
+                                   ^
+../src/FAT32.cpp:245:46: error: ‘GET’ was not declared in this scope
+      cluster = getSetFreeCluster (NEXT_FREE, GET, 0); 
+                                              ^
+../src/FAT32.cpp:247:40: error: ‘SET’ was not declared in this scope
+          getSetFreeCluster (NEXT_FREE, SET, firstCluster);
+                                        ^
+../src/FAT32.cpp:253:39: error: ‘SET’ was not declared in this scope
+      getSetNextCluster (firstCluster, SET, 0);
+                                       ^
+../src/FAT32.cpp:256:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("File deleted!");
+                                       ^
+../src/FAT32.cpp:266:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+            FSM::uart0.print("\r\n");
+                                   ^
+../src/FAT32.cpp:272:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("   ");
+                           ^
+../src/FAT32.cpp:275:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         FSM::uart0.print("FILE" );
+                                 ^
+../src/FAT32.cpp:276:31: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+         FSM::uart0.print("   ");
+                               ^
+../src/FAT32.cpp:277:24: error: ‘LOW’ was not declared in this scope
+         displayMemory (LOW, dir->SfileSize);
+                        ^
+../src/FAT32.cpp:277:43: error: ‘displayMemory’ was not declared in this scope
+         displayMemory (LOW, dir->SfileSize);
+                                           ^
+../src/FAT32.cpp:280:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      if(dir->attrib == 0x10) FSM::uart0.print("DIR");
+                                                    ^
+../src/FAT32.cpp:281:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      else FSM::uart0.print("ROOT");
+                                  ^
+../src/FAT32.cpp:287:43: error: ‘GET’ was not declared in this scope
+    cluster = (getSetNextCluster (cluster, GET, 0));
+                                           ^
+../src/FAT32.cpp:293:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("Error in getting cluster");
+                                                ^
+../src/FAT32.cpp:194:6: warning: unused variable ‘temp_char’ [-Wunused-variable]
+ char temp_char[15];
+      ^
+../src/FAT32.cpp: In function ‘unsigned char readFile(unsigned char, char*)’:
+../src/FAT32.cpp:315:34: error: ‘convertFileName’ was not declared in this scope
+ error = convertFileName (fileName); //convert fileName into FAT format
+                                  ^
+../src/FAT32.cpp:318:18: error: ‘GET_FILE’ was not declared in this scope
+ dir = findFiles (GET_FILE, fileName); //get the file location
+                  ^
+../src/FAT32.cpp:321:14: error: ‘READ’ was not declared in this scope
+   if(flag == READ) return (1);
+              ^
+../src/FAT32.cpp:325:12: error: ‘VERIFY’ was not declared in this scope
+ if(flag == VERIFY) return (1); //specified file name is already existing
+            ^
+../src/FAT32.cpp:331:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+ FSM::uart0.print("\r\n\r\n");
+                            ^
+../src/FAT32.cpp:337:14: error: ‘sectorPerCluster’ was not declared in this scope
+   for(j=0; j<sectorPerCluster; j++)
+              ^
+../src/FAT32.cpp:347:41: error: ‘GET’ was not declared in this scope
+   cluster = getSetNextCluster (cluster, GET, 0);
+                                         ^
+../src/FAT32.cpp:349:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print("Error in getting cluster");
+                                               ^
+../src/FAT32.cpp: In function ‘unsigned char convertFileName(char*)’:
+../src/FAT32.cpp:371:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print("Invalid fileName..");
+                                       ^
+../src/FAT32.cpp: In function ‘unsigned char writeFile(char*, char*)’:
+../src/FAT32.cpp:414:15: error: ‘VERIFY’ was not declared in this scope
+ j = readFile (VERIFY, fileName);
+               ^
+../src/FAT32.cpp:420:13: error: ‘appendStartCluster’ was not declared in this scope
+   cluster = appendStartCluster;
+             ^
+../src/FAT32.cpp:424:47: error: ‘GET’ was not declared in this scope
+     nextCluster = getSetNextCluster (cluster, GET, 0);
+                                               ^
+../src/FAT32.cpp:425:23: error: ‘EOF’ was not declared in this scope
+     if(nextCluster == EOF) break;
+                       ^
+../src/FAT32.cpp:430:13: error: ‘fileSize’ was not declared in this scope
+   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
+             ^
+../src/FAT32.cpp:430:40: error: ‘sectorPerCluster’ was not declared in this scope
+   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
+                                        ^
+../src/FAT32.cpp:430:59: error: ‘bytesPerSector’ was not declared in this scope
+   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
+                                                           ^
+../src/FAT32.cpp:438:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.print("\r\n");
+                          ^
+../src/FAT32.cpp:441:32: error: ‘NEXT_FREE’ was not declared in this scope
+   cluster = getSetFreeCluster (NEXT_FREE, GET, 0);
+                                ^
+../src/FAT32.cpp:441:43: error: ‘GET’ was not declared in this scope
+   cluster = getSetFreeCluster (NEXT_FREE, GET, 0);
+                                           ^
+../src/FAT32.cpp:442:16: error: ‘totalClusters’ was not declared in this scope
+   if(cluster > totalClusters)
+                ^
+../src/FAT32.cpp:443:16: error: ‘rootCluster’ was not declared in this scope
+      cluster = rootCluster;
+                ^
+../src/FAT32.cpp:445:42: error: ‘searchNextFreeCluster’ was not declared in this scope
+   cluster = searchNextFreeCluster(cluster);
+                                          ^
+../src/FAT32.cpp:448:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("\r\n");
+                              ^
+../src/FAT32.cpp:449:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print(" No free cluster!");
+                                           ^
+../src/FAT32.cpp:452:30: error: ‘SET’ was not declared in this scope
+   getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
+                              ^
+../src/FAT32.cpp:452:35: error: ‘EOF’ was not declared in this scope
+   getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
+                                   ^
+../src/FAT32.cpp:456:3: error: ‘fileSize’ was not declared in this scope
+   fileSize = 0;
+   ^
+../src/FAT32.cpp:468:8: error: ‘fileSize’ was not declared in this scope
+    i = fileSize % bytesPerSector;
+        ^
+../src/FAT32.cpp:468:19: error: ‘bytesPerSector’ was not declared in this scope
+    i = fileSize % bytesPerSector;
+                   ^
+../src/FAT32.cpp:485:3: error: ‘fileSize’ was not declared in this scope
+   fileSize++;
+   ^
+../src/FAT32.cpp:492:13: error: ‘sectorPerCluster’ was not declared in this scope
+     if(j == sectorPerCluster) {j = 0; break;}
+             ^
+../src/FAT32.cpp:495:35: error: ‘MAX_STRING_SIZE’ was not declared in this scope
+    } while((data != '\n') && (k < MAX_STRING_SIZE)); //stop when newline character is found
+                                   ^
+../src/FAT32.cpp:509:47: error: ‘searchNextFreeCluster’ was not declared in this scope
+    cluster = searchNextFreeCluster(prevCluster); //look for a free cluster starting from the current cluster
+                                               ^
+../src/FAT32.cpp:513:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("\r\n");
+                              ^
+../src/FAT32.cpp:514:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print(" No free cluster!");
+                                           ^
+../src/FAT32.cpp:518:35: error: ‘SET’ was not declared in this scope
+    getSetNextCluster(prevCluster, SET, cluster);
+                                   ^
+../src/FAT32.cpp:519:36: error: ‘EOF’ was not declared in this scope
+    getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
+                                    ^
+../src/FAT32.cpp:522:20: error: ‘NEXT_FREE’ was not declared in this scope
+ getSetFreeCluster (NEXT_FREE, SET, cluster); //update FSinfo next free cluster entry
+                    ^
+../src/FAT32.cpp:522:31: error: ‘SET’ was not declared in this scope
+ getSetFreeCluster (NEXT_FREE, SET, cluster); //update FSinfo next free cluster entry
+                               ^
+../src/FAT32.cpp:529:23: error: ‘appendFileSector’ was not declared in this scope
+   SD_readSingleBlock (appendFileSector);    
+                       ^
+../src/FAT32.cpp:530:42: error: ‘appendFileLocation’ was not declared in this scope
+   dir = (struct dir_Structure *) &buffer[appendFileLocation]; 
+                                          ^
+../src/FAT32.cpp:535:17: error: ‘fileSize’ was not declared in this scope
+   extraMemory = fileSize - dir->SfileSize;
+                 ^
+../src/FAT32.cpp:538:21: error: ‘REMOVE’ was not declared in this scope
+   freeMemoryUpdate (REMOVE, extraMemory); //updating free memory count in FSinfo sector;
+                     ^
+../src/FAT32.cpp:538:40: error: ‘freeMemoryUpdate’ was not declared in this scope
+   freeMemoryUpdate (REMOVE, extraMemory); //updating free memory count in FSinfo sector;
+                                        ^
+../src/FAT32.cpp:541:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.print("\r\n");
+                          ^
+../src/FAT32.cpp:549:15: error: ‘rootCluster’ was not declared in this scope
+ prevCluster = rootCluster; //root cluster
+               ^
+../src/FAT32.cpp:555:29: error: ‘sectorPerCluster’ was not declared in this scope
+    for(sector = 0; sector < sectorPerCluster; sector++)
+                             ^
+../src/FAT32.cpp:560:17: error: ‘bytesPerSector’ was not declared in this scope
+      for(i=0; i<bytesPerSector; i+=32)
+                 ^
+../src/FAT32.cpp:571:29: error: ‘EMPTY’ was not declared in this scope
+         if((dir->name[0] == EMPTY) || (dir->name[0] == DELETED))  //looking for an empty slot to enter file info
+                             ^
+../src/FAT32.cpp:571:56: error: ‘DELETED’ was not declared in this scope
+         if((dir->name[0] == EMPTY) || (dir->name[0] == DELETED))  //looking for an empty slot to enter file info
+                                                        ^
+../src/FAT32.cpp:575:19: error: ‘ATTR_ARCHIVE’ was not declared in this scope
+     dir->attrib = ATTR_ARCHIVE; //settting file attribute as 'archive'
+                   ^
+../src/FAT32.cpp:585:22: error: ‘fileSize’ was not declared in this scope
+     dir->SfileSize = fileSize;
+                      ^
+../src/FAT32.cpp:590:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("\r\n");
+                            ^
+../src/FAT32.cpp:591:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("\r\n");
+                            ^
+../src/FAT32.cpp:594:23: error: ‘REMOVE’ was not declared in this scope
+     freeMemoryUpdate (REMOVE, fileSize); //updating free memory count in FSinfo sector
+                       ^
+../src/FAT32.cpp:594:39: error: ‘freeMemoryUpdate’ was not declared in this scope
+     freeMemoryUpdate (REMOVE, fileSize); //updating free memory count in FSinfo sector
+                                       ^
+../src/FAT32.cpp:600:46: error: ‘GET’ was not declared in this scope
+    cluster = getSetNextCluster (prevCluster, GET, 0);
+                                              ^
+../src/FAT32.cpp:604:21: error: ‘EOF’ was not declared in this scope
+       if(cluster == EOF)   //this situation will come when total files in root is multiple of (32*sectorPerCluster)
+                     ^
+../src/FAT32.cpp:606:46: error: ‘searchNextFreeCluster’ was not declared in this scope
+   cluster = searchNextFreeCluster(prevCluster); //find next cluster for root directory entries
+                                              ^
+../src/FAT32.cpp:613:45: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      FSM::uart0.print("End of Cluster Chain");
+                                             ^
+../src/FAT32.cpp:618:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+     FSM::uart0.print("Error in getting cluster");
+                                                ^
+../src/FAT32.cpp: In function ‘long unsigned int searchNextFreeCluster(long unsigned int)’:
+../src/FAT32.cpp:641:41: error: ‘totalClusters’ was not declared in this scope
+     for(cluster =startCluster; cluster <totalClusters; cluster+=128) 
+                                         ^
+../src/FAT32.cpp:643:16: error: ‘unusedSectors’ was not declared in this scope
+       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
+                ^
+../src/FAT32.cpp:643:32: error: ‘reservedSectorCount’ was not declared in this scope
+       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
+                                ^
+../src/FAT32.cpp:643:71: error: ‘bytesPerSector’ was not declared in this scope
+       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
+                                                                       ^
+../src/FAT32.cpp: In function ‘void displayMemory(unsigned char, long unsigned int)’:
+../src/FAT32.cpp:678:14: error: ‘HIGH’ was not declared in this scope
+   if(flag == HIGH)  memoryString[13] = 'K';
+              ^
+../src/FAT32.cpp: In function ‘void deleteFile(char*)’:
+../src/FAT32.cpp:694:14: error: ‘DELETE’ was not declared in this scope
+   findFiles (DELETE, fileName);
+              ^
+../src/FAT32.cpp: In function ‘void freeMemoryUpdate(unsigned char, long unsigned int)’:
+../src/FAT32.cpp:713:6: error: ‘freeClusterCountUpdated’ was not declared in this scope
+   if(freeClusterCountUpdated)
+      ^
+../src/FAT32.cpp:715:36: error: ‘TOTAL_FREE’ was not declared in this scope
+  freeClusters = getSetFreeCluster (TOTAL_FREE, GET, 0);
+                                    ^
+../src/FAT32.cpp:715:48: error: ‘GET’ was not declared in this scope
+  freeClusters = getSetFreeCluster (TOTAL_FREE, GET, 0);
+                                                ^
+../src/FAT32.cpp:716:13: error: ‘ADD’ was not declared in this scope
+  if(flag == ADD)
+             ^
+../src/FAT32.cpp:720:33: error: ‘SET’ was not declared in this scope
+  getSetFreeCluster (TOTAL_FREE, SET, freeClusters);
+                                 ^
+../src/FAT32.cpp: In function ‘long unsigned int getFirstSector(long unsigned int)’:
+../src/FAT32.cpp:101:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/FAT32.o] Erreur 1

@@ -41,4 +41,11 @@
 			<item value="27" key="DIALOG_Y_ORIGIN"/>
 		</section>
 	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="525" key="DIALOG_WIDTH"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="615" key="DIALOG_HEIGHT"/>
+		<item value="421" key="DIALOG_X_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+	</section>
 </section>

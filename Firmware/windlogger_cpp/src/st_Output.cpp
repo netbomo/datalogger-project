@@ -38,12 +38,13 @@
 #include "../lib/main.h"
 #include "../lib/FSM.h"
 #include "../lib/Usart.h"
+#include "../lib/SDcard.h"
 #include "../lib/st_Output.h"
 
 
 Output::Output(){
 	strcpy(m_name,"output\0");
-	FSM::logger.output_enable=USART0;
+	FSM::logger.output_enable= USART0 | SD_CARD;			/// @todo enable must be choose by config
 }
 
 Output::~Output(){
@@ -59,6 +60,7 @@ void Output::execute (){
 		usart1_print();
 	}
 	if(FSM::logger.output_enable||SD_CARD){
+		FSM::uart0.print("go to sd write ->");
 		SDCard_print();
 	}
 	if(FSM::logger.output_enable||WIFI){
@@ -105,4 +107,10 @@ void Output::usart1_print (){
 
 void Output::SDCard_print (){
 
+	//SD.init();
+	FSM::uart0.print(" init ->");
+	//SD.write("It's working\r\n");
+	FSM::uart0.print(" write ->");
+	//SD.write("fine on 2 lines!");
+	FSM::uart0.print(" write too!");
 }
