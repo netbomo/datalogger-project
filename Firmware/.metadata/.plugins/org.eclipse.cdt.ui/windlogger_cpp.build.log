@@ -1,26 +1,111 @@
-17:51:41 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+16:05:52 **** Incremental Build of configuration Debug for project windlogger_cpp ****
 make all 
-Building file: ../src/st_Output.cpp
+Building file: ../src/powerAC.cpp
 Invoking: AVR C++ Compiler
-avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/st_Output.d" -MT"src/st_Output.o" -c -o "src/st_Output.o" "../src/st_Output.cpp"
-Finished building: ../src/st_Output.cpp
- 
-Building file: ../src/st_Sleep.cpp
-Invoking: AVR C++ Compiler
-avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/st_Sleep.d" -MT"src/st_Sleep.o" -c -o "src/st_Sleep.o" "../src/st_Sleep.cpp"
-Finished building: ../src/st_Sleep.cpp
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/powerAC.d" -MT"src/powerAC.o" -c -o "src/powerAC.o" "../src/powerAC.cpp"
+../src/powerAC.cpp: In member function ‘void powerAC::read_values(unsigned char, unsigned char, unsigned int)’:
+../src/powerAC.cpp:122:12: warning: unused variable ‘temp_char’ [-Wunused-variable]
+       char temp_char[12];
+            ^
+../src/powerAC.cpp: In member function ‘void powerAC::print_config(char*, char*, char*, char*, char*, char*)’:
+../src/powerAC.cpp:245:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
+                              ^
+../src/powerAC.cpp:245:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
+                                                                                           ^
+../src/powerAC.cpp:246:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id1); FSM::uart0.print(" Voltage Factor: "); FSM::uart0.print(dtostrf(v_factor,0,3,temp_conv));
+                                                                   ^
+../src/powerAC.cpp:247:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));
+                                                                    ^
+../src/powerAC.cpp:248:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id5); FSM::uart0.print(" Voltage  Delay: "); FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
+                                                                   ^
+../src/powerAC.cpp:248:143: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id5); FSM::uart0.print(" Voltage  Delay: "); FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
+                                                                                                                                               ^
+../src/powerAC.cpp:249:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id3); FSM::uart0.print(" Current Factor: "); FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
+                                                                   ^
+../src/powerAC.cpp:250:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv)); //FSM::uart0.print("\r\n");
+                                                                    ^
+../src/powerAC.cpp:251:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id6); FSM::uart0.print(" Supply Voltage: "); FSM::uart0.print(dtostrf(showSupply,0,3,temp_conv)); FSM::uart0.print("\r\n");
+                                                                   ^
+../src/powerAC.cpp:251:146: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id6); FSM::uart0.print(" Supply Voltage: "); FSM::uart0.print(dtostrf(showSupply,0,3,temp_conv)); FSM::uart0.print("\r\n");
+                                                                                                                                                  ^
+../src/powerAC.cpp: In member function ‘void powerAC::print_data_array()’:
+../src/powerAC.cpp:277:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.print("\r\n");
+                          ^
+../src/powerAC.cpp:280:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                ^
+../src/powerAC.cpp:280:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                       ^
+../src/powerAC.cpp:281:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                ^
+../src/powerAC.cpp:281:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                       ^
+../src/powerAC.cpp:282:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                ^
+../src/powerAC.cpp:282:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                       ^
+../src/powerAC.cpp:283:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" s ");FSM::uart0.print(dtostrf(s_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                ^
+../src/powerAC.cpp:283:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" s ");FSM::uart0.print(dtostrf(s_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                       ^
+../src/powerAC.cpp:284:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" pf ");FSM::uart0.print(dtostrf(pf_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                 ^
+../src/powerAC.cpp:284:121: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" pf ");FSM::uart0.print(dtostrf(pf_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                         ^
+Finished building: ../src/powerAC.cpp
  
 Building target: windlogger_cpp.elf
 Invoking: AVR C++ Linker
 avr-g++ -Wl,-Map,windlogger_cpp.map,--cref -mrelax -Wl,--gc-sections -mmcu=atmega1284p -o "windlogger_cpp.elf"  ./src/Anemometer.o ./src/FSM.o ./src/Power.o ./src/RTC.o ./src/Sensor.o ./src/State.o ./src/TWI.o ./src/Usart.o ./src/Windvane.o ./src/main.o ./src/operator.o ./src/powerAC.o ./src/powerDC.o ./src/st_Config.o ./src/st_Measure.o ./src/st_Output.o ./src/st_Sleep.o   
-./src/st_Measure.o : Dans la fonction « Measure::execute() » :
-../src/st_Measure.cpp:60 : référence indéfinie vers « Power::read_dc_value(unsigned char, unsigned int) »
-../src/st_Measure.cpp:112 : référence indéfinie vers « Power::calc_all() »
-./src/Power.o : Dans la fonction « Power::readVcc() » :
-../src/Power.cpp:156 : référence indéfinie vers « Power::print(char*) »
-collect2: error: ld returned 1 exit status
-makefile:66 : la recette pour la cible « windlogger_cpp.elf » a échouée
-make: *** [windlogger_cpp.elf] Erreur 1
+Finished building target: windlogger_cpp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S windlogger_cpp.elf  >"windlogger_cpp.lss"
+Finished building: windlogger_cpp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex windlogger_cpp.elf  "windlogger_cpp.hex"
+Finished building: windlogger_cpp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex windlogger_cpp.elf  "windlogger_cpp.eep"
+Finished building: windlogger_cpp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
+AVR Memory Usage
+----------------
+Device: atmega1284p
 
-17:51:41 Build Finished (took 373ms)
+Program:   16700 bytes (12.7% Full)
+(.text + .data + .bootloader)
+
+Data:       1536 bytes (9.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+16:05:53 Build Finished (took 720ms)
 

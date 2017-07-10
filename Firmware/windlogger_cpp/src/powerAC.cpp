@@ -43,6 +43,27 @@
 	powerAC::powerAC(unsigned char v_pin, unsigned char i_pin, unsigned char id):Power(v_pin, i_pin, id){
 		s_average = 0;	/**< there is the result from the apparent power average */
 		pf_average = 0;	/**< there is the result from the power factor average */
+
+		v_offset = 512;
+		i_offset=512;
+
+
+		for(int i=0;i<50;++i){
+			Vmeas=adc_value(m_v_pin); // channel ?? for the voltage compensated with the offset
+			Imeas=adc_value(m_i_pin); // channel ?? for the current compensated with the offset
+
+			// display measures
+			//FSM::uart0.print(dtostrf(Vmeas,0,3,temp_char));FSM::uart0.print("	");FSM::uart0.print(dtostrf(Imeas,0,3,temp_char));FSM::uart0.print("\r\n");
+
+
+			//-----------------------------------------------------------------------------
+			// B) Apply digital low pass filters to extract the 2.5 V or 1.65 V dc offset,
+			//     then subtract this - signal is now centred on 0 counts.
+			//-----------------------------------------------------------------------------
+			v_offset = v_offset + ((Vmeas-v_offset)/1024);
+			i_offset = i_offset + ((Imeas-i_offset)/1024);
+		}
+
 	}
 
 	powerAC::~powerAC(){
@@ -189,8 +210,8 @@
 		v_average+=v_data[counter]/FSM::logger.measure_max;
 		i_average+=i_data[counter]/FSM::logger.measure_max;
 		p_average+=p_data[counter]/FSM::logger.measure_max;
-//		s_average+=s_data[counter]/FSM::logger.measure_max;
-//		pf_average+=pf_data[counter]/FSM::logger.measure_max;
+		s_average+=s_data[counter]/FSM::logger.measure_max;
+		pf_average+=pf_data[counter]/FSM::logger.measure_max;
 
 	}
 	 //FSM::uart0.print("-> ");FSM::uart0.print(dtostrf(p_average,0,3,temp_char)); FSM::uart0.print("\r\n");
@@ -223,9 +244,9 @@
 			FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
 			FSM::uart0.print(arg_id1); FSM::uart0.print(" Voltage Factor: ");	FSM::uart0.print(dtostrf(v_factor,0,3,temp_conv));
 			FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: ");	FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));
-			FSM::uart0.print(arg_id3); FSM::uart0.print(" Voltage  Delay: ");	FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
-			FSM::uart0.print(arg_id4); FSM::uart0.print(" Current Factor: ");	FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
-			FSM::uart0.print(arg_id5); FSM::uart0.print(" Current  Offset: ");	FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv)); //FSM::uart0.print("\r\n");
+			FSM::uart0.print(arg_id5); FSM::uart0.print(" Voltage  Delay: ");	FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
+			FSM::uart0.print(arg_id3); FSM::uart0.print(" Current Factor: ");	FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
+			FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: ");	FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv)); //FSM::uart0.print("\r\n");
 			FSM::uart0.print(arg_id6); FSM::uart0.print(" Supply Voltage: ");	FSM::uart0.print(dtostrf(showSupply,0,3,temp_conv)); FSM::uart0.print("\r\n");
 
 	}
