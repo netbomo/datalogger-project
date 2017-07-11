@@ -57,12 +57,12 @@ void powerDC::read_values(unsigned char measure_number, unsigned int timeout){
 	  sumI = 0;
 	  sumP = 0;
 
-	  double SupplyVoltage = 5000; // VCC/2 is present on ADC5
+	  double SupplyVoltage = 4930; // VCC/2 is present on ADC5
 	  showSupply = SupplyVoltage ;
 
 	  unsigned long start = TCNT3;    //millis()-start makes sure it doesn't get stuck in the loop if there is an error.
 
-	  char temp_char[10];
+	  //char temp_char[10];
 	  //FSM::uart0.print("m_v_pin : ");FSM::uart0.print(itoa(m_v_pin,temp_char,10));FSM::uart0.print("	m_i_pin : 0");FSM::uart0.print(itoa(m_i_pin,temp_char,10));FSM::uart0.print(" m_id : ");FSM::uart0.print(itoa(m_id,temp_char,10));FSM::uart0.print("\r\n");
 
    //-------------------------------------------------------------------------------------------------------------------------
@@ -81,6 +81,7 @@ void powerDC::read_values(unsigned char measure_number, unsigned int timeout){
 	   Vmeas=adc_value(m_v_pin); // channel ?? for the voltage compensated with the offset
 	   Imeas=adc_value(m_i_pin); // channel ?? for the current compensated with the offset
 
+
 	   // display measures
 	   //FSM::uart0.print(dtostrf(Vmeas,0,3,temp_char));FSM::uart0.print("	");FSM::uart0.print(dtostrf(Imeas,0,3,temp_char));FSM::uart0.print("\r\n");
 
@@ -89,7 +90,7 @@ void powerDC::read_values(unsigned char measure_number, unsigned int timeout){
 	   // B) Apply digital low pass filters to extract the 2.5 V dc offset,
 	   //     then subtract this - signal is now centred on 0 counts.
 	   //-----------------------------------------------------------------------------
-	   i_offset = 512;
+
 	   i_filtered = Imeas - i_offset;
 
 	   sumV += Vmeas;			//voltage squared
