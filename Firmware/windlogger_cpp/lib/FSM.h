@@ -132,8 +132,8 @@ public :
 	static Anemometer anemo1;		/**< this is the anemometer 1 declaration */
 	static Anemometer anemo2;		/**< this is the anemometer 2 declaration */
 	static Windvane windvane;		/**< this is the windvane declaration */
-	//static powerDC pDC;			/**< this is the powerAC declaration */
 	static powerAC pAC;			/**< this is the powerAC declaration */
+	static powerDC pDC;			/**< this is the powerAC declaration */
 
 
 private :

@@ -67,8 +67,8 @@ Logger FSM::logger;						// This is the structure of data stored in the eeprom
 Anemometer FSM::anemo1(0);				// Anemometer 1 definition
 Anemometer FSM::anemo2(1);				// Anemometer 1 definition
 Windvane FSM::windvane(2);				// Windvane sensor definition
-//powerDC FSM::pDC(7,4,0);				// voltage pin, current pin, id
-powerAC FSM::pAC(0,2,0);				// voltage pin, current pin, id
+powerAC FSM::pAC(0,1,0);				// voltage pin, current pin, id
+powerDC FSM::pDC(7,4,1);				// voltage pin, current pin, id
 
 //Class constructor
 FSM::FSM():second_counter(0),nextState(&idle){
@@ -80,19 +80,12 @@ FSM::FSM():second_counter(0),nextState(&idle){
 	anemo2.load_param();
 	windvane.load_param();
 	pAC.load_param();
+	pDC.load_param();
 
-
+//
 //	for(unsigned char i = 0; i<10 ;++i){
 //		pAC.read_values(i,4,2000);
 //	}
-
-
-	// now, we use external rtc pcf8563 on the TWI
-//	// Timer2 initialisation : use for the Real Time Clock, it generate second hit.
-//	TIMSK2 |= _BV(TOIE2);				// enable overflow interrupt
-//	TCNT2 = 0;
-//	TCCR2B = _BV(CS22) | _BV(CS20); 	// prescaler for overload interrupt each 1 second : CS2[2:0]=101;
-//	ASSR |=  _BV(AS2);					// Set the bit AS2 in the ASSR register to clock the timer 2 from the external crystal
 
 	sei();								// enable interrupt
 

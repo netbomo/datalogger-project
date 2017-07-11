@@ -133,47 +133,59 @@ void Config::execute (){
 				break;
 			case 52:	// set windvane offset, update eeprom method in the setter
 				FSM::pAC.set_v_offset(arg_f);
-			break;
-		case 53:	// set windvane offset, update eeprom method in the setter
-			FSM::pAC.set_i_factor(arg_f);
-			break;
-		case 54:	// set windvane factor, update eeprom method in the setter
-			FSM::pAC.set_i_offset(arg_f);
-			break;
-		case 55:	// set windvane factor, update eeprom method in the setter
-			FSM::pAC.set_v_phase(arg_f);
-			break;
-		case 91:
-			if(arg_uc>=0 &&arg_uc<60)	FSM::rtc.update_reg(FSM::rtc.SECS,arg_uc);
-			else FSM::uart0.print("must be: 0=<secs<60");
-			break;
-		case 92:
-			if(arg_uc>=0 &&arg_uc<60)	FSM::rtc.update_reg(FSM::rtc.MINS,arg_uc);
-			else FSM::uart0.print("must be: 0=<mins<60");
-			break;
-		case 93:
-			if(arg_uc>=0 &&arg_uc<24)	FSM::rtc.update_reg(FSM::rtc.HOURS,arg_uc);
-			else FSM::uart0.print("must be: 0=<hour<24");
-			break;
-		case 94:
-			//arg_uc = atoi(_config_request+4);
-			if(arg_uc>=0 &&arg_uc<7)	FSM::rtc.update_reg(FSM::rtc.WEEKDAY,arg_uc);
-			else FSM::uart0.print("must be: 0=<weekday<7");
-			break;
-		case 95:
-			if(arg_uc>0 &&arg_uc<32)	FSM::rtc.update_reg(FSM::rtc.DAY,arg_uc);
-			else FSM::uart0.print("must be: 0<day<32");
-			break;
-		case 96:
-			if(arg_uc>0 &&arg_uc<13)	FSM::rtc.update_reg(FSM::rtc.MONTH,arg_uc);
-			else FSM::uart0.print("must be: 0<month<13");
-			break;
-		case 97:
-			if(arg_uc>=16 &&arg_uc<99)	FSM::rtc.update_reg(FSM::rtc.YEAR,arg_uc);
-			else FSM::uart0.print("must be: 16=<year<99");
-			break;
-		default:
-			break;
+				break;
+			case 53:	// set windvane offset, update eeprom method in the setter
+				FSM::pAC.set_i_factor(arg_f);
+				break;
+			case 54:	// set windvane factor, update eeprom method in the setter
+				FSM::pAC.set_i_offset(arg_f);
+				break;
+			case 55:	// set windvane factor, update eeprom method in the setter
+				FSM::pAC.set_v_phase(arg_f);
+				break;
+			case 61:	// set windvane factor, update eeprom method in the setter
+				FSM::pDC.set_v_factor(arg_f);
+				break;
+			case 62:	// set windvane offset, update eeprom method in the setter
+				FSM::pDC.set_v_offset(arg_f);
+				break;
+			case 63:	// set windvane offset, update eeprom method in the setter
+				FSM::pDC.set_i_factor(arg_f);
+				break;
+			case 64:	// set windvane factor, update eeprom method in the setter
+				FSM::pDC.set_i_offset(arg_f);
+				break;
+			case 91:
+				if(arg_uc>=0 &&arg_uc<60)	FSM::rtc.update_reg(FSM::rtc.SECS,arg_uc);
+				else FSM::uart0.print("must be: 0=<secs<60");
+				break;
+			case 92:
+				if(arg_uc>=0 &&arg_uc<60)	FSM::rtc.update_reg(FSM::rtc.MINS,arg_uc);
+				else FSM::uart0.print("must be: 0=<mins<60");
+				break;
+			case 93:
+				if(arg_uc>=0 &&arg_uc<24)	FSM::rtc.update_reg(FSM::rtc.HOURS,arg_uc);
+				else FSM::uart0.print("must be: 0=<hour<24");
+				break;
+			case 94:
+				//arg_uc = atoi(_config_request+4);
+				if(arg_uc>=0 &&arg_uc<7)	FSM::rtc.update_reg(FSM::rtc.WEEKDAY,arg_uc);
+				else FSM::uart0.print("must be: 0=<weekday<7");
+				break;
+			case 95:
+				if(arg_uc>0 &&arg_uc<32)	FSM::rtc.update_reg(FSM::rtc.DAY,arg_uc);
+				else FSM::uart0.print("must be: 0<day<32");
+				break;
+			case 96:
+				if(arg_uc>0 &&arg_uc<13)	FSM::rtc.update_reg(FSM::rtc.MONTH,arg_uc);
+				else FSM::uart0.print("must be: 0<month<13");
+				break;
+			case 97:
+				if(arg_uc>=16 &&arg_uc<99)	FSM::rtc.update_reg(FSM::rtc.YEAR,arg_uc);
+				else FSM::uart0.print("must be: 16=<year<99");
+				break;
+			default:
+				break;
 		}
 		display();	// display config after modification
 	}
@@ -209,6 +221,7 @@ void Config::display(){
 	//FSM::anemo2.print_config("$20","$21","$22");
 	FSM::windvane.print_config("$30","$31","$32");
 	FSM::pAC.print_config("$51"," $52"," $53"," $54"," $55"," $56");
+	FSM::pDC.print_config("$61"," $62"," $63"," $64");
 
 	FSM::uart0.print("\r\n");
 	FSM::rtc.print_config();

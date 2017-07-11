@@ -119,8 +119,9 @@ void Measure::windvane_value (){
 
 // read power value - not define realy (see emonLib)
 void Measure::power_read_value (){
-	FSM::pAC.read_values(FSM::logger.measure_counter,4, 1500); // mesure number, number of crossing, timeout = time_you_want/((1/f_clock)*1024) = 32ms/((1/16MHz=*1024) = 500
-	//FSM::powerAC.print_data_array();
+	FSM::pAC.read_values(FSM::logger.measure_counter,4, 1500); // mesure number, number of crossing, timeout = time_you_want/((1/f_clock)*1024) = 96ms/((1/16MHz=*1024) = 1500
+
+	FSM::pDC.read_values(FSM::logger.measure_counter,500);		// mesure number, number of crossing, timeout = time_you_want/((1/f_clock)*1024) = 32ms/((1/16MHz=*1024) = 500
 }
 
 // read the temperature value from one DS18b20 sensor
@@ -141,6 +142,7 @@ void Measure::calc_average (){
 	FSM::anemo2.calc_average();
 	FSM::windvane.calc_average();
 	FSM::pAC.calc_averages();
+	FSM::pDC.calc_averages();
 
 	FSM::logger.measure_counter=0;	// initialize the next measure
 
