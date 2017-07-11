@@ -52,7 +52,7 @@ void SDcard::init(){
 	//do stuff
 
 	SD_init();
-	getBootSectorData();
+	fat32.getBootSectorData();
 }
 
 
@@ -62,7 +62,7 @@ void SDcard::write(char *string){
 					//SDCard init
 					SD_init();
 					// OUVERTURE DE LA PARTITION
-					getBootSectorData();				/** envoyer cette fonction pour l'identification du péripherique ( a faire toujours apres l'init de SD)*/
+					fat32.getBootSectorData();				/** envoyer cette fonction pour l'identification du péripherique ( a faire toujours apres l'init de SD)*/
 
 					flag_reinit = 1;								/** set flag_reinit*/
 				}
@@ -70,18 +70,18 @@ void SDcard::write(char *string){
 
 			strcpy(m_tmp_filename, m_filename) ;		/**copier le nom de fichier dans le registre temporaire*/
 
-						j = readFile(VERIFY, m_tmp_filename);				/**vérifier si le fichier éxiste*/
+						j = fat32.readFile(fat32.VERIFY, m_tmp_filename);				/**vérifier si le fichier éxiste*/
 
 						strcpy(m_tmp_filename, m_filename) ;		/**copier le nom de fichier dans le registre temporaire*/
 
 						if(j==0){													/**si le fichier n'éxiste pas*/
 							//strcpy(string, ) ; /**init datastring avec cette chaine de caractére*/
-							writeFile(m_tmp_filename, "timestamp,speed1,speed2,degree,temp,acPower,dcPower,rpm\n");													/** construire le fichier avec l'entête au début*/
+							fat32.writeFile(m_tmp_filename, "timestamp,speed1,speed2,degree,temp,acPower,dcPower,rpm\n");													/** construire le fichier avec l'entête au début*/
 							}
 
 				strcpy(m_tmp_filename, m_filename) ;		/**copier le nom de fichier dans le registre temporaire*/
 
-				writeFile(m_tmp_filename,string);
+				fat32.writeFile(m_tmp_filename,string);
 
 			}
 			else {															/**si PG2 = 1 => la carte SD est hors lécteur*/

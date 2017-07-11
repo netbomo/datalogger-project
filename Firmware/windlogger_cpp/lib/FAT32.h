@@ -125,7 +125,6 @@ public:
 	unsigned char freeClusterCountUpdated;
 
 
-private:
 	//Attribute definitions for file/directory
 	const unsigned char ATTR_READ_ONLY   = 0x01;
 	const unsigned char ATTR_HIDDEN      = 0x02;

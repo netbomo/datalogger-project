@@ -1,404 +1,277 @@
-15:05:58 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+06:20:30 **** Incremental Build of configuration Debug for project windlogger_cpp ****
 make all 
-Building file: ../src/FAT32.cpp
-../src/FAT32.cpp: In function ‘unsigned char getBootSectorData()’:
-../src/FAT32.cpp:53:1: error: ‘unusedSectors’ was not declared in this scope
+Building file: ../src/SDcard.cpp
 Invoking: AVR C++ Compiler
-avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/FAT32.d" -MT"src/FAT32.o" -c -o "src/FAT32.o" "../src/FAT32.cpp"
-src/subdir.mk:78 : la recette pour la cible « src/FAT32.o » a échouée
- unusedSectors = 0;
- ^
-../src/FAT32.cpp:72:1: error: ‘bytesPerSector’ was not declared in this scope
- bytesPerSector = bpb->SbytesPerSector;
- ^
-../src/FAT32.cpp:74:1: error: ‘sectorPerCluster’ was not declared in this scope
- sectorPerCluster = bpb->SsectorPerCluster;
- ^
-../src/FAT32.cpp:76:1: error: ‘reservedSectorCount’ was not declared in this scope
- reservedSectorCount = bpb->SreservedSectorCount;
- ^
-../src/FAT32.cpp:77:1: error: ‘rootCluster’ was not declared in this scope
- rootCluster = bpb->SrootCluster;// + (sector / sectorPerCluster) +1;
- ^
-../src/FAT32.cpp:78:1: error: ‘firstDataSector’ was not declared in this scope
- firstDataSector = bpb->ShiddenSectors + reservedSectorCount + (bpb->SnumberofFATs * bpb->SFATsize_F32);
- ^
-../src/FAT32.cpp:83:1: error: ‘totalClusters’ was not declared in this scope
- totalClusters = dataSectors / sectorPerCluster;
- ^
-../src/FAT32.cpp:86:24: error: ‘TOTAL_FREE’ was not declared in this scope
- if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
-                        ^
-../src/FAT32.cpp:86:36: error: ‘GET’ was not declared in this scope
- if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
-                                    ^
-../src/FAT32.cpp:86:42: error: ‘getSetFreeCluster’ was not declared in this scope
- if((getSetFreeCluster (TOTAL_FREE, GET, 0)) > totalClusters)  //check if FSinfo free clusters count is valid
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/SDcard.d" -MT"src/SDcard.o" -c -o "src/SDcard.o" "../src/SDcard.cpp"
+../src/SDcard.cpp: In member function ‘void SDcard::write(char*)’:
+../src/SDcard.cpp:79:99: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+        fat32.writeFile(m_tmp_filename, "timestamp,speed1,speed2,degree,temp,acPower,dcPower,rpm\n");             /** construire le fichier avec l'entête au début*/
+Finished building: ../src/SDcard.cpp
+                                                                                                   ^
+ 
+Building file: ../src/Sensor.cpp
+../src/SDcard.cpp:89:77: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+Invoking: AVR C++ Compiler
+      FSM::uart0.print("\rpas de carte sd, insérez une dans le lécteur\n\r");
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/Sensor.d" -MT"src/Sensor.o" -c -o "src/Sensor.o" "../src/Sensor.cpp"
+                                                                             ^
+../src/Sensor.cpp: In member function ‘void Sensor::load_param()’:
+../src/Sensor.cpp:114:39: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  m_factor = eeprom_read_float((float*)m_eeprom_addr);
+                                       ^
+../src/Sensor.cpp:115:39: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  m_offset = eeprom_read_float((float*)m_eeprom_addr+5);
+                                       ^
+../src/Sensor.cpp:116:46: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  m_enable = eeprom_read_byte((unsigned char*)m_eeprom_addr+6);
+                                              ^
+../src/Sensor.cpp: In member function ‘void Sensor::update_param()’:
+../src/Sensor.cpp:121:30: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_float((float*)m_eeprom_addr,m_factor);
+                              ^
+../src/Sensor.cpp:122:30: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_float((float*)m_eeprom_addr+5,m_offset);
+                              ^
+../src/Sensor.cpp:123:37: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  eeprom_update_byte((unsigned char*)m_eeprom_addr+6,m_enable);
+                                     ^
+Finished building: ../src/Sensor.cpp
+ 
+Building file: ../src/State.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/State.d" -MT"src/State.o" -c -o "src/State.o" "../src/State.cpp"
+Finished building: ../src/State.cpp
+ 
+Building file: ../src/Usart.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/Usart.d" -MT"src/Usart.o" -c -o "src/Usart.o" "../src/Usart.cpp"
+Finished building: ../src/Usart.cpp
+ 
+Building file: ../src/fct_SDCard.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/fct_SDCard.d" -MT"src/fct_SDCard.o" -c -o "src/fct_SDCard.o" "../src/fct_SDCard.cpp"
+../src/fct_SDCard.cpp: In function ‘unsigned char SD_init()’:
+../src/fct_SDCard.cpp:40:42: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("\rpas de carte\n");
                                           ^
-../src/FAT32.cpp:87:6: error: ‘freeClusterCountUpdated’ was not declared in this scope
-      freeClusterCountUpdated = 0;
-      ^
-../src/FAT32.cpp:89:3: error: ‘freeClusterCountUpdated’ was not declared in this scope
-   freeClusterCountUpdated = 1;
-   ^
-../src/FAT32.cpp: In function ‘long unsigned int getFirstSector(long unsigned int)’:
-../src/FAT32.cpp:100:34: error: ‘sectorPerCluster’ was not declared in this scope
-   return (((clusterNumber - 2) * sectorPerCluster) + firstDataSector);
-                                  ^
-../src/FAT32.cpp:100:54: error: ‘firstDataSector’ was not declared in this scope
-   return (((clusterNumber - 2) * sectorPerCluster) + firstDataSector);
+../src/fct_SDCard.cpp:62:29: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      FSM::uart0.print("\r\n");;
+                             ^
+../src/fct_SDCard.cpp:80:29: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      FSM::uart0.print("\r\n");;
+                             ^
+../src/fct_SDCard.cpp:81:54: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+      FSM::uart0.print("\rinitialisation a échoué\n");
                                                       ^
-../src/FAT32.cpp: In function ‘long unsigned int getSetNextCluster(long unsigned int, unsigned char, long unsigned int)’:
-../src/FAT32.cpp:120:18: error: ‘unusedSectors’ was not declared in this scope
- FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
-                  ^
-../src/FAT32.cpp:120:34: error: ‘reservedSectorCount’ was not declared in this scope
- FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
-                                  ^
-../src/FAT32.cpp:120:79: error: ‘bytesPerSector’ was not declared in this scope
- FATEntrySector = unusedSectors + reservedSectorCount + ((clusterNumber * 4) / bytesPerSector) ;
-                                                                               ^
-../src/FAT32.cpp:132:15: error: ‘GET’ was not declared in this scope
- if(get_set == GET)
-               ^
-../src/FAT32.cpp: In function ‘long unsigned int getSetFreeCluster(unsigned char, unsigned char, long unsigned int)’:
-../src/FAT32.cpp:157:20: error: ‘unusedSectors’ was not declared in this scope
- SD_readSingleBlock(unusedSectors + 1);
-                    ^
-../src/FAT32.cpp:162:16: error: ‘GET’ was not declared in this scope
-  if(get_set == GET)
-                ^
-../src/FAT32.cpp:164:20: error: ‘TOTAL_FREE’ was not declared in this scope
-    if(totOrNext == TOTAL_FREE)
-                    ^
-../src/FAT32.cpp:171:20: error: ‘TOTAL_FREE’ was not declared in this scope
-    if(totOrNext == TOTAL_FREE)
-                    ^
-../src/FAT32.cpp: In function ‘dir_Structure* findFiles(unsigned char, char*)’:
-../src/FAT32.cpp:196:11: error: ‘rootCluster’ was not declared in this scope
- cluster = rootCluster; //root cluster
-           ^
-../src/FAT32.cpp:202:29: error: ‘sectorPerCluster’ was not declared in this scope
-    for(sector = 0; sector < sectorPerCluster; sector++)
-                             ^
-../src/FAT32.cpp:207:17: error: ‘bytesPerSector’ was not declared in this scope
-      for(i=0; i<bytesPerSector; i+=32)
-                 ^
-../src/FAT32.cpp:211:28: error: ‘EMPTY’ was not declared in this scope
-         if(dir->name[0] == EMPTY) //indicates end of the file list of the directory
-                            ^
-../src/FAT32.cpp:213:16: error: ‘DELETE’ was not declared in this scope
-     if(flag == DELETE)
-                ^
-../src/FAT32.cpp:217:23: error: ‘DELETED’ was not declared in this scope
-   if((dir->name[0] != DELETED) && (dir->attrib != ATTR_LONG_NAME))
-                       ^
-../src/FAT32.cpp:217:51: error: ‘ATTR_LONG_NAME’ was not declared in this scope
-   if((dir->name[0] != DELETED) && (dir->attrib != ATTR_LONG_NAME))
-                                                   ^
-../src/FAT32.cpp:219:23: error: ‘GET_FILE’ was not declared in this scope
-           if((flag == GET_FILE) || (flag == DELETE))
-                       ^
-../src/FAT32.cpp:219:45: error: ‘DELETE’ was not declared in this scope
-           if((flag == GET_FILE) || (flag == DELETE))
-                                             ^
-../src/FAT32.cpp:227:8: error: ‘appendFileSector’ was not declared in this scope
-        appendFileSector = firstSector + sector;
-        ^
-../src/FAT32.cpp:228:5: error: ‘appendFileLocation’ was not declared in this scope
-     appendFileLocation = i;
-     ^
-../src/FAT32.cpp:229:5: error: ‘appendStartCluster’ was not declared in this scope
-     appendStartCluster = (((unsigned long) dir->firstClusterHI) << 16) | dir->firstClusterLO;
-     ^
-../src/FAT32.cpp:230:5: error: ‘fileSize’ was not declared in this scope
-     fileSize = dir->SfileSize;
-     ^
-../src/FAT32.cpp:235:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-      FSM::uart0.print("\r\nDeleting..\r\n\r\n");
-                                               ^
-../src/FAT32.cpp:242:24: error: ‘ADD’ was not declared in this scope
-      freeMemoryUpdate (ADD, dir->SfileSize);
-                        ^
-../src/FAT32.cpp:242:43: error: ‘freeMemoryUpdate’ was not declared in this scope
-      freeMemoryUpdate (ADD, dir->SfileSize);
-                                           ^
-../src/FAT32.cpp:245:35: error: ‘NEXT_FREE’ was not declared in this scope
-      cluster = getSetFreeCluster (NEXT_FREE, GET, 0); 
-                                   ^
-../src/FAT32.cpp:245:46: error: ‘GET’ was not declared in this scope
-      cluster = getSetFreeCluster (NEXT_FREE, GET, 0); 
-                                              ^
-../src/FAT32.cpp:247:40: error: ‘SET’ was not declared in this scope
-          getSetFreeCluster (NEXT_FREE, SET, firstCluster);
-                                        ^
-../src/FAT32.cpp:253:39: error: ‘SET’ was not declared in this scope
-      getSetNextCluster (firstCluster, SET, 0);
+../src/fct_SDCard.cpp:99:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+       FSM::uart0.print("\r\n");;
+                              ^
+../src/fct_SDCard.cpp:116:41: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   case 1 : FSM::uart0.print("\rver1.x\n");break;
+                                         ^
+../src/fct_SDCard.cpp:117:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   case 2 : FSM::uart0.print("\rSDHC\n");break;
                                        ^
-../src/FAT32.cpp:256:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-       FSM::uart0.print("File deleted!");
-                                       ^
-../src/FAT32.cpp:266:35: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-            FSM::uart0.print("\r\n");
-                                   ^
-../src/FAT32.cpp:272:27: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-     FSM::uart0.print("   ");
-                           ^
-../src/FAT32.cpp:275:33: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-         FSM::uart0.print("FILE" );
-                                 ^
-../src/FAT32.cpp:276:31: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-         FSM::uart0.print("   ");
-                               ^
-../src/FAT32.cpp:277:24: error: ‘LOW’ was not declared in this scope
-         displayMemory (LOW, dir->SfileSize);
-                        ^
-../src/FAT32.cpp:277:43: error: ‘displayMemory’ was not declared in this scope
-         displayMemory (LOW, dir->SfileSize);
-                                           ^
-../src/FAT32.cpp:280:52: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-      if(dir->attrib == 0x10) FSM::uart0.print("DIR");
-                                                    ^
-../src/FAT32.cpp:281:34: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-      else FSM::uart0.print("ROOT");
-                                  ^
-../src/FAT32.cpp:287:43: error: ‘GET’ was not declared in this scope
-    cluster = (getSetNextCluster (cluster, GET, 0));
-                                           ^
-../src/FAT32.cpp:293:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-     FSM::uart0.print("Error in getting cluster");
-                                                ^
-../src/FAT32.cpp:194:6: warning: unused variable ‘temp_char’ [-Wunused-variable]
- char temp_char[15];
-      ^
-../src/FAT32.cpp: In function ‘unsigned char readFile(unsigned char, char*)’:
-../src/FAT32.cpp:315:34: error: ‘convertFileName’ was not declared in this scope
- error = convertFileName (fileName); //convert fileName into FAT format
-                                  ^
-../src/FAT32.cpp:318:18: error: ‘GET_FILE’ was not declared in this scope
- dir = findFiles (GET_FILE, fileName); //get the file location
-                  ^
-../src/FAT32.cpp:321:14: error: ‘READ’ was not declared in this scope
-   if(flag == READ) return (1);
-              ^
-../src/FAT32.cpp:325:12: error: ‘VERIFY’ was not declared in this scope
- if(flag == VERIFY) return (1); //specified file name is already existing
+../src/fct_SDCard.cpp:118:41: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   case 3 : FSM::uart0.print("\rver2.x\n");break;
+                                         ^
+../src/fct_SDCard.cpp:119:50: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   default :FSM::uart0.print("\runknown Sd card\n");
+                                                  ^
+Finished building: ../src/fct_SDCard.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/main.d" -MT"src/main.o" -c -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building file: ../src/powerAC.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/powerAC.d" -MT"src/powerAC.o" -c -o "src/powerAC.o" "../src/powerAC.cpp"
+../src/powerAC.cpp: In member function ‘void powerAC::read_values(unsigned char, unsigned char, unsigned int)’:
+../src/powerAC.cpp:100:12: warning: unused variable ‘temp_char’ [-Wunused-variable]
+       char temp_char[12];
             ^
-../src/FAT32.cpp:331:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
- FSM::uart0.print("\r\n\r\n");
-                            ^
-../src/FAT32.cpp:337:14: error: ‘sectorPerCluster’ was not declared in this scope
-   for(j=0; j<sectorPerCluster; j++)
-              ^
-../src/FAT32.cpp:347:41: error: ‘GET’ was not declared in this scope
-   cluster = getSetNextCluster (cluster, GET, 0);
-                                         ^
-../src/FAT32.cpp:349:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-    FSM::uart0.print("Error in getting cluster");
-                                               ^
-../src/FAT32.cpp: In function ‘unsigned char convertFileName(char*)’:
-../src/FAT32.cpp:371:39: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print("Invalid fileName..");
-                                       ^
-../src/FAT32.cpp: In function ‘unsigned char writeFile(char*, char*)’:
-../src/FAT32.cpp:414:15: error: ‘VERIFY’ was not declared in this scope
- j = readFile (VERIFY, fileName);
-               ^
-../src/FAT32.cpp:420:13: error: ‘appendStartCluster’ was not declared in this scope
-   cluster = appendStartCluster;
-             ^
-../src/FAT32.cpp:424:47: error: ‘GET’ was not declared in this scope
-     nextCluster = getSetNextCluster (cluster, GET, 0);
-                                               ^
-../src/FAT32.cpp:425:23: error: ‘EOF’ was not declared in this scope
-     if(nextCluster == EOF) break;
-                       ^
-../src/FAT32.cpp:430:13: error: ‘fileSize’ was not declared in this scope
-   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
-             ^
-../src/FAT32.cpp:430:40: error: ‘sectorPerCluster’ was not declared in this scope
-   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
-                                        ^
-../src/FAT32.cpp:430:59: error: ‘bytesPerSector’ was not declared in this scope
-   sector = (fileSize - (clusterCount * sectorPerCluster * bytesPerSector)) / bytesPerSector; //last sector number of the last cluster of the file
-                                                           ^
-../src/FAT32.cpp:438:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp: In member function ‘void powerAC::print_config(char*, char*, char*, char*, char*, char*)’:
+../src/powerAC.cpp:223:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
+                              ^
+../src/powerAC.cpp:223:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
+                                                                                           ^
+../src/powerAC.cpp:224:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id1); FSM::uart0.print(" Voltage Factor: "); FSM::uart0.print(dtostrf(v_factor,0,3,temp_conv));
+                                                                   ^
+../src/powerAC.cpp:225:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));
+                                                                    ^
+../src/powerAC.cpp:226:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id3); FSM::uart0.print(" Voltage  Delay: "); FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
+                                                                   ^
+../src/powerAC.cpp:226:143: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id3); FSM::uart0.print(" Voltage  Delay: "); FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
+                                                                                                                                               ^
+../src/powerAC.cpp:227:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id4); FSM::uart0.print(" Current Factor: "); FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
+                                                                   ^
+../src/powerAC.cpp:228:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id5); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv)); //FSM::uart0.print("\r\n");
+                                                                    ^
+../src/powerAC.cpp:229:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id6); FSM::uart0.print(" Supply Voltage: "); FSM::uart0.print(dtostrf(showSupply,0,3,temp_conv)); FSM::uart0.print("\r\n");
+                                                                   ^
+../src/powerAC.cpp:229:146: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.print(arg_id6); FSM::uart0.print(" Supply Voltage: "); FSM::uart0.print(dtostrf(showSupply,0,3,temp_conv)); FSM::uart0.print("\r\n");
+                                                                                                                                                  ^
+../src/powerAC.cpp: In member function ‘void powerAC::print_data_array()’:
+../src/powerAC.cpp:255:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
    FSM::uart0.print("\r\n");
                           ^
-../src/FAT32.cpp:441:32: error: ‘NEXT_FREE’ was not declared in this scope
-   cluster = getSetFreeCluster (NEXT_FREE, GET, 0);
-                                ^
-../src/FAT32.cpp:441:43: error: ‘GET’ was not declared in this scope
-   cluster = getSetFreeCluster (NEXT_FREE, GET, 0);
-                                           ^
-../src/FAT32.cpp:442:16: error: ‘totalClusters’ was not declared in this scope
-   if(cluster > totalClusters)
-                ^
-../src/FAT32.cpp:443:16: error: ‘rootCluster’ was not declared in this scope
-      cluster = rootCluster;
-                ^
-../src/FAT32.cpp:445:42: error: ‘searchNextFreeCluster’ was not declared in this scope
-   cluster = searchNextFreeCluster(cluster);
-                                          ^
-../src/FAT32.cpp:448:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-       FSM::uart0.print("\r\n");
-                              ^
-../src/FAT32.cpp:449:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-       FSM::uart0.print(" No free cluster!");
-                                           ^
-../src/FAT32.cpp:452:30: error: ‘SET’ was not declared in this scope
-   getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
-                              ^
-../src/FAT32.cpp:452:35: error: ‘EOF’ was not declared in this scope
-   getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
-                                   ^
-../src/FAT32.cpp:456:3: error: ‘fileSize’ was not declared in this scope
-   fileSize = 0;
-   ^
-../src/FAT32.cpp:468:8: error: ‘fileSize’ was not declared in this scope
-    i = fileSize % bytesPerSector;
-        ^
-../src/FAT32.cpp:468:19: error: ‘bytesPerSector’ was not declared in this scope
-    i = fileSize % bytesPerSector;
-                   ^
-../src/FAT32.cpp:485:3: error: ‘fileSize’ was not declared in this scope
-   fileSize++;
-   ^
-../src/FAT32.cpp:492:13: error: ‘sectorPerCluster’ was not declared in this scope
-     if(j == sectorPerCluster) {j = 0; break;}
-             ^
-../src/FAT32.cpp:495:35: error: ‘MAX_STRING_SIZE’ was not declared in this scope
-    } while((data != '\n') && (k < MAX_STRING_SIZE)); //stop when newline character is found
-                                   ^
-../src/FAT32.cpp:509:47: error: ‘searchNextFreeCluster’ was not declared in this scope
-    cluster = searchNextFreeCluster(prevCluster); //look for a free cluster starting from the current cluster
+../src/powerAC.cpp:258:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                ^
+../src/powerAC.cpp:258:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                       ^
+../src/powerAC.cpp:259:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                ^
+../src/powerAC.cpp:259:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                       ^
+../src/powerAC.cpp:260:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                ^
+../src/powerAC.cpp:260:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                       ^
+../src/powerAC.cpp:261:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" s ");FSM::uart0.print(dtostrf(s_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                ^
+../src/powerAC.cpp:261:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" s ");FSM::uart0.print(dtostrf(s_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                       ^
+../src/powerAC.cpp:262:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" pf ");FSM::uart0.print(dtostrf(pf_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                 ^
+../src/powerAC.cpp:262:121: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+    FSM::uart0.set(i+'0');FSM::uart0.print(" pf ");FSM::uart0.print(dtostrf(pf_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                         ^
+Finished building: ../src/powerAC.cpp
+ 
+Building file: ../src/powerDC.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/powerDC.d" -MT"src/powerDC.o" -c -o "src/powerDC.o" "../src/powerDC.cpp"
+../src/powerDC.cpp: In member function ‘void powerDC::read_values(unsigned char, unsigned int)’:
+../src/powerDC.cpp:65:9: warning: unused variable ‘temp_char’ [-Wunused-variable]
+    char temp_char[10];
+         ^
+../src/powerDC.cpp: In member function ‘void powerDC::print_config(char*, char*, char*, char*)’:
+../src/powerDC.cpp:165:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
+                            ^
+../src/powerDC.cpp:165:89: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
+                                                                                         ^
+../src/powerDC.cpp:166:65: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print(arg_id1); FSM::uart0.print(" Voltage Factor: "); FSM::uart0.print(dtostrf(v_factor,0,3,temp_conv));
+                                                                 ^
+../src/powerDC.cpp:167:66: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));FSM::uart0.print("\r\n");
+                                                                  ^
+../src/powerDC.cpp:167:142: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));FSM::uart0.print("\r\n");
+                                                                                                                                              ^
+../src/powerDC.cpp:168:65: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print(arg_id3); FSM::uart0.print(" Current Factor: "); FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
+                                                                 ^
+../src/powerDC.cpp:169:66: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv));FSM::uart0.print("\r\n"); //FSM::uart0.print("\r\n");
+                                                                  ^
+../src/powerDC.cpp:169:142: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv));FSM::uart0.print("\r\n"); //FSM::uart0.print("\r\n");
+                                                                                                                                              ^
+../src/powerDC.cpp: In member function ‘void powerDC::print_data_array()’:
+../src/powerDC.cpp:188:25: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+  FSM::uart0.print("\r\n");
+                         ^
+../src/powerDC.cpp:191:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                ^
-../src/FAT32.cpp:513:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-       FSM::uart0.print("\r\n");
-                              ^
-../src/FAT32.cpp:514:43: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-       FSM::uart0.print(" No free cluster!");
-                                           ^
-../src/FAT32.cpp:518:35: error: ‘SET’ was not declared in this scope
-    getSetNextCluster(prevCluster, SET, cluster);
-                                   ^
-../src/FAT32.cpp:519:36: error: ‘EOF’ was not declared in this scope
-    getSetNextCluster(cluster, SET, EOF);   //last cluster of the file, marked EOF
-                                    ^
-../src/FAT32.cpp:522:20: error: ‘NEXT_FREE’ was not declared in this scope
- getSetFreeCluster (NEXT_FREE, SET, cluster); //update FSinfo next free cluster entry
-                    ^
-../src/FAT32.cpp:522:31: error: ‘SET’ was not declared in this scope
- getSetFreeCluster (NEXT_FREE, SET, cluster); //update FSinfo next free cluster entry
-                               ^
-../src/FAT32.cpp:529:23: error: ‘appendFileSector’ was not declared in this scope
-   SD_readSingleBlock (appendFileSector);    
-                       ^
-../src/FAT32.cpp:530:42: error: ‘appendFileLocation’ was not declared in this scope
-   dir = (struct dir_Structure *) &buffer[appendFileLocation]; 
-                                          ^
-../src/FAT32.cpp:535:17: error: ‘fileSize’ was not declared in this scope
-   extraMemory = fileSize - dir->SfileSize;
-                 ^
-../src/FAT32.cpp:538:21: error: ‘REMOVE’ was not declared in this scope
-   freeMemoryUpdate (REMOVE, extraMemory); //updating free memory count in FSinfo sector;
-                     ^
-../src/FAT32.cpp:538:40: error: ‘freeMemoryUpdate’ was not declared in this scope
-   freeMemoryUpdate (REMOVE, extraMemory); //updating free memory count in FSinfo sector;
-                                        ^
-../src/FAT32.cpp:541:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.print("\r\n");
-                          ^
-../src/FAT32.cpp:549:15: error: ‘rootCluster’ was not declared in this scope
- prevCluster = rootCluster; //root cluster
-               ^
-../src/FAT32.cpp:555:29: error: ‘sectorPerCluster’ was not declared in this scope
-    for(sector = 0; sector < sectorPerCluster; sector++)
-                             ^
-../src/FAT32.cpp:560:17: error: ‘bytesPerSector’ was not declared in this scope
-      for(i=0; i<bytesPerSector; i+=32)
-                 ^
-../src/FAT32.cpp:571:29: error: ‘EMPTY’ was not declared in this scope
-         if((dir->name[0] == EMPTY) || (dir->name[0] == DELETED))  //looking for an empty slot to enter file info
-                             ^
-../src/FAT32.cpp:571:56: error: ‘DELETED’ was not declared in this scope
-         if((dir->name[0] == EMPTY) || (dir->name[0] == DELETED))  //looking for an empty slot to enter file info
-                                                        ^
-../src/FAT32.cpp:575:19: error: ‘ATTR_ARCHIVE’ was not declared in this scope
-     dir->attrib = ATTR_ARCHIVE; //settting file attribute as 'archive'
-                   ^
-../src/FAT32.cpp:585:22: error: ‘fileSize’ was not declared in this scope
-     dir->SfileSize = fileSize;
-                      ^
-../src/FAT32.cpp:590:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-     FSM::uart0.print("\r\n");
-                            ^
-../src/FAT32.cpp:591:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-     FSM::uart0.print("\r\n");
-                            ^
-../src/FAT32.cpp:594:23: error: ‘REMOVE’ was not declared in this scope
-     freeMemoryUpdate (REMOVE, fileSize); //updating free memory count in FSinfo sector
-                       ^
-../src/FAT32.cpp:594:39: error: ‘freeMemoryUpdate’ was not declared in this scope
-     freeMemoryUpdate (REMOVE, fileSize); //updating free memory count in FSinfo sector
-                                       ^
-../src/FAT32.cpp:600:46: error: ‘GET’ was not declared in this scope
-    cluster = getSetNextCluster (prevCluster, GET, 0);
-                                              ^
-../src/FAT32.cpp:604:21: error: ‘EOF’ was not declared in this scope
-       if(cluster == EOF)   //this situation will come when total files in root is multiple of (32*sectorPerCluster)
-                     ^
-../src/FAT32.cpp:606:46: error: ‘searchNextFreeCluster’ was not declared in this scope
-   cluster = searchNextFreeCluster(prevCluster); //find next cluster for root directory entries
-                                              ^
-../src/FAT32.cpp:613:45: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-      FSM::uart0.print("End of Cluster Chain");
-                                             ^
-../src/FAT32.cpp:618:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-     FSM::uart0.print("Error in getting cluster");
-                                                ^
-../src/FAT32.cpp: In function ‘long unsigned int searchNextFreeCluster(long unsigned int)’:
-../src/FAT32.cpp:641:41: error: ‘totalClusters’ was not declared in this scope
-     for(cluster =startCluster; cluster <totalClusters; cluster+=128) 
-                                         ^
-../src/FAT32.cpp:643:16: error: ‘unusedSectors’ was not declared in this scope
-       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
-                ^
-../src/FAT32.cpp:643:32: error: ‘reservedSectorCount’ was not declared in this scope
-       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
-                                ^
-../src/FAT32.cpp:643:71: error: ‘bytesPerSector’ was not declared in this scope
-       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
-                                                                       ^
-../src/FAT32.cpp: In function ‘void displayMemory(unsigned char, long unsigned int)’:
-../src/FAT32.cpp:678:14: error: ‘HIGH’ was not declared in this scope
-   if(flag == HIGH)  memoryString[13] = 'K';
-              ^
-../src/FAT32.cpp: In function ‘void deleteFile(char*)’:
-../src/FAT32.cpp:694:14: error: ‘DELETE’ was not declared in this scope
-   findFiles (DELETE, fileName);
-              ^
-../src/FAT32.cpp: In function ‘void freeMemoryUpdate(unsigned char, long unsigned int)’:
-../src/FAT32.cpp:713:6: error: ‘freeClusterCountUpdated’ was not declared in this scope
-   if(freeClusterCountUpdated)
-      ^
-../src/FAT32.cpp:715:36: error: ‘TOTAL_FREE’ was not declared in this scope
-  freeClusters = getSetFreeCluster (TOTAL_FREE, GET, 0);
-                                    ^
-../src/FAT32.cpp:715:48: error: ‘GET’ was not declared in this scope
-  freeClusters = getSetFreeCluster (TOTAL_FREE, GET, 0);
-                                                ^
-../src/FAT32.cpp:716:13: error: ‘ADD’ was not declared in this scope
-  if(flag == ADD)
-             ^
-../src/FAT32.cpp:720:33: error: ‘SET’ was not declared in this scope
-  getSetFreeCluster (TOTAL_FREE, SET, freeClusters);
-                                 ^
-../src/FAT32.cpp: In function ‘long unsigned int getFirstSector(long unsigned int)’:
-../src/FAT32.cpp:101:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-make: *** [src/FAT32.o] Erreur 1
+../src/powerDC.cpp:191:118: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+Finished building: ../src/powerDC.cpp
+   FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
+ 
+Building file: ../src/st_Config.cpp
+                                                                                                                      ^
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/st_Config.d" -MT"src/st_Config.o" -c -o "src/st_Config.o" "../src/st_Config.cpp"
+../src/powerDC.cpp:192:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                               ^
+../src/powerDC.cpp:192:118: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                      ^
+../src/powerDC.cpp:193:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                               ^
+../src/powerDC.cpp:193:118: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+   FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
+                                                                                                                      ^
+Finished building: ../src/st_Config.cpp
+ 
+Building file: ../src/st_Measure.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/st_Measure.d" -MT"src/st_Measure.o" -c -o "src/st_Measure.o" "../src/st_Measure.cpp"
+Finished building: ../src/st_Measure.cpp
+ 
+Building file: ../src/st_Output.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/st_Output.d" -MT"src/st_Output.o" -c -o "src/st_Output.o" "../src/st_Output.cpp"
+Finished building: ../src/st_Output.cpp
+ 
+Building file: ../src/st_Sleep.cpp
+Invoking: AVR C++ Compiler
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/st_Sleep.d" -MT"src/st_Sleep.o" -c -o "src/st_Sleep.o" "../src/st_Sleep.cpp"
+Finished building: ../src/st_Sleep.cpp
+ 
+Building target: windlogger_cpp.elf
+Invoking: AVR C++ Linker
+avr-g++ -Wl,-Map,windlogger_cpp.map,--cref -mrelax -Wl,--gc-sections -mmcu=atmega1284p -o "windlogger_cpp.elf"  ./src/Anemometer.o ./src/FAT32.o ./src/FSM.o ./src/Power.o ./src/RTC.o ./src/SDcard.o ./src/SPI.o ./src/Sensor.o ./src/State.o ./src/TWI.o ./src/Usart.o ./src/Windvane.o ./src/fct_SDCard.o ./src/main.o ./src/operator.o ./src/powerAC.o ./src/powerDC.o ./src/st_Config.o ./src/st_Measure.o ./src/st_Output.o ./src/st_Sleep.o   
+makefile:66 : la recette pour la cible « windlogger_cpp.elf » a échouée
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « cardType »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+/usr/lib/gcc/avr/4.9.2/../../../avr/bin/ld : Désactivation de la relâche : il ne pourra pas travailler avec des définitions multiples
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « buffer »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « SDHC_flag »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « totalBlocks »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+./src/SDcard.o : Dans la fonction « SDcard::write(char*) » :
+../src/SDcard.cpp:59 : définitions multiples de « startBlock »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « SDHC_flag »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « cardType »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « buffer »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « totalBlocks »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+./src/fct_SDCard.o : Dans la fonction « SD_writeSingleBlock(unsigned long) » :
+../src/fct_SDCard.cpp:259 : définitions multiples de « startBlock »
+./src/FAT32.o:../src/FAT32.cpp:408 : défini pour la première fois ici
+collect2: error: ld returned 1 exit status
+make: *** [windlogger_cpp.elf] Erreur 1
 
-15:05:59 Build Finished (took 595ms)
+06:20:32 Build Finished (took 1s.972ms)
 

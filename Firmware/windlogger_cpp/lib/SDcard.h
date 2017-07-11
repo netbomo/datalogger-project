@@ -66,6 +66,8 @@ protected:
 	unsigned char flag_reinit;					/** flag set apres SD_init pour ne pas la renvoyer tant que la carte est dans le lécteur et on écris toujours**/
 
 
+	FAT32 fat32;	/**<declaration*/
+
 	char m_filename[15];		/**< filename string */
 	char m_tmp_filename[15];		/**< tmp filename string */
 

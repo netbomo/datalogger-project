@@ -43,7 +43,7 @@
 //Arguments: none
 //return: none
 //***************************************************************************
-unsigned char getBootSectorData (void)
+unsigned char FAT32::getBootSectorData (void)
 {
 struct BS_Structure *bpb; //mapping the buffer onto the structure
 struct MBRinfo_Structure *mbr;
@@ -95,7 +95,7 @@ return 0;
 //Arguments: cluster number for which first sector is to be found
 //return: first sector address
 //***************************************************************************
-unsigned long getFirstSector(unsigned long clusterNumber)
+unsigned long FAT32::getFirstSector(unsigned long clusterNumber)
 {
   return (((clusterNumber - 2) * sectorPerCluster) + firstDataSector);
 }
@@ -107,7 +107,7 @@ unsigned long getFirstSector(unsigned long clusterNumber)
 //if next cluster is to be set 3. next cluster number, if argument#2 = SET, else 0
 //return: next cluster number, if if argument#2 = GET, else 0
 //****************************************************************************
-unsigned long getSetNextCluster (unsigned long clusterNumber,
+unsigned long FAT32::getSetNextCluster (unsigned long clusterNumber,
                                  unsigned char get_set,
                                  unsigned long clusterEntry)
 {
@@ -149,7 +149,7 @@ return (0);
 //        total number of free clusters, if arg1 is TOTAL_FREE & arg2 is GET
 //		  0xffffffff, if any error or if arg2 is SET
 //********************************************************************************************
-unsigned long getSetFreeCluster(unsigned char totOrNext, unsigned char get_set, unsigned long FSEntry)
+unsigned long FAT32::getSetFreeCluster(unsigned char totOrNext, unsigned char get_set, unsigned long FSEntry)
 {
 struct FSInfo_Structure *FS = (struct FSInfo_Structure *) &buffer;
 unsigned char error = 0;
@@ -185,7 +185,7 @@ if((FS->leadSignature != 0x41615252) || (FS->structureSignature != 0x61417272) |
 //        print file/dir list of the root directory, if flag = GET_LIST
 //		  Delete the file mentioned in arg#2, if flag = DELETE
 //****************************************************************************
-struct dir_Structure* findFiles (unsigned char flag,char *fileName)
+struct dir_Structure* FAT32::findFiles (unsigned char flag,char *fileName)
 {
 unsigned long cluster, sector, firstSector, firstCluster, nextCluster;
 struct dir_Structure *dir;
@@ -305,7 +305,7 @@ return 0;
 //	      1, if file is already existing and flag = VERIFY; or if flag=READ and file does not exist
 //		  2, if file name is incompatible
 //***************************************************************************
-unsigned char readFile (unsigned char flag, char *fileName)
+unsigned char FAT32::readFile (unsigned char flag, char *fileName)
 {
 struct dir_Structure *dir;
 unsigned long cluster, byteCounter = 0, fileSize, firstSector;
@@ -359,7 +359,7 @@ return 0;
 //Arguments: pointer to the file name
 //return: 0, if successful else 1.
 //***************************************************************************
-unsigned char convertFileName (char *fileName)
+unsigned char FAT32::convertFileName (char *fileName)
 {
 unsigned char fileNameFAT[11];
 unsigned char j, k;
@@ -404,7 +404,7 @@ return 0;
 //Arguments: pointer to the file name
 //return: none
 //************************************************************************************
-unsigned char writeFile (char *fileName, char *dataString)
+unsigned char FAT32::writeFile (char *fileName, char *dataString)
 {
 unsigned char j,k, data, error = 0, fileCreatedFlag = 0, start = 0, appendFile = 0, sector=0;
 unsigned int i, firstClusterHigh=0, firstClusterLow=0;  //value 0 is assigned just to avoid warning in compilation
@@ -632,7 +632,7 @@ while(1)
 //Arguments: Starting cluster
 //return: the next free cluster
 //****************************************************************
-unsigned long searchNextFreeCluster (unsigned long startCluster)
+unsigned long FAT32::searchNextFreeCluster (unsigned long startCluster)
 {
   unsigned long cluster, *value, sector;
   unsigned char i;
@@ -660,7 +660,7 @@ unsigned long searchNextFreeCluster (unsigned long startCluster)
 //			 2. unsigned long memory value
 //return: none
 //************************************************************
-void displayMemory (unsigned char flag, unsigned long memory)
+void FAT32::displayMemory (unsigned char flag, unsigned long memory)
 {
   char memoryString[] = "              Bytes"; //19 character long string for memory display
   unsigned char i;
@@ -684,7 +684,7 @@ void displayMemory (unsigned char flag, unsigned long memory)
 //Arguments: pointer to the file name
 //return: none
 //********************************************************************
-void deleteFile (char *fileName)
+void FAT32::deleteFile (char *fileName)
 {
   unsigned char error;
 
@@ -701,7 +701,7 @@ void deleteFile (char *fileName)
 //Arguments: #1.flag ADD or REMOVE #2.file size in Bytes
 //return: none
 //********************************************************************
-void freeMemoryUpdate (unsigned char flag, unsigned long size)
+void FAT32::freeMemoryUpdate (unsigned char flag, unsigned long size)
 {
   unsigned long freeClusters;
   //convert file size into number of clusters occupied
