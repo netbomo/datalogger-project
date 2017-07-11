@@ -1,75 +1,78 @@
-16:05:52 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+17:47:29 **** Incremental Build of configuration Debug for project windlogger_cpp ****
 make all 
 Building file: ../src/powerAC.cpp
 Invoking: AVR C++ Compiler
 avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/powerAC.d" -MT"src/powerAC.o" -c -o "src/powerAC.o" "../src/powerAC.cpp"
 ../src/powerAC.cpp: In member function ‘void powerAC::read_values(unsigned char, unsigned char, unsigned int)’:
-../src/powerAC.cpp:122:12: warning: unused variable ‘temp_char’ [-Wunused-variable]
-       char temp_char[12];
+../src/powerAC.cpp:81:19: warning: variable ‘saved_num_samples’ set but not used [-Wunused-but-set-variable]
+      unsigned int saved_num_samples[4]={0};    // used for display debug value
+                   ^
+../src/powerAC.cpp:83:12: warning: unused variable ‘temp_char’ [-Wunused-variable]
+       char temp_char[12];    // used for display debug value
             ^
 ../src/powerAC.cpp: In member function ‘void powerAC::print_config(char*, char*, char*, char*, char*, char*)’:
-../src/powerAC.cpp:245:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:264:30: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
                               ^
-../src/powerAC.cpp:245:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:264:91: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
                                                                                            ^
-../src/powerAC.cpp:246:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:265:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print(arg_id1); FSM::uart0.print(" Voltage Factor: "); FSM::uart0.print(dtostrf(v_factor,0,3,temp_conv));
                                                                    ^
-../src/powerAC.cpp:247:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:266:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));
                                                                     ^
-../src/powerAC.cpp:248:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:267:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print(arg_id5); FSM::uart0.print(" Voltage  Delay: "); FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
                                                                    ^
-../src/powerAC.cpp:248:143: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:267:143: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print(arg_id5); FSM::uart0.print(" Voltage  Delay: "); FSM::uart0.print(dtostrf(v_phase,0,3,temp_conv)); FSM::uart0.print("\r\n");
                                                                                                                                                ^
-../src/powerAC.cpp:249:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:268:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print(arg_id3); FSM::uart0.print(" Current Factor: "); FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
                                                                    ^
-../src/powerAC.cpp:250:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:269:68: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv)); //FSM::uart0.print("\r\n");
                                                                     ^
-../src/powerAC.cpp:251:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:270:67: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print(arg_id6); FSM::uart0.print(" Supply Voltage: "); FSM::uart0.print(dtostrf(showSupply,0,3,temp_conv)); FSM::uart0.print("\r\n");
                                                                    ^
-../src/powerAC.cpp:251:146: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:270:146: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.print(arg_id6); FSM::uart0.print(" Supply Voltage: "); FSM::uart0.print(dtostrf(showSupply,0,3,temp_conv)); FSM::uart0.print("\r\n");
                                                                                                                                                   ^
 ../src/powerAC.cpp: In member function ‘void powerAC::print_data_array()’:
-../src/powerAC.cpp:277:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:296:26: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
    FSM::uart0.print("\r\n");
                           ^
-../src/powerAC.cpp:280:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:299:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                 ^
-../src/powerAC.cpp:280:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:299:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                                                                                        ^
-../src/powerAC.cpp:281:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:300:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                 ^
-../src/powerAC.cpp:281:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:300:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                                                                                        ^
-../src/powerAC.cpp:282:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:301:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                 ^
-../src/powerAC.cpp:282:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:301:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                                                                                        ^
-../src/powerAC.cpp:283:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:302:48: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" s ");FSM::uart0.print(dtostrf(s_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                 ^
-../src/powerAC.cpp:283:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:302:119: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" s ");FSM::uart0.print(dtostrf(s_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                                                                                        ^
-../src/powerAC.cpp:284:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:303:49: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" pf ");FSM::uart0.print(dtostrf(pf_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                  ^
-../src/powerAC.cpp:284:121: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+../src/powerAC.cpp:303:121: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
     FSM::uart0.set(i+'0');FSM::uart0.print(" pf ");FSM::uart0.print(dtostrf(pf_data[i],0,3,temp));FSM::uart0.print("\r\n");
                                                                                                                          ^
 Finished building: ../src/powerAC.cpp
@@ -97,7 +100,7 @@ AVR Memory Usage
 ----------------
 Device: atmega1284p
 
-Program:   16700 bytes (12.7% Full)
+Program:   16606 bytes (12.7% Full)
 (.text + .data + .bootloader)
 
 Data:       1536 bytes (9.4% Full)
@@ -107,5 +110,5 @@ Data:       1536 bytes (9.4% Full)
 Finished building: sizedummy
  
 
-16:05:53 Build Finished (took 720ms)
+17:47:29 Build Finished (took 557ms)
 

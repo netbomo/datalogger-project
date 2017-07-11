@@ -68,7 +68,7 @@ Anemometer FSM::anemo1(0);				// Anemometer 1 definition
 Anemometer FSM::anemo2(1);				// Anemometer 1 definition
 Windvane FSM::windvane(2);				// Windvane sensor definition
 //powerDC FSM::pDC(7,4,0);				// voltage pin, current pin, id
-powerAC FSM::pAC(0,1,0);				// voltage pin, current pin, id
+powerAC FSM::pAC(0,2,0);				// voltage pin, current pin, id
 
 //Class constructor
 FSM::FSM():second_counter(0),nextState(&idle){

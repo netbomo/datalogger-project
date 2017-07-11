@@ -75,8 +75,14 @@
 	 */
 
 	void powerAC::read_values(unsigned char measure_number, unsigned char crossings, unsigned int timeout){
-		 unsigned int crossCount = 0;                             //Used to measure number of times threshold is crossed.
+		 unsigned char crossCount = 0;                             //Used to measure number of times threshold is crossed.
 			  unsigned int numberOfSamples = 0;                        //This is now incremented
+
+			  unsigned int saved_num_samples[4]={0};				// used for display debug value
+			  long int saved_timeout = 0;				// used for display debug value
+			   char temp_char[12];				// used for display debug value
+
+
 			  sumV = 0;
 			  sumI = 0;
 			  sumP = 0;
@@ -95,7 +101,7 @@
 
 		   while(st==false)                                   //the while loop...
 		   {
-			 startV = adc_value(7);                    //using the voltage waveform
+			 startV = adc_value(m_v_pin);                    //using the voltage waveform
 			 if ((startV < (ADC_COUNTS*0.55)) && (startV > (ADC_COUNTS*0.45))) {
 				 st=true;  //check its within range
 				 //FSM::uart0.print("exit while st startV\r\n");
@@ -118,10 +124,9 @@
 
 		   while ((exit_by_crosscount) && (exit_by_timeout))
 		   {
-			   char temp_char[12];
 
 			   numberOfSamples++; //Count number of times looped.
-			   referenceV = Vmeas; //Used for delay/phase compensation
+			   referenceV = v_filtered; //Used for delay/phase compensation
 
 
 			   Vmeas=adc_value(m_v_pin); // channel ?? for the voltage compensated with the offset
@@ -146,29 +151,38 @@
 			   Vshifted = referenceV + v_phase * (v_filtered - referenceV);  //calculates the voltage shift after the measurement
 
 			   sumP += Vshifted*i_filtered; 	// stores the power data
+			   //sumP += v_filtered*i_filtered; 	// debug
 
 			   //-----------------------------------------------------------------------------
 			   // G) Find the number of times the voltage has crossed the initial voltage
 			   //    - every 2 crosses we will have sampled 1 wavelength
 			   //    - so this method allows us to sample an integer number of half wavelengths which increases accuracy
 			   //-----------------------------------------------------------------------------
+
+
+
 			   lastVCross = checkVCross;
 			   if (Vmeas > startV) checkVCross = true;
 			   else checkVCross = false;
 			   if (numberOfSamples==1) lastVCross = checkVCross;
 
-			   if (lastVCross != checkVCross) crossCount++;
+			   if (lastVCross != checkVCross) {
+				   saved_num_samples[crossCount] = numberOfSamples;
+				   crossCount++;
+			   }
 
 			   exit_by_crosscount = crossCount < crossings;
 
-			   exit_by_timeout = (TCNT3-start)<timeout;
+			   saved_timeout = (TCNT3-start);
+
+			   exit_by_timeout = saved_timeout<timeout;
 
 		   }
 
 		   // check exit
 
-		   //if(!exit_by_crosscount) FSM::uart0.print("exit_by_crosscount\r\n");
-		   //if(!exit_by_timeout) FSM::uart0.print("exit_by_timeout\r\n");
+//		   if(!exit_by_crosscount) FSM::uart0.print("exit_by_crosscount\r\n");
+//		   if(!exit_by_timeout) FSM::uart0.print("exit_by_timeout\r\n");
 
 		   //-------------------------------------------------------------------------------------------------------------------------
 		   // 3) Post loop calculations
@@ -186,9 +200,15 @@
 		   s_data[measure_number]= v_data[measure_number]*i_data[measure_number];
 		   pf_data[measure_number] = p_data[measure_number]/s_data[measure_number];
 
-		   //referenceV local ou global?
-
-
+//		   // measuring data : numberof samples, timeout...
+//
+//		   FSM::uart0.print("number of samples : \r\n");
+//		   FSM::uart0.print(ultoa(saved_num_samples[0], temp_char,10 )); FSM::uart0.print("	");
+//		   FSM::uart0.print(ultoa(saved_num_samples[1], temp_char,10 )); FSM::uart0.print("	");
+//		   FSM::uart0.print(ultoa(saved_num_samples[2], temp_char,10 )); FSM::uart0.print("	");
+//		   FSM::uart0.print(ultoa(saved_num_samples[3], temp_char,10 )); FSM::uart0.print("\r\n");
+//		   FSM::uart0.print("timeout : ");
+//		   FSM::uart0.print(ultoa(saved_timeout, temp_char,10 )); FSM::uart0.print("\r\n");
 	}
 
 	void powerAC::calc_averages(){
