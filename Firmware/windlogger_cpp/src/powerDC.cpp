@@ -29,6 +29,10 @@
  *    Detailed description of file.
  */
 
+
+// gets rid of annoying "deprecated conversion from string constant blah blah" warning
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+
 #include <avr/io.h>
 #include <string.h>
 #include <stdlib.h>
@@ -62,7 +66,7 @@ void powerDC::read_values(unsigned char measure_number, unsigned int timeout){
 
 	  unsigned long start = TCNT3;    //millis()-start makes sure it doesn't get stuck in the loop if there is an error.
 
-	  char temp_char[10];
+	  //char temp_char[10];
 	  //FSM::uart0.print("m_v_pin : ");FSM::uart0.print(itoa(m_v_pin,temp_char,10));FSM::uart0.print("	m_i_pin : 0");FSM::uart0.print(itoa(m_i_pin,temp_char,10));FSM::uart0.print(" m_id : ");FSM::uart0.print(itoa(m_id,temp_char,10));FSM::uart0.print("\r\n");
 
    //-------------------------------------------------------------------------------------------------------------------------

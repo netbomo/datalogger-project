@@ -31,6 +31,8 @@
 
 // gets rid of annoying "deprecated conversion from string constant blah blah" warning
 #pragma GCC diagnostic ignored "-Wwrite-strings"
+// gets rid of annoying "cast to pointer from blabla od diferent size" warning
+#pragma GCC diagnostic ignored "-Wint-to-pointer-cast"
 
 #include <avr/io.h>
 #include <stdlib.h>

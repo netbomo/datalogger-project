@@ -3618,3 +3618,19 @@ Caused by: java.lang.IllegalArgumentException: Argument cannot be null
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:182)
 	... 24 more
+!SESSION 2017-07-11 12:22:25.392 -----------------------------------------------
+eclipse.buildId=4.6.3.M20170301-0400
+java.version=1.8.0_131
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-07-11 12:24:07.351
+!MESSAGE Indexed 'windlogger_cpp' (21 sources, 45 headers) in 18,1 sec: 1 610 declarations; 4 982 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-07-11 12:28:49.295
+!MESSAGE Indexed 'windlogger_cpp' (21 sources, 45 headers) in 5,2 sec: 1 610 declarations; 4 982 references; 0 unresolved inclusions; 1 syntax errors; 0 unresolved names (0 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-07-11 12:55:37.025
+!MESSAGE Indexed 'windlogger_cpp' (21 sources, 46 headers) in 1,48 sec: 1 610 declarations; 5 018 references; 0 unresolved inclusions; 1 syntax errors; 5 unresolved names (0,075 %)

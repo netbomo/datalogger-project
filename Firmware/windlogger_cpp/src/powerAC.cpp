@@ -29,6 +29,10 @@
  *    Detailed description of file.
  */
 
+
+// gets rid of annoying "deprecated conversion from string constant blah blah" warning
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+
 #include <avr/io.h>
 #include <string.h>
 #include <stdlib.h>
@@ -97,7 +101,7 @@
 
 		   while ((exit_by_crosscount) && (exit_by_timeout))
 		   {
-			   char temp_char[12];
+			   //char temp_char[12];
 
 			   numberOfSamples++; //Count number of times looped.
 			   referenceV = Vmeas; //Used for delay/phase compensation

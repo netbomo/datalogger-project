@@ -10,18 +10,22 @@
 #define HEADERS_FCT_SDCARD_H_
 
 
-//Use following macro if you don't want to activate the multiple block access functions
-//those functions are not required for FAT32
+class fct_SDCard {
+
+
+
+	//Use following macro if you don't want to activate the multiple block access functions
+	//those functions are not required for FAT32
 
 #define FAT_TESTING_ONLY	// a commenter pour desactiver les fonctions FAT32
 
 
 
-// macros  SS (PG1) pin  Chip Select of SD actif a 0
+	// macros  SS (PG1) pin  Chip Select of SD actif a 0
 #define SD_CS_ASSERT     PORTB &= ~0x03				/**mettre le 7em bit a 0 (cs)*/
 #define SD_CS_DEASSERT   PORTB |= 0x03				/**mettre le 7em bit a 1 (cs)*/
 
-//SD commands, many of these are not used here
+	//SD commands, many of these are not used here
 #define GO_IDLE_STATE            0					/**logiciel reset*/
 #define SEND_OP_COND             1					/**introduire le processus d'initialisation*/
 #define SEND_IF_COND			 8					/**seulement Pour SDC V2. Vérifiez gamme de tension*/
@@ -45,48 +49,49 @@
 #define ON     1
 #define OFF    0
 
-volatile unsigned long startBlock, totalBlocks;
-volatile unsigned char SDHC_flag, cardType, buffer[512];
+	volatile unsigned long startBlock, totalBlocks;
+	volatile unsigned char SDHC_flag, cardType, buffer[512];
 
-/**
- * Fonction d'initialisation de la carte SD dans le mode SPI
- * @return	0 lorsque l'initialisation a réussie, 1 lorsque la carte est non détécter, 2 lorsque l'initialisation a échoué
- */
-unsigned char SD_init(void);
+	/**
+	 * Fonction d'initialisation de la carte SD dans le mode SPI
+	 * @return	0 lorsque l'initialisation a réussie, 1 lorsque la carte est non détécter, 2 lorsque l'initialisation a échoué
+	 */
+	unsigned char SD_init(void);
 
-/**
- * Fonction pour envoyé une commande a la carte SD
- * @param cmd	valeur de la commande sur 8bit
- * @param arg	paramétre de la commande sur 32bit
- * @return	reponse	l'état du bus SPI
- */
-unsigned char SD_sendCommand(unsigned char cmd, unsigned long arg);
+	/**
+	 * Fonction pour envoyé une commande a la carte SD
+	 * @param cmd	valeur de la commande sur 8bit
+	 * @param arg	paramétre de la commande sur 32bit
+	 * @return	reponse	l'état du bus SPI
+	 */
+	unsigned char SD_sendCommand(unsigned char cmd, unsigned long arg);
 
-/**
- * Fonction pour lire un seul block de la carte SD
- * @param startBlock	le début du block
- * @return 0	si y'a pas d'erreur sur la lécture,	1	si le temps est écoulé, reponse 	autrement
- */
-unsigned char SD_readSingleBlock(unsigned long startBlock);
+	/**
+	 * Fonction pour lire un seul block de la carte SD
+	 * @param startBlock	le début du block
+	 * @return 0	si y'a pas d'erreur sur la lécture,	1	si le temps est écoulé, reponse 	autrement
+	 */
+	unsigned char SD_readSingleBlock(unsigned long startBlock);
 
-/**
- * Fonction pour écrire un seul block
- * @param startBlock	le début du block
- * @return	 0	si y'a pas d'erreur sur l'écriture,	1	si le temps est écoulé, reponse 	autrement
- */
-unsigned char SD_writeSingleBlock(unsigned long startBlock);
+	/**
+	 * Fonction pour écrire un seul block
+	 * @param startBlock	le début du block
+	 * @return	 0	si y'a pas d'erreur sur l'écriture,	1	si le temps est écoulé, reponse 	autrement
+	 */
+	unsigned char SD_writeSingleBlock(unsigned long startBlock);
 
-/**
- * Fonction pour effacer un nombre de block précisé de la carte SD
- * @param startBlock	le début du block
- * @param totalBlocks
- * @return
- */
-unsigned char SD_erase (unsigned long startBlock, unsigned long totalBlocks);
+	/**
+	 * Fonction pour effacer un nombre de block précisé de la carte SD
+	 * @param startBlock	le début du block
+	 * @param totalBlocks
+	 * @return
+	 */
+	unsigned char SD_erase (unsigned long startBlock, unsigned long totalBlocks);
 
-//not implemented
-//unsigned char SD_readMultipleBlock (unsigned long startBlock, unsigned long totalBlocks);
-//unsigned char SD_writeMultipleBlock(unsigned long startBlock, unsigned long totalBlocks);
+	//not implemented
+	//unsigned char SD_readMultipleBlock (unsigned long startBlock, unsigned long totalBlocks);
+	//unsigned char SD_writeMultipleBlock(unsigned long startBlock, unsigned long totalBlocks);
 
+};
 
 #endif /* HEADERS_FCT_SDCARD_H_ */

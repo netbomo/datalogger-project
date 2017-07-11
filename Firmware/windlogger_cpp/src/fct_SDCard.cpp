@@ -5,6 +5,10 @@
  *      Author: formateur
  */
 
+
+// gets rid of annoying "deprecated conversion from string constant blah blah" warning
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -20,7 +24,7 @@
 //return	: unsigned char; will be 0 if no error,
 // 			  otherwise the response byte will be sent
 //******************************************************************
-unsigned char SD_init(void)
+unsigned char fct_SDCard::SD_init(void)
 {
 	unsigned char response, SD_version;
 	unsigned int retry=0 ;
@@ -134,7 +138,7 @@ unsigned char SD_init(void)
 //return	: unsigned char; response byte
 //******************************************************************
 
-unsigned char SD_sendCommand(unsigned char cmd, unsigned long arg)
+unsigned char fct_SDCard::SD_sendCommand(unsigned char cmd, unsigned long arg)
 {
 	unsigned char response, retry=0, status;
 
@@ -195,7 +199,7 @@ unsigned char SD_sendCommand(unsigned char cmd, unsigned long arg)
 // 			  otherwise the response byte will be sent
 //*****************************************************************
 
-unsigned char SD_erase (unsigned long startBlock, unsigned long totalBlocks)
+unsigned char fct_SDCard::SD_erase (unsigned long startBlock, unsigned long totalBlocks)
 {
 	unsigned char response;
 
@@ -221,7 +225,7 @@ unsigned char SD_erase (unsigned long startBlock, unsigned long totalBlocks)
 // 			  otherwise the response byte will be sent
 //******************************************************************
 
-unsigned char SD_readSingleBlock(unsigned long startBlock)
+unsigned char fct_SDCard::SD_readSingleBlock(unsigned long startBlock)
 {
 	unsigned char response;
 	unsigned int i, retry=0;
@@ -255,7 +259,7 @@ unsigned char SD_readSingleBlock(unsigned long startBlock)
 // 			  otherwise the response byte will be sent
 //******************************************************************
 
-unsigned char SD_writeSingleBlock(unsigned long startBlock)
+unsigned char fct_SDCard::SD_writeSingleBlock(unsigned long startBlock)
 {
 	unsigned char response;
 	unsigned int i, retry=0;
@@ -312,7 +316,7 @@ unsigned char SD_writeSingleBlock(unsigned long startBlock)
 //return	: unsigned char; will be 0 if no error,
 // 			  otherwise the response byte will be sent
 //****************************************************************************/
-unsigned char SD_readMultipleBlock (unsigned long startBlock, unsigned long totalBlocks)
+unsigned char fct_SDCard::SD_readMultipleBlock (unsigned long startBlock, unsigned long totalBlocks)
 {
 unsigned char response;
 unsigned int i, retry=0;
@@ -367,7 +371,7 @@ return 0;
 //return: unsigned char; will be 0 if no error,
 // otherwise the response byte will be sent
 //****************************************************************************/
-unsigned char SD_writeMultipleBlock(unsigned long startBlock, unsigned long totalBlocks)
+unsigned char fct_SDCard::SD_writeMultipleBlock(unsigned long startBlock, unsigned long totalBlocks)
 {
 unsigned char response, data;
 unsigned int i, retry=0;

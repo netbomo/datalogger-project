@@ -9,6 +9,10 @@
 //Date				: 10 May 2011
 //*********************************************************
 
+
+#include "../lib/fct_SDCard.h"
+
+
 #ifndef _FAT32_H_
 #define _FAT32_H_
 
@@ -155,6 +159,9 @@ public:
 
 
 	const unsigned char MAX_STRING_SIZE	=	100;	 //defining the maximum size of the dataString
+
+protected:
+	fct_SDCard fct;
 
 };
 

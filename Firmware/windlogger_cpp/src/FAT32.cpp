@@ -9,6 +9,10 @@
 //Date				: 10 May 2011
 //************************************************************
 
+
+// gets rid of annoying "deprecated conversion from string constant blah blah" warning
+#pragma GCC diagnostic ignored "-Wwrite-strings"
+
 #include <avr/io.h>
 #include <avr/pgmspace.h>
 #include <stdlib.h>
@@ -52,20 +56,20 @@ unsigned long dataSectors;
 
 unusedSectors = 0;
 
-SD_readSingleBlock(0);
-bpb = (struct BS_Structure *)buffer;
+fct.SD_readSingleBlock(0);
+bpb = (struct BS_Structure *)fct.buffer;
 
 if(bpb->SjumpBoot[0]!=0xE9 && bpb->SjumpBoot[0]!=0xEB)   //check if it is boot sector
 {
-  mbr = (struct MBRinfo_Structure *) buffer;       //if it is not boot sector, it must be MBR
+  mbr = (struct MBRinfo_Structure *) fct.buffer;       //if it is not boot sector, it must be MBR
   
   if(mbr->signature != 0xaa55) return 1;       //if it is not even MBR then it's not FAT32
   	
   partition = (struct partitionInfo_Structure *)(mbr->partitionData);//first partition
   unusedSectors = partition->firstSector; //the unused sectors, hidden to the FAT
   
-  SD_readSingleBlock(partition->firstSector);//read the bpb sector
-  bpb = (struct BS_Structure *)buffer;
+  fct.SD_readSingleBlock(partition->firstSector);//read the bpb sector
+  bpb = (struct BS_Structure *)fct.buffer;
   if(bpb->SjumpBoot[0]!=0xE9 && bpb->SjumpBoot[0]!=0xEB) return 1;
 }
 
@@ -124,10 +128,10 @@ FATEntryOffset = (unsigned int) ((clusterNumber * 4) % bytesPerSector);
 
 //read the sector into a buffer
 while(retry <10)
-{ if(!SD_readSingleBlock(FATEntrySector)) break; retry++;}
+{ if(!fct.SD_readSingleBlock(FATEntrySector)) break; retry++;}
 
 //get the cluster address from the buffer
-FATEntryValue = (unsigned long *) &buffer[FATEntryOffset];
+FATEntryValue = (unsigned long *) &(fct.buffer)[FATEntryOffset];
 
 if(get_set == GET)
   return ((*FATEntryValue) & 0x0fffffff);
@@ -135,7 +139,7 @@ if(get_set == GET)
 
 *FATEntryValue = clusterEntry;   //for setting new value in cluster entry in FAT
 
-SD_writeSingleBlock(FATEntrySector);
+fct.SD_writeSingleBlock(FATEntrySector);
 
 return (0);
 }
@@ -151,10 +155,10 @@ return (0);
 //********************************************************************************************
 unsigned long FAT32::getSetFreeCluster(unsigned char totOrNext, unsigned char get_set, unsigned long FSEntry)
 {
-struct FSInfo_Structure *FS = (struct FSInfo_Structure *) &buffer;
+struct FSInfo_Structure *FS = (struct FSInfo_Structure *) &(fct.buffer);
 unsigned char error = 0;
 
-SD_readSingleBlock(unusedSectors + 1);
+fct.SD_readSingleBlock(unusedSectors + 1);
 
 if((FS->leadSignature != 0x41615252) || (FS->structureSignature != 0x61417272) || (FS->trailSignature !=0xaa550000))
   return 0xffffffff;
@@ -173,7 +177,7 @@ if((FS->leadSignature != 0x41615252) || (FS->structureSignature != 0x61417272) |
    else // when totOrNext = NEXT_FREE
 	  FS->nextFreeCluster = FSEntry;
  
-   error = SD_writeSingleBlock(unusedSectors + 1);	//update FSinfo
+   error = fct.SD_writeSingleBlock(unusedSectors + 1);	//update FSinfo
  }
  return 0xffffffff;
 }
@@ -201,12 +205,12 @@ while(1)
 
    for(sector = 0; sector < sectorPerCluster; sector++)
    {
-     SD_readSingleBlock (firstSector + sector);
+	   fct.SD_readSingleBlock (firstSector + sector);
 	
 
      for(i=0; i<bytesPerSector; i+=32)
      {
-	    dir = (struct dir_Structure *) &buffer[i];
+	    dir = (struct dir_Structure *) &(fct.buffer)[i];
 
         if(dir->name[0] == EMPTY) //indicates end of the file list of the directory
 		{
@@ -237,7 +241,7 @@ while(1)
                 
 				 //mark file as 'deleted' in FAT table
 				 dir->name[0] = DELETED;    
-				 SD_writeSingleBlock (firstSector+sector);
+				 fct.SD_writeSingleBlock (firstSector+sector);
 				 			 
 				 freeMemoryUpdate (ADD, dir->SfileSize);
 
@@ -336,11 +340,11 @@ while(1)
 
   for(j=0; j<sectorPerCluster; j++)
   {
-    SD_readSingleBlock(firstSector + j);
+	  fct.SD_readSingleBlock(firstSector + j);
     
 	for(k=0; k<512; k++)
     {
-      FSM::uart0.set(buffer[k]);
+      FSM::uart0.set(fct.buffer[k]);
       if ((byteCounter++) >= fileSize ) return 0;
     }
   }
@@ -463,14 +467,14 @@ while(1)
    if(start)
    {
       start = 0;
-	  startBlock = getFirstSector (cluster) + sector;
-	  SD_readSingleBlock (startBlock);
+      fct.startBlock = getFirstSector (cluster) + sector;
+      fct.SD_readSingleBlock (startBlock);
 	  i = fileSize % bytesPerSector;
 	  j = sector;
    }
    else
    {
-      startBlock = getFirstSector (cluster);
+	   fct.startBlock = getFirstSector (cluster);
 	  i=0;
 	  j=0;
    }
@@ -481,16 +485,16 @@ while(1)
 
 	 data = dataString[k++];
 	 //transmitByte(data);
-     buffer[i++] = data;
+	 fct.buffer[i++] = data;
 	 fileSize++;
      
      if(i >= 512)   //though 'i' will never become greater than 512, it's kept here to avoid 
 	 {				//infinite loop in case it happens to be greater than 512 due to some data corruption
 	   i=0;
-	   error = SD_writeSingleBlock (startBlock);
+	   error = fct.SD_writeSingleBlock (fct.startBlock);
        j++;
 	   if(j == sectorPerCluster) {j = 0; break;}
-	   startBlock++; 
+	   fct. startBlock++;
      }
    } while((data != '\n') && (k < MAX_STRING_SIZE)); //stop when newline character is found
    													 //or when string size limit reached
@@ -498,8 +502,8 @@ while(1)
    if((data == '\n') || (k >= MAX_STRING_SIZE))
    {
       for(;i<512;i++)  //fill the rest of the buffer with 0x00
-        buffer[i]= 0x00;
-   	  error = SD_writeSingleBlock (startBlock);
+    	  fct.buffer[i]= 0x00;
+   	  error = fct.SD_writeSingleBlock (fct.startBlock);
 
       break;
    } 
@@ -526,15 +530,15 @@ getSetFreeCluster (NEXT_FREE, SET, cluster); //update FSinfo next free cluster e
 
 if(appendFile)  //executes this loop if file is to be appended
 {
-  SD_readSingleBlock (appendFileSector);    
-  dir = (struct dir_Structure *) &buffer[appendFileLocation]; 
+	fct.SD_readSingleBlock (appendFileSector);
+  dir = (struct dir_Structure *) &(fct.buffer)[appendFileLocation];
 
   dir->lastAccessDate = 0;   //date of last access ignored
 //  dir->writeTime = timeFAT;  //setting new time of last write, obtained from RTC
 //  dir->writeDate = dateFAT;  //setting new date of last write, obtained from RTC
   extraMemory = fileSize - dir->SfileSize;
   dir->SfileSize = fileSize;
-  SD_writeSingleBlock (appendFileSector);
+  fct.SD_writeSingleBlock (appendFileSector);
   freeMemoryUpdate (REMOVE, extraMemory); //updating free memory count in FSinfo sector;
 
   
@@ -554,12 +558,12 @@ while(1)
 
    for(sector = 0; sector < sectorPerCluster; sector++)
    {
-     SD_readSingleBlock (firstSector + sector);
+	   fct.SD_readSingleBlock (firstSector + sector);
 	
 
      for(i=0; i<bytesPerSector; i+=32)
      {
-	    dir = (struct dir_Structure *) &buffer[i];
+	    dir = (struct dir_Structure *) &(fct.buffer)[i];
 
 		if(fileCreatedFlag)   //to mark last directory entry with 0x00 (empty) mark
 		 { 					  //indicating end of the directory file list
@@ -584,7 +588,7 @@ while(1)
 		  dir->firstClusterLO = firstClusterLow;
 		  dir->SfileSize = fileSize;
 
-		  SD_writeSingleBlock (firstSector + sector);
+		  fct.SD_writeSingleBlock (firstSector + sector);
 		  fileCreatedFlag = 1;
 
 		  FSM::uart0.print("\r\n");
@@ -641,10 +645,10 @@ unsigned long FAT32::searchNextFreeCluster (unsigned long startCluster)
     for(cluster =startCluster; cluster <totalClusters; cluster+=128) 
     {
       sector = unusedSectors + reservedSectorCount + ((cluster * 4) / bytesPerSector);
-      SD_readSingleBlock(sector);
+      fct.SD_readSingleBlock(sector);
       for(i=0; i<128; i++)
       {
-       	 value = (unsigned long *) &buffer[i*4];
+       	 value = (unsigned long *) &(fct.buffer)[i*4];
          if(((*value) & 0x0fffffff) == 0)
             return(cluster+i);
       }  
