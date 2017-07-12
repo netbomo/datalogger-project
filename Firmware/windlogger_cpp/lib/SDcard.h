@@ -60,6 +60,10 @@ public:
 
 	void write(char *string);
 
+	void build_filename(unsigned char month,unsigned char year);
+
+	void print_filename();
+
 
 protected:
 

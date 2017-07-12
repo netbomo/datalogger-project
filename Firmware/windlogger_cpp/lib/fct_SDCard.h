@@ -11,8 +11,10 @@
 
 
 class fct_SDCard {
+public:
+	fct_SDCard();
 
-
+	~fct_SDCard();
 
 	//Use following macro if you don't want to activate the multiple block access functions
 	//those functions are not required for FAT32

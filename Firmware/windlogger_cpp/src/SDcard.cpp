@@ -34,6 +34,7 @@
 
 #include <avr/io.h>
 #include <string.h>
+#include <stdlib.h>
 
 #include "../lib/FSM.h"
 #include "../lib/fct_SDCard.h"
@@ -42,7 +43,7 @@
 SDcard::SDcard() {
 	// TODO Auto-generated constructor stub
 	flag_reinit = 0;
-	cardType=0;
+	fat32.set_cardType(0);
 
 }
 
@@ -53,9 +54,12 @@ SDcard::~SDcard() {
 void SDcard::init(){
 
 	//do stuff
+	if(flag_reinit == 0){								/** envoyer un init de la carte si elle est remise dans le lécteur*/
+		//SDCard init
 
-	SD_init();
-	fat32.getBootSectorData();
+		fat32.init();
+		fat32.getBootSectorData();
+	}
 }
 
 
@@ -63,7 +67,7 @@ void SDcard::write(char *string){
 	if	((PINC & 0x03)==0){						/**si PG2 = 0 => la carte SD est dans le lécteur*/
 				if(flag_reinit == 0){								/** envoyer un init de la carte si elle est remise dans le lécteur*/
 					//SDCard init
-					SD_init();
+					fat32.init();
 					// OUVERTURE DE LA PARTITION
 					fat32.getBootSectorData();				/** envoyer cette fonction pour l'identification du péripherique ( a faire toujours apres l'init de SD)*/
 
@@ -93,4 +97,19 @@ void SDcard::write(char *string){
 					flag_reinit = 0;										/**rénitialiser i a la sortie de cette boucle pour lancé l'init si PG2 change*/
 
 				}
+}
+
+void SDcard::build_filename(unsigned char month,unsigned char year){
+
+	char temp_conv[10];				/**registre de convertion*/
+
+	strcpy(m_filename,itoa(month,temp_conv,10));
+	strcat(m_filename,"_") ;
+	strcat(m_filename,itoa(year,temp_conv,10));
+	strcat(m_filename,".csv") ;
+ }
+
+void SDcard::print_filename(){
+	FSM::uart0.print("sd file name : ");
+	FSM::uart0.print(m_filename);FSM::uart0.print("\r\n");
 }

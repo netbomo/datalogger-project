@@ -39,6 +39,8 @@ class Output : public State {
 private:
 	char string[100];		/// take care about string length! if data are bigger than strng length ->> soft reset.
 
+	unsigned char last_month;
+
 public :
 	// Operations
 	Output ();

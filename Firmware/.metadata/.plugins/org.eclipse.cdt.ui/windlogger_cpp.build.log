@@ -1,353 +1,42 @@
-12:55:39 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+07:41:13 **** Incremental Build of configuration Debug for project windlogger_cpp ****
 make all 
-Building file: ../src/FAT32.cpp
+Building file: ../src/st_Output.cpp
 Invoking: AVR C++ Compiler
-avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/FAT32.d" -MT"src/FAT32.o" -c -o "src/FAT32.o" "../src/FAT32.cpp"
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h: In member function ‘unsigned char FAT32::getBootSectorData()’:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:74:16: error: ‘unsigned char fct_SDCard::SD_readSingleBlock(long unsigned int)’ is private
-  unsigned char SD_readSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:59:25: error: within this context
- fct.SD_readSingleBlock(0);
-                         ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:60:34: error: within this context
- bpb = (struct BS_Structure *)fct.buffer;
-                                  ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:64:42: error: within this context
-   mbr = (struct MBRinfo_Structure *) fct.buffer;       //if it is not boot sector, it must be MBR
-                                          ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:74:16: error: ‘unsigned char fct_SDCard::SD_readSingleBlock(long unsigned int)’ is private
-  unsigned char SD_readSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:71:48: error: within this context
-   fct.SD_readSingleBlock(partition->firstSector);//read the bpb sector
-                                                ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:72:36: error: within this context
-   bpb = (struct BS_Structure *)fct.buffer;
-                                    ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h: In member function ‘long unsigned int FAT32::getSetNextCluster(long unsigned int, unsigned char, long unsigned int)’:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:74:16: error: ‘unsigned char fct_SDCard::SD_readSingleBlock(long unsigned int)’ is private
-  unsigned char SD_readSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:131:44: error: within this context
- { if(!fct.SD_readSingleBlock(FATEntrySector)) break; retry++;}
-                                            ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:134:41: error: within this context
- FATEntryValue = (unsigned long *) &(fct.buffer)[FATEntryOffset];
-                                         ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:81:16: error: ‘unsigned char fct_SDCard::SD_writeSingleBlock(long unsigned int)’ is private
-  unsigned char SD_writeSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:142:39: error: within this context
- fct.SD_writeSingleBlock(FATEntrySector);
-                                       ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h: In member function ‘long unsigned int FAT32::getSetFreeCluster(unsigned char, unsigned char, long unsigned int)’:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:158:65: error: within this context
- struct FSInfo_Structure *FS = (struct FSInfo_Structure *) &(fct.buffer);
-                                                                 ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:74:16: error: ‘unsigned char fct_SDCard::SD_readSingleBlock(long unsigned int)’ is private
-  unsigned char SD_readSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:161:41: error: within this context
- fct.SD_readSingleBlock(unusedSectors + 1);
-                                         ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:81:16: error: ‘unsigned char fct_SDCard::SD_writeSingleBlock(long unsigned int)’ is private
-src/subdir.mk:78 : la recette pour la cible « src/FAT32.o » a échouée
-  unsigned char SD_writeSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:180:53: error: within this context
-    error = fct.SD_writeSingleBlock(unusedSectors + 1); //update FSinfo
-                                                     ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h: In member function ‘dir_Structure* FAT32::findFiles(unsigned char, char*)’:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:74:16: error: ‘unsigned char fct_SDCard::SD_readSingleBlock(long unsigned int)’ is private
-  unsigned char SD_readSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:208:49: error: within this context
-     fct.SD_readSingleBlock (firstSector + sector);
-                                                 ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:213:43: error: within this context
-      dir = (struct dir_Structure *) &(fct.buffer)[i];
-                                           ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:81:16: error: ‘unsigned char fct_SDCard::SD_writeSingleBlock(long unsigned int)’ is private
-  unsigned char SD_writeSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:244:49: error: within this context
-      fct.SD_writeSingleBlock (firstSector+sector);
-                                                 ^
-../src/FAT32.cpp:198:6: warning: unused variable ‘temp_char’ [-Wunused-variable]
- char temp_char[15];
-      ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h: In member function ‘unsigned char FAT32::readFile(unsigned char, char*)’:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:74:16: error: ‘unsigned char fct_SDCard::SD_readSingleBlock(long unsigned int)’ is private
-  unsigned char SD_readSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:343:42: error: within this context
-    fct.SD_readSingleBlock(firstSector + j);
-                                          ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:347:26: error: within this context
-       FSM::uart0.set(fct.buffer[k]);
-                          ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h: In member function ‘unsigned char FAT32::writeFile(char*, char*)’:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:52:25: error: ‘volatile long unsigned int fct_SDCard::startBlock’ is private
-  volatile unsigned long startBlock, totalBlocks;
-                         ^
-../src/FAT32.cpp:470:11: error: within this context
-       fct.startBlock = getFirstSector (cluster) + sector;
-           ^
-../src/FAT32.cpp:471:31: error: ‘startBlock’ was not declared in this scope
-       fct.SD_readSingleBlock (startBlock);
-                               ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:52:25: error: ‘volatile long unsigned int fct_SDCard::startBlock’ is private
-  volatile unsigned long startBlock, totalBlocks;
-                         ^
-../src/FAT32.cpp:477:9: error: within this context
-     fct.startBlock = getFirstSector (cluster);
-         ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:488:7: error: within this context
-   fct.buffer[i++] = data;
-       ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:52:25: error: ‘volatile long unsigned int fct_SDCard::startBlock’ is private
-  volatile unsigned long startBlock, totalBlocks;
-                         ^
-../src/FAT32.cpp:494:42: error: within this context
-     error = fct.SD_writeSingleBlock (fct.startBlock);
-                                          ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:81:16: error: ‘unsigned char fct_SDCard::SD_writeSingleBlock(long unsigned int)’ is private
-  unsigned char SD_writeSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:494:52: error: within this context
-     error = fct.SD_writeSingleBlock (fct.startBlock);
-                                                    ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:52:25: error: ‘volatile long unsigned int fct_SDCard::startBlock’ is private
-  volatile unsigned long startBlock, totalBlocks;
-                         ^
-../src/FAT32.cpp:497:10: error: within this context
-     fct. startBlock++;
-          ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:505:12: error: within this context
-        fct.buffer[i]= 0x00;
-            ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:52:25: error: ‘volatile long unsigned int fct_SDCard::startBlock’ is private
-  volatile unsigned long startBlock, totalBlocks;
-                         ^
-../src/FAT32.cpp:506:44: error: within this context
-       error = fct.SD_writeSingleBlock (fct.startBlock);
-                                            ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:81:16: error: ‘unsigned char fct_SDCard::SD_writeSingleBlock(long unsigned int)’ is private
-  unsigned char SD_writeSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:506:54: error: within this context
-       error = fct.SD_writeSingleBlock (fct.startBlock);
-                                                      ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:74:16: error: ‘unsigned char fct_SDCard::SD_readSingleBlock(long unsigned int)’ is private
-  unsigned char SD_readSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:533:42: error: within this context
-  fct.SD_readSingleBlock (appendFileSector);
-                                          ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:534:40: error: within this context
-   dir = (struct dir_Structure *) &(fct.buffer)[appendFileLocation];
-                                        ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:81:16: error: ‘unsigned char fct_SDCard::SD_writeSingleBlock(long unsigned int)’ is private
-  unsigned char SD_writeSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:541:44: error: within this context
-   fct.SD_writeSingleBlock (appendFileSector);
-                                            ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:74:16: error: ‘unsigned char fct_SDCard::SD_readSingleBlock(long unsigned int)’ is private
-  unsigned char SD_readSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:561:49: error: within this context
-     fct.SD_readSingleBlock (firstSector + sector);
-                                                 ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:566:43: error: within this context
-      dir = (struct dir_Structure *) &(fct.buffer)[i];
-                                           ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:81:16: error: ‘unsigned char fct_SDCard::SD_writeSingleBlock(long unsigned int)’ is private
-  unsigned char SD_writeSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:591:50: error: within this context
-     fct.SD_writeSingleBlock (firstSector + sector);
-                                                  ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h: In member function ‘long unsigned int FAT32::searchNextFreeCluster(long unsigned int)’:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:74:16: error: ‘unsigned char fct_SDCard::SD_readSingleBlock(long unsigned int)’ is private
-  unsigned char SD_readSingleBlock(unsigned long startBlock);
-                ^
-../src/FAT32.cpp:648:36: error: within this context
-       fct.SD_readSingleBlock(sector);
-                                    ^
-In file included from ../src/../lib/../lib/../lib/FAT32.h:13:0,
-                 from ../src/../lib/../lib/SDcard.h:34,
-                 from ../src/../lib/FSM.h:41,
-                 from ../src/FAT32.cpp:20:
-../src/../lib/../lib/../lib/../lib/fct_SDCard.h:53:56: error: ‘volatile unsigned char fct_SDCard::buffer [512]’ is private
-  volatile unsigned char SDHC_flag, cardType, buffer[512];
-                                                        ^
-../src/FAT32.cpp:651:42: error: within this context
-          value = (unsigned long *) &(fct.buffer)[i*4];
-                                          ^
-make: *** [src/FAT32.o] Erreur 1
+avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/st_Output.d" -MT"src/st_Output.o" -c -o "src/st_Output.o" "../src/st_Output.cpp"
+Finished building: ../src/st_Output.cpp
+ 
+Building target: windlogger_cpp.elf
+Invoking: AVR C++ Linker
+avr-g++ -Wl,-Map,windlogger_cpp.map,--cref -mrelax -Wl,--gc-sections -mmcu=atmega1284p -o "windlogger_cpp.elf"  ./src/Anemometer.o ./src/FAT32.o ./src/FSM.o ./src/Power.o ./src/RTC.o ./src/SDcard.o ./src/SPI.o ./src/Sensor.o ./src/State.o ./src/TWI.o ./src/Usart.o ./src/Windvane.o ./src/fct_SDCard.o ./src/main.o ./src/operator.o ./src/powerAC.o ./src/powerDC.o ./src/st_Config.o ./src/st_Measure.o ./src/st_Output.o ./src/st_Sleep.o   
+Finished building target: windlogger_cpp.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S windlogger_cpp.elf  >"windlogger_cpp.lss"
+Finished building: windlogger_cpp.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex windlogger_cpp.elf  "windlogger_cpp.hex"
+Finished building: windlogger_cpp.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex windlogger_cpp.elf  "windlogger_cpp.eep"
+Finished building: windlogger_cpp.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
+AVR Memory Usage
+----------------
+Device: atmega1284p
 
-12:55:40 Build Finished (took 255ms)
+Program:   21328 bytes (16.3% Full)
+(.text + .data + .bootloader)
+
+Data:       2577 bytes (15.7% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+07:41:13 Build Finished (took 755ms)
 

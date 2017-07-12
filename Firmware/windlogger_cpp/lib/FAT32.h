@@ -104,6 +104,10 @@ public:
 
 	~FAT32();
 
+	void init();
+
+	void set_cardType(unsigned char val);
+
 	//************* functions *************
 	unsigned char getBootSectorData (void);
 	unsigned long getFirstSector(unsigned long clusterNumber);

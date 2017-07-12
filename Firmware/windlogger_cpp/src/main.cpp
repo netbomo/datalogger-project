@@ -50,8 +50,10 @@ int main(){
  */
 	DDRA = 0x00;	// All adc in input mode
 
-	DDRB = 0xF0;				//	config the port B
+	DDRB = 0b10111000;				//	config the port B
 	PORTB = 0x00;				//	set all portb 's bits to low
+
+	PINC = 0x00;				//Set portC in input mode
 
 	FSM fsm; 					//	FSM instance, that is the state machine mechanism
 

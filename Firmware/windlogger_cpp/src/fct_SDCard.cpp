@@ -16,7 +16,13 @@
 #include "../lib/fct_SDCard.h"
 #include "../lib/SPI.h"
 
+	fct_SDCard::fct_SDCard(){
 
+	}
+
+	fct_SDCard::~fct_SDCard(){
+
+	}
 
 //******************************************************************
 //Function	: to initialize the SD/SDHC card in SPI mode

@@ -81,6 +81,10 @@ public:
 	 */
 	unsigned char get_second() const{return m_time.secs;}
 
+	unsigned char get_month() const{return m_time.month;}
+
+	unsigned char get_year() const{return m_time.year;}
+
 	unsigned long get_timestamp();
 
 	/******************************************************************************

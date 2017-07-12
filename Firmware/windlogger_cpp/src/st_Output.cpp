@@ -32,6 +32,7 @@
 // gets rid of annoying "deprecated conversion from string constant blah blah" warning
 #pragma GCC diagnostic ignored "-Wwrite-strings"
 
+#include <avr/io.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -43,6 +44,10 @@
 
 
 Output::Output(){
+	last_month = FSM::rtc.get_month();		// initialize month reference in order to set data in the correct filename on the SD card
+
+	FSM::SD.build_filename(FSM::rtc.get_month(),FSM::rtc.get_year());	// build the filename
+
 	strcpy(m_name,"output\0");
 	FSM::logger.output_enable= USART0 | SD_CARD;			/// @todo enable must be choose by config
 }
@@ -60,9 +65,22 @@ void Output::execute (){
 		usart1_print();
 	}
 	if(FSM::logger.output_enable||SD_CARD){
-		FSM::uart0.print("go to sd write ->");
-		SDCard_print();
+		FSM::uart0.print("SD present? : ");
+		FSM::uart0.set((PINC&&(1<<3))+'0');FSM::uart0.print("\r\n");
+
+		if(PINC&&(1<<3)){
+			// test the month, if is different, build a new filename in order to store data in the sd card
+			if(last_month!=FSM::rtc.get_month()){
+				FSM::SD.build_filename(FSM::rtc.get_month(),FSM::rtc.get_year());
+				FSM::SD.print_filename();
+			}
+			FSM::uart0.print("go to sd write ->");
+			SDCard_print();
+		}
+		else FSM::uart0.print("Pas de carte SD\r\n");
+
 	}
+
 	if(FSM::logger.output_enable||WIFI){
 		usart1_print();
 	}
@@ -107,10 +125,10 @@ void Output::usart1_print (){
 
 void Output::SDCard_print (){
 
-	//SD.init();
+	FSM::SD.init();
 	FSM::uart0.print(" init ->");
-	//SD.write("It's working\r\n");
+	FSM::SD.write("It's working\r\n");
 	FSM::uart0.print(" write ->");
-	//SD.write("fine on 2 lines!");
+	FSM::SD.write("fine on 2 lines!");
 	FSM::uart0.print(" write too!");
 }

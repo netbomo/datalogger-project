@@ -41,6 +41,16 @@
 
 	}
 
+
+	void FAT32::init(){
+		fct.SD_init();
+	}
+
+
+	void FAT32::set_cardType(unsigned char val){
+		fct.cardType = val;
+	}
+
 //***************************************************************************
 //Function: to read data from boot sector of SD card, to determine important
 //parameters like bytesPerSector, sectorsPerCluster etc.
@@ -468,7 +478,7 @@ while(1)
    {
       start = 0;
       fct.startBlock = getFirstSector (cluster) + sector;
-      fct.SD_readSingleBlock (startBlock);
+      fct.SD_readSingleBlock (fct.startBlock);
 	  i = fileSize % bytesPerSector;
 	  j = sector;
    }

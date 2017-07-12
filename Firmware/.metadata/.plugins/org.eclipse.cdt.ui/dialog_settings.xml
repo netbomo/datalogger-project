@@ -29,6 +29,8 @@
 		<item value="false" key="caseSensitive"/>
 		<item value="227191" key="searchFlags"/>
 		<list key="previousPatterns">
+			<item value="SDcard"/>
+			<item value="SD_init"/>
 			<item value="cardType"/>
 			<item value="unusedSectors"/>
 			<item value="firstDataSector"/>
