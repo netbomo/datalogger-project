@@ -106,6 +106,7 @@ public:
 
 	void init();
 
+
 	void set_cardType(unsigned char val);
 
 	//************* functions *************

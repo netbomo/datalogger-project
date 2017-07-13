@@ -40,7 +40,7 @@ unsigned char fct_SDCard::SD_init(void)
 	FSM::spi.init();																/**envoyer l'initialition du périphérique SPI**/
 
 	for(i=0;i<10;i++){
-		SD_CS_ASSERT;														/**set chip select*/
+		ASSERT();														/**set chip select*/
 		do
 		{
 		   response = SD_sendCommand(GO_IDLE_STATE, 0); 					/**envoyer un reset du logiciel */
@@ -55,7 +55,7 @@ unsigned char fct_SDCard::SD_init(void)
 
 		} while(response != 0x01);											/**response = 0x01 : la carte est en idle stat et pas d'érreur*/
 
-		SD_CS_DEASSERT;
+		DEASSERT();
 		FSM::spi.transmit (0xff);												/**transmission du 1er octet */
 		FSM::spi.transmit (0xff);												/**transmission du 2eme octet */
 
@@ -123,10 +123,10 @@ unsigned char fct_SDCard::SD_init(void)
 		//
 		switch (cardType)													/** un switch pour le type de la carte (pour vérifier la communication avec la carte)*/
 		{
-		case 1 : FSM::uart0.print("\rver1.x\n");break;
-		case 2 : FSM::uart0.print("\rSDHC\n");break;
-		case 3 : FSM::uart0.print("\rver2.x\n");break;
-		default :FSM::uart0.print("\runknown Sd card\n");
+		case 1 : FSM::uart0.print("ver1.x\r\n");break;
+		case 2 : FSM::uart0.print("SDHC\r\n");break;
+		case 3 : FSM::uart0.print("ver2.x\r\n");break;
+		default :FSM::uart0.print("unknown Sd card\r\n");
 		}
 		//
 
@@ -164,7 +164,7 @@ unsigned char fct_SDCard::SD_sendCommand(unsigned char cmd, unsigned long arg)
 				 	 arg = arg << 9;
 			   }
 
-		SD_CS_ASSERT;
+		ASSERT();
 
 		FSM::spi.transmit(cmd | 0x40); //send command, first two bits always '01'
 		FSM::spi.transmit(arg>>24);
@@ -192,7 +192,7 @@ unsigned char fct_SDCard::SD_sendCommand(unsigned char cmd, unsigned long arg)
 		}
 
 		FSM::spi.receive(); //extra 8 CLK
-		SD_CS_DEASSERT;
+		DEASSERT();
 
 
 	return response; //return state
@@ -240,12 +240,12 @@ unsigned char fct_SDCard::SD_readSingleBlock(unsigned long startBlock)
 
 		 if(response != 0x00) return response; 												/**vérifié si SD status: 0x00 - OK (pas de flag activé)*/
 
-		SD_CS_ASSERT;
+		ASSERT();
 
 		retry = 0;
 		while(FSM::spi.receive() != 0xfe) 														/**attendre le start block qu'il prend la val 0xfe*/
 		  if(retry++ > 0xfffe){
-			  	 	 SD_CS_DEASSERT;
+			  	 	 DEASSERT();
 			  	 	 return 1;  } 															/**sortie de la fonction time-out*/
 
 		for(i=0; i<512; i++) 																/** lire toutes les 512 bytes*/
@@ -253,7 +253,7 @@ unsigned char fct_SDCard::SD_readSingleBlock(unsigned long startBlock)
 
 
 		FSM::spi.receive(); 																		/**laisser coulé 8 clock pulses*/
-		SD_CS_DEASSERT;
+		DEASSERT();
 
 	return 0;
 }
@@ -274,7 +274,7 @@ unsigned char fct_SDCard::SD_writeSingleBlock(unsigned long startBlock)
 
 		 if(response != 0x00) return response; 												/**vérifié si SD status: 0x00 - OK (pas de flag activé)*/
 
-		SD_CS_ASSERT;
+		ASSERT();
 
 		FSM::spi.transmit(0xfe);     															/**envoyer le start block 0xfe (page 197 datasheet SD)*/
 
@@ -291,23 +291,23 @@ unsigned char fct_SDCard::SD_writeSingleBlock(unsigned long startBlock)
 																																AAA='110'-data rejected due to write error
 																															}*/
 		{
-			SD_CS_DEASSERT;
+			DEASSERT();
 			return response;
 		}
 
 		while(!FSM::spi.receive()) 																/** attendre que la carte SD finis d'écrire et passe a l'état get idle*/
-			if(retry++ > 0xfffe){SD_CS_DEASSERT; return 1;}									/**sortie de la fonction time-out*/
+			if(retry++ > 0xfffe){DEASSERT(); return 1;}									/**sortie de la fonction time-out*/
 
-		SD_CS_DEASSERT;
+		DEASSERT();
 		FSM::spi.transmit(0xff);   																/**juste laisser passer 8 clock cycle delay avant la réaffirmation de CS line*/
-		SD_CS_ASSERT;         																/**Réaffirmation de CS line pour vérifier si la carte est toujours occupé*/
+		ASSERT();         																/**Réaffirmation de CS line pour vérifier si la carte est toujours occupé*/
 
 		while(!FSM::spi.receive()) 																/** attendre que la carte SD finis d'écrire et passe a l'état get idle*/
 			if(retry++ > 0xfffe){
-				SD_CS_DEASSERT; return 1;
+				DEASSERT(); return 1;
 			}
 
-		SD_CS_DEASSERT;
+		DEASSERT();
 
 	return 0;
 }

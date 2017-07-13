@@ -1,4 +1,4 @@
-07:41:13 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+07:14:22 **** Incremental Build of configuration Debug for project windlogger_cpp ****
 make all 
 Building file: ../src/st_Output.cpp
 Invoking: AVR C++ Compiler
@@ -28,7 +28,7 @@ AVR Memory Usage
 ----------------
 Device: atmega1284p
 
-Program:   21328 bytes (16.3% Full)
+Program:   21312 bytes (16.3% Full)
 (.text + .data + .bootloader)
 
 Data:       2577 bytes (15.7% Full)
@@ -38,5 +38,5 @@ Data:       2577 bytes (15.7% Full)
 Finished building: sizedummy
  
 
-07:41:13 Build Finished (took 755ms)
+07:14:22 Build Finished (took 478ms)
 

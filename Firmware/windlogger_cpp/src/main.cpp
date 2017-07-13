@@ -51,7 +51,8 @@ int main(){
 	DDRA = 0x00;	// All adc in input mode
 
 	DDRB = 0b10111000;				//	config the port B
-	PORTB = 0x00;				//	set all portb 's bits to low
+	PORTB = 0b00001000;				//	set all portb 's bits to low
+
 
 	PINC = 0x00;				//Set portC in input mode
 

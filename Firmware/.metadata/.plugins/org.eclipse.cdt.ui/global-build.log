@@ -1,21 +1,4 @@
-07:21:01 **** Incremental Build of configuration Debug for project windlogger_cpp ****
-make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
-AVR Memory Usage
-----------------
-Device: atmega1284p
-
-Program:   14840 bytes (11.3% Full)
-(.text + .data + .bootloader)
-
-Data:       2307 bytes (14.1% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-07:41:13 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+07:14:22 **** Incremental Build of configuration Debug for project windlogger_cpp ****
 make all 
 Building file: ../src/st_Output.cpp
 Invoking: AVR C++ Compiler
@@ -45,7 +28,7 @@ AVR Memory Usage
 ----------------
 Device: atmega1284p
 
-Program:   21328 bytes (16.3% Full)
+Program:   21312 bytes (16.3% Full)
 (.text + .data + .bootloader)
 
 Data:       2577 bytes (15.7% Full)

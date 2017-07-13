@@ -65,6 +65,7 @@ public:
 	void print_filename();
 
 
+
 protected:
 
 	unsigned char flag_reinit;					/** flag set apres SD_init pour ne pas la renvoyer tant que la carte est dans le lécteur et on écris toujours**/

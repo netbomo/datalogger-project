@@ -32,6 +32,7 @@
 #ifndef OUTPUT__HPP
 #define OUTPUT__HPP
 
+#include <avr/io.h>
 #include "../lib/State.h"
 #include "../lib/SDcard.h"
 
@@ -58,6 +59,9 @@ public :
 	void usart1_print ();
 
 	void SDCard_print ();
+
+
+
 
 	// Constants
 	static const unsigned char USART0 = 1;		/// enable constant for USART0

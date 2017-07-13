@@ -9,6 +9,7 @@
 #ifndef HEADERS_FCT_SDCARD_H_
 #define HEADERS_FCT_SDCARD_H_
 
+#include <avr/io.h>
 
 class fct_SDCard {
 public:
@@ -23,9 +24,7 @@ public:
 
 
 
-	// macros  SS (PG1) pin  Chip Select of SD actif a 0
-#define SD_CS_ASSERT     PORTB &= ~0x03				/**mettre le 7em bit a 0 (cs)*/
-#define SD_CS_DEASSERT   PORTB |= 0x03				/**mettre le 7em bit a 1 (cs)*/
+
 
 	//SD commands, many of these are not used here
 #define GO_IDLE_STATE            0					/**logiciel reset*/
@@ -59,6 +58,10 @@ public:
 	 * @return	0 lorsque l'initialisation a réussie, 1 lorsque la carte est non détécter, 2 lorsque l'initialisation a échoué
 	 */
 	unsigned char SD_init(void);
+
+	// macros  SS (PB3) pin  Chip Select of SD actif a 0
+	inline void ASSERT(){ PORTB &= ~(1<<3);}			/**mettre le 7em bit a 0 (cs)*/
+	inline void DEASSERT(){PORTB |= (1<<3);}				/**mettre le 7em bit a 1 (cs)*/
 
 	/**
 	 * Fonction pour envoyé une commande a la carte SD
