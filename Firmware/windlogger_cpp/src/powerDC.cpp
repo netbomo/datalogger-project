@@ -57,7 +57,7 @@ void powerDC::read_values(unsigned char measure_number, unsigned int timeout){
 	  sumI = 0;
 	  sumP = 0;
 
-	  double SupplyVoltage = 4930; // VCC/2 is present on ADC5
+	  double SupplyVoltage = 4900; // VCC/2 is present on ADC5
 	  showSupply = SupplyVoltage ;
 
 	  unsigned long start = TCNT3;    //millis()-start makes sure it doesn't get stuck in the loop if there is an error.

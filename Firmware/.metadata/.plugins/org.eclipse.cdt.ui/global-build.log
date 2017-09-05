@@ -1,101 +1,15 @@
-15:36:52 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+17:02:16 **** Incremental Build of configuration Debug for project digital_test ****
 make all 
 Invoking: Print Size
-avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
+avr-size --format=avr --mcu=atmega1284p digital_test.elf
 AVR Memory Usage
 ----------------
 Device: atmega1284p
 
-Program:   18880 bytes (14.4% Full)
+Program:     672 bytes (0.5% Full)
 (.text + .data + .bootloader)
 
-Data:       1858 bytes (11.3% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-15:42:22 **** Incremental Build of configuration Debug for project windlogger_cpp ****
-make all 
-Building file: ../src/powerDC.cpp
-Invoking: AVR C++ Compiler
-avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/powerDC.d" -MT"src/powerDC.o" -c -o "src/powerDC.o" "../src/powerDC.cpp"
-../src/powerDC.cpp: In member function ‘void powerDC::print_config(char*, char*, char*, char*)’:
-../src/powerDC.cpp:166:28: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
-                            ^
-../src/powerDC.cpp:166:89: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print("Sensor "); FSM::uart0.print(print(temp_conv));FSM::uart0.print("\r\n");
-                                                                                         ^
-../src/powerDC.cpp:167:65: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id1); FSM::uart0.print(" Voltage Factor: "); FSM::uart0.print(dtostrf(v_factor,0,3,temp_conv));
-                                                                 ^
-../src/powerDC.cpp:168:66: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));FSM::uart0.print("\r\n");
-                                                                  ^
-../src/powerDC.cpp:168:142: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id2); FSM::uart0.print(" Voltage  Offset: "); FSM::uart0.print(dtostrf(v_offset,0,3,temp_conv));FSM::uart0.print("\r\n");
-                                                                                                                                              ^
-../src/powerDC.cpp:169:65: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-Finished building: ../src/powerDC.cpp
-  FSM::uart0.print(arg_id3); FSM::uart0.print(" Current Factor: "); FSM::uart0.print(dtostrf(i_factor,0,3,temp_conv));
-                                                                 ^
-../src/powerDC.cpp:170:66: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv));FSM::uart0.print("\r\n"); //FSM::uart0.print("\r\n");
-                                                                  ^
-../src/powerDC.cpp:170:142: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print(arg_id4); FSM::uart0.print(" Current  Offset: "); FSM::uart0.print(dtostrf(i_offset,0,3,temp_conv));FSM::uart0.print("\r\n"); //FSM::uart0.print("\r\n");
-                                                                                                                                              ^
-../src/powerDC.cpp: In member function ‘void powerDC::print_data_array()’:
-../src/powerDC.cpp:189:25: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-  FSM::uart0.print("\r\n");
-                         ^
-../src/powerDC.cpp:192:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
- 
-   FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                               ^
-../src/powerDC.cpp:192:118: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.set(i+'0');FSM::uart0.print(" v ");FSM::uart0.print(dtostrf(v_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                      ^
-../src/powerDC.cpp:193:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-Building target: windlogger_cpp.elf
-   FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                               ^
-../src/powerDC.cpp:193:118: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.set(i+'0');FSM::uart0.print(" i ");FSM::uart0.print(dtostrf(i_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                      ^
-../src/powerDC.cpp:194:47: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-Invoking: AVR C++ Linker
-avr-g++ -Wl,-Map,windlogger_cpp.map,--cref -mrelax -Wl,--gc-sections -mmcu=atmega1284p -o "windlogger_cpp.elf"  ./src/Anemometer.o ./src/FSM.o ./src/Power.o ./src/RTC.o ./src/Sensor.o ./src/State.o ./src/TWI.o ./src/Usart.o ./src/Windvane.o ./src/main.o ./src/operator.o ./src/powerAC.o ./src/powerDC.o ./src/st_Config.o ./src/st_Measure.o ./src/st_Output.o ./src/st_Sleep.o   
-   FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                               ^
-../src/powerDC.cpp:194:118: warning: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-   FSM::uart0.set(i+'0');FSM::uart0.print(" p ");FSM::uart0.print(dtostrf(p_data[i],0,3,temp));FSM::uart0.print("\r\n");
-                                                                                                                      ^
-Finished building target: windlogger_cpp.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S windlogger_cpp.elf  >"windlogger_cpp.lss"
-Finished building: windlogger_cpp.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex windlogger_cpp.elf  "windlogger_cpp.hex"
-Finished building: windlogger_cpp.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex windlogger_cpp.elf  "windlogger_cpp.eep"
-Finished building: windlogger_cpp.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
-AVR Memory Usage
-----------------
-Device: atmega1284p
-
-Program:   18838 bytes (14.4% Full)
-(.text + .data + .bootloader)
-
-Data:       1858 bytes (11.3% Full)
+Data:         46 bytes (0.3% Full)
 (.data + .bss + .noinit)
 
 

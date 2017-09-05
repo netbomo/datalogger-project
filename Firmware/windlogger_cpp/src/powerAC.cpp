@@ -88,7 +88,7 @@
 			  sumP = 0;
 
 			  /// @todo increase offset calibration with an external 2.5V reference
-			  double SupplyVoltage = 4930; // VCC/2 is present on ADC5
+			  double SupplyVoltage = 4900; // VCC/2 is present on ADC5
 			  //long SupplyVoltage = readVcc();
 			  showSupply = SupplyVoltage ;
 

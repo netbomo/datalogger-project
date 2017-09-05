@@ -15,5 +15,5 @@ avrdudepropertypage/weight_top_expanded=80
 avrpaths//systempath/AVRDUDE=/usr/bin
 avrpaths//systempath/AVRGCC=/usr/bin
 avrpaths//systempath/AVRINCLUDE=/usr/lib/avr/include
-avrpaths//systempath/MAKE=/usr/bin
+avrpaths//systempath/MAKE=
 eclipse.preferences.version=1
