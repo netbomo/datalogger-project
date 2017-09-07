@@ -6,18 +6,24 @@
 CPP_SRCS += \
 ../src/FSM.cpp \
 ../src/Usart.cpp \
+../src/adc_calib.cpp \
+../src/esp826612.cpp \
 ../src/main.cpp \
 ../src/operator.cpp 
 
 OBJS += \
 ./src/FSM.o \
 ./src/Usart.o \
+./src/adc_calib.o \
+./src/esp826612.o \
 ./src/main.o \
 ./src/operator.o 
 
 CPP_DEPS += \
 ./src/FSM.d \
 ./src/Usart.d \
+./src/adc_calib.d \
+./src/esp826612.d \
 ./src/main.d \
 ./src/operator.d 
 

@@ -10,9 +10,11 @@
 
 #include "../lib/FSM.h"
 
+/// @todo change timer2 for external RTC test
 unsigned long int FSM::timestamp = 0;
 
-Usart FSM::usart0(0,Usart::BR_57600);
+Usart FSM::usart0(0,Usart::BR_115200);
+Usart FSM::usart1(1,Usart::BR_115200);
 
 
 FSM::FSM(){
@@ -21,6 +23,7 @@ FSM::FSM(){
 		TCCR2B = _BV(CS22) | _BV(CS20); // prescaler for overload interrupt each 1 second : CS2[2:0]=101;
 		ASSR |=  _BV(AS2);					// Set the bit AS2 in the ASSR register to clock the timer 2 from the external crystal
 
+		wifi.LDO_enable();
 }
 
 /**

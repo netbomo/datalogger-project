@@ -36,25 +36,30 @@
 
 char Usart::data_udr0 = 0;
 unsigned char Usart::flag_rx0 = 0;
+char Usart::data_udr1 = 0;
+unsigned char Usart::flag_rx1 = 0;
 
-Usart::Usart():m_usart(255) {}
 
-Usart::Usart(unsigned char usart, unsigned int baudrate) {
+Usart::Usart(unsigned char usart, unsigned int baudrate):m_usart(usart),m_baudrate(baudrate) {
 	// TODO Auto-generated constructor stub
 
-	switch (usart) {
+	switch (m_usart) {
 		case 0:
-			m_usart = usart;
-			UBRR0 = baudrate; // set baud rate
+			UBRR0 = m_baudrate; // set baud rate
 
 			UCSR0A = _BV(U2X0); // for the baud rate setting
 
 			UCSR0B = _BV(RXCIE0) | _BV(RXEN0) |_BV(TXEN0); //enable receiver and transmitter
-			UCSR0C = _BV(UPM01) | _BV(UPM00) | _BV(UCSZ01) | _BV(UCSZ00);	// Set frame format : 8data 2stop bit
+			UCSR0C =  _BV(UCSZ01) | _BV(UCSZ00);	// Set frame format : 8data 1stop bit
 
 			break;
 		case 1:
+			UBRR1 = baudrate; // set baud rate
 
+			UCSR1A = _BV(U2X0); // for the baud rate setting
+
+			UCSR1B = _BV(RXCIE1) | _BV(RXEN1) |_BV(TXEN1); //enable receiver and transmitter
+			UCSR1C =  _BV(UCSZ11) | _BV(UCSZ10);	// Set frame format : 8data 1stop bit
 			break;
 		default:
 			break;
@@ -72,6 +77,14 @@ ISR(USART0_RX_vect)							//sous routine d'interruption lors d'une reception
 	Usart::flag_rx0 = 1;					//mise à 1 du drapeau de reception pour interruption
 }
 
+ISR(USART1_RX_vect)							//sous routine d'interruption lors d'une reception
+{
+	Usart::data_udr1 = UDR1;						//récupération du registre de donnée UDR0 dans la variable globale data_udr0
+	Usart::flag_rx1 = 1;					//mise à 1 du drapeau de reception pour interruption
+}
+
+
+
 void Usart::set(char character){
 	switch (m_usart) {
 	case 0:
@@ -82,7 +95,11 @@ void Usart::set(char character){
 		UDR0 = character;
 		break;
 	case 1:
-
+		/* Wait for empty transmit buffer */
+		while ( !( UCSR1A & (1<<UDRE1)) )
+			;
+		/* Put data into buffer, sends the data */
+		UDR1 = character;
 		break;
 	default:
 		break;
@@ -98,5 +115,6 @@ void Usart::print(char* string){
 			i++;								//tant que la data ne contient pas '\0'
 		}
 }
+
 
 

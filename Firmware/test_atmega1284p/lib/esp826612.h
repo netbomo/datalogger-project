@@ -6,7 +6,7 @@
  *    This program is free software: you can redistribute it and/or modify
  *    it under the terms of the GNU General Public License as published by
  *    the Free Software Foundation, either version 3 of the License, or
- *    (at your option) any later version.
+ *    any later version.
  *
  *    This program is distributed in the hope that it will be useful,
  *    but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -21,52 +21,64 @@
  *******************************************************************************
  *
  *
- *    @file   Usart.h
- *    @Author gilou
- *    @date   26 avr. 2017
+ *    @file   esp826612.h
+ *    @author betzy
+ *    @date   6 sept. 2017
  *    @brief  Brief description of file.
  *
  *    Detailed description of file.
  */
-#ifndef USART_H_
-#define USART_H_
+#ifndef ESP826612_H_
+#define ESP826612_H_
 
-class Usart {
+#include <avr/io.h>
+#include <util/delay.h>
+
+class esp8266_12 {
 public:
+	/**
+	 * Constructor
+	 */
+	esp8266_12();
 
 	/**
-	 *	\brief USART constructor on asynchronous mode
-	 *	\param usart 0 for usart0 or 1 for usart1
-	 *	\param baudrate	Use BR_XXXX constant to define baud rate speed
+	 * Destructor
 	 */
-	Usart(unsigned char usart, unsigned int baudrate);
-	virtual ~Usart();
+	virtual ~esp8266_12();
 
-	/**
-	 *	\brief USART char sender function
-	 *	\param character to send on the USART0
-	 */
-	void set(char character);
+	/** Constants definition */
+	const char NB_OF_STRING = 10;		/*!< Wifi string number need to record 	*/
+	const char NB_OF_CHAR = 30;			/*!< String char max number		 		*/
 
-	/**
-	 *	\brief USART string sender function
-	 * 	\param string to send on the USART0
-	 */
+	// Module pins control
+
+	// Reset the module
+
+	inline void reset(){PORTD &= ~_BV(6);
+						_delay_us(1);
+						PORTD |= _BV(6);};
+
+	// Module enable pin
+
+	inline void enable(){PORTD |= _BV(4) | _BV(6);};
+
+	inline void disable(){PORTD &= ~_BV(4);};
+
+	// LDO enable pin
+
+	inline void LDO_enable(){PORTD |= _BV(5);};
+
+	inline void LDO_disable(){PORTD &= ~_BV(5);};
+
+	// print
+
 	void print(char *string);
 
-	static char data_udr0;
-	static unsigned char flag_rx0;
-	static char data_udr1;
-	static unsigned char flag_rx1;
-
-	// Constants
-static const unsigned int BR_9600 = 207;	/**< UBBRn registers value to work at 9600 baud**/
-static const unsigned int BR_57600 = 34;	/**< UBBRn registers value to work at 57600 baud**/
-static const unsigned int BR_115200 = 16;	/**< UBBRn registers value to work at 115200 baud**/
-
-private:
-	unsigned char m_usart;
-	unsigned int m_baudrate;
+	/****************************************************************************************
+	 * This part is used only in the test mode or in the test firmware
+	 */
+	void test_init();
+	void test_wifi_tx(char *string);
 };
 
-#endif /* USART_H_ */
+#endif /* ESP826612_H_ */
