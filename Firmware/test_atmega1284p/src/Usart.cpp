@@ -67,9 +67,6 @@ Usart::Usart(unsigned char usart, unsigned int baudrate):m_usart(usart),m_baudra
 
 }
 
-Usart::~Usart() {
-	// TODO Auto-generated destructor stub
-}
 
 ISR(USART0_RX_vect)							//sous routine d'interruption lors d'une reception
 {

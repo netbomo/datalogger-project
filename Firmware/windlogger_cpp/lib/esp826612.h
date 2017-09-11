@@ -48,7 +48,7 @@ public:
 
 	/** Constants definition */
 	const char NB_OF_STRING = 10;		/*!< Wifi string number need to record 	*/
-	const char NB_OF_CHAR = 30;			/*!< String char max number		 		*/
+	const char NB_OF_CHAR = 35;			/*!< String char max number		 		*/
 
 	// Module pins control
 
@@ -60,7 +60,7 @@ public:
 
 	// Module enable pin
 
-	inline void enable(){PORTD |= _BV(4) | _BV(6);};
+	inline void enable(){PORTD |= _BV(4) | _BV(5) | _BV(6);};
 
 	inline void disable(){PORTD &= ~_BV(4);};
 

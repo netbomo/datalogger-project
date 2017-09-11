@@ -48,10 +48,13 @@ int main(){
 /******************************************************************************
  * Hardware initialization
  */
-	DDRA = 0x00;	// All adc in input mode
+	DDRA = 0x00;		// PortA as analog inputs
 
-	DDRB = 0xF0;				//	config the port B
+	DDRB = 0xF7;		// PortB[0-2] are input, other is set to outputs, SPI will be initialise when it will be used.
 	PORTB = 0x00;				//	set all portb 's bits to low
+
+	DDRD= 0xFF;			// Config the port D as outputs. D0 to D3 are Usart0 and 1, they will be rewrited.
+	PORTD = 0x00;		// Don"t start the Wifi module at the wake up. (D4-7)
 
 	FSM fsm; 					//	FSM instance, that is the state machine mechanism
 

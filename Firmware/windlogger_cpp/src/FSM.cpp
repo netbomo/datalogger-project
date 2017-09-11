@@ -58,7 +58,8 @@ unsigned long int FSM::timestamp = 0;		// timestamp is an uint32 to stock the cu
 /******************************************************************************
  * static class definition need to be out of constructor or function. That refer to hardware peripherals
  */
-Usart FSM::uart0(0,Usart::BR_57600);	// This is the uart0 definition
+Usart FSM::uart0(0,Usart::BR_115200);	// This is the uart0 definition
+Usart FSM::uart1(1,Usart::BR_115200);	// This is the uart0 definition
 TWI FSM::twi;							// this is the twi definition
 RTC FSM::rtc;								// this is the rtc definition
 
@@ -73,6 +74,8 @@ powerDC FSM::pDC(7,4,1);				// voltage pin, current pin, id
 //Class constructor
 FSM::FSM():second_counter(0),nextState(&idle){
 
+	sei();								// enable interrupt
+
 	config.load_logger();				// call the eeprom configuration from the config state
 
 	// initialize each sensors from the sensors_param structure, Be careful! for each new sensor, increase the eeprom.sensor_counter
@@ -82,12 +85,9 @@ FSM::FSM():second_counter(0),nextState(&idle){
 	pAC.load_param();
 	pDC.load_param();
 
-//
-//	for(unsigned char i = 0; i<10 ;++i){
-//		pAC.read_values(i,4,2000);
-//	}
-
-	sei();								// enable interrupt
+	// initialize each module and test it
+	wifi.enable();
+	wifi.test_init();
 
 }
 

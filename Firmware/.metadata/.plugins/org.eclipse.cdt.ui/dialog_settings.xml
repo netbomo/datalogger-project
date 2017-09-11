@@ -9,9 +9,26 @@
 		<item value="649" key="DIALOG_X_ORIGIN"/>
 		<item value="233" key="DIALOG_Y_ORIGIN"/>
 	</section>
+	<section name="org.eclipse.cdt.internal.ui.browser.opentype.OpenTypeActionSettings">
+		<item value="true" key="show_enums"/>
+		<item value="true" key="show_unions"/>
+		<item value="true" key="show_macros"/>
+		<item value="true" key="show_classes"/>
+		<item value="true" key="show_functions"/>
+		<item value="true" key="show_lowlevel"/>
+		<item value="true" key="show_namespaces"/>
+		<item value="true" key="show_enumerators"/>
+		<item value="true" key="show_structs"/>
+		<item value="399" key="x"/>
+		<item value="571" key="width"/>
+		<item value="31" key="y"/>
+		<item value="true" key="show_typedefs"/>
+		<item value="true" key="show_variables"/>
+		<item value="682" key="height"/>
+	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
-		<item value="156" key="size.height"/>
-		<item value="695" key="size.width"/>
+		<item value="138" key="size.height"/>
+		<item value="677" key="size.width"/>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>

@@ -1,0 +1,55 @@
+Initialization Windlogger test 0.2.2
+WiFi initialization :
+sl
+EmonESP 12793839
+l
+TAG
+n
+Connecting to SSID: TP-LINK_A46E
+
+
+Connected, IP: 192.168.0.100
+4
+Server started
+1
+
+
+s$lܞ|�$�|
+          
+           �l�"|��2�s�"�p��oN�lNn���
+                                        cp�l s$p�N��
+                                                          $
+                                                           ��
+
+                                                              B
+                                                               o�|l�
+                                                                      �|�n�$� d`�N
+             d Ns��
+                      c
+                        �lr��o
+                               Bd�r
+                                    ����2$�{l��N�
+EmonESP 12793839
+Firmware: BUILD_TAG
+Connecting to SSID: TP-LINK_A46E
+Connected, IP: 192.168.0.100
+Server started
+
+rll��|�#�o
+           
+            �
+             $�b|��r�b�b��on�lNo���cp�l`{lp�n�
+                                                        �
+                                                         $
+                                                          ��
+                                                             co�|$�
+                                                                       ��No�l� $`�no
+                $`os�o
+                        #lrےn
+                                b
+                                 �$�r����d�rl��n�
+EmonESP 12793839
+Firmware: BUILD_TAG
+Connecting to SSID: TP-LINK_A46E
+Connected, IP: 192.168.0.100
+Server started

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item value="-469" key="DIALOG_X_ORIGIN"/>
-		<item value="-448" key="DIALOG_Y_ORIGIN"/>
+		<item value="514" key="DIALOG_X_ORIGIN"/>
+		<item value="44" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 		<item value="true" key="actionSetFilter"/>
@@ -15,8 +15,8 @@
 		<item value="Iceweasel→Firefox ESR" key="EditorSelectionDialog.STORE_ID_DESCR"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="-1" key="dialogHeight"/>
-		<item value="-1" key="dialogWidth"/>
+		<item value="244" key="dialogHeight"/>
+		<item value="344" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">

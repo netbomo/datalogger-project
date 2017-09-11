@@ -49,6 +49,8 @@
 #include "../lib/st_Output.h"
 #include "../lib/st_Sleep.h"
 
+#include "../lib/esp826612.h"
+
 
 /**
  * \brief The Logger structure regroup members need to be saved in the micro-controler's eeprom
@@ -121,6 +123,7 @@ public :
 	 * static class, that refer to hardware peripherals
 	 */
 	static Usart uart0;				/**< This is the uart0 declaration */
+	static Usart uart1;				/**< This is the uart0 declaration */
 	static TWI twi;					/**< This is the twi declaration */
 	static RTC rtc;					/**< This is the rtc declaration */
 
@@ -134,6 +137,12 @@ public :
 	static Windvane windvane;		/**< this is the windvane declaration */
 	static powerAC pAC;			/**< this is the powerAC declaration */
 	static powerDC pDC;			/**< this is the powerAC declaration */
+
+
+	/******************************************************************************
+	 * Modules declaration
+	 */
+	esp8266_12 wifi;			/**< This is the wifi module declaration */
 
 
 private :

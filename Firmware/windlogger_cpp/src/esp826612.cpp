@@ -46,7 +46,7 @@ esp8266_12::~esp8266_12() {
 }
 
 void  esp8266_12::print(char *string){
-	FSM::usart1.print(string);
+	FSM::uart1.print(string);
 }
 
 
@@ -59,14 +59,16 @@ void esp8266_12::test_init(){
 	unsigned char uart1_al = 0,uart1_ac = 0;								// index for lines and colunms
 	char recording = 0;
 
-		/** Waiting for the char 'E' first char of "EmonESP xxx string" **********/
+		FSM::uart0.print("\r\nWifi test :\r\n");
+
+		/** Waiting for the char 'E' first char of "EmonESP xxxxxx string" **********/
 		while(!recording){
-			if(FSM::usart1.flag_rx1 && FSM::usart1.data_udr1 == 'E')		// Test if the new char is a 'E'
+			if(FSM::uart1.flag_rx1 && FSM::uart1.data_udr1 == 'E')		// Test if the new char is a 'E'
 			{
-				uart1_array[uart1_al][uart1_ac] = FSM::usart1.data_udr1;	// if right save it in the first line, first column.
+				uart1_array[uart1_al][uart1_ac] = FSM::uart1.data_udr1;	// if right save it in the first line, first column.
 				uart1_ac++;													// increase the column
 				recording = 1;												// we can go starting record char
-				FSM::usart1.flag_rx1 = 0;									// reset the flag
+				FSM::uart1.flag_rx1 = 0;									// reset the flag
 			}
 			_delay_us(1);													// If no an 'E', delay needs do not leave the loop empty (compilation optimization)
 		}
@@ -74,12 +76,12 @@ void esp8266_12::test_init(){
 		/** Record the 5 string from the wifi module *****************************/
 		for(uart1_al = 0; uart1_al < NB_OF_STRING; uart1_al++){						// record the 5 strings
 			while(recording){												// recording to find '\r' char, end of line
-				if(FSM::usart1.flag_rx1)									// if new char comes
+				if(FSM::uart1.flag_rx1)									// if new char comes
 				{
-					uart1_array[uart1_al][uart1_ac] = FSM::usart1.data_udr1;	// Save it in the column
-					if((uart1_array[uart1_al][uart1_ac] == '\r')) recording = 0;			// if the char is '\r', stop recording
+					uart1_array[uart1_al][uart1_ac] = FSM::uart1.data_udr1;	// Save it in the column
+					if((uart1_array[uart1_al][uart1_ac] == '\r') || (uart1_ac >= (NB_OF_CHAR-2))) recording = 0;			// if the char is '\r', stop recording
 					uart1_ac++;													// increase the column
-					FSM::usart1.flag_rx1 = 0;									// reset the flag
+					FSM::uart1.flag_rx1 = 0;									// reset the flag
 				}
 				_delay_us(1);												// needs do not leave the loop empty (compilation optimization)
 			}// end of while
@@ -95,7 +97,7 @@ void esp8266_12::test_init(){
 		/** Print strings on uart0 ***********************************************/
 		for(uart1_al = 0; uart1_al < NB_OF_STRING; uart1_al++){
 			//FSM::usart0.set(uart1_al+'0');FSM::usart0.print(" - ");
-			FSM::usart0.print(uart1_array[uart1_al]);						// print string
+			FSM::uart0.print(uart1_array[uart1_al]);						// print string
 		}// end of for
 
 }
@@ -110,29 +112,28 @@ void esp8266_12::test_wifi_tx(char *string){
 		// sent a test
 		print(string);
 
-		/** Waiting for the char 'G' first char of "EmonESP xxx string" **********/
+		/** Waiting for the char 'G' first char of "EmonESP xxxxx string" **********/
 		while(!recording){
-			if(FSM::usart1.flag_rx1 && FSM::usart1.data_udr1 == 'G')		// Test if the new char is a 'E'
+			if(FSM::uart1.flag_rx1 && FSM::uart1.data_udr1 == 'G')		// Test if the new char is a 'E'
 			{
-				uart1_array[uart1_al][uart1_ac] = FSM::usart1.data_udr1;	// if right save it in the first line, first column.
+				uart1_array[uart1_al][uart1_ac] = FSM::uart1.data_udr1;	// if right save it in the first line, first column.
 				uart1_ac++;													// increase the column
 				recording = 1;												// we can go starting record char
-				FSM::usart1.flag_rx1 = 0;									// reset the flag
+				FSM::uart1.flag_rx1 = 0;									// reset the flag
 			}
 			_delay_us(1);													// If no an 'E', delay needs do not leave the loop empty (compilation optimization)
 		}
 
-		char temp_conv[10];
 
 	for(uart1_al = 0; uart1_al < nb_string; uart1_al++){						// record the 5 strings
 		while(recording){												// recording to find '\r' char, end of line
-			if(FSM::usart1.flag_rx1)									// if new char comes
+			if(FSM::uart1.flag_rx1)									// if new char comes
 			{
-				uart1_array[uart1_al][uart1_ac] = FSM::usart1.data_udr1;	// Save it in the column
+				uart1_array[uart1_al][uart1_ac] = FSM::uart1.data_udr1;	// Save it in the column
 				//FSM::usart0.print(itoa(NB_OF_CHAR-2,temp_conv,10));
 				if( ((uart1_array[uart1_al][uart1_ac] == '\r') ||uart1_ac >= (NB_OF_CHAR-2))) recording = 0;			// if the char is '\r', stop recording
 				uart1_ac++;													// increase the column
-				FSM::usart1.flag_rx1 = 0;									// reset the flag
+				FSM::uart1.flag_rx1 = 0;									// reset the flag
 			}
 			_delay_us(1);												// needs do not leave the loop empty (compilation optimization)
 		}// end of while
@@ -148,7 +149,7 @@ void esp8266_12::test_wifi_tx(char *string){
 	/** Print strings on uart0 ***********************************************/
 	for(uart1_al = 0; uart1_al < nb_string; uart1_al++){
 		//FSM::usart0.set(uart1_al+'0');FSM::usart0.print(" - ");
-		FSM::usart0.print(uart1_array[uart1_al]);						// print string
+		FSM::uart0.print(uart1_array[uart1_al]);						// print string
 	}// end of for
 
 }

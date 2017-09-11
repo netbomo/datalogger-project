@@ -42,6 +42,8 @@
  */
 	char Usart::data_udr0 = 0;			//	This register permit at the usart0 rx interrupt to store the UDR register
 	bool Usart::flag_rx0 = 0;			//	Is set by the uart0 rx interrupt
+	char Usart::data_udr1 = 0;			//	This register permit at the usart1 rx interrupt to store the UDR register
+	bool Usart::flag_rx1 = 0;			//	Is set by the uart1 rx interrupt
 
 Usart::Usart(unsigned char usart, unsigned int baudrate) {
 	// TODO add uart1 support
@@ -53,12 +55,18 @@ Usart::Usart(unsigned char usart, unsigned int baudrate) {
 
 			UCSR0A = _BV(U2X0); // for the baud rate setting
 
-			UCSR0B = _BV(RXCIE0) | _BV(RXEN0) |_BV(TXEN0); 					//enable receiver and transmitter
-			UCSR0C = _BV(UPM01) | _BV(UPM00) | _BV(UCSZ01) | _BV(UCSZ00);	// Set frame format : 8data 2stop bit
+			UCSR0B = _BV(RXCIE0) | _BV(RXEN0) |_BV(TXEN0); //enable receiver and transmitter
+			UCSR0C =  _BV(UCSZ01) | _BV(UCSZ00);	// Set frame format : 8data 1stop bit
 
 			break;
 		case 1:
+			m_usart = usart;	// save uart number
+			UBRR1 = baudrate; // set baud rate
 
+			UCSR1A = _BV(U2X0); // for the baud rate setting
+
+			UCSR1B = _BV(RXCIE1) | _BV(RXEN1) |_BV(TXEN1); //enable receiver and transmitter
+			UCSR1C =  _BV(UCSZ11) | _BV(UCSZ10);	// Set frame format : 8data 1stop bit
 			break;
 		default:
 			break;
@@ -78,6 +86,16 @@ ISR(USART0_RX_vect)
 }
 
 /******************************************************************************
+ * \fn Interrupt Sub routine(uart1 reception vector)
+ * \brief this sub routine comes when a char is received on the uart1
+ */
+ISR(USART1_RX_vect)							//sous routine d'interruption lors d'une reception
+{
+	Usart::data_udr1 = UDR1;						//récupération du registre de donnée UDR0 dans la variable globale data_udr0
+	Usart::flag_rx1 = 1;					//mise à 1 du drapeau de reception pour interruption
+}
+
+/******************************************************************************
  * sending data methods
  */
 // USART char sender function
@@ -88,7 +106,11 @@ void Usart::set(char character){
 		UDR0 = character;					// Put data into buffer, sends the data
 		break;
 	case 1:
-
+		/* Wait for empty transmit buffer */
+		while ( !( UCSR1A & (1<<UDRE1)) )
+			;
+		/* Put data into buffer, sends the data */
+		UDR1 = character;
 		break;
 	default:
 		break;
