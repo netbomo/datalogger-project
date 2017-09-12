@@ -118,6 +118,8 @@ public :
 	 * static global variable
 	 */
 	static unsigned long int timestamp;					/**< timestamp is an uint32 to stock the current unix time, needs to be static to be use by hardware Interrupt Sub Routine (ISR)*/
+	static ringBufS *pRBuf;								/**< pointer on the to usart0's ringbuffer */
+	static ringBufS rBuf;								/**< usart0's ringbuffer */
 
 	/******************************************************************************
 	 * static class, that refer to hardware peripherals

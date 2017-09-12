@@ -55,6 +55,9 @@ bool FSM::flag_data_frequencies_ready = 0;
  */
 unsigned long int FSM::timestamp = 0;		// timestamp is an uint32 to stock the current unix time stamp
 
+ringBufS FSM::rBuf;							// uart0 ring buffer
+ringBufS *FSM::pRBuf = new(ringBufS);		// usart ring buffer pointer initialization
+
 /******************************************************************************
  * static class definition need to be out of constructor or function. That refer to hardware peripherals
  */
@@ -85,9 +88,13 @@ FSM::FSM():second_counter(0),nextState(&idle){
 	pAC.load_param();
 	pDC.load_param();
 
+	// initialize the ring buffer
+	ringBufS_init(pRBuf);					// initialize the usart0's ring buffer
+
 	// initialize each module and test it
-	wifi.enable();
-	wifi.test_init();
+//	wifi.enable();
+//	wifi.LDO_enable();
+//	wifi.test_init();
 
 }
 

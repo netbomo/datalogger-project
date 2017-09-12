@@ -34,6 +34,8 @@
 #include <avr/io.h>
 #include <util/delay.h>
 
+#include "../lib/ringbufs.h"
+
 class esp8266_12 {
 public:
 	/**
@@ -47,8 +49,8 @@ public:
 	virtual ~esp8266_12();
 
 	/** Constants definition */
-	const char NB_OF_STRING = 10;		/*!< Wifi string number need to record 	*/
-	const char NB_OF_CHAR = 35;			/*!< String char max number		 		*/
+	const char NB_OF_STRING = 5;		/*!< Wifi string number need to record 	*/
+	const char NB_OF_CHAR = 30;			/*!< String char max number		 		*/
 
 	// Module pins control
 
@@ -60,7 +62,7 @@ public:
 
 	// Module enable pin
 
-	inline void enable(){PORTD |= _BV(4) | _BV(5) | _BV(6);};
+	inline void enable(){PORTD |= _BV(4) | _BV(6);};
 
 	inline void disable(){PORTD &= ~_BV(4);};
 
@@ -78,7 +80,11 @@ public:
 	 * This part is used only in the test mode or in the test firmware
 	 */
 	void test_init();
-	void test_wifi_tx(char *string);
+	void test_wifi_tx(char *string, const unsigned char nb_string);
+
+private:
+	unsigned char str_count;
+
 };
 
 #endif /* ESP826612_H_ */
