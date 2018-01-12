@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=/home/gilou/git_repos/datalogger-project/.git\:
-GitRepositoriesView.GitDirectories.relative=/home/gilou/git_repos/datalogger-project/.git\:
+GitRepositoriesView.GitDirectories=/home/gilou/git_repos/datalogger-project/.git\:/home/gilou/git-repos/datalogger-project/.git\:
+GitRepositoriesView.GitDirectories.relative=/home/gilou/git_repos/datalogger-project/.git\:/home/gilou/git-repos/datalogger-project/.git\:
 core_defaultRepositoryDir=/home/gilou/git_repos
 eclipse.preferences.version=1

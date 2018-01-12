@@ -90,7 +90,7 @@ windlogger_1.eep: windlogger_1.elf
 
 sizedummy: windlogger_1.elf
 	@echo 'Invoking: Print Size'
-	-avr-size --format=avr --mcu=atmega1284p windlogger_1.elf
+	-avr-size --format=berkeley -t windlogger_1.elf
 	@echo 'Finished building: $@'
 	@echo ' '
 

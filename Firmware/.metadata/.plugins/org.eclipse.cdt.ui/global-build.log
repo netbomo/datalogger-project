@@ -1,56 +1,6 @@
-09:46:12 **** Incremental Build of configuration Debug for project windlogger_cpp ****
+14:43:54 **** Build of configuration Release for project windlogger_1 ****
 make all 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
-AVR Memory Usage
-----------------
-Device: atmega1284p
+Cannot run program "make": Unknown reason
 
-Program:    8044 bytes (6.1% Full)
-(.text + .data + .bootloader)
-
-Data:        493 bytes (3.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
-10:51:26 **** Incremental Build of configuration Debug for project windlogger_cpp ****
-make all 
-Building file: ../src/Windvane.cpp
-Invoking: AVR C++ Compiler
-avr-g++ -Wall -g2 -gstabs -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -funsigned-char -funsigned-bitfields -fno-exceptions -std=gnu++11 -mmcu=atmega1284p -DF_CPU=16000000UL -MMD -MP -MF"src/Windvane.d" -MT"src/Windvane.o" -c -o "src/Windvane.o" "../src/Windvane.cpp"
-Finished building: ../src/Windvane.cpp
- 
-Building target: windlogger_cpp.elf
-Invoking: AVR C++ Linker
-avr-g++ -Wl,-Map,windlogger_cpp.map,--cref -mrelax -Wl,--gc-sections -mmcu=atmega1284p -o "windlogger_cpp.elf"  ./src/Anemometer.o ./src/DateTime.o ./src/FSM.o ./src/Sensor.o ./src/State.o ./src/Usart.o ./src/Windvane.o ./src/main.o ./src/operator.o ./src/st_Config.o ./src/st_Measure.o ./src/st_Output.o ./src/st_Sleep.o   
-Finished building target: windlogger_cpp.elf
- 
-Invoking: AVR Create Extended Listing
-avr-objdump -h -S windlogger_cpp.elf  >"windlogger_cpp.lss"
-Finished building: windlogger_cpp.lss
- 
-Create Flash image (ihex format)
-avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex windlogger_cpp.elf  "windlogger_cpp.hex"
-Finished building: windlogger_cpp.hex
- 
-Create eeprom image (ihex format)
-avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex windlogger_cpp.elf  "windlogger_cpp.eep"
-Finished building: windlogger_cpp.eep
- 
-Invoking: Print Size
-avr-size --format=avr --mcu=atmega1284p windlogger_cpp.elf
-AVR Memory Usage
-----------------
-Device: atmega1284p
-
-Program:    8044 bytes (6.1% Full)
-(.text + .data + .bootloader)
-
-Data:        493 bytes (3.0% Full)
-(.data + .bss + .noinit)
-
-
-Finished building: sizedummy
- 
+Error: Program "make" not found in PATH
+PATH=[/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games]
