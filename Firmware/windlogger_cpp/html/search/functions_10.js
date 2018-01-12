@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['update_5fepprom',['update_epprom',['../class_config.html#a5fefd76d384c0a710ea0dd0d71d5d05b',1,'Config']]],
-  ['usart',['Usart',['../class_usart.html#aefd519c2990906495cf54ae1f5b4394a',1,'Usart']]],
-  ['usart0_5fprint',['usart0_print',['../class_output.html#af4bc42d2d3bb3b2a98782f0df0eba133',1,'Output']]],
-  ['usart1_5fprint',['usart1_print',['../class_output.html#a943b106620d1c711e838298a4c4233af',1,'Output']]]
+  ['temperature_5fread_5fvalue',['temperature_read_value',['../class_measure.html#ae3c562d3b11c5e202366597b951e969b',1,'Measure']]],
+  ['time_5fto_5fepoch',['time_to_epoch',['../class_r_t_c.html#a20900a7f5bd95b1928bf2d08a0de687c',1,'RTC']]],
+  ['twi',['TWI',['../class_t_w_i.html#a7042d7a8da6173d2a528ec7bd31162ae',1,'TWI']]]
 ];

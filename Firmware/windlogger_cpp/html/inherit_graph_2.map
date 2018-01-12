@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_f_s_m.html" title="The class FSM regroup hardware peripherals declaration and mechanic methods. " alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" href="$class_power.html" title="The Power class is the base container for measuring and calculating power. " alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node2" href="$classpower_d_c.html" title="powerDC" alt="" coords="112,5,189,32"/>
 </map>

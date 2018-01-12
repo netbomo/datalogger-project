@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['datetime',['DateTime',['../class_date_time.html',1,'']]]
+  ['config',['Config',['../class_config.html',1,'']]]
 ];

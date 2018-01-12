@@ -8,21 +8,21 @@
  viewBox="0.00 0.00 269.00 28.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 24)">
 <title>Measure::windvane_value</title>
-<!-- Node35 -->
-<g id="node1" class="node"><title>Node35</title>
+<!-- Node89 -->
+<g id="node1" class="node"><title>Node89</title>
 <polygon fill="#bfbfbf" stroke="black" points="0,-0.5 0,-19.5 130,-19.5 130,-0.5 0,-0.5"/>
 <text text-anchor="middle" x="65" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Measure::windvane_value</text>
 </g>
-<!-- Node36 -->
-<g id="node2" class="node"><title>Node36</title>
+<!-- Node90 -->
+<g id="node2" class="node"><title>Node90</title>
 <g id="a_node2"><a xlink:href="class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" target="_top" xlink:title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ...">
 <polygon fill="none" stroke="black" points="166,-0.5 166,-19.5 261,-19.5 261,-0.5 166,-0.5"/>
 <text text-anchor="middle" x="213.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">Measure::execute</text>
 </a>
 </g>
 </g>
-<!-- Node35&#45;&gt;Node36 -->
-<g id="edge1" class="edge"><title>Node35&#45;&gt;Node36</title>
+<!-- Node89&#45;&gt;Node90 -->
+<g id="edge1" class="edge"><title>Node89&#45;&gt;Node90</title>
 <path fill="none" stroke="midnightblue" d="M140.425,-10C149.102,-10 157.758,-10 165.904,-10"/>
 <polygon fill="midnightblue" stroke="midnightblue" points="140.257,-6.5001 130.257,-10 140.257,-13.5001 140.257,-6.5001"/>
 </g>

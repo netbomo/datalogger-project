@@ -1,0 +1,9 @@
+<map id="RTC::get_date" name="RTC::get_date">
+<area shape="rect" id="node2" href="$class_t_w_i.html#a3e375d4c03edae3f0c8263a330eddd8d" title="TWI::receive" alt="" coords="161,132,259,159"/>
+<area shape="rect" id="node3" href="$class_t_w_i.html#a130b2bf159b768c28ae0d4129c556711" title="TWI::start" alt="" coords="324,5,405,32"/>
+<area shape="rect" id="node4" href="$class_t_w_i.html#a6bde06891e3037d407b28a4ecbc3386f" title="TWI::get_status" alt="" coords="307,56,423,83"/>
+<area shape="rect" id="node5" href="$class_t_w_i.html#a29a1270e7b1ee2b573c1a32e3214ac57" title="TWI::restart" alt="" coords="319,107,411,133"/>
+<area shape="rect" id="node6" href="$class_t_w_i.html#ab5cefdcf75964a3ce2ed54303de56614" title="TWI::get_ack" alt="" coords="314,157,415,184"/>
+<area shape="rect" id="node7" href="$class_t_w_i.html#a8fb1629575f81558db83b54955470136" title="TWI::get_nack" alt="" coords="311,208,419,235"/>
+<area shape="rect" id="node8" href="$class_t_w_i.html#a3ed950888f040e24dc9dcb0ba65d17f1" title="TWI::stop" alt="" coords="325,259,405,285"/>
+</map>

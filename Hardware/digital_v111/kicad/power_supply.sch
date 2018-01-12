@@ -1097,4 +1097,6 @@ Wire Wire Line
 Connection ~ 4025 5650
 Text Label 1675 4775 2    60   ~ 0
 Vin_PWR
+Text Notes 3475 2475 1    60   ~ 0
+move D after jumper
 $EndSCHEMATC

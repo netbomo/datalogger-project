@@ -1,11 +1,17 @@
 <map id="FSM" name="FSM">
-<area shape="rect" id="node2" href="$class_config.html" title="The class Config inherits from the class State. This class manage input between the FSM..." alt="" coords="8,263,147,516"/>
-<area shape="rect" id="node3" href="$class_state.html" title="{State\n||+ State()\l+ ~State()\l+ execute()\l+ print()\l}" alt="" coords="468,42,556,163"/>
-<area shape="rect" id="node6" href="$class_sleep.html" title="{Sleep\n||+ Sleep()\l+ ~Sleep()\l+ execute()\l+ print()\l}" alt="" coords="412,329,500,450"/>
-<area shape="rect" id="node7" href="$class_idle.html" title="{Idle\n||+ Idle()\l+ ~Idle()\l+ execute()\l+ print()\l}" alt="" coords="524,329,612,450"/>
-<area shape="rect" id="node8" href="$class_measure.html" title="The class Measure inherits from the class State. " alt="" coords="637,270,814,509"/>
-<area shape="rect" id="node10" href="$class_output.html" title="{Output\n|+ USART0\l+ USART1\l+ SD_CARD\l+ WIFI\l+ GPRS\l|+ Output()\l+ ~Output()\l+ execute()\l+ print()\l+ usart0_print()\l+ usart1_print()\l+ SDCard_print()\l}" alt="" coords="1029,277,1150,501"/>
-<area shape="rect" id="node4" href="$class_date_time.html" title="The DateTime class permit to have human readable format for the timestamp. " alt="" coords="5,5,123,200"/>
-<area shape="rect" id="node5" href="$class_usart.html" title="This is the uart library for the atmega1284p. " alt="" coords="285,285,387,494"/>
-<area shape="rect" id="node9" href="$struct_eeprom.html" title="The Eeprom structure regroup members need to be saved in the micro&#45;controler&#39;s eeprom. " alt="" coords="839,307,1004,472"/>
+<area shape="rect" id="node2" href="$class_config.html" title="The class Config inherits from the class State. This class manage input between the FSM..." alt="" coords="155,739,285,1007"/>
+<area shape="rect" id="node3" href="$class_state.html" title="{State\n|# m_name\l|+ State()\l+ ~State()\l+ execute()\l+ print()\l+ isEqual()\l}" alt="" coords="365,130,453,266"/>
+<area shape="rect" id="node7" href="$class_sleep.html" title="{Sleep\n|&#45; m_name\l|+ Sleep()\l+ ~Sleep()\l+ execute()\l+ print()\l+ isEqual()\l}" alt="" coords="309,805,397,941"/>
+<area shape="rect" id="node9" href="$class_idle.html" title="{Idle\n||+ Idle()\l+ ~Idle()\l+ execute()\l+ print()\l+ isEqual()\l}" alt="" coords="421,805,509,941"/>
+<area shape="rect" id="node11" href="$class_measure.html" title="The class Measure inherits from the class State. " alt="" coords="534,754,711,993"/>
+<area shape="rect" id="node15" href="$class_output.html" title="{Output\n|+ USART0\l+ USART1\l+ SD_CARD\l+ WIFI\l+ GPRS\l&#45; string\l|+ Output()\l+ ~Output()\l+ execute()\l+ print()\l+ isEqual()\l+ usart0_print()\l+ usart1_print()\l+ SDCard_print()\l}" alt="" coords="735,747,857,1000"/>
+<area shape="rect" id="node4" href="$class_anemometer.html" title="{Anemometer\n|+ TIMER3_OVF_PERIODE\l|+ Anemometer()\l+ ~Anemometer()\l+ print()\l+ read_value()\l+ start()\l}" alt="" coords="881,805,1066,941"/>
+<area shape="rect" id="node5" href="$class_sensor.html" title="The sensor class is the base container for sensor, need to create a inherited class from sensor..." alt="" coords="991,5,1126,391"/>
+<area shape="rect" id="node10" href="$class_windvane.html" title="{Windvane\n||+ Windvane()\l+ ~Windvane()\l+ print()\l+ read_value()\l}" alt="" coords="1090,813,1198,934"/>
+<area shape="rect" id="node6" href="$class_usart.html" title="This is the uart library for the atmega1284p. " alt="" coords="1222,769,1325,978"/>
+<area shape="rect" id="node8" href="$class_t_w_i.html" title="{TWI\n||+ TWI()\l+ ~TWI()\l+ print()\l+ receive()\l+ set_char()\l+ get_char()\l&#45; start()\l&#45; restart()\l&#45; stop()\l&#45; set()\l&#45; get_ack()\l&#45; get_nack()\l&#45; get_status()\l}" alt="" coords="1349,747,1448,1000"/>
+<area shape="rect" id="node12" href="$struct_logger.html" title="The Logger structure regroup members need to be saved in the micro&#45;controler&#39;s eeprom. " alt="" coords="1472,783,1637,963"/>
+<area shape="rect" id="node13" href="$class_r_t_c.html" title="The RTC class regroup methods and parameters to use the Real Time Clock : pcf8563 This class use the ..." alt="" coords="1661,703,1824,1044"/>
+<area shape="rect" id="node14" href="$struct_time.html" title="The time structure is a simple date time format. " alt="" coords="1699,115,1786,281"/>
+<area shape="rect" id="node16" href="$class_power.html" title="The Power class is the base container for measuring and calculating power. " alt="" coords="1849,468,1983,1279"/>
 </map>

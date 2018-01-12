@@ -1,12 +1,23 @@
 <map id="main.h" name="main.h">
-<area shape="rect" id="node2" href="$_config_8h.html" title="This file declare the Config class. " alt="" coords="81,80,151,107"/>
-<area shape="rect" id="node4" href="$_config_8cpp.html" title="This file define the Config class. " alt="" coords="5,229,91,256"/>
-<area shape="rect" id="node5" href="$_f_s_m_8cpp.html" title="Brief description of file. " alt="" coords="115,229,189,256"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title="This is the main file, is the firmware&#39;s body. " alt="" coords="213,229,288,256"/>
-<area shape="rect" id="node7" href="$_measure_8cpp.html" title="The class Measure inherits from the class State. " alt="" coords="313,229,410,256"/>
-<area shape="rect" id="node8" href="$_output_8cpp.html" title="The class Output inherits from the class State. " alt="" coords="434,229,521,256"/>
-<area shape="rect" id="node9" href="$_usart_8cpp.html" title="This is the uart library for the atmega1284p. " alt="" coords="545,229,623,256"/>
-<area shape="rect" id="node10" href="$_sleep_8cpp.html" title="Brief description of file. " alt="" coords="508,80,588,107"/>
-<area shape="rect" id="node11" href="$_state_8cpp.html" title="Brief description of file. " alt="" coords="613,80,691,107"/>
-<area shape="rect" id="node3" href="$_f_s_m_8h.html" title="The FSM is the finish state machine mechanism. " alt="" coords="220,155,281,181"/>
+<area shape="rect" id="node2" href="$_sensor_8h.html" title="This class is the base class of sensor. " alt="" coords="488,80,563,107"/>
+<area shape="rect" id="node6" href="$_f_s_m_8cpp.html" title="Brief description of file. " alt="" coords="5,304,80,331"/>
+<area shape="rect" id="node7" href="$main_8cpp.html" title="This is the main file, is the firmware&#39;s body. " alt="" coords="599,304,673,331"/>
+<area shape="rect" id="node11" href="$st___config_8cpp.html" title="st_Config.cpp" alt="" coords="935,304,1038,331"/>
+<area shape="rect" id="node12" href="$st___measure_8cpp.html" title="st_Measure.cpp" alt="" coords="796,304,911,331"/>
+<area shape="rect" id="node13" href="$st___output_8cpp.html" title="st_Output.cpp" alt="" coords="1063,304,1167,331"/>
+<area shape="rect" id="node14" href="$st___sleep_8cpp.html" title="st_Sleep.cpp" alt="" coords="1191,304,1289,331"/>
+<area shape="rect" id="node15" href="$_state_8cpp.html" title="Brief description of file. " alt="" coords="1314,304,1393,331"/>
+<area shape="rect" id="node16" href="$_usart_8cpp.html" title="This is the uart library for the atmega1284p. " alt="" coords="1417,304,1495,331"/>
+<area shape="rect" id="node19" href="$_power_8h.html" title="Power.h" alt="" coords="279,155,350,181"/>
+<area shape="rect" id="node22" href="$st___config_8h.html" title="st_Config.h" alt="" coords="773,155,862,181"/>
+<area shape="rect" id="node3" href="$_anemometer_8h.html" title="Brief description of file. " alt="" coords="472,155,579,181"/>
+<area shape="rect" id="node10" href="$_sensor_8cpp.html" title="Brief description of file. " alt="" coords="340,304,428,331"/>
+<area shape="rect" id="node17" href="$_windvane_8h.html" title="Brief description of file. " alt="" coords="657,155,748,181"/>
+<area shape="rect" id="node4" href="$_f_s_m_8h.html" title="The FSM is the finish state machine mechanism. " alt="" coords="671,229,732,256"/>
+<area shape="rect" id="node5" href="$_anemometer_8cpp.html" title="Brief description of file. " alt="" coords="453,304,574,331"/>
+<area shape="rect" id="node8" href="$_power_8cpp.html" title="Power.cpp" alt="" coords="231,304,315,331"/>
+<area shape="rect" id="node9" href="$_r_t_c_8cpp.html" title="Brief description of file. " alt="" coords="697,304,772,331"/>
+<area shape="rect" id="node18" href="$_windvane_8cpp.html" title="Brief description of file. " alt="" coords="757,229,862,256"/>
+<area shape="rect" id="node20" href="$power_d_c_8h.html" title="Brief description of file. " alt="" coords="177,229,265,256"/>
+<area shape="rect" id="node21" href="$power_d_c_8cpp.html" title="Brief description of file. " alt="" coords="105,304,207,331"/>
 </map>

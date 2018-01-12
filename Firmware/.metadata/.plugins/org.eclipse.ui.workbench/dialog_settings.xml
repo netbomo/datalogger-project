@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="WorkbenchPreferenceDialogSettings">
+<<<<<<< HEAD
 		<item value="-434" key="DIALOG_Y_ORIGIN"/>
 		<item value="282" key="DIALOG_X_ORIGIN"/>
+=======
+		<item value="514" key="DIALOG_X_ORIGIN"/>
+		<item value="44" key="DIALOG_Y_ORIGIN"/>
+>>>>>>> 0ba8b28feadf834be4b84fdbb06c3bc03c4d2a12
 	</section>
 	<section name="org.eclipse.ui.preferences.keysPreferencePage">
 		<item value="true" key="actionSetFilter"/>
@@ -15,8 +20,8 @@
 		<item value=".html" key="EditorSelectionDialog.STORE_ID_FILE_EXTENSION"/>
 	</section>
 	<section name="org.eclipse.ui.internal.QuickAccess">
-		<item value="-1" key="dialogHeight"/>
-		<item value="-1" key="dialogWidth"/>
+		<item value="244" key="dialogHeight"/>
+		<item value="344" key="dialogWidth"/>
 		<list key="textEntries">
 		</list>
 		<list key="orderedElements">
@@ -27,8 +32,9 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="eclox.ui.wizard.NewDoxyfile" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="org.eclipse.ui.wizards.new.file" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
 			<item value="org.eclipse.ui.Other"/>
 		</list>
 	</section>
@@ -36,6 +42,11 @@
 		<item value="org.eclipse.ui.wizards.import.ExternalProject" key="ImportExportPage.STORE_SELECTED_IMPORT_WIZARD_ID"/>
 		<list key="ImportExportPage.STORE_EXPANDED_IMPORT_CATEGORIES">
 			<item value="org.eclipse.ui.Basic"/>
+<<<<<<< HEAD
+=======
+			<item value="org.eclipse.cdt.ui.importWizardCategory"/>
+			<item value="org.eclipse.egit.ui.internal.clone.gitclonecategory"/>
+>>>>>>> 0ba8b28feadf834be4b84fdbb06c3bc03c4d2a12
 		</list>
 	</section>
 	<section name="FileSystemImportWizard">

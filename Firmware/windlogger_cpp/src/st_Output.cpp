@@ -33,6 +33,7 @@
 #pragma GCC diagnostic ignored "-Wwrite-strings"
 
 #include <string.h>
+#include <stdlib.h>
 
 #include "../lib/main.h"
 #include "../lib/FSM.h"
@@ -42,7 +43,6 @@
 
 Output::Output(){
 	strcpy(m_name,"output\0");
-	ptr_string = string;
 	FSM::logger.output_enable=USART0;
 }
 
@@ -51,8 +51,7 @@ Output::~Output(){
 }
 
 void Output::execute (){
-	print();
-	//print();
+
 	if(FSM::logger.output_enable||USART0){
 		usart0_print();
 	}
@@ -68,6 +67,8 @@ void Output::execute (){
 	if(FSM::logger.output_enable||GPRS){
 		usart1_print();
 	}
+
+	//FSM::uart0.print("exit output\r\n");
 }
 
 void Output::print(){
@@ -80,12 +81,23 @@ bool Output::isEqual(char *name)const {
 
 
 void Output::usart0_print (){
-	ptr_string =&string[0];
-	FSM::windvane.print_average(ptr_string);  /// pas fonctionnel
+	char tmp_char[20];	// char array used for number to string conversion
 
-	//strcpy(string,"\r\n");
-	FSM::uart0.print(string);
-	ptr_string =&string[0];
+	strcpy(string,itoa(15,tmp_char,10));				// Start by copy node number
+	strcat(string," ");									// todo change " " separation by a variable
+	//strcat(string,itoa(FSM::rtc.get_second(),tmp_char,10));
+	strcat(string,ultoa(FSM::timestamp,tmp_char,10));	// Add timestamp
+	strcat(string," ");
+
+	FSM::anemo1.print_average(1,string);					// add data average
+	FSM::anemo2.print_average(1,string);					// add data average
+	FSM::windvane.print_average(0,string);
+	FSM::pAC.print_average(3,string);
+	FSM::pDC.print_average(3,string);
+
+	strcat(string,"\r\n");								// Close string
+
+	FSM::uart0.print(string);							// Send the string on uart0
 }
 
 void Output::usart1_print (){

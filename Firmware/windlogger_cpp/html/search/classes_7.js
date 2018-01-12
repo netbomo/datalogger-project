@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['sleep',['Sleep',['../class_sleep.html',1,'']]],
-  ['state',['State',['../class_state.html',1,'']]]
+  ['power',['Power',['../class_power.html',1,'']]],
+  ['powerac',['powerAC',['../classpower_a_c.html',1,'']]],
+  ['powerdc',['powerDC',['../classpower_d_c.html',1,'']]]
 ];

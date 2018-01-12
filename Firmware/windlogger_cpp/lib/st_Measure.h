@@ -46,11 +46,6 @@ class Measure : public State {
 
 public :
 	/******************************************************************************
-	 * static hardware flags declaration
-	 */
-	static bool flag_data_frequencies_ready;	/**< Set when the timerX overflow, data are ready @todo timer number*/
-
-	/******************************************************************************
 	 * Constructor and destructor
 	 */
 	/**

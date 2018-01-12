@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 GitRepositoriesView.GitDirectories=/home/gilou/git_repos/datalogger-project/.git\:/home/gilou/git-repos/datalogger-project/.git\:
 GitRepositoriesView.GitDirectories.relative=/home/gilou/git_repos/datalogger-project/.git\:/home/gilou/git-repos/datalogger-project/.git\:
+=======
+GitRepositoriesView.GitDirectories=/home/betzy/git_repos/datalogger-project/.git\:/home/gilou/git_repos/datalogger-project/.git\:/home/gilou/git_repos/datalogger-project.wiki/.git\:
+GitRepositoriesView.GitDirectories.relative=/home/betzy/git_repos/datalogger-project/.git\:/home/gilou/git_repos/datalogger-project/.git\:/home/gilou/git_repos/datalogger-project.wiki/.git\:
+RepositorySearchDialogSearchPath=/home/gilou/git_repos
+>>>>>>> 0ba8b28feadf834be4b84fdbb06c3bc03c4d2a12
 core_defaultRepositoryDir=/home/gilou/git_repos
 eclipse.preferences.version=1

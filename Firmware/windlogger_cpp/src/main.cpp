@@ -48,21 +48,26 @@ int main(){
 /******************************************************************************
  * Hardware initialization
  */
-	DDRB = 0xFF;				//	config the port B as output
+	DDRA = 0x00;		// PortA as analog inputs
+
+	DDRB = 0xF7;		// PortB[0-2] are input, other is set to outputs, SPI will be initialise when it will be used.
 	PORTB = 0x00;				//	set all portb 's bits to low
+
+	DDRD= 0xFF;			// Config the port D as outputs. D0 to D3 are Usart0 and 1, they will be rewrited.
+	PORTD = 0x00;		// Don"t start the Wifi module at the wake up. (D4-7)
 
 	FSM fsm; 					//	FSM instance, that is the state machine mechanism
 
 /******************************************************************************
  * @todo If verbose mode is select ($01=1), display some infos on the uart0
  */
-	fsm.uart0.print("Initialization\r\n");		// print on uart0 "initialisation"
+	//fsm.uart0.print("Initialization\r\n");		// print on uart0 "initialisation"
 
 /******************************************************************************
  * Initialize main scope variable
  */
-    unsigned long int timestamp_old = 0;	// this variable is check if a new second come for the timing management
-
+    unsigned char second_old = 0;	// this variable is check if a new second come for the timing management
+    second_old = fsm.rtc.get_second();
 
 /******************************************************************************
  * If all initialization are ok, start the program
@@ -78,10 +83,14 @@ int main(){
 			fsm.uart0.flag_rx0 = 0;			// and reset the flag
 		}
 
+
+
 		// If a new second comes
-		if(timestamp_old!=fsm.timestamp){
+		FSM::rtc.get_date();
+//		mettre à jour le timestamp
+		if(second_old!=fsm.rtc.get_second()){
 			fsm.measurement_timing_control ();	// check if time comes to do a new measure or not
-			 timestamp_old = fsm.timestamp;		// update timestamp_old
+			second_old = fsm.rtc.get_second();		// update timestamp_old
 		}
 
 	/******************************************************************************

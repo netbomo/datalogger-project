@@ -63,6 +63,13 @@ public:
 
 	inline void set_offset(double offset) {m_offset=offset; update_param();}
 
+	inline void set_enable(double enable) {m_enable=enable; update_param();}
+
+	/******************************************************************************
+	 * getters
+	 */
+	inline unsigned char is_enable()const{return m_enable;}
+
 	/******************************************************************************
 	 * Sensor's methods
 	 */
@@ -78,7 +85,7 @@ public:
 	/**
 	 * \brief This method print the sensor configuration for the sensor. It's a good idea to overload this function to do it more explicit for each sensor.
 	 */
-	void print_config();
+	void print_config(char arg_id0[], char arg_id1[], char arg_id2[]);
 
 	/**
 	* \brief This method calculate the average from the data array.
@@ -88,7 +95,7 @@ public:
 	/**
 	 * \brief The print_average method print the average's value in the string.
 	 */
-	char* print_average(char *string);
+	char* print_average(unsigned char prec, char *string);
 
 	void print_data_array()const;
 
@@ -117,9 +124,11 @@ protected:
 	/******************************************************************************
 	 * private members
 	 */
-	unsigned char m_id;	/**< this the sensor's id in the Eeprom::sensor_counter */
+	unsigned char m_id;						/**< this the sensor's id in the Eeprom::sensor_counter */
 
-	unsigned char m_eeprom_addr;		/**< This is the eeprom address calc from the m_id and the EEPROM_OFFSET */
+	unsigned char m_enable;					/**< If enable is off, the sensor is not process */
+
+	unsigned char m_eeprom_addr;			/**< This is the eeprom address calc from the m_id and the EEPROM_OFFSET */
 
 	double m_data[MAX_DATA_SAMPLE]={0.0};	/**< this is the data array where witch data are put and from where the average is done. */
 

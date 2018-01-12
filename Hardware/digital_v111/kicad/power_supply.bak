@@ -719,8 +719,6 @@ Wire Notes Line
 	500  4225 11225 4225
 Wire Notes Line
 	6975 500  6975 6525
-Wire Notes Line
-	6975 6525 6950 6525
 Text Notes 3450 4900 0    60   ~ 0
 Auto switch, if if Vin is set, don't use +5V from USB
 Wire Notes Line

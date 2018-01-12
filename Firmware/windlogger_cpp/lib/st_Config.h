@@ -37,7 +37,6 @@
 #define CONFIG__HPP
 
 #include "../lib/main.h"
-#include "../lib/DateTime.h"
 #include "../lib/State.h"
 
 /**
@@ -49,7 +48,6 @@
  */
 class Config : public State {
 
-	DateTime currentTime;	/**< current time is the human readable side of the timestamp. Use for configuration.*/
 	char request[20];		/**< is the char array use to save character from USART0*/
 	unsigned char request_i;			/**< this is the request string's index*/
 

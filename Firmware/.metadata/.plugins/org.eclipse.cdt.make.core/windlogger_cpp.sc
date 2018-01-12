@@ -2,15 +2,15 @@
 <?scdStore version="2"?><scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="de.innot.avreclipse.configuration.app.debug.1214670962;de.innot.avreclipse.configuration.app.debug.1214670962.;de.innot.avreclipse.tool.compiler.winavr.app.debug.670530615;de.innot.avreclipse.compiler.winavr.input.1801337072">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="/usr/lib/gcc/avr/4.8.1/include"/>
-<includePath path="/usr/lib/gcc/avr/4.8.1/include-fixed"/>
-<includePath path="/usr/lib/gcc/avr/4.8.1/../../../avr/include"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/include"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/include-fixed"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/../../../avr/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
-<definedSymbol symbol="__GNUC_MINOR__=8"/>
-<definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
-<definedSymbol symbol="__VERSION__=&quot;4.8.1&quot;"/>
+<definedSymbol symbol="__GNUC_MINOR__=9"/>
+<definedSymbol symbol="__GNUC_PATCHLEVEL__=2"/>
+<definedSymbol symbol="__VERSION__=&quot;4.9.2&quot;"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
 <definedSymbol symbol="__ATOMIC_ACQUIRE=2"/>
@@ -69,6 +69,8 @@
 <definedSymbol symbol="__UINT_FAST64_TYPE__=long long unsigned int"/>
 <definedSymbol symbol="__INTPTR_TYPE__=int"/>
 <definedSymbol symbol="__UINTPTR_TYPE__=unsigned int"/>
+<definedSymbol symbol="__has_include(STR)=__has_include__(STR)"/>
+<definedSymbol symbol="__has_include_next(STR)=__has_include_next__(STR)"/>
 <definedSymbol symbol="__GXX_ABI_VERSION=1002"/>
 <definedSymbol symbol="__USING_SJLJ_EXCEPTIONS__=1"/>
 <definedSymbol symbol="__SCHAR_MAX__=127"/>
@@ -122,6 +124,8 @@
 <definedSymbol symbol="__UINT_FAST64_MAX__=18446744073709551615ULL"/>
 <definedSymbol symbol="__INTPTR_MAX__=32767"/>
 <definedSymbol symbol="__UINTPTR_MAX__=65535U"/>
+<definedSymbol symbol="__GCC_IEC_559=0"/>
+<definedSymbol symbol="__GCC_IEC_559_COMPLEX=0"/>
 <definedSymbol symbol="__FLT_EVAL_METHOD__=0"/>
 <definedSymbol symbol="__DEC_EVAL_METHOD__=2"/>
 <definedSymbol symbol="__FLT_RADIX__=2"/>
@@ -327,7 +331,6 @@
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=51"/>
-<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
 <definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
 <definedSymbol symbol="__AVR_HAVE_ELPM__=1"/>
 <definedSymbol symbol="__AVR_HAVE_ELPMX__=1"/>
@@ -436,21 +439,23 @@
 <definedSymbol symbol="__INT24_MIN__=(-__INT24_MAX__-1)"/>
 <definedSymbol symbol="__UINT24_MAX__=16777215UL"/>
 <definedSymbol symbol="__ELF__=1"/>
+<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
+<definedSymbol symbol="__AVR_DEVICE_NAME__=atmega1284p"/>
 <definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.app.debug.1214670962;de.innot.avreclipse.configuration.app.debug.1214670962.;de.innot.avreclipse.tool.cppcompiler.app.debug.2008442998;de.innot.avreclipse.cppcompiler.input.943763473">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="/usr/lib/gcc/avr/4.8.1/include"/>
-<includePath path="/usr/lib/gcc/avr/4.8.1/include-fixed"/>
-<includePath path="/usr/lib/gcc/avr/4.8.1/../../../avr/include"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/include"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/include-fixed"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/../../../avr/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
-<definedSymbol symbol="__GNUC_MINOR__=8"/>
-<definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
-<definedSymbol symbol="__VERSION__=&quot;4.8.1&quot;"/>
+<definedSymbol symbol="__GNUC_MINOR__=9"/>
+<definedSymbol symbol="__GNUC_PATCHLEVEL__=2"/>
+<definedSymbol symbol="__VERSION__=&quot;4.9.2&quot;"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
 <definedSymbol symbol="__ATOMIC_ACQUIRE=2"/>
@@ -510,8 +515,11 @@
 <definedSymbol symbol="__UINT_FAST64_TYPE__=long long unsigned int"/>
 <definedSymbol symbol="__INTPTR_TYPE__=int"/>
 <definedSymbol symbol="__UINTPTR_TYPE__=unsigned int"/>
+<definedSymbol symbol="__has_include(STR)=__has_include__(STR)"/>
+<definedSymbol symbol="__has_include_next(STR)=__has_include_next__(STR)"/>
 <definedSymbol symbol="__GXX_WEAK__=1"/>
 <definedSymbol symbol="__DEPRECATED=1"/>
+<definedSymbol symbol="__cpp_binary_literals=201304"/>
 <definedSymbol symbol="__GXX_ABI_VERSION=1002"/>
 <definedSymbol symbol="__USING_SJLJ_EXCEPTIONS__=1"/>
 <definedSymbol symbol="__SCHAR_MAX__=127"/>
@@ -565,6 +573,8 @@
 <definedSymbol symbol="__UINT_FAST64_MAX__=18446744073709551615ULL"/>
 <definedSymbol symbol="__INTPTR_MAX__=32767"/>
 <definedSymbol symbol="__UINTPTR_MAX__=65535U"/>
+<definedSymbol symbol="__GCC_IEC_559=0"/>
+<definedSymbol symbol="__GCC_IEC_559_COMPLEX=0"/>
 <definedSymbol symbol="__FLT_EVAL_METHOD__=0"/>
 <definedSymbol symbol="__DEC_EVAL_METHOD__=2"/>
 <definedSymbol symbol="__FLT_RADIX__=2"/>
@@ -770,7 +780,6 @@
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=51"/>
-<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
 <definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
 <definedSymbol symbol="__AVR_HAVE_ELPM__=1"/>
 <definedSymbol symbol="__AVR_HAVE_ELPMX__=1"/>
@@ -876,20 +885,22 @@
 <definedSymbol symbol="__INT24_MIN__=(-__INT24_MAX__-1)"/>
 <definedSymbol symbol="__UINT24_MAX__=16777215UL"/>
 <definedSymbol symbol="__ELF__=1"/>
+<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
+<definedSymbol symbol="__AVR_DEVICE_NAME__=atmega1284p"/>
 <definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.app.release.552119404;de.innot.avreclipse.configuration.app.release.552119404.;de.innot.avreclipse.tool.compiler.winavr.app.release.900369444;de.innot.avreclipse.compiler.winavr.input.1668459620">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="/usr/lib/gcc/avr/4.8.1/include"/>
-<includePath path="/usr/lib/gcc/avr/4.8.1/include-fixed"/>
-<includePath path="/usr/lib/gcc/avr/4.8.1/../../../avr/include"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/include"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/include-fixed"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/../../../avr/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
-<definedSymbol symbol="__GNUC_MINOR__=8"/>
-<definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
-<definedSymbol symbol="__VERSION__=&quot;4.8.1&quot;"/>
+<definedSymbol symbol="__GNUC_MINOR__=9"/>
+<definedSymbol symbol="__GNUC_PATCHLEVEL__=2"/>
+<definedSymbol symbol="__VERSION__=&quot;4.9.2&quot;"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
 <definedSymbol symbol="__ATOMIC_ACQUIRE=2"/>
@@ -948,6 +959,8 @@
 <definedSymbol symbol="__UINT_FAST64_TYPE__=long long unsigned int"/>
 <definedSymbol symbol="__INTPTR_TYPE__=int"/>
 <definedSymbol symbol="__UINTPTR_TYPE__=unsigned int"/>
+<definedSymbol symbol="__has_include(STR)=__has_include__(STR)"/>
+<definedSymbol symbol="__has_include_next(STR)=__has_include_next__(STR)"/>
 <definedSymbol symbol="__GXX_ABI_VERSION=1002"/>
 <definedSymbol symbol="__USING_SJLJ_EXCEPTIONS__=1"/>
 <definedSymbol symbol="__SCHAR_MAX__=127"/>
@@ -1001,6 +1014,8 @@
 <definedSymbol symbol="__UINT_FAST64_MAX__=18446744073709551615ULL"/>
 <definedSymbol symbol="__INTPTR_MAX__=32767"/>
 <definedSymbol symbol="__UINTPTR_MAX__=65535U"/>
+<definedSymbol symbol="__GCC_IEC_559=0"/>
+<definedSymbol symbol="__GCC_IEC_559_COMPLEX=0"/>
 <definedSymbol symbol="__FLT_EVAL_METHOD__=0"/>
 <definedSymbol symbol="__DEC_EVAL_METHOD__=2"/>
 <definedSymbol symbol="__FLT_RADIX__=2"/>
@@ -1206,7 +1221,6 @@
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=51"/>
-<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
 <definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
 <definedSymbol symbol="__AVR_HAVE_ELPM__=1"/>
 <definedSymbol symbol="__AVR_HAVE_ELPMX__=1"/>
@@ -1315,21 +1329,23 @@
 <definedSymbol symbol="__INT24_MIN__=(-__INT24_MAX__-1)"/>
 <definedSymbol symbol="__UINT24_MAX__=16777215UL"/>
 <definedSymbol symbol="__ELF__=1"/>
+<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
+<definedSymbol symbol="__AVR_DEVICE_NAME__=atmega1284p"/>
 <definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>
 <instance id="de.innot.avreclipse.configuration.app.release.552119404;de.innot.avreclipse.configuration.app.release.552119404.;de.innot.avreclipse.tool.cppcompiler.app.release.989920968;de.innot.avreclipse.cppcompiler.input.2135302534">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
-<includePath path="/usr/lib/gcc/avr/4.8.1/include"/>
-<includePath path="/usr/lib/gcc/avr/4.8.1/include-fixed"/>
-<includePath path="/usr/lib/gcc/avr/4.8.1/../../../avr/include"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/include"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/include-fixed"/>
+<includePath path="/usr/lib/gcc/avr/4.9.2/../../../avr/include"/>
 <definedSymbol symbol="__STDC__=1"/>
 <definedSymbol symbol="__cplusplus=199711L"/>
 <definedSymbol symbol="__STDC_HOSTED__=1"/>
 <definedSymbol symbol="__GNUC__=4"/>
-<definedSymbol symbol="__GNUC_MINOR__=8"/>
-<definedSymbol symbol="__GNUC_PATCHLEVEL__=1"/>
-<definedSymbol symbol="__VERSION__=&quot;4.8.1&quot;"/>
+<definedSymbol symbol="__GNUC_MINOR__=9"/>
+<definedSymbol symbol="__GNUC_PATCHLEVEL__=2"/>
+<definedSymbol symbol="__VERSION__=&quot;4.9.2&quot;"/>
 <definedSymbol symbol="__ATOMIC_RELAXED=0"/>
 <definedSymbol symbol="__ATOMIC_SEQ_CST=5"/>
 <definedSymbol symbol="__ATOMIC_ACQUIRE=2"/>
@@ -1389,8 +1405,11 @@
 <definedSymbol symbol="__UINT_FAST64_TYPE__=long long unsigned int"/>
 <definedSymbol symbol="__INTPTR_TYPE__=int"/>
 <definedSymbol symbol="__UINTPTR_TYPE__=unsigned int"/>
+<definedSymbol symbol="__has_include(STR)=__has_include__(STR)"/>
+<definedSymbol symbol="__has_include_next(STR)=__has_include_next__(STR)"/>
 <definedSymbol symbol="__GXX_WEAK__=1"/>
 <definedSymbol symbol="__DEPRECATED=1"/>
+<definedSymbol symbol="__cpp_binary_literals=201304"/>
 <definedSymbol symbol="__GXX_ABI_VERSION=1002"/>
 <definedSymbol symbol="__USING_SJLJ_EXCEPTIONS__=1"/>
 <definedSymbol symbol="__SCHAR_MAX__=127"/>
@@ -1444,6 +1463,8 @@
 <definedSymbol symbol="__UINT_FAST64_MAX__=18446744073709551615ULL"/>
 <definedSymbol symbol="__INTPTR_MAX__=32767"/>
 <definedSymbol symbol="__UINTPTR_MAX__=65535U"/>
+<definedSymbol symbol="__GCC_IEC_559=0"/>
+<definedSymbol symbol="__GCC_IEC_559_COMPLEX=0"/>
 <definedSymbol symbol="__FLT_EVAL_METHOD__=0"/>
 <definedSymbol symbol="__DEC_EVAL_METHOD__=2"/>
 <definedSymbol symbol="__FLT_RADIX__=2"/>
@@ -1649,7 +1670,6 @@
 <definedSymbol symbol="__AVR__=1"/>
 <definedSymbol symbol="AVR=1"/>
 <definedSymbol symbol="__AVR_ARCH__=51"/>
-<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
 <definedSymbol symbol="__AVR_HAVE_RAMPZ__=1"/>
 <definedSymbol symbol="__AVR_HAVE_ELPM__=1"/>
 <definedSymbol symbol="__AVR_HAVE_ELPMX__=1"/>
@@ -1755,6 +1775,8 @@
 <definedSymbol symbol="__INT24_MIN__=(-__INT24_MAX__-1)"/>
 <definedSymbol symbol="__UINT24_MAX__=16777215UL"/>
 <definedSymbol symbol="__ELF__=1"/>
+<definedSymbol symbol="__AVR_ATmega1284P__=1"/>
+<definedSymbol symbol="__AVR_DEVICE_NAME__=atmega1284p"/>
 <definedSymbol symbol="F_CPU=16000000UL"/>
 </collector>
 </instance>

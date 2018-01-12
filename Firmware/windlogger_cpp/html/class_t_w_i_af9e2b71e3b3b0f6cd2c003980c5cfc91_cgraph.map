@@ -1,0 +1,7 @@
+<map id="TWI::get_char" name="TWI::get_char">
+<area shape="rect" id="node2" href="$class_t_w_i.html#a8fb1629575f81558db83b54955470136" title="TWI::get_nack" alt="" coords="163,5,271,32"/>
+<area shape="rect" id="node3" href="$class_t_w_i.html#a6bde06891e3037d407b28a4ecbc3386f" title="TWI::get_status" alt="" coords="159,56,275,83"/>
+<area shape="rect" id="node4" href="$class_t_w_i.html#a29a1270e7b1ee2b573c1a32e3214ac57" title="TWI::restart" alt="" coords="171,107,263,133"/>
+<area shape="rect" id="node5" href="$class_t_w_i.html#a130b2bf159b768c28ae0d4129c556711" title="TWI::start" alt="" coords="176,157,257,184"/>
+<area shape="rect" id="node6" href="$class_t_w_i.html#a3ed950888f040e24dc9dcb0ba65d17f1" title="TWI::stop" alt="" coords="177,208,257,235"/>
+</map>

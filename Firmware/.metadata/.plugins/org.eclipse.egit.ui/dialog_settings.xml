@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item value="2" key="org.eclipse.egit.ui.internal.clone.GitSelectWizardPageWizardSel"/>
+	<item value="/home/gilou/git_repos/datalogger-project.wiki/.git" key="GitSelectRepositoryPage.lastRepository"/>
 	<list key="CommitDialog.authorValues">
 		<item value="gilou &lt;gilou@tripalium.org&gt;"/>
 		<item value="gilou &lt;gilou@laptop.home&gt;"/>
@@ -8,6 +10,8 @@
 		<item value="gilou &lt;gilou@tripalium.org&gt;"/>
 		<item value="gilou &lt;gilou@laptop.home&gt;"/>
 	</list>
+	<section name="GitImportWizard">
+	</section>
 	<section name="org.eclipse.egit.ui.internal.push.PushResultDialog.dialogBounds">
 		<item value="652" key="DIALOG_WIDTH"/>
 		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>

@@ -1,0 +1,4 @@
+<map id="Config::initialize_logger" name="Config::initialize_logger">
+<area shape="rect" id="node2" href="$class_config.html#ab2f7c3fc31f5a2c4e115860474dd8f55" title="Load saved config data from the eeprom. " alt="" coords="175,13,310,39"/>
+<area shape="rect" id="node3" href="$class_config.html#a4cda6b3fcf08b798afe3bf1311450b0c" title="Update saved config data in the eeprom. " alt="" coords="168,63,317,90"/>
+</map>

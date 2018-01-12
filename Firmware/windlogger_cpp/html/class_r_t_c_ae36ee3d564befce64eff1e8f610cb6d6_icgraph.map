@@ -1,0 +1,5 @@
+<map id="RTC::is_leap_year" name="RTC::is_leap_year">
+<area shape="rect" id="node2" href="$class_r_t_c.html#a20900a7f5bd95b1928bf2d08a0de687c" title="RTC::time_to_epoch" alt="" coords="184,5,327,32"/>
+<area shape="rect" id="node3" href="$class_r_t_c.html#ad0c4545ccad338b30faab6a125833843" title="RTC::get_timestamp" alt="" coords="375,5,519,32"/>
+<area shape="rect" id="node4" href="$class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ..." alt="" coords="567,5,693,32"/>
+</map>

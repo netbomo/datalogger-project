@@ -1,0 +1,4 @@
+<map id="Config::load_logger" name="Config::load_logger">
+<area shape="rect" id="node2" href="$class_config.html#ad634dbd3d1afb02eac176fd4f0150614" title="Initialize the eeprom memory. " alt="" coords="188,5,303,47"/>
+<area shape="rect" id="node3" href="$class_config.html#a4cda6b3fcf08b798afe3bf1311450b0c" title="Update saved config data in the eeprom. " alt="" coords="351,13,500,39"/>
+</map>

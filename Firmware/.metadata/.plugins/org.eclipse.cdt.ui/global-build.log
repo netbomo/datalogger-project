@@ -1,6 +1,0 @@
-14:43:54 **** Build of configuration Release for project windlogger_1 ****
-make all 
-Cannot run program "make": Unknown reason
-
-Error: Program "make" not found in PATH
-PATH=[/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games]

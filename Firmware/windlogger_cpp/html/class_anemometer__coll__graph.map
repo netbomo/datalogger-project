@@ -1,0 +1,3 @@
+<map id="Anemometer" name="Anemometer">
+<area shape="rect" id="node2" href="$class_sensor.html" title="The sensor class is the base container for sensor, need to create a inherited class from sensor..." alt="" coords="31,5,165,391"/>
+</map>

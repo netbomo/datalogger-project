@@ -1,5 +1,6 @@
 <map id="FSM::FSM" name="FSM::FSM">
-<area shape="rect" id="node2" href="$class_config.html#ab55107c3371b6c41be6688c0989993c7" title="Load saved config data from the eeprom. " alt="" coords="140,13,283,39"/>
-<area shape="rect" id="node3" href="$class_config.html#af2fee2ffae339b1e8ead1cd413e44ee3" title="Initialize the eeprom memory. " alt="" coords="331,5,445,47"/>
-<area shape="rect" id="node4" href="$class_config.html#a5fefd76d384c0a710ea0dd0d71d5d05b" title="Update saved config data in the eeprom. " alt="" coords="493,13,651,39"/>
+<area shape="rect" id="node2" href="$class_config.html#ab2f7c3fc31f5a2c4e115860474dd8f55" title="Load saved config data from the eeprom. " alt="" coords="142,13,277,39"/>
+<area shape="rect" id="node5" href="$class_sensor.html#a953410c8a76c3b718349000a11e6160e" title="Load saved parameters for sensors from the eeprom. " alt="" coords="140,63,279,90"/>
+<area shape="rect" id="node3" href="$class_config.html#ad634dbd3d1afb02eac176fd4f0150614" title="Initialize the eeprom memory. " alt="" coords="327,5,441,47"/>
+<area shape="rect" id="node4" href="$class_config.html#a4cda6b3fcf08b798afe3bf1311450b0c" title="Update saved config data in the eeprom. " alt="" coords="489,13,639,39"/>
 </map>

@@ -1,0 +1,15 @@
+<map id="Sensor::update_param" name="Sensor::update_param">
+<area shape="rect" id="node2" href="$class_sensor.html#a4e88d49608387ab4f65734913e514109" title="Sensor::is_enable" alt="" coords="211,71,337,98"/>
+<area shape="rect" id="node11" href="$class_sensor.html#aad89726b9c769ca2dbf7b121bae54b2e" title="Sensor::set_enable" alt="" coords="207,122,341,149"/>
+<area shape="rect" id="node13" href="$class_sensor.html#aed192cfaa131d7e89dadf6da01e9d609" title="Sensor::set_factor" alt="" coords="209,173,339,199"/>
+<area shape="rect" id="node14" href="$class_sensor.html#ad713fef719161b27e6b93a0d3a371e0c" title="Sensor::set_offset" alt="" coords="209,223,339,250"/>
+<area shape="rect" id="node3" href="$class_sensor.html#ae16fd0cbdda6cfed1deac36f5c7c0a8f" title="This method calculate the average from the data array. " alt="" coords="399,71,547,98"/>
+<area shape="rect" id="node6" href="$class_sensor.html#a38a47820684e5ff0f61ad32b8afbde45" title="The print_average method print the average&#39;s value in the string. " alt="" coords="398,122,547,149"/>
+<area shape="rect" id="node9" href="$class_anemometer.html#a9be3b4b392ef08ef29c769e6ce4bebf4" title="Anemometer::read_value" alt="" coords="389,17,556,43"/>
+<area shape="rect" id="node4" href="$class_measure.html#a1518672dff4f81603a35bff08c20e9f5" title="calcul average from the data array " alt="" coords="604,71,761,98"/>
+<area shape="rect" id="node5" href="$class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ..." alt="" coords="809,42,936,69"/>
+<area shape="rect" id="node7" href="$class_output.html#af4bc42d2d3bb3b2a98782f0df0eba133" title="Output::usart0_print" alt="" coords="614,122,751,149"/>
+<area shape="rect" id="node8" href="$class_output.html#a087f4330e641bb4682ab2862bca7a1af" title="Output::execute" alt="" coords="815,122,930,149"/>
+<area shape="rect" id="node10" href="$class_measure.html#a4390d770b19dbc51e5486fefe9f4b9d1" title="read value from anemometer and RPM " alt="" coords="615,5,750,47"/>
+<area shape="rect" id="node12" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="415,173,530,199"/>
+</map>

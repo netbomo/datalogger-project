@@ -1,0 +1,14 @@
+<map id="Anemometer::read_value" name="Anemometer::read_value">
+<area shape="rect" id="node2" href="$class_sensor.html#a4e88d49608387ab4f65734913e514109" title="Sensor::is_enable" alt="" coords="220,187,347,214"/>
+<area shape="rect" id="node3" href="$class_sensor.html#a9478b09a17b24105c0fe5b32e988224a" title="Sensor::print" alt="" coords="596,46,692,72"/>
+<area shape="rect" id="node4" href="$class_sensor.html#a59e815290b2883cea096c8bc613429c0" title="Sensor::read_value" alt="" coords="404,35,539,62"/>
+<area shape="rect" id="node5" href="$class_sensor.html#a0e1288d8b8594192f9d65819c185764f" title="This method print the sensor configuration for the sensor. It&#39;s a good idea to overload this function..." alt="" coords="402,86,541,112"/>
+<area shape="rect" id="node7" href="$class_sensor.html#ae16fd0cbdda6cfed1deac36f5c7c0a8f" title="This method calculate the average from the data array. " alt="" coords="397,136,545,163"/>
+<area shape="rect" id="node8" href="$class_sensor.html#a38a47820684e5ff0f61ad32b8afbde45" title="The print_average method print the average&#39;s value in the string. " alt="" coords="397,187,546,214"/>
+<area shape="rect" id="node9" href="$class_sensor.html#aa03d707dfa7562805b77f9040831418b" title="Sensor::print_data\l_array" alt="" coords="407,238,535,280"/>
+<area shape="rect" id="node11" href="$class_sensor.html#a953410c8a76c3b718349000a11e6160e" title="Load saved parameters for sensors from the eeprom. " alt="" coords="402,304,541,331"/>
+<area shape="rect" id="node12" href="$class_sensor.html#abf05dcc164ceadf01fa48c32fbaf040a" title="Update saved parameters for sensors in the eeprom. " alt="" coords="395,355,548,382"/>
+<area shape="rect" id="node13" href="$class_sensor.html#a4a9eb446ca4c73268ec6d93b959273f9" title="Initialize the eeprom memory. " alt="" coords="412,406,531,448"/>
+<area shape="rect" id="node6" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="601,126,687,152"/>
+<area shape="rect" id="node10" href="$class_usart.html#a86c9264f48dabbc3d97fa32d2d02d22d" title="USART char sender function. " alt="" coords="604,246,684,272"/>
+</map>

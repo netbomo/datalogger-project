@@ -1,4 +1,18 @@
 <map id="Usart::set" name="Usart::set">
-<area shape="rect" id="node2" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="133,5,316,32"/>
-<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="364,5,415,32"/>
+<area shape="rect" id="node2" href="$class_f_s_m.html#a3819be8e9fe92b750f47b9731e92f254" title="Call when a string from usart0 finish by &quot;\r\n&quot;. " alt="" coords="133,34,316,61"/>
+<area shape="rect" id="node4" href="$class_sensor.html#aa03d707dfa7562805b77f9040831418b" title="Sensor::print_data\l_array" alt="" coords="161,85,289,127"/>
+<area shape="rect" id="node14" href="$class_power.html#acd77541eabe8feb58e0b73154268cdd2" title="Power::print_data_array" alt="" coords="145,151,305,178"/>
+<area shape="rect" id="node17" href="$classpower_d_c.html#aedca6b1fc36cfddd8876fadb387debe1" title="powerDC::~powerDC" alt="" coords="364,202,512,229"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="413,34,463,61"/>
+<area shape="rect" id="node5" href="$class_sensor.html#a4e88d49608387ab4f65734913e514109" title="Sensor::is_enable" alt="" coords="375,89,501,115"/>
+<area shape="rect" id="node6" href="$class_sensor.html#ae16fd0cbdda6cfed1deac36f5c7c0a8f" title="This method calculate the average from the data array. " alt="" coords="569,71,717,98"/>
+<area shape="rect" id="node9" href="$class_sensor.html#a38a47820684e5ff0f61ad32b8afbde45" title="The print_average method print the average&#39;s value in the string. " alt="" coords="569,122,718,149"/>
+<area shape="rect" id="node12" href="$class_anemometer.html#a9be3b4b392ef08ef29c769e6ce4bebf4" title="Anemometer::read_value" alt="" coords="560,17,727,43"/>
+<area shape="rect" id="node7" href="$class_measure.html#a1518672dff4f81603a35bff08c20e9f5" title="calcul average from the data array " alt="" coords="775,71,932,98"/>
+<area shape="rect" id="node8" href="$class_measure.html#a754d2de10d1a44bb3b62ab162ceeaae2" title="The execute method is the measure &quot;main function&quot; The execute function work as this scheme : ..." alt="" coords="980,42,1107,69"/>
+<area shape="rect" id="node10" href="$class_output.html#af4bc42d2d3bb3b2a98782f0df0eba133" title="Output::usart0_print" alt="" coords="785,122,922,149"/>
+<area shape="rect" id="node11" href="$class_output.html#a087f4330e641bb4682ab2862bca7a1af" title="Output::execute" alt="" coords="986,122,1101,149"/>
+<area shape="rect" id="node13" href="$class_measure.html#a4390d770b19dbc51e5486fefe9f4b9d1" title="read value from anemometer and RPM " alt="" coords="786,5,921,47"/>
+<area shape="rect" id="node15" href="$class_power.html#a1e7595ee0b3b0439d979ffeab785d0d8" title="Power::set_i_offset" alt="" coords="371,151,505,178"/>
+<area shape="rect" id="node16" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="586,173,701,199"/>
 </map>

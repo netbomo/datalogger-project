@@ -1,0 +1,7 @@
+<map id="State::isEqual" name="State::isEqual">
+<area shape="rect" id="node2" href="$class_sleep.html#ae198e0867de4921a6b2e89885a14d547" title="Sleep::isEqual" alt="" coords="165,5,272,32"/>
+<area shape="rect" id="node3" href="$class_output.html#aca8fc00d64eadd62201e6f83b276df3c" title="Output::isEqual" alt="" coords="163,56,275,83"/>
+<area shape="rect" id="node4" href="$class_idle.html#a32b2da497da978d14810c9c73837d5c0" title="Idle::isEqual" alt="" coords="171,107,266,133"/>
+<area shape="rect" id="node5" href="$class_measure.html#ab7d61a122c14b9c5e9652dc802938275" title="Measure::isEqual" alt="" coords="157,157,280,184"/>
+<area shape="rect" id="node6" href="$class_config.html#a7282f450d3ec325f7dc05bcd7f8f11fb" title="Config::isEqual" alt="" coords="163,208,274,235"/>
+</map>

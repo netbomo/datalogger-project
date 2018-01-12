@@ -1,5 +1,3 @@
 <map id="FSM::execute" name="FSM::execute">
 <area shape="rect" id="node2" href="$class_state.html#aa272f704a5f33920524fb57c80339b2f" title="State::execute" alt="" coords="157,5,264,32"/>
-<area shape="rect" id="node3" href="$class_state.html#ac150b47c0f2b53152671d0698a890981" title="State::print" alt="" coords="167,56,254,83"/>
-<area shape="rect" id="node4" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="167,107,254,133"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="Power::read_rms_value" name="Power::read_rms_value">
+<area shape="rect" id="node2" href="$class_power.html#a1e33445a6a18766a77c5304292efcb4f" title="This method read return int value from the ADC channel. " alt="" coords="212,5,339,32"/>
+<area shape="rect" id="node3" href="$class_usart.html#ab236d7c399791bbe1431f85e9b60f601" title="USART string sender function. " alt="" coords="232,56,319,83"/>
+</map>

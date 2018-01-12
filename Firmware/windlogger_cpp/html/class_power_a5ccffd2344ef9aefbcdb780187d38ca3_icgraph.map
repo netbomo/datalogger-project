@@ -1,0 +1,8 @@
+<map id="Power::update_param" name="Power::update_param">
+<area shape="rect" id="node2" href="$class_power.html#a3dc8a4eeb7a87fa3a73cad504187173d" title="Power::set_i_factor" alt="" coords="206,5,341,32"/>
+<area shape="rect" id="node4" href="$class_power.html#a1e7595ee0b3b0439d979ffeab785d0d8" title="Power::set_i_offset" alt="" coords="206,56,341,83"/>
+<area shape="rect" id="node5" href="$class_power.html#a131e857270e7cf3957e0d1508d0a0986" title="Power::set_v_factor" alt="" coords="204,107,343,133"/>
+<area shape="rect" id="node6" href="$class_power.html#ad87d6ae7b5fb07b1a7d5fd2f70e878ce" title="Power::set_v_offset" alt="" coords="204,157,343,184"/>
+<area shape="rect" id="node7" href="$class_power.html#a1281d3f600c6cc3227de7d22e68a96a0" title="Power::set_v_phase" alt="" coords="203,208,344,235"/>
+<area shape="rect" id="node3" href="$class_config.html#a2a806f322b0d533aabdb8e796d3b1033" title="The execute method is the config &quot;main function&quot; In this method, sentence from the uart are process e..." alt="" coords="392,107,507,133"/>
+</map>

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 activeuserprofiles=Team;devpc;laptop
+=======
+activeuserprofiles=Team;betzy;laptop
+>>>>>>> 0ba8b28feadf834be4b84fdbb06c3bc03c4d2a12
 eclipse.preferences.version=1
 org.eclipse.rse.systemtype.local.systemType.defaultUserId=gilou
 useridperkey=laptop.Local\=gilou;

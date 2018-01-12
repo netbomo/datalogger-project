@@ -36,14 +36,20 @@
 #define FSM__HPP
 
 #include "../lib/Usart.h"
+#include "../lib/TWI.h"
+#include "../lib/RTC.h"
 #include "../lib/Windvane.h"
 #include "../lib/Anemometer.h"
+#include "../lib/powerDC.h"
+#include "../lib/powerAC.h"
 
 #include "../lib/State.h"
-#include "st_Config.h"
-#include "st_Measure.h"
-#include "st_Output.h"
-#include "st_Sleep.h"
+#include "../lib/st_Config.h"
+#include "../lib/st_Measure.h"
+#include "../lib/st_Output.h"
+#include "../lib/st_Sleep.h"
+
+#include "../lib/esp826612.h"
 
 
 /**
@@ -51,6 +57,7 @@
  */
 struct Logger{
 	unsigned int structure_version;		/**< This permit to improve the structure by auto reset eeprom data when the structure evolve to prevent data bad reading */
+	unsigned char node_id;				/**< The node id, permit identify each datalogger (0 - 255)*/
 	unsigned char measure_sample_conf;	/**< Measurement sampling (0: no measure, 1 : 10 secs, 2: 1 min, 3: 10 min...) */
 	unsigned char measure_max;			/**< Measure_max is the number of measure by measure_sample_conf (ex by minute or by 10 minutes...). !Be careful! is a new configuration is create, the Sensor::MAX_DATA_SAMPLE needs to be adjust to the highest value of measure_max! */
 	unsigned char measure_periode;		/**< Measure_periode is the interval between two measures in seconds */
@@ -105,25 +112,39 @@ public :
 	static bool flag_new_measure;			/**< set when time come for a new measure */
 	static bool flag_data_averages_ready;	/**< set when each averages are calculated and ready for the OUTPUT state */
 	static bool flag_config_request;		/**< set when a string from usart0 finish by "\r\n" */
+	static bool flag_data_frequencies_ready;/**< Set when the timer3 overflow, data are ready*/
 
 	/******************************************************************************
 	 * static global variable
 	 */
 	static unsigned long int timestamp;					/**< timestamp is an uint32 to stock the current unix time, needs to be static to be use by hardware Interrupt Sub Routine (ISR)*/
+	static ringBufS *pRBuf;								/**< pointer on the to usart0's ringbuffer */
+	static ringBufS rBuf;								/**< usart0's ringbuffer */
 
 	/******************************************************************************
 	 * static class, that refer to hardware peripherals
 	 */
 	static Usart uart0;				/**< This is the uart0 declaration */
+	static Usart uart1;				/**< This is the uart0 declaration */
+	static TWI twi;					/**< This is the twi declaration */
+	static RTC rtc;					/**< This is the rtc declaration */
 
 	static Logger logger;			/**< This is the structure of data stored in the eeprom */
 
 	/******************************************************************************
 	 * static sensors list
 	 */
-	static Anemometer anemo1;		/**< this is the anemometer 1 definition */
-	static Anemometer anemo2;
+	static Anemometer anemo1;		/**< this is the anemometer 1 declaration */
+	static Anemometer anemo2;		/**< this is the anemometer 2 declaration */
 	static Windvane windvane;		/**< this is the windvane declaration */
+	static powerAC pAC;			/**< this is the powerAC declaration */
+	static powerDC pDC;			/**< this is the powerAC declaration */
+
+
+	/******************************************************************************
+	 * Modules declaration
+	 */
+	esp8266_12 wifi;			/**< This is the wifi module declaration */
 
 
 private :

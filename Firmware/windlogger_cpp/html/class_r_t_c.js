@@ -1,0 +1,25 @@
+var class_r_t_c =
+[
+    [ "RTC", "class_r_t_c.html#ada31c5120d18d2dd2863b3d440308da2", null ],
+    [ "~RTC", "class_r_t_c.html#abc7ca124964fe2c8593bbabf82431e70", null ],
+    [ "a2toBCD", "class_r_t_c.html#a9325bf8d08eb30a6eb764a67940f4442", null ],
+    [ "get_date", "class_r_t_c.html#a6e75afc10029f384081b814c2450e0fa", null ],
+    [ "get_second", "class_r_t_c.html#a64fff0b6517be73f463e7741a8f0a200", null ],
+    [ "get_timestamp", "class_r_t_c.html#ad0c4545ccad338b30faab6a125833843", null ],
+    [ "is_leap_year", "class_r_t_c.html#ae36ee3d564befce64eff1e8f610cb6d6", null ],
+    [ "print_config", "class_r_t_c.html#a59f014e14e774bf372dcf0d5d64e6717", null ],
+    [ "time_to_epoch", "class_r_t_c.html#a20900a7f5bd95b1928bf2d08a0de687c", null ],
+    [ "update_reg", "class_r_t_c.html#a47c11140f33fe80ffb96fb5296859a25", null ],
+    [ "utoBCD", "class_r_t_c.html#a85d7813e4900f346f811c0c01dc5cb89", null ],
+    [ "DAY", "class_r_t_c.html#acacbe271d4d7163db9ba90a0b627d0cd", null ],
+    [ "epoch_010116", "class_r_t_c.html#a861802caab07d0568b7d2537fc442dcb", null ],
+    [ "EPOCH_TIMESTAMP", "class_r_t_c.html#ab4c40de925d31eabb9e4de7c0cd85842", null ],
+    [ "HOURS", "class_r_t_c.html#a00f48532bc2e4ed7dbf04b0dd3f7a2f5", null ],
+    [ "JOURS", "class_r_t_c.html#a62a5303a140c066912282dce79ce7619", null ],
+    [ "m_time", "class_r_t_c.html#a892f074680b3c01941b1accb3540a0d5", null ],
+    [ "MINS", "class_r_t_c.html#a6710aa9c65888497f7cff2e008f4c0d2", null ],
+    [ "MONTH", "class_r_t_c.html#a564d945d3e797355103fd458ee87ecf8", null ],
+    [ "SECS", "class_r_t_c.html#a8aef1347e74cb0aff5ca517492201fe0", null ],
+    [ "WEEKDAY", "class_r_t_c.html#a1977034140149e3d65f650c33745f95b", null ],
+    [ "YEAR", "class_r_t_c.html#aa832f0c9e9cc517ad731e36f26abf62e", null ]
+];

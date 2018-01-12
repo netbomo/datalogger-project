@@ -35,8 +35,23 @@
 
 class Anemometer: public Sensor {
 public:
-	Anemometer();
+	Anemometer(unsigned char id);
 	virtual ~Anemometer();
+
+	/**
+	 * This method need to be overload to personalize sensor config display's
+	 * @return return string pointer
+	 */
+	char* print(char *string);
+
+	/**
+	 * This method read the sensors value, needs to be implemented for each sensor
+	 */
+	void read_value(unsigned char measure_number);
+
+	static void start();
+
+	const double TIMER3_OVF_PERIODE = (double) 65536/15625.0; // 15625 constant to convert from 1/fclock*1024(prescaler) in second
 };
 
 #endif /* ANEMOMETER_H_ */
