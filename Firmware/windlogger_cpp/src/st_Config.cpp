@@ -128,6 +128,10 @@ void Config::execute (){
 			case 32:	// set windvane offset, update eeprom method in the setter
 				FSM::windvane.set_offset(arg_f);
 				break;
+
+				// power measurement is now organise in two instance of the power class ct
+				//can be select in the 1 or the 2 or not at all if enable, set the factor and offset
+
 			case 51:	// set windvane factor, update eeprom method in the setter
 				FSM::pAC.set_v_factor(arg_f);
 				break;
@@ -135,10 +139,10 @@ void Config::execute (){
 				FSM::pAC.set_v_offset(arg_f);
 				break;
 			case 53:	// set windvane offset, update eeprom method in the setter
-				FSM::pAC.set_i_factor(arg_f);
+				FSM::pAC.set_ct1_factor(arg_f);
 				break;
 			case 54:	// set windvane factor, update eeprom method in the setter
-				FSM::pAC.set_i_offset(arg_f);
+				FSM::pAC.set_ct1_offset(arg_f);
 				break;
 			case 55:	// set windvane factor, update eeprom method in the setter
 				FSM::pAC.set_v_phase(arg_f);
@@ -150,10 +154,10 @@ void Config::execute (){
 				FSM::pDC.set_v_offset(arg_f);
 				break;
 			case 63:	// set windvane offset, update eeprom method in the setter
-				FSM::pDC.set_i_factor(arg_f);
+				FSM::pDC.set_ct1_factor(arg_f);
 				break;
 			case 64:	// set windvane factor, update eeprom method in the setter
-				FSM::pDC.set_i_offset(arg_f);
+				FSM::pDC.set_ct1_offset(arg_f);
 				break;
 			case 91:
 				if(arg_uc>=0 &&arg_uc<60)	FSM::rtc.update_reg(FSM::rtc.SECS,arg_uc);
@@ -221,7 +225,7 @@ void Config::display(){
 	//FSM::anemo2.print_config("$20","$21","$22");
 	FSM::windvane.print_config("$30","$31","$32");
 	FSM::pAC.print_config("$51"," $52"," $53"," $54"," $55"," $56");
-	FSM::pDC.print_config("$61"," $62"," $63"," $64");
+	//FSM::pDC.print_config("$61"," $62"," $63"," $64"); todo overload print for dc and multiple phases
 
 	FSM::uart0.print("\r\n");
 	FSM::rtc.print_config();

@@ -34,13 +34,19 @@
  */
 static const unsigned char LED_PIN = 7;		/// LED_PIN is on the PB7 pin
 
-static const unsigned char PIN_WINDVANE = 0;	/**< windvane pin constant */
+static const unsigned char PIN_WINDVANE = 6;	/**< windvane pin constant */
+static const unsigned char PIN_VOLT1 = 0;
+static const unsigned char PIN_VOLT2 = 7;
+static const unsigned char PIN_CT1 = 1;
+static const unsigned char PIN_CT2 = 2;
+static const unsigned char PIN_CT3 = 3;
+static const unsigned char PIN_CT4 = 4;
 
 
 /******************************************************************************
  * Structure constants
  */
-static const unsigned int DATA_STRUCTURE_VERSION = 062717;		///use date of the data structure's revision
+static const unsigned int DATA_STRUCTURE_VERSION = 122717;		///use date of the data structure's revision
 //static const unsigned char NUMBER_OF_SENSORS = 3;	/**< this need to be increase if you have more than 3 sensors! */
 static const unsigned char MAX_DATA_SAMPLE = 10;	/**< this needs to be the same as the highest value of FSM::eeprom.measure_max. From now, the highest possible value is 10 (10mins average).  */
 static const unsigned char EEPROM_OFFSET = 30;		/**< this is the eeprom offset use to save sensor parameters */
